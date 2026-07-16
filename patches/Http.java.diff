@@ -1,0 +1,70 @@
+--- a/src/com/mindprod/http/Http.java
++++ b/src/com/mindprod/http/Http.java
+@@ -43,7 +43,6 @@
+ import com.mindprod.common18.Build;
+ import com.mindprod.common18.ST;
+ import com.mindprod.fastcat.FastCat;
+-import org.jetbrains.annotations.Nullable;
+ 
+ import java.io.IOException;
+ import java.io.InputStream;
+@@ -147,7 +146,9 @@
+     static
+         {
+         System.setProperty( "java.net.preferIPv4Stack", "true" );
+-        System.setProperty( "jsse.enableSNIExtension", "false" );
++        // SNI left enabled (was force-disabled here in the original 2014 code for old
++        // non-SNI shareware sites) - modern CDNs (Cloudflare etc.) require SNI to route
++        // TLS to the right certificate on a shared IP; disabling it breaks every https: site.
+         System.setProperty( "jdk.tls.ephemeralDHKeySize", "2048" );
+         }
+ 
+@@ -223,13 +224,11 @@
+     /**
+      * string composed from interrupts
+      */
+-    @Nullable
+     protected String interruptResponseMessage;
+ 
+     /**
+      * string back from website
+      */
+-    @Nullable
+     protected String rawResponseMessage;
+ 
+     /**
+@@ -492,6 +491,34 @@
+         // save responseCode for later retrieval
+         responseCode = urlc.getResponseCode();
+         rawResponseMessage = urlc.getResponseMessage();
++        // HttpURLConnection auto-follows same-protocol redirects but refuses to cross
++        // http<->https, so a plain 301 from http to https (very common in 2026) would
++        // otherwise come back here as a tiny redirect-stub body instead of the real content.
++        // Follow those manually, bounded to avoid redirect loops.
++        int crossProtocolRedirects = 0;
++        while ( ( responseCode == 301 || responseCode == 302 || responseCode == 303
++                  || responseCode == 307 || responseCode == 308 )
++                && crossProtocolRedirects < 5 )
++            {
++            final String location = urlc.getHeaderField( "Location" );
++            if ( location == null )
++                {
++                break;
++                }
++            final URL redirectedUrl = new URL( urlc.getURL(), location );
++            urlc.disconnect();
++            urlc = ( HttpURLConnection ) redirectedUrl.openConnection();
++            urlc.setAllowUserInteraction( false );
++            urlc.setDoInput( true );
++            urlc.setDoOutput( false );
++            urlc.setUseCaches( false );
++            urlc.setRequestMethod( "GET" );
++            setStandardProperties( urlc );
++            urlc.connect();
++            responseCode = urlc.getResponseCode();
++            rawResponseMessage = urlc.getResponseMessage();
++            crossProtocolRedirects++;
++            }
+         // get size of message. -1 means comes in an indeterminate number of chunks.
+         int estimatedLength = urlc.getContentLength();
+         if ( estimatedLength <= 0 )

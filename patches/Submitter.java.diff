@@ -1,0 +1,25 @@
+--- a/src/com/mindprod/submitter/Submitter.java
++++ b/src/com/mindprod/submitter/Submitter.java
+@@ -835,11 +835,11 @@
+             alert( "You must fill in the PAD URL before hitting submit." );
+             return false;
+             }
+-        if ( !websiteURLString.startsWith( "http://" ) )
++        if ( !websiteURLString.startsWith( "http://" ) && !websiteURLString.startsWith( "https://" ) )
+             {
+             alert( "The website URL ["
+                    + websiteURLString
+-                   + "] must begin with http://" );
++                   + "] must begin with http:// or https://" );
+             return false;
+             }
+         if ( !padFileString.endsWith( ".xml" ) )
+@@ -1232,7 +1232,7 @@
+             // We can't do anything with it.
+             return;
+             }
+-        if ( !websiteURLString.startsWith( "http://" ) )
++        if ( !websiteURLString.startsWith( "http://" ) && !websiteURLString.startsWith( "https://" ) )
+             {
+             websiteURLString = "http://" + websiteURLString;
+             }
