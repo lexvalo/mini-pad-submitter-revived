@@ -48,21 +48,35 @@ Three separate bugs, all versions of the same root cause: **this code was writte
 
 With those three changes, the tool can fetch and validate a PAD file hosted on any normal modern HTTPS site again.
 
-`dist/submitter-patched.jar` is the rebuilt, runnable jar (`java -jar submitter-patched.jar`). `src/` has the two patched files in full plus `Get.java` unchanged (included because `Submitter` depends on it) — for anyone who wants to rebuild from scratch you'll also need the rest of Roedy Green's `com.mindprod` packages (`common18`, `entities`, `fastcat`, etc.) on the classpath, available from his original distribution.
+`dist/submitter-patched.jar` is the rebuilt, runnable jar (`java -jar submitter-patched.jar`). `src/` has the patched files in full plus `Get.java` unchanged (included because `Submitter` depends on it) — for anyone who wants to rebuild from scratch you'll also need the rest of Roedy Green's `com.mindprod` packages (`common18`, `entities`, `fastcat`, etc.) on the classpath, available from his original distribution.
 
 ## What this doesn't fix
 
 Getting a PAD validated at all was the blocker this patch removes. Whether the tool then successfully submits to each site in its target list is a separate, untested question — some of those directories are long dead by now, and it's possible a few of the ones still alive have added bot-protection or CSRF tokens that a 2017-era HTTP client might not get past. This patch only fixes the part that was unconditionally broken for anyone on a modern HTTPS site.
 
+## The site list is now editable
+
+The list of 66 target sites used to be hardcoded as a 1500-line Java `enum` (`SubmissionSite.java`) — every site's name, URL, and form fields baked directly into the source, added and removed by hand since 2009. Changing anything meant editing Java and recompiling.
+
+It's now loaded at runtime from [`dist/sites.txt`](dist/sites.txt), a plain text file that sits next to the jar. Each site is a block like:
+
+```
+2Software|http://www.2-software.net/submit.html|/submit.html|POST
+    pad_file_url=$PAD
+    pad_submitted=Submit PAD File
+```
+
+`$PAD` is replaced with the actual PAD file URL at submission time. Add, remove, or edit entries with a plain text editor — no recompilation, just restart the program. All 66 original entries are still there, extracted as-is from the 2017 source, including one (`Download11`) that turns out to have always submitted an empty value instead of the real pad URL — a bug in the original code, kept as-is rather than quietly fixed.
+
 ## How to use it
 
 1. Install a Java runtime (JRE/JDK 8 or later) if you don't already have one.
-2. Download [`dist/submitter-patched.jar`](dist/submitter-patched.jar) — that's the whole program, nothing else in this repo is required to run it.
-3. Run it: `java -jar submitter-patched.jar`. A GUI window opens ("Mini PAD Submitter 26.3").
+2. Download both [`dist/submitter-patched.jar`](dist/submitter-patched.jar) and [`dist/sites.txt`](dist/sites.txt) into the same folder — the jar looks for `sites.txt` next to itself at startup.
+3. Run it: `java -jar submitter-patched.jar`. A GUI window opens ("Mini PAD Submitter 26.3 Revived").
 4. Fill in two fields:
    - **Web Dir URL** — the folder your PAD file lives in, e.g. `https://yoursite.com` (no trailing filename).
    - **PAD xml file** — just the filename, e.g. `yoursite-pad.xml` (no `http://`, no `/`, no domain — the tool joins the two fields itself).
-5. Click **Submit**. It'll try its built-in list of 66 target sites and report which ones accepted it.
+5. Click **Submit**. It'll try every site listed in `sites.txt` and report which ones accepted it.
 
 `src/` and `patches/` aren't needed to use the tool — they're there for anyone who wants to see exactly what changed or rebuild it themselves. See [What was actually wrong](#what-was-actually-wrong) above.
 
@@ -76,14 +90,15 @@ From the repo root:
 mkdir build
 cd build && jar xf ../dist/submitter-patched.jar && cd ..
 
-javac -cp build -d build src/com/mindprod/http/Http.java src/com/mindprod/http/Get.java src/com/mindprod/submitter/Submitter.java
+javac -cp build -d build src/com/mindprod/http/Http.java src/com/mindprod/http/Get.java src/com/mindprod/submitter/Site.java src/com/mindprod/submitter/Submitter.java
 
 jar cfe submitter-rebuilt.jar com.mindprod.submitter.Submitter -C build .
+cp dist/sites.txt .
 
 java -jar submitter-rebuilt.jar
 ```
 
-This extracts the existing jar's classes into `build/`, recompiles the three patched files on top of it (overwriting just those `.class` files), and repackages everything into a fresh runnable jar. Tested end to end on a clean directory before writing this down.
+This extracts the existing jar's classes into `build/`, recompiles the patched files on top of it (overwriting just those `.class` files), and repackages everything into a fresh runnable jar. `sites.txt` needs to sit next to whichever jar you actually run. Tested end to end on a clean directory before writing this down.
 
 ## About the original author
 

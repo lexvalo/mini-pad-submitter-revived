@@ -1,0 +1,294 @@
+# Mini PAD Submitter - site list
+#
+# One block per site:
+#   Name|HomeURL|Action|METHOD
+#       key=value            (form field sent with the submission)
+#       query:key=value      (sent as a URL query param instead of a form field - rare)
+#
+# Use $PAD as the placeholder for the actual PAD file URL in any value.
+# METHOD is GET or POST. Blank line separates entries. Lines starting with # are comments.
+# Add, remove, or edit entries here - no recompilation needed, just restart the program.
+
+2Software|http://www.2-software.net/submit.html|/submit.html|POST
+    pad_file_url=$PAD
+    pad_submitted=Submit PAD File
+
+AbabaSoft|http://www.ababasoft.com/index.html|checkadd.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+ABCDatos|http://www.abcdatos.com/programas/padform.html|/cgi-bin/pad.cgi|GET
+    padurl=$PAD
+
+ABDownloads|http://www.ab-downloads.com/english/Submit/|/english/Submit/submit.htm|POST
+    padfile=$PAD
+
+AllSoftWares|http://windows.en.all-softwares.com/submit.php|/submit.php|POST
+    url=$PAD
+
+AppDown|http://appdown.com/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    regNowID=
+    shareItID=
+    psubmit=Submit PAD File
+
+AskedFiles|http://www.askedfiles.com/submit.php|/checkadd|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+BigDreamSoft|http://www.bigdreamsoft.com/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+BizPep|http://bizpep.com/submit.php|/add.php|POST
+    type=Software
+    type=Web%20Site
+    so=$PAD
+    review=true
+    review=
+    catsubmit=Submit
+
+DeSoftList|http://de.softlist.ws/addsoft/|/addsoft/|POST
+    pad_url=$PAD
+    sid=-1
+    submit=Submit
+
+Download100|http://www.download100.net/services/submit-soft.aspx|/services/submit-soft.aspx|GET
+    padurl=$PAD
+
+Download11|http://download11.com/submit/|/submit/submit.php|GET
+    url=
+
+Download3K|http://www.download3k.com/submit.php|/submit.php|POST
+    url=$PAD
+    id_regnow=
+
+Download3KDe|http://www.download3k.de/submit.php|/submit.php|POST
+    url=$PAD
+    id_regnow=
+
+Download3KEs|http://www.download3k.es/submit.php|/submit.php|POST
+    url=$PAD
+    id_regnow=
+
+Download3KFr|http://www.download3k.fr/submit.php|/submit.php|POST
+    url=$PAD
+    id_regnow=
+
+Download3kRo|http://www.download3k.ro/submit.php|/submit.php|POST
+    url=$PAD
+    id_regnow=
+
+Download4You|http://download4you.com/php/add.php|/php/add_software.php|POST
+    LOAD_PAD_URL=$PAD
+    action=loaded
+    submit=Load PAD file!
+
+DownloadBy|http://www.download-by.net/submit.php|/checkadd.html|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+DownloadoManiac|http://download.omani.ac/submit.php|/submit.php|POST
+    pad=$PAD
+    form=submitting
+
+DownloadReady|http://www.downloadready.com/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    psubmit=Submit
+    preset=Reset
+
+Downloads2|http://www.downloads2.com/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    psubmit=PAD File Submit
+
+DownloadsArea|http://www.downloadsarea.com/Submit.html|/Submit.html|POST
+    padurl=$PAD
+
+DownloadSpin|http://www.downloadspin.com/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+DownloadTyphoon|http://www.downloadtyphoon.com/submit-pad-file|/submit-pad-file.html|GET
+    padurl=$PAD
+    regnow=
+
+EuroDownload|http://www.eurodownload.com/pad_submit.php|/pad_check.php|POST
+    padurl=$PAD
+    regnow=
+    sellshareware=
+    esellerate=
+    shareit=
+    bmtmicro=
+    plimus=
+    psubmit=Submit PAD File
+
+Evocero|http://www.evocero.com/evosoftware/submit.php|/evosoftware/checkaddp.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+FastShareware|http://www.fastshareware.com/submit.php|/addpad.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+Fd4a|http://www.fd4a.net/submit.php|/submit.php|POST
+    padurl=$PAD
+
+FileCluster|http://www.filecluster.com/submit-software.html|/submit-software.html|POST
+    padurl=$PAD
+    action=ADD
+
+FileDir|http://filedir.com/submit/form/|/submit/form/|POST
+    act=submit_do
+    pad=$PAD
+    Submit=Submit
+
+FileProfile|http://www.fileprofile.com/submit.htm|/submitdone.php|GET
+    xmlpath=$PAD
+
+FilesGuard|http://filesguard.com/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+FindSoftNet|http://www.findsoft.net/Submit.html|/|POST
+    padurl=$PAD
+    psubmit=Submit
+
+FindSoftwareeu|http://www.findsoftware.eu/submit.php|/submit|POST
+    pad_url=$PAD
+
+ForMac|http://for-mac.com/submit.html|/index|GET
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+FreeSafeSoft|http://freesafesoft.com/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    userregnowpid=
+    psubmit=Submit PAD File
+
+FreeSoftwareSharewareDownloads|http://free-software-shareware-downloads.com/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+Freeware1|http://www.freeware1.com/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+FreewaresZDown|http://www.freewares.z-down.com/submit-freeware.php|/checkadd.php|POST
+    padurl=$PAD
+    regnow=
+    psubmit=Submit PAD File
+
+ImFreeware|http://www.imfreeware.com/submitres|/submitres|POST
+    padurl=$PAD
+    submittype=software
+    submit=Submit
+
+MyDownloadPlanet|http://www.mydownloadplanet.com/submit-software.aspx|/submit-software.aspx|POST
+    pad=$PAD
+    Submit=Submit
+
+PlanetSofts|http://www.planetsofts.com/submit.html|/submit.html|POST
+    performAction=1
+    rss=$PAD
+
+RaritySoft|http://www.raritysoft.com/pad/submit|/pad/submit|POST
+    SubmitPadFileForm[PadFileUrl]=$PAD
+
+RecoveryReview|http://recovery-review.com/pad-submission.html|/index.php|POST
+    query:action=submit
+    padurl=$PAD
+
+RuSoftList|http://ru.softlist.ws/addsoft/|/addsoft/|POST
+    pad_url=$PAD
+    sid=-1
+    submit=Submit
+
+Sharewareville|http://sharewareville.com/submit.php|/submit_confirm.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+Soft112|http://www.soft112.com/submit-software.html|/submit-software.html|POST
+    csrf=6793a9ec8f50edebf791e8d5f015aadc
+    submit_pad[ip]=184.66.171.186
+    submit_pad[url]=$PAD
+
+Soft321|http://www.soft321.com/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    linkbackurl=
+    psubmit=Submit PAD File
+
+SoftFolder|http://www.softfolder.com/software/submit.php|/software/checkadd.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+Softholm|http://www.softholm.com/php/pad_submit.html|/php/pads.php|POST
+    url=$PAD
+
+SoftListWs|http://softlist.ws/addsoft/|/addsoft/|POST
+    pad_url=$PAD
+    sid=-1
+    submit=Submit
+
+SoftwareBee|http://www.softwarebee.com/submit.html|/submit.html|POST
+    pad_file_box=$PAD
+
+SoftwareKB|http://www.softwarekb.com/submissions-2/submit-pad-4|/submissions-2/submit-pad-4|POST
+    padfile=$PAD
+
+SoftwareWagon|http://softwarewagon.com/submit-software.php|/submit-software.php|POST
+    submit_soft=1
+    hlc=
+    pad_url=$PAD
+    regnow_id=
+
+SpotPig|http://www.spotpig.com/submit.php|/submit.php|POST
+    url=$PAD
+    B1=Submit
+
+StandaloneInstaller|http://standaloneinstaller.com/submit.php|/submit.php|POST
+    email=
+    pad=$PAD
+
+StyleXP3x|http://stylexp.3x.ro/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+Swdb|http://swdb.ru/submit/|/submit/|POST
+    padurl=$PAD
+
+TelechargerZ|http://telecharger.z-down.com/soumission_logiciel_shareware_freeware.php|/checkadd.php|POST
+    padurl=$PAD
+    regnow=
+    psubmit=Soumettre le fichier PAD
+
+TeraByte|http://ip-66-51-104-19.tera-byte.com/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD FileHTTP
+
+TwoBrothers|http://shareware.twobrotherssoftware.com/submit.php|/checkadd.php|POST
+    padurl=$PAD
+    psubmit=Submit PAD File
+
+WebContentSolutions|http://www.webcontentsolutions.com/submitform.html|/submitsoft.asp|POST
+    padurl=$PAD
+    Submit=Submit
+
+Windows10Compatible|http://www.windows10compatible.com/submit|/submit|POST
+    _token=vjrpiDngMoCEwYVAD7iANyfv4OU7HfKz2ka6X9Tr
+    web=$PAD
+
+YankeeDownload|http://www.yankeedownload.com/pad_submit.php|/pad_check.php|POST
+    padurl=$PAD
+    regnow=
+    shareit=
+    sellshareware=
+    esellerate=
+    bmtmicro=
+    plimus=
+    psubmit=Submit PAD File
+
+ZDown|http://www.z-down.com/submit-softwares.php|/checkadd.php|POST
+    padurl=$PAD
+    regnow=
+    psubmit=Submit PAD File
+

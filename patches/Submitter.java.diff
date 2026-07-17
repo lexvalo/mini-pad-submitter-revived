@@ -1,6 +1,44 @@
 --- a/src/com/mindprod/submitter/Submitter.java
 +++ b/src/com/mindprod/submitter/Submitter.java
-@@ -835,11 +835,11 @@
+@@ -414,10 +414,15 @@
+     private static final int FIRST_COPYRIGHT_YEAR = 2007;
+ 
+     /**
+-     * how many websites we submit to, If this number changes, you must manually change many other places:
+-     * use search/replace with regex to find them all.
++     * Sites to submit to, loaded once from sites.txt (next to the jar) instead of
++     * being a hardcoded enum - edit that file to add, remove, or change sites.
+      */
+-    private static final int HOW_MANY_WEBSITES = SubmissionSite.values().length;
++    private static final java.util.List<Site> SITES = Site.loadAll();
++
++    /**
++     * how many websites we submit to.
++     */
++    private static final int HOW_MANY_WEBSITES = SITES.size();
+ 
+     /**
+      * How long to wait for response from site to to finish rendering. Does not count time for initial response.
+@@ -457,7 +462,7 @@
+      * embedded version string
+      */
+     @SuppressWarnings( { "UnusedDeclaration" } )
+-    private static final String VERSION_STRING = "26.3";
++    private static final String VERSION_STRING = "26.3 Revived";
+ 
+     /**
+      * background colour, pale green to match website
+@@ -685,8 +690,7 @@
+         title2 = new JLabel(
+                 "released:" +
+                 RELEASE_DATE +
+-                " build:" +
+-                Build.BUILD_NUMBER
++                " 2026 Community Edition"
+         );
+         title2.setFont( FONT_FOR_TITLE2 );
+         title2.setForeground( FOREGROUND_FOR_TITLE );
+@@ -835,11 +839,11 @@
              alert( "You must fill in the PAD URL before hitting submit." );
              return false;
              }
@@ -14,7 +52,16 @@
              return false;
              }
          if ( !padFileString.endsWith( ".xml" ) )
-@@ -1232,7 +1232,7 @@
+@@ -1122,7 +1126,7 @@
+      * @param site         which site.
+      * @param siteResponse HTML from the site.
+      */
+-    private void logSiteResponse( final SubmissionSite site, final String siteResponse )
++    private void logSiteResponse( final Site site, final String siteResponse )
+         {
+         // for log.html files
+         try
+@@ -1232,7 +1236,7 @@
              // We can't do anything with it.
              return;
              }
@@ -23,3 +70,23 @@
              {
              websiteURLString = "http://" + websiteURLString;
              }
+@@ -1341,7 +1345,7 @@
+         out.println( ">>>> SUBMITTING " + fullPADURLString );
+         out.println( "" );
+         responsePage.setText( "" );
+-        for ( SubmissionSite site : SubmissionSite.values() )
++        for ( Site site : SITES )
+             {
+             assert instructions != null : "instructions component not yet built.";
+             instructions.setText( "Submitting to " + site.getName() + "." );
+@@ -1350,8 +1354,8 @@
+                 {
+                 siteResponse = "no response";
+                 }
+-            final int siteResponseCode = SubmissionSite.getResponseCode();
+-            final String siteResponseMessage = SubmissionSite.getResponseMessage();
++            final int siteResponseCode = Site.getResponseCode();
++            final String siteResponseMessage = Site.getResponseMessage();
+             // render document relative to the website where the response came from.
+             // htmlDocument.setBase( site.getBaseURL() );
+             response.setText( "Response from: " + site.getName() + " >>>" + siteResponseCode + "<<< " +
