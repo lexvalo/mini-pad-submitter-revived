@@ -2,6 +2,9 @@
 
 Roedy Green's **Mini PAD Submitter** is a small Java application that has existed since the late 1990s. It was built to submit [PAD files](https://en.wikipedia.org/wiki/Portable_Application_Description) (Portable Application Description — the shareware-era standard for describing Windows and Mac applications to software directories) to multiple download sites at once.
 
+<img width="684" height="517" alt="Mini PAD submitter 26 3 Revived - community edition 2026" src="https://github.com/user-attachments/assets/b9ceab3c-bfa4-4fa1-aacd-b24a3f8a9559" />
+
+
 The final official release (26.3) dates from 2017.
 
 By 2026 the program could no longer communicate with most modern websites. Not because the application itself had become obsolete, but because the web around it had changed. HTTPS became the default, SNI became essential for CDN-hosted websites, and protocol redirects exposed assumptions that had quietly survived for years.
