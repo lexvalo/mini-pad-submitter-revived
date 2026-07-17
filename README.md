@@ -66,6 +66,25 @@ Getting a PAD validated at all was the blocker this patch removes. Whether the t
 
 `src/` and `patches/` aren't needed to use the tool — they're there for anyone who wants to see exactly what changed or rebuild it themselves. See [What was actually wrong](#what-was-actually-wrong) above.
 
+## Building from source
+
+You'll need a JDK (8 or later). `Submitter` also depends on the rest of Roedy Green's `com.mindprod` packages (`common18`, `entities`, `fastcat`), which aren't duplicated in this repo — the easiest way to get them is to reuse the already-compiled classes bundled in `dist/submitter-patched.jar`.
+
+From the repo root:
+
+```sh
+mkdir build
+cd build && jar xf ../dist/submitter-patched.jar && cd ..
+
+javac -cp build -d build src/com/mindprod/http/Http.java src/com/mindprod/http/Get.java src/com/mindprod/submitter/Submitter.java
+
+jar cfe submitter-rebuilt.jar com.mindprod.submitter.Submitter -C build .
+
+java -jar submitter-rebuilt.jar
+```
+
+This extracts the existing jar's classes into `build/`, recompiles the three patched files on top of it (overwriting just those `.class` files), and repackages everything into a fresh runnable jar. Tested end to end on a clean directory before writing this down.
+
 ## About the original author
 
 Mini PAD Submitter was written by **Roedy Green** of Canadian Mind Products ([mindprod.com](https://mindprod.com)), a Canadian software developer who spent decades writing and freely distributing Java utilities, and maintaining the widely-read [Java Glossary](https://mindprod.com/jgloss/jgloss.html). Roedy passed away in October 2023, following a stroke.
