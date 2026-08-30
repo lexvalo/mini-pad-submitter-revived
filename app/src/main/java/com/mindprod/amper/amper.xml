@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XML_DIZ_INFO>
+  <MASTER_PAD_VERSION_INFO>
+    <MASTER_PAD_VERSION>4.0</MASTER_PAD_VERSION>
+    <MASTER_PAD_EDITOR>AppVisor 1.0.43</MASTER_PAD_EDITOR>
+    <MASTER_PAD_EDITOR_URL>http://publisher.appvisor.com</MASTER_PAD_EDITOR_URL>
+    <MASTER_PAD_INFO>Portable Application Description, or PAD(TM) 2004 Association of Software Professionals (ASP)http://www.asp-shareware.org/pad is a data set standard and specification that is commercialsoftware publishers to disseminate certified information about their software application. The PAD format is copyright of the ASP and cannot be used without the formal licensing and permission of both the Association of Software Professionals and its agent AppVisor.com.</MASTER_PAD_INFO>
+    <CERTIFIED>Y</CERTIFIED>
+    <CERTIFICATE_ID>CRT-220053D1FD1E</CERTIFICATE_ID>
+    <CERTIFICATE_LICENSE>http://repository.appvisor.com/crt-220053d1fd1e</CERTIFICATE_LICENSE>
+  </MASTER_PAD_VERSION_INFO>
+  <RoboSoft>
+    <Company_UIN>CMP-120053D1FD1E</Company_UIN>
+    <Product_UIN>APP-220053D1FD1E</Product_UIN>
+    <Publish_on_CD>FALSE</Publish_on_CD>
+    <NewsFeed_Search_String></NewsFeed_Search_String>
+    <Search_String>Amper</Search_String>
+    <Press_Release_Search_String></Press_Release_Search_String>
+    <Backlink></Backlink>
+    <Comments_For_Reviewer></Comments_For_Reviewer>
+    <Search_String_Unique>Amper</Search_String_Unique>
+    <Search_Engine_Search_String></Search_Engine_Search_String>
+    <Web_Directories_Search_String></Web_Directories_Search_String>
+    <Company_Description></Company_Description>
+  </RoboSoft>
+  <Company_Info>
+    <PublisherID>pid-d100b4383410</PublisherID>
+    <BrandID>bid-120053d1fd1e</BrandID>
+    <Company_Name>Canadian Mind Products</Company_Name>
+    <Country>Canada</Country>
+    <State_Province>BC</State_Province>
+    <City_Town>Victoria</City_Town>
+    <Zip_Postal_Code>V8T 4G8</Zip_Postal_Code>
+    <Address_1>#101 - 2536 Wark Street</Address_1>
+    <Address_2>Quadra Village</Address_2>
+    <Company_WebSite_URL>http://mindprod.com</Company_WebSite_URL>
+    <Contact_Info>
+      <Contact_First_Name>Roedy</Contact_First_Name>
+      <Contact_Last_Name>Green</Contact_Last_Name>
+      <Contact_Email>inquiry@mindprod.com</Contact_Email>
+      <Author_First_Name>Roedy</Author_First_Name>
+      <Author_Last_Name>Green</Author_Last_Name>
+      <Author_Email>inquiry@mindprod.com</Author_Email>
+      <Contact_Phone>(250) 361-9093</Contact_Phone>
+    </Contact_Info>
+    <Support_Info>
+      <Sales_Email>inquiry@mindprod.com</Sales_Email>
+      <Support_Email>inquiry@mindprod.com</Support_Email>
+      <General_Email>inquiry@mindprod.com</General_Email>
+      <Sales_Phone>(250) 361-9093</Sales_Phone>
+      <Support_Phone>(250) 361-9093</Support_Phone>
+      <General_Phone>(250) 361-9093</General_Phone>
+      <Fax_Phone>(250) 361-9093</Fax_Phone>
+    </Support_Info>
+    <GooglePlusPage></GooglePlusPage>
+    <LinkedinPage></LinkedinPage>
+    <TwitterCompanyPage></TwitterCompanyPage>
+    <FacebookCompanyPage></FacebookCompanyPage>
+  </Company_Info>
+  <Program_Info>
+    <AppID>app-220053d1fd1e</AppID>
+    <Program_Name>Amper</Program_Name>
+    <Program_Version>2.0</Program_Version>
+    <Program_Release_Month>11</Program_Release_Month>
+    <Program_Release_Day>03</Program_Release_Day>
+    <Program_Release_Year>2012</Program_Release_Year>
+    <Program_Cost_Dollars>0.00</Program_Cost_Dollars>
+    <Program_Type>Freeware</Program_Type>
+    <Program_Category_Class>Web Development::HTML Tools</Program_Category_Class>
+    <Program_Specific_Category>Development Tools</Program_Specific_Category>
+    <Program_Categories>Web Development :: HTML Conversion Tools,Web Development :: Miscellaneous,Internet :: Tools &amp; Utilities,Web Development :: HTML Utilities</Program_Categories>
+    <Program_Release_Status>Minor Update</Program_Release_Status>
+    <Program_Install_Support>No Install Support</Program_Install_Support>
+    <Program_Target_Platform>Windows</Program_Target_Platform>
+    <Program_OS_Support>Win2000,WinXP,Win7 x32,Win7 x64,Windows 8,Windows 10,WinServer,WinOther,Windows2000,Windows2003,Windows Server 2000,Windows Server 2003,Windows Server 2008,Windows Server 2008r2,Windows Server 2012,Windows Tablet PC Edition 2005,Windows Media Center Edition 2005,WinVista,Windows Vista Starter,Windows Vista Home Basic,Windows Vista Home Premium,Windows Vista Business,Windows Vista Enterprise,Windows Vista Ultimate,WinVista x64,Windows Vista Home Basic x64,Windows Vista Home Premium x64,Windows Vista Business x64,Windows Vista Enterprise x64,Windows Vista Ultimate x64</Program_OS_Support>
+    <Program_Language>English</Program_Language>
+    <Program_Change_Info>now avoids ampifying text inside script.../script tags</Program_Change_Info>
+    <Program_System_Requirements>Java 1.8+</Program_System_Requirements>
+    <Limitations>No limitations</Limitations>
+    <Awards></Awards>
+    <File_Info>
+      <File_Size_Bytes>920576</File_Size_Bytes>
+      <File_Size_K>899</File_Size_K>
+      <File_Size_MB>0.88</File_Size_MB>
+    </File_Info>
+    <Expire_Info>
+      <Has_Expire_Info>N</Has_Expire_Info>
+      <Expire_Count></Expire_Count>
+      <Expire_Based_On></Expire_Based_On>
+      <Expire_Year></Expire_Year>
+      <Expire_Other_Info></Expire_Other_Info>
+      <Expire_Month></Expire_Month>
+      <Expire_Day></Expire_Day>
+    </Expire_Info>
+    <FacebookFanPage></FacebookFanPage>
+    <VideoLink1URL></VideoLink1URL>
+    <VideoLink2URL></VideoLink2URL>
+    <Includes_JAVA_VM></Includes_JAVA_VM>
+    <Includes_DirectX></Includes_DirectX>
+    <Includes_VB_Runtime></Includes_VB_Runtime>
+    <GooglePlusFanPage></GooglePlusFanPage>
+  </Program_Info>
+  <Web_Info>
+    <Application_URLs>
+      <Application_Info_URL>http://mindprod.com/products1.html#AMPER</Application_Info_URL>
+      <Application_Order_URL>http://mindprod.com/products1.html#AMPER</Application_Order_URL>
+      <Application_Screenshot_URL>http://mindprod.com/image/screenshot/amper.png</Application_Screenshot_URL>
+      <Application_Icon_URL>http://mindprod.com/image/icon32/amper.png</Application_Icon_URL>
+      <Application_XML_File_URL>http://repository.appvisor.com/app-220053d1fd1e/site-01/Amper_pad.xml</Application_XML_File_URL>
+    </Application_URLs>
+    <Download_URLs>
+      <Primary_Download_URL>http://mindprod.com/zips/amper20.zip</Primary_Download_URL>
+      <Secondary_Download_URL></Secondary_Download_URL>
+      <Additional_Download_URL_1></Additional_Download_URL_1>
+      <Additional_Download_URL_2></Additional_Download_URL_2>
+    </Download_URLs>
+  </Web_Info>
+  <Program_Descriptions>
+    <English>
+      <Keywords>amper, HTML, ampersand, entity</Keywords>
+      <Char_Desc_45>Safely converts ampersands to !amp; entities</Char_Desc_45>
+      <Char_Desc_80>Safely converts ampersands to !amp; entities</Char_Desc_80>
+      <Char_Desc_250>Cleans up HTML by converting appropriate ampersands to the equivalent !amp; entity and back.</Char_Desc_250>
+      <Char_Desc_450>It is hard to talk about the Amper program in PAD XML where I cannot describe either the input or output of this program.  It converts ampersands to !amp; entities and back.  If you use HTMLValidator it will complain about bare ampersands. This gives you a quick way to clean up an entire website. It only converts the ampersands that need it and have not already been converted.</Char_Desc_450>
+      <Char_Desc_2000>In the following, pretend ! is an ampersand. PAD files don't let me give literal examples. Amper converts ! to !amp; in HTML files and back, but does not convert it when the ! is already in an entity e.g. !lt; !thetasym; !eacute;
+
+The main use for this is to pass HTMLValidator verification of your HTML, which is very picky about !, especially inside URLs.
+
+As a side effect, it also ensures all your comment delimiters balance.
+
+It does not change ! inside comments, though it will c-hange it inside href= and image= urls, or anywhere else e.g. Java Applet parameters, which is correct according to the HTMLValidator. It does _not_ change " to !quot; or e' to !eacute; It just fixes !, the most troublesome character.
+
+To convert a single file, type:
+
+  java.exe -jar C:\com\mindprod\amper\amper.jar myfile.html
+
+The results replace the old file, so you had better make a backup just in case this is not what you want.
+
+You can also list several files on the command line:
+
+  java.exe -jar C:\com\mindprod\amper\amper.jar myfile.html C:\mydir\another.html
+
+To use convert the current directory of html files:
+
+  java.exe -jar C:\com\mindprod\amper\amper.jar .
+
+Sorry no wildcards, just . , and ..
+
+DON'T USE WILDCARDS unless you deeply understand how they  work. Windows expands them, not amper,  and feeds them to amper (or any other program) as a giant list of all the directories and files in the
+current directory. Amper will thus tend  process all the files in your directories, when you just meant to process the files in the current directory.
+
+The -s switch makes all subsequent directories searched recursively to include all their subdirectories.
+
+e.g.
+
+  java.exe -jar C:\com\mindprod\amper\amper.jar -s E:\mindprod
+
+will fix all *.html files in the mindprod directory tree, ignoring other types of files.
+
+If you have the jar extension set up as executable, you can abbreviate:
+
+  C:\com\mindprod\amper\amper.jar .</Char_Desc_2000>
+    </English>
+  </Program_Descriptions>
+  <Permissions>
+    <Distribution_Permissions>You may include the Amper on any CD compilation.</Distribution_Permissions>
+    <EULA>This program is for non-military use only.
+For details on what that licencing restriction means and why I restricted this software that way, see http://mindprod.com/contact/nonmil.html
+If you incorporate any of my code in your programs, they too must be marked for non-military use only.
+However it is not your responsibility to enforce that restriction.</EULA>
+  </Permissions>
+  <ASP>
+    <ASP_FORM>Y</ASP_FORM>
+    <ASP_Member>Y</ASP_Member>
+    <ASP_Member_Number>07607</ASP_Member_Number>
+  </ASP>
+  <Affiliates>
+    <Affiliates_Regsoft_Order_Page></Affiliates_Regsoft_Order_Page>
+    <Affiliates_Regnow_Order_Page></Affiliates_Regnow_Order_Page>
+    <Affiliates_Regsoft_Vendor_ID></Affiliates_Regsoft_Vendor_ID>
+    <Affiliates_Regnow_Vendor_ID></Affiliates_Regnow_Vendor_ID>
+    <Affiliates_Regsoft_Product_ID></Affiliates_Regsoft_Product_ID>
+    <Affiliates_Regnow_Product_ID></Affiliates_Regnow_Product_ID>
+    <Affiliates_FORM></Affiliates_FORM>
+    <Affiliates_FORM_VER></Affiliates_FORM_VER>
+    <Affiliates_VERSION></Affiliates_VERSION>
+    <Affiliates_URL></Affiliates_URL>
+    <Affiliates_Information_Page></Affiliates_Information_Page>
+    <Affiliates_Avangate_Order_Page></Affiliates_Avangate_Order_Page>
+    <Affiliates_Avangate_Vendor_ID></Affiliates_Avangate_Vendor_ID>
+    <Affiliates_Avangate_Product_ID></Affiliates_Avangate_Product_ID>
+    <Affiliates_Avangate_Maximum_Commission_Rate></Affiliates_Avangate_Maximum_Commission_Rate>
+    <Affiliates_BMTMicro_Order_Page></Affiliates_BMTMicro_Order_Page>
+    <Affiliates_BMTMicro_Vendor_ID></Affiliates_BMTMicro_Vendor_ID>
+    <Affiliates_BMTMicro_Product_ID></Affiliates_BMTMicro_Product_ID>
+    <Affiliates_BMTMicro_Maximum_Commission_Rate></Affiliates_BMTMicro_Maximum_Commission_Rate>
+    <Affiliates_eSellerate_Order_Page></Affiliates_eSellerate_Order_Page>
+    <Affiliates_eSellerate_Vendor_ID></Affiliates_eSellerate_Vendor_ID>
+    <Affiliates_eSellerate_Product_ID></Affiliates_eSellerate_Product_ID>
+    <Affiliates_eSellerate_Maximum_Commission_Rate></Affiliates_eSellerate_Maximum_Commission_Rate>
+    <Affiliates_Kagi_Order_Page></Affiliates_Kagi_Order_Page>
+    <Affiliates_Kagi_Vendor_ID></Affiliates_Kagi_Vendor_ID>
+    <Affiliates_Kagi_Product_ID></Affiliates_Kagi_Product_ID>
+    <Affiliates_Kagi_Maximum_Commission_Rate></Affiliates_Kagi_Maximum_Commission_Rate>
+    <Affiliates_Order1_Order_Page></Affiliates_Order1_Order_Page>
+    <Affiliates_Order1_Vendor_ID></Affiliates_Order1_Vendor_ID>
+    <Affiliates_Order1_Product_ID></Affiliates_Order1_Product_ID>
+    <Affiliates_Order1_Maximum_Commission_Rate></Affiliates_Order1_Maximum_Commission_Rate>
+    <Affiliates_Regnet_Order_Page></Affiliates_Regnet_Order_Page>
+    <Affiliates_Regnet_Vendor_ID></Affiliates_Regnet_Vendor_ID>
+    <Affiliates_Regnet_Product_ID></Affiliates_Regnet_Product_ID>
+    <Affiliates_Regnet_Maximum_Commission_Rate></Affiliates_Regnet_Maximum_Commission_Rate>
+    <Affiliates_Regnow_Maximum_Commission_Rate></Affiliates_Regnow_Maximum_Commission_Rate>
+    <Affiliates_Regsoft_Maximum_Commission_Rate></Affiliates_Regsoft_Maximum_Commission_Rate>
+    <Affiliates_ShareIt_Order_Page></Affiliates_ShareIt_Order_Page>
+    <Affiliates_ShareIt_Vendor_ID></Affiliates_ShareIt_Vendor_ID>
+    <Affiliates_ShareIt_Product_ID></Affiliates_ShareIt_Product_ID>
+    <Affiliates_ShareIt_Maximum_Commission_Rate></Affiliates_ShareIt_Maximum_Commission_Rate>
+    <Affiliates_SWReg_Order_Page></Affiliates_SWReg_Order_Page>
+    <Affiliates_SWReg_Vendor_ID></Affiliates_SWReg_Vendor_ID>
+    <Affiliates_SWReg_Product_ID></Affiliates_SWReg_Product_ID>
+    <Affiliates_SWReg_Maximum_Commission_Rate></Affiliates_SWReg_Maximum_Commission_Rate>
+  </Affiliates>
+  <NewsFeed>
+    <NewsFeed_FORM></NewsFeed_FORM>
+    <NewsFeed_VERSION></NewsFeed_VERSION>
+    <NewsFeed_URL></NewsFeed_URL>
+    <NewsFeed_DESCRIPTION></NewsFeed_DESCRIPTION>
+    <NewsFeed_Feed_URL>http://mindprod.com/rss/jgloss.xml</NewsFeed_Feed_URL>
+    <NewsFeed_Type>RSS 2.0</NewsFeed_Type>
+    <NewsFeed_Site_URL>http://mindprod.com</NewsFeed_Site_URL>
+    <NewsFeed_Author_First_Name>Roedy</NewsFeed_Author_First_Name>
+    <NewsFeed_Author_Last_Name>Green</NewsFeed_Author_Last_Name>
+    <NewsFeed_Author_Email>inquiry@mindprod.com</NewsFeed_Author_Email>
+    <NewsFeed_Language>English</NewsFeed_Language>
+    <NewsFeed_Title>Canadian Mind Products | Java Glossary</NewsFeed_Title>
+    <NewsFeed_Description_70>Glossary of Java terms, sample Java code, Java and Internet lore.</NewsFeed_Description_70>
+    <NewsFeed_Description_250>Glossary of Java terms, sample Java code, and general Java and Internet lore.
+For non-military use only.
+News about updates of free software with full source written in Java, C, C++ and ASM.
+Also coding example programs and coding snippets.</NewsFeed_Description_250>
+    <NewsFeed_Purpose>News</NewsFeed_Purpose>
+    <NewsFeed_Site_Name>Canadian Mind Products</NewsFeed_Site_Name>
+  </NewsFeed>
+  <Press_Release>
+    <Press_Release></Press_Release>
+    <Headline></Headline>
+    <Summary></Summary>
+    <Press_Release_Plain></Press_Release_Plain>
+  </Press_Release>
+  <Site>
+    <Site_FORM>Y</Site_FORM>
+    <Site_VERSION>1.0</Site_VERSION>
+    <Site_URL>http://Submit-Everywhere.com/extensions/Site.htm</Site_URL>
+    <Site_DESCRIPTION>This PAD extension allows you to add your site info into your PAD file.  This info can be used by site submission software or by web directories themselves.</Site_DESCRIPTION>
+    <Site_Site_Title>Canadian Mind Products</Site_Site_Title>
+    <Site_Site_URL>http://mindprod.com/products.html</Site_Site_URL>
+    <Site_Keywords>Roedy Green, Canadian Mind Products, Java Glossary, Computer Buyers' Glossary, Gay Glossary, Java, glossary, gay, roedy, CMP, Consolidated Moose Pasture, terminology</Site_Keywords>
+    <Site_Description_100>CMP's purpose is to stand up for the rights of plants and animals.  Java, Computer Buyer glossaries.</Site_Description_100>
+    <Site_Description_250>CMP's purpose is to stand up for the rights of plants and animals. Animals also includes cetacea, humans, gay people, atheists, war victims and invertebrates. CMP attempts to inculcate planetary consciousness - concern for the planet as a whole.</Site_Description_250>
+    <Site_Description_450>CMP's purpose is to stand up for the rights of plants and animals. Animals also includes cetacea, humans, gay people, atheists, war victims and invertebrates. CMP attempts to inculcate planetary consciousness - concern for the planet as a whole. A subgoal is to teach people to use computers effectively, particularly with the Java computer language.</Site_Description_450>
+    <Site_Contact_First_Name>Roedy</Site_Contact_First_Name>
+    <Site_Contact_Last_Name>Green</Site_Contact_Last_Name>
+    <Site_Contact_Email>inquiry@mindprod.com</Site_Contact_Email>
+  </Site>
+  <Dynamic_PAD>
+    <Dynamic_Distributive>N</Dynamic_Distributive>
+    <General>
+      <DP_Pad_Enabled>TRUE</DP_Pad_Enabled>
+      <DP_AtFormFill_Enabled>TRUE</DP_AtFormFill_Enabled>
+      <DP_Distributive_Enabled>FALSE</DP_Distributive_Enabled>
+      <DP_Script_Base_URL>http://repository.appvisor.com/</DP_Script_Base_URL>
+      <DP_Pad_Mask>Amper_pad.xml</DP_Pad_Mask>
+      <DP_Distributive_Primary_URL>http://mindprod.com/zips/amper20.zip</DP_Distributive_Primary_URL>
+      <DP_Distributive_Mask>amper20.zip</DP_Distributive_Mask>
+    </General>
+  </Dynamic_PAD>
+</XML_DIZ_INFO>

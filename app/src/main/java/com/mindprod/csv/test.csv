@@ -1,0 +1,5 @@
+abc,def,"g h i","jk,l","m""n'o"
+"m""n'o",,a,"x,y,z",x;y;z # a comment
+true,123,0.33
+abc,def,"last one"
+abc,def # last one

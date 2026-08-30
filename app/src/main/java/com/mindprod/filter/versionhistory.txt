@@ -1,0 +1,35 @@
+
+----
+
+Version History:
+
+ 1.4 2005-06-18 cleaner bat files
+
+ 1.5 2005-07-07 displays stats, with
+                recursive indenting. converted to Java 1.5 syntax
+
+ 1.6 2006-01-01
+
+ 1.7 2006-01-01
+
+ 1.8 2006-03-13 rewrite with for:each JDK 1.5
+
+ 1.9 2007-01-01
+
+ 2.0 2007-01-01
+
+ 2.1 2007-01-01
+
+ 2.2 2007-06-29 Commandline is Iterable, isQuiet, now iterate CommandLine directly.
+
+ 2.3 2007-08-27 add JunkFilter
+
+ 2.4 2009-02-27 send output to err instead of out so will not contaminate batch data to out.
+
+ 2.5 2009-02-28 CommandLine split off in its own package
+
+ 2.6 2009-05-10 add StartAndEndWithFilter and NoFootFilter
+
+ 2.7 2010-11-22 add optional invert parameter on a number of the filters.
+
+-30-

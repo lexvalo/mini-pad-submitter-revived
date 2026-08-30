@@ -1,0 +1,9 @@
+rem GuessLanguage
+E:\
+E:\com\mindprod\submitter
+java com.mindprod.submitter.GuessLanguage candidates.csv
+java com.mindprod.submitter.GuessLanguage nohassle.csv
+java com.mindprod.submitter.GuessLanguage hassle.csv
+
+rem java com.mindprod.submitter.GuessLanguage dead.csv
+rem -30-

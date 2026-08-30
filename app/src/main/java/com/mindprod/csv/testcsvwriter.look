@@ -1,0 +1,4 @@
+META-INF/MANIFEST.MF
+com/mindprod/common18/EIO.class
+com/mindprod/csv/CSVWriter.class
+com/mindprod/csv/TestCSVWriter.class

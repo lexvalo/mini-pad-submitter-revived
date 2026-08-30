@@ -1,0 +1,196 @@
+<?xml version="1.0" ?>
+<XML_DIZ_INFO>
+<MASTER_PAD_VERSION_INFO>
+<MASTER_PAD_VERSION>3.11</MASTER_PAD_VERSION>
+<MASTER_PAD_EDITOR>PADGen 3.1.1.50 http://www.padgen.org</MASTER_PAD_EDITOR>
+<MASTER_PAD_INFO>Portable Application Description, or PAD for short,
+is a data set that is used by shareware authors to disseminate information to anyone interested in their software products.
+To find out more go to http://pad.asp-software.org</MASTER_PAD_INFO>
+</MASTER_PAD_VERSION_INFO>
+<!-- cml file missing --><site>
+<Site_FORM>Y</Site_FORM>
+<Site_VERSION>1.0</Site_VERSION>
+<Site_URL>http://Submit-Everywhere.com/extensions/Site.htm</Site_URL>
+<Site_DESCRIPTION>This PAD extension allows you to add your site info into your PAD file.
+This info can be used by site submission software or by web directories themselves.</Site_DESCRIPTION>
+<Site_Site_Title>Canadian Mind Products</Site_Site_Title>
+<Site_Site_URL>http://mindprod.com/products.html</Site_Site_URL>
+<Site_Description_100>CMP's purpose is to stand up for the rights of plants and animals.  Java, Computer Buyer glossaries.</Site_Description_100>
+<Site_Description_250>CMP's purpose is to stand up for the rights of plants and animals. Animals also includes cetacea, humans, gay people, atheists, war victims and invertebrates. CMP attempts to inculcate planetary consciousness - concern for the planet as a whole.</Site_Description_250>
+<Site_Description_450>CMP's purpose is to stand up for the rights of plants and animals. Animals also includes cetacea, humans, gay people, atheists, war victims and invertebrates. CMP attempts to inculcate planetary consciousness - concern for the planet as a whole. A subgoal is to teach people to use computers effectively, particularly with the Java computer language.</Site_Description_450>
+<Site_Contact_Email>inquiry@mindprod.com</Site_Contact_Email>
+<Site_Contact_First_Name>Roedy</Site_Contact_First_Name>
+<Site_Contact_Last_Name>Green</Site_Contact_Last_Name>
+<Site_Keywords>Roedy Green, Canadian Mind Products, Java Glossary, Computer Buyers' Glossary, Gay Glossary, Java, glossary, gay, roedy, CMP, Consolidated Moose Pasture, terminology</Site_Keywords>
+</site>
+<!-- missing pmlFile --><NewsFeed>
+<NewsFeed_Feed_URL>http://mindprod.com/rss/jgloss.xml</NewsFeed_Feed_URL>
+<NewsFeed_Type>RSS 2.0</NewsFeed_Type>
+<NewsFeed_Site_Name>Canadian Mind Products</NewsFeed_Site_Name>
+<NewsFeed_Site_URL>http://mindprod.com</NewsFeed_Site_URL>
+<NewsFeed_Author_First_Name>Roedy</NewsFeed_Author_First_Name>
+<NewsFeed_Author_Last_Name>Green</NewsFeed_Author_Last_Name>
+<NewsFeed_Author_Email>inquiry@mindprod.com</NewsFeed_Author_Email>
+<NewsFeed_Language>English</NewsFeed_Language>
+<NewsFeed_Title>Canadian Mind Products | Java Glossary</NewsFeed_Title>
+<NewsFeed_Description_70>Glossary of Java terms, sample Java code, Java and Internet lore.</NewsFeed_Description_70>
+<NewsFeed_Description_250>Glossary of Java terms, sample Java code, and general Java and Internet lore.
+For non-military use only.
+News about updates of free software with full source written in Java, C, C++ and ASM.
+Also coding example programs and coding snippets.</NewsFeed_Description_250>
+<NewsFeed_Purpose>News</NewsFeed_Purpose>
+</NewsFeed>
+<PADmap>
+<PADmap_FORM>Y</PADmap_FORM>
+<PADmap_DESCRIPTION>
+Link to plain text file containing ALL the mindprod.com PAD URLs
+</PADmap_DESCRIPTION>
+<PADmap_VERSION>1.0</PADmap_VERSION>
+<PADmap_URL>http://www.padmaps.org/padmap.htm</PADmap_URL>
+<PADmap_SCOPE>Company</PADmap_SCOPE>
+<PADmap_Location>http://mindprod.com/pad/allpads.txt</PADmap_Location>
+</PADmap>
+<PADRING>
+http://mindprod.com/pad/accumulate.xml
+http://mindprod.com/pad/align.xml
+http://mindprod.com/pad/americantax.xml
+http://mindprod.com/pad/available.xml
+http://mindprod.com/pad/backuptozip.xml
+http://mindprod.com/pad/batik.xml
+http://mindprod.com/pad/blout.xml
+http://mindprod.com/pad/bootsave.xml
+http://mindprod.com/pad/borders.xml
+http://mindprod.com/pad/boyer.xml
+http://mindprod.com/pad/bracebalancer.xml
+http://mindprod.com/pad/bulk.xml
+http://mindprod.com/pad/chaos.xml
+http://mindprod.com/pad/cmossave.xml
+http://mindprod.com/pad/coal.xml
+http://mindprod.com/pad/colorsaver.xml
+http://mindprod.com/pad/commandline.xml
+http://mindprod.com/pad/comparators.xml
+http://mindprod.com/pad/confirm.xml
+http://mindprod.com/pad/connectors.xml
+http://mindprod.com/pad/creditcard.xml
+http://mindprod.com/pad/currcon.xml
+http://mindprod.com/pad/dedup.xml
+http://mindprod.com/pad/echoserver.xml
+http://mindprod.com/pad/encodingrecogniser.xml
+http://mindprod.com/pad/encodings.xml
+http://mindprod.com/pad/entities.xml
+http://mindprod.com/pad/esper.xml
+http://mindprod.com/pad/extract.xml
+http://mindprod.com/pad/filetimes.xml
+http://mindprod.com/pad/filetransfer.xml
+http://mindprod.com/pad/filter.xml
+http://mindprod.com/pad/fontsaver.xml
+http://mindprod.com/pad/fontshower.xml
+http://mindprod.com/pad/fontshowerawt.xml
+http://mindprod.com/pad/fourtidy.xml
+http://mindprod.com/pad/goldencoin.xml
+http://mindprod.com/pad/heapsort.xml
+http://mindprod.com/pad/honk.xml
+http://mindprod.com/pad/htmlmacros.xml
+http://mindprod.com/pad/http.xml
+http://mindprod.com/pad/hunkio.xml
+http://mindprod.com/pad/ini.xml
+http://mindprod.com/pad/insult.xml
+http://mindprod.com/pad/inwords.xml
+http://mindprod.com/pad/isbn.xml
+http://mindprod.com/pad/jarcheck.xml
+http://mindprod.com/pad/jarlook.xml
+http://mindprod.com/pad/jdisplay.xml
+http://mindprod.com/pad/keyplayer.xml
+http://mindprod.com/pad/ledatastream.xml
+http://mindprod.com/pad/linkedlist.xml
+http://mindprod.com/pad/makekey.xml
+http://mindprod.com/pad/masker.xml
+http://mindprod.com/pad/masmbalancer.xml
+http://mindprod.com/pad/masmtidy.xml
+http://mindprod.com/pad/mimecheck.xml
+http://mindprod.com/pad/mouse.xml
+http://mindprod.com/pad/networkcam.xml
+http://mindprod.com/pad/officialencoding.xml
+http://mindprod.com/pad/palette.xml
+http://mindprod.com/pad/pentium.xml
+http://mindprod.com/pad/pgpkeywords.xml
+http://mindprod.com/pad/pluck.xml
+http://mindprod.com/pad/population.xml
+http://mindprod.com/pad/primes.xml
+http://mindprod.com/pad/pws.xml
+http://mindprod.com/pad/qev.xml
+http://mindprod.com/pad/quicksort.xml
+http://mindprod.com/pad/radixsort.xml
+http://mindprod.com/pad/reflow.xml
+http://mindprod.com/pad/restore.xml
+http://mindprod.com/pad/rgrow.xml
+http://mindprod.com/pad/say!.xml
+http://mindprod.com/pad/screws.xml
+http://mindprod.com/pad/setclock.xml
+http://mindprod.com/pad/shellsort.xml
+http://mindprod.com/pad/sortcode.xml
+http://mindprod.com/pad/sortsrs.xml
+http://mindprod.com/pad/sound.xml
+http://mindprod.com/pad/spinner.xml
+http://mindprod.com/pad/splice.xml
+http://mindprod.com/pad/splitter.xml
+http://mindprod.com/pad/surrogatepair.xml
+http://mindprod.com/pad/tabin.xml
+http://mindprod.com/pad/tabout.xml
+http://mindprod.com/pad/transporter.xml
+http://mindprod.com/pad/tz.xml
+http://mindprod.com/pad/untouch.xml
+http://mindprod.com/pad/volser.xml
+http://mindprod.com/pad/wavelength.xml
+http://mindprod.com/pad/yyyymmdd.xml
+http://repository.appvisor.com/app-220053d1fd1e/site-01/Amper_pad.xml
+http://repository.appvisor.com/info/app-0100a7100c41/Base64_pad.xml
+http://repository.appvisor.com/app-0600523b2ada/site-01/Biorhythms_Calculator_pad.xml
+http://repository.appvisor.com/info/app-0a0071d866f0/BrokenLinks_pad.xml
+http://repository.appvisor.com/info/app-e4007bbb9bb0/Canadian_Sales_Tax_Calculator_pad.xml
+http://repository.appvisor.com/app-86006e70ba97/site-01/Chop_and_Behead_pad.xml
+http://repository.appvisor.com/info/app-d200454258b1/Common_JDK_17_Utility_classes_pad.xml
+http://repository.appvisor.com/app-34009366642c/site-01/Compactor_pad.xml
+http://repository.appvisor.com/app-7100b9206f7d/site-01/Comparator_Cutter_pad.xml
+http://repository.appvisor.com/app-f0001203cc0a/site-01/Conversion_Amanuensis_pad.xml
+http://repository.appvisor.com/app-7000da54ec01/site-01/Cropper_pad.xml
+http://repository.appvisor.com/info/app-c300e015ebef/CSVReaderWriter_pad.xml
+http://repository.appvisor.com/app-2600d5ad31c6/site-01/Ensure_pad.xml
+http://repository.appvisor.com/app-390071b8df09/site-01/FastCat_pad.xml
+http://repository.appvisor.com/app-a30098720cd6/site-01/File_I/File_IO_Amanuensis_pad.xml
+http://repository.appvisor.com/app-22000aba74b1/site-01/Findparked_pad.xml
+http://repository.appvisor.com/app-f200b8426e45/site-01/FS_pad.xml
+http://repository.appvisor.com/info/app-b500c065efb0/Greetingcard_pad.xml
+http://repository.appvisor.com/info/app-9200822318b1/Holiday_Calculator_pad.xml
+http://repository.appvisor.com/app-550076260eb0/site-01/Password_Generator_pad.xml
+http://repository.appvisor.com/info/app-85008da94eb0/PowCost_pad.xml
+http://repository.appvisor.com/app-3500efb89c64/site-01/Propagate_pad.xml
+http://repository.appvisor.com/app-2500e9cfb4a8/site-01/QuickDNS_pad.xml
+http://repository.appvisor.com/info/app-a100172f7c41/Quoter_Amanuensis_pad.xml
+http://repository.appvisor.com/app-f00073b8afa1/site-01/Replicator_pad.xml
+http://repository.appvisor.com/info/app-a0008e35aa01/Rightsize_pad.xml
+http://repository.appvisor.com/app-5200f2cdccd0/site-01/Aquarium_Sand_Depth_Calculator_pad.xml
+http://repository.appvisor.com/app-8000fef5da41/site-01/SiteMap_For_Google_pad.xml
+http://repository.appvisor.com/app-5600781e03c6/site-01/SnapTime_pad.xml
+http://repository.appvisor.com/app-c100079ec353/site-01/SortedArrayList_and_Merge_pad.xml
+http://repository.appvisor.com/info/app-7000a1e4bc22/Mini_PAD_Submitter_pad.xml
+http://repository.appvisor.com/app-1500a6196db0/site-01/Unicode_pad.xml
+http://repository.appvisor.com/app-c0108db555ae/site-01/VerCheck_Version_Change_Detector_pad.xml
+http://repository.appvisor.com/app-600058add941/site-01/Wassup_pad.xml
+http://repository.appvisor.com/app-a3006ffe2f1c/site-01/Which_pad.xml
+</PADRING>
+<PADTUBE>
+<PADTUBE_FORM>Y</PADTUBE_FORM>
+<PADTUBE_DESCRIPTION>Allows publishers to link PAD files to their PADTube publisher accounts.</PADTUBE_DESCRIPTION>
+<PADTUBE_VERSION>1.0</PADTUBE_VERSION>
+<PADTUBE_URL>http://www.padtube.com/pad/extensions/PADTube.htm</PADTUBE_URL>
+<PADTUBE_SCOPE>Company</PADTUBE_SCOPE>
+<PADTUBE_Member>Y</PADTUBE_Member>
+<PADTUBE_Member_REGEX>^[yYnN]\Z</PADTUBE_Member_REGEX>
+<PADTUBE_Member_REGEX_DOCUMENTATION>Y, y, N, or n</PADTUBE_Member_REGEX_DOCUMENTATION>
+<PADTUBE_Username>mindprod</PADTUBE_Username>
+<PADTUBE_Username_REGEX>^[a-zA-Z0-9_.]{6,32}\Z</PADTUBE_Username_REGEX>
+<PADTUBE_Username_REGEX_DOCUMENTATION>Alphanumeric with underscore allowed 6-32 characters</PADTUBE_Username_REGEX_DOCUMENTATION>
+<PADTUBE_WEBSITE>http://www.padtube.com</PADTUBE_WEBSITE>
+</PADTUBE>
+</XML_DIZ_INFO>

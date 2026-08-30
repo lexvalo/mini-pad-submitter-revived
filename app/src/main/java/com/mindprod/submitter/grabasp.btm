@@ -1,0 +1,44 @@
+rem GrabAsp.btm -- download then filter PADsites from ASP list. 2016-12-04
+rem Invoke with GrabAsp.btm not GrabAsp
+
+set spinoff=no
+rem Results will replace current candidates.csv
+E:
+cd E:\com\mindprod\submitter
+rem -fetch to refetch the 017.html files.
+rem check http://padsites.org/pad/page017/ still 17 pages
+rem record grab date in GrabAsp.java
+java.exe  com.mindprod.submitter.GrabAsp 17  -fetch
+rem GrabAsp.java will join *.html files into grabasp.csv
+if "%spinoff" == "no" goto bypass:
+copy grabasp.csv forasp.csv
+rem have name, homeurl, submiturl, ...
+rem reshape to name, status, homeurl, status, submiturl,
+csvreshape.exe forasp.csv 0 99 1 99 2
+csvsort forasp.csv 0i+
+Echo forasp.csv ready
+pause
+:bypass
+csvsort grabasp.csv 3s+ 1s+
+csvalign grabasp.csv
+copy grabasp.csv possappvisor.csv
+echo manually prune old sites, leave ones changed since last grabasp.
+%EDIT grabasp.csv
+pause pruning of sites unchanged should be removed.
+copy grabasp.csv candidates.csv
+rem prune off date
+csvreshape candidates.csv 0 1 2
+java com.mindprod.submitter.AssignSiteNames
+java com.mindprod.submitter.ProbeAndClassify
+csvalign candidates.csv
+%EDIT candidates.csv
+csvsort possappvisor.csv 2s+ 3s+
+extract.exe  "http://publisher.appvisor.com" - possappvisor.csv > temp.csv
+copy temp.csv possappvisor.csv
+rem prune possappvisor.csv of old stuff and leave in newappvisor.csv
+justnewappvisors.exe
+csvalign newappvisor.csv
+echo manually make sure newappvisor.csv are in appvisor.csv
+pause
+%EDIT newappvisor.csv
+rem -30-

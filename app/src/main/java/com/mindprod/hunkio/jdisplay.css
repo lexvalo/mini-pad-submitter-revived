@@ -1,0 +1,817 @@
+/* aux style sheet for JDisplay */
+
+applet.jdisplay object.jdisplay{
+	clear: both;
+	display: block;
+	float: none;
+	margin: 10px 0 10px 0;
+}
+
+body.snippet,body.snippet pre /* iframed */{
+	background: #ffffff; /*! white !*/
+	border: none;
+	color: #000000; /*! black !*/
+	/* don't specify font size, so will fit user preference, same as other non-inlined text. */
+	/* in iframe must use fixed vertical pitch to fix in pre-sized box */
+	line-height: 22px !important;
+	margin: 0;
+}
+
+/* div.box in mindprod.css */
+div.abundance,
+div.bad,
+div.bali,
+div.bat,
+div.bsh,
+div.btm,
+div.c,
+div.cpp,
+div.css,
+div.csv,
+div.eiffel,
+div.forth,
+div.html,
+div.http,
+div.ini,
+div.java,
+div.javascript,
+div.jnlp,
+div.key,
+div.newsgroup,
+div.output,
+div.pascal,
+div.properties,
+div.property,
+div.registry,
+div.slickc,
+div.sql,
+div.xml,
+pre.bad,
+pre.bali,
+pre.bat,
+pre.bsh,
+pre.btm,
+pre.c,
+pre.cpp,
+pre.css,
+pre.csv,
+pre.forth,
+pre.html,
+pre.http,
+pre.ini,
+pre.java,
+pre.jnlp,
+pre.manifest,
+pre.newsgroup,
+pre.output,
+pre.prop,
+pre.properties,
+pre.property,
+pre.slickc,
+pre.sql,
+pre.xml{
+	background: #fcfcff no-repeat scroll; /*! extreme pale blue !*/
+	border: thin solid;
+	clear: both;
+	display: block; /* inline-block makes shorter block, but then you get text to right. */
+	/* display:table;tighten up surrounding box */
+	font-size: 16px;
+	margin: 10px 0 10px 0; /* outer t r b l */
+	padding: 5px; /* inner t r b l */
+}
+
+iframe.jdisplay /* sandwich around iframe */{
+	border: thin solid;
+	border-width: 1px;
+	clear: both;
+	display: block;
+	margin: 8px 0 8px 0; /* t r b l */
+	padding: 5px; /* no border */
+}
+
+span.classpath, span.setvalue, span.exepath {
+	background-color: transparent;
+	color: #542d19; /*! serious brown !*/
+}
+
+span.cssclass /* the xxxx in class="xxxx" in html markup, td.strawberry */{
+	background-color: transparent;
+	color: #5157ff; /*! Wedgewood blue !*/
+	font-size: 1.2em;
+}
+
+span.csscolourcomment /* slash start bang comment to name colours */{
+	background-color: transparent;
+	color: #8b7a11; /*! tarnished gold !*/
+	font-style: italic;
+}
+
+span.cssimportant/* for !important */{
+	background-color: transparent;
+	color: #ff0000; /*! red !*/
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+span.cssprop /* used in CSS listings   font-size : 12pt -- font-size is the property (keyword),
+12pt is cssvalue */{
+	background-color: transparent;
+	color: #630064; /*! dark hippocrene !*/
+}
+
+span.csspseudo /* :hover */{
+	background-color: transparent;
+	color: #8a8eff; /*! languid blue !*/
+	font-size: 1.0em;
+}
+
+span.cssselector /* eg. >  */{
+	background-color: transparent;
+	color: #0008ff; /*! happy blue !*/
+	font-size: 1.1em;
+	font-weight: 600;
+}
+
+span.cssunit {
+	background-color: transparent;
+	color: #24a28d; /*! TopStyle nautical !*/
+	font-size: 1.00em;
+}
+
+span.cssurl{
+	background-color: transparent;
+	color: #653540; /*! dark stain brown !*/
+}
+
+span.cssvalue {
+	background-color: transparent;
+	color: #d33682; /*! Topstyle red numbers !*/
+	font-size: 1.05em;
+}
+
+span.erfrom /* newreader from */ {
+	color: #0000ff; /*! blue !*/
+}
+
+span.erhead{
+	color: #008080; /*! teal !*/
+}
+
+span.erquoted{
+	color: #a52a2a; /*! brown !*/
+	font-style: italic;
+}
+
+span.ersaid{
+	color: #000000; /*! black !*/
+	font-size: smaller;
+}
+
+span.fence0{
+	background-color: transparent;
+	color: #0000ad; /*! dark crayon blue !*/
+	font-size: 24px!important;
+	font-weight: bold;
+}
+
+span.fence1{
+	background-color: transparent;
+	color: #0000ad; /*! dark crayon blue !*/
+	font-size: 21px!important;
+	font-weight: bold;
+}
+
+span.fence2{
+	background-color: transparent;
+	color: #0000ad; /*! dark crayon blue !*/
+	font-size: 18px!important;
+	font-weight: bold;
+}
+
+span.fence3{
+	background-color: transparent;
+	color: #0000ad; /*! dark crayon blue !*/
+	font-size: 15px!important;
+	font-weight: normal;
+}
+
+span.fence4{
+	background-color: transparent;
+	color: #0000ad; /*! dark crayon blue !*/
+	font-size: 13px!important;
+	font-weight: normal;
+}
+
+span.parm, span.param, span.parameter{
+	background-color: transparent; /* parameter passed on command line, or Applet param. Java parms are vars */
+	color: #0008ff; /*! happy blue !*/
+}
+
+td.decimal,td.numeric,td.hex{
+	text-align: right;
+}
+
+.abundance /* Abundance source code */{
+	background: #fcfcff; /*! extreme pale blue !*/
+	color: #bb8811; /*! Backyardigans gold !*/
+}
+
+/* all styles in this style sheet, but not other stylesheets */
+.abundance,
+.ada,
+.alphaentity,
+.annotation,
+.asm,
+.bad,
+.bali,
+.balivar,
+.balivardef,
+.bat,
+.batcomment,
+.binary,
+.binaryhigh,
+.binarylow,
+.bsh,
+.bshcomment,
+.btm,
+.bytecode,
+.c,
+.cdata,
+.char,
+.charentity,
+.charliteral,
+.class,
+.classdef,
+.classpath,
+.cobol,
+.comment,
+.commentslashslash,
+.commentslashstar,
+.constant,
+.constantdef,
+.cpp,
+.css,
+.cssclass,
+.csscolourcomment,
+.cssimportant,
+.cssprop,
+.csspseudo,
+.cssselector,
+.cssurl,
+.cssvalue,
+.csvcomment,
+.decimal,
+.decimalentity,
+.decimalhigh,
+.decimallow,
+.divoperator,
+.domain,
+.eiffel,
+.encoding,
+.entity,
+.env,
+.envkey,
+.envvalue,
+.eps,
+.exepath,
+.font,
+.forth,
+.fortran,
+.foxpro,
+.hcc,
+.hct,
+.hex,
+.hexentity,
+.hexhigh,
+.hexlow,
+.html,
+.html5entity,
+.htmlattribute,
+.htmlentity,
+.htmlstring,
+.htmltag,
+.http,
+.httpkey,
+.ini,
+.inicomment,
+.inikey,
+.inisection,
+.inivalue,
+.interface,
+.interfacedef,
+.jasm,
+.java,
+.javadoc,
+.javadoctag,
+.javascript,
+.jnlp,
+.k,
+.keyword,
+.label,
+.lisp,
+.literal,
+.macro,
+.masm,
+.method,
+.methoddef,
+.numeric,
+.numericindicator,
+.numericliteral,
+.octal,
+.octalhigh,
+.octallow,
+.operator,
+.package,
+.packagedef,
+.param,
+.parameter,
+.parm,
+.pascal,
+.perl,
+.pl1,
+.postscript,
+.prop,
+.propcomment,
+.properties,
+.property,
+.propkey,
+.propvalue,
+.ps,
+.registry,
+.rem,
+.remark,
+.reserved,
+.semicolon,
+.setvalue,
+.slickc,
+.sql,
+.sqlvar,
+.string,
+.stringliteral,
+.txt,
+.unicodeliteral,
+.unknownentity,
+.value,
+.var,
+.vardef,
+.vb,
+.version,
+.xml,
+.xmlattribute,
+.xmlcomment,
+.xmlentity,
+.xmltag,
+div.abundance,
+div.bad,
+div.bali,
+div.bat,
+div.bsh,
+div.btm,
+div.c,
+div.cpp,
+div.css,
+div.csv,
+div.eiffel,
+div.forth,
+div.html,
+div.http,
+div.ini,
+div.java,
+div.javascript,
+div.jnlp,
+div.key,
+div.newsgroup,
+div.output,
+div.pascal,
+div.properties,
+div.property,
+div.registry,
+div.slickc,
+div.sql,
+div.xml,
+pre,
+pre.bad,
+pre.bali,
+pre.bat,
+pre.bsh,
+pre.btm,
+pre.c,
+pre.cpp,
+pre.css,
+pre.csv,
+pre.forth,
+pre.html,
+pre.http,
+pre.ini,
+pre.java,
+pre.jnlp,
+pre.newsgroup,
+pre.output,
+pre.prop,
+pre.properties,
+pre.property,
+pre.slickc,
+pre.sql,
+pre.xml,
+span.fence0,
+span.fence1,
+span.fence2,
+span.fence3,
+span.fence4{
+	font-family: Consolas,"Bitstream Vera Sans Mono","Lucida Console","Lucida Sans","Lucida Sans Unicode","Segoe UI",monospace;
+	font-size: 1.1em;
+}
+
+.ada,.java{
+	background-color: transparent;
+	color: #006677; /*! deep cyan !*/
+}
+
+.annotation{
+	background-color: transparent;
+	color: #295d78; /*! dark eclipse blue !*/
+}
+
+.asm,.masm,.jasm,.bytecode /* Assembler source code */{
+	background-color: transparent;
+	color: #bb0077; /*! wine !*/
+}
+
+.bad /* erroneous computer code,something you should not do */{
+	background-color: transparent;
+	color: #ff0000; /*! red !*/
+}
+
+.bali, .balivar {
+	background-color: transparent;
+	color: #bb8811; /*! Backyardigans gold !*/
+}
+
+.balivardef /* Bali variable name */{
+	background-color: transparent;
+	color: #bb8811; /*! Backyardigans gold !*/
+	font-weight: bold;
+}
+
+.binary,.octal,.binarylow,.octallow /* binary and octal literals in any computer language */{
+	background-color: transparent;
+	color: #8d1272; /*! winter grape !*/
+}
+
+.binaryhigh,.octalhigh /* binary and octal literals in any computer language */{
+	background-color: transparent;
+	color: #da00ce; /*! screaming pink !*/
+}
+
+.c,.slickc,.cpp /* c,slickc,c++ source code */{
+	background-color: transparent;
+	color: #00aabb; /*! bluish cyan !*/
+}
+
+.cdata,.cdatacontents,.vb{
+	background-color: transparent;
+	color: #660066; /*! aged wine !*/
+}
+
+.cdatatag{
+	background-color: transparent;
+	color: #808080; /*! unobtrusive grey !*/
+	font-size: .9em;
+}
+
+.char,.charliteral,.unicodeliteral /* brighter than .string and .htmlstring "string" literals */{
+	background-color: transparent;
+	color: #ef150a; /*! fiery red !*/
+}
+
+.class{
+	background-color: transparent;
+	color: #653510; /*! greyed brown !*/
+}
+
+.classdef /* define new Java class name */{
+	background-color: transparent;
+	color: #653510; /*! greyed brown !*/
+	font-weight: bold;
+}
+
+.cobol,.fortran{
+	background-color: transparent;
+	color: #006633; /*! dark bluish green !*/
+}
+
+.comment,.rem,.remark,.bshcomment,.batcomment,.hcc,.xmlcomment,.propcomment,.inicomment,.php,.csvcomment,.csscomment
+/* comment/remark in any computer language. hcc=Html-Comment-Content */{
+	background-color: transparent;
+	color: #009200; /*! twinkly green !*/
+	font-style: italic;
+}
+
+.commentslashslash{
+	background-color: transparent;
+	color: #5c9548; /*! conservative green !*/
+	font-style: italic;
+}
+
+.commentslashstar{
+	background-color: transparent;
+	color: #409954; /*! blue tinged green !*/
+	font-style: italic;
+}
+
+.constantdef,.enumdef /* Java constant name */{
+	background-color: transparent;
+	color: #b22222; /*! firebrick !*/
+	font-weight: bold;
+}
+
+.css /* examples of unparsed css style sheet coding. colour scheme similar to that used by TopStyle */{
+	background-color: transparent;
+	color: #bb00bb; /*! loganberry !*/
+}
+
+.decimal,.decimallow,.numeric,.numericliteral,.literal /* low order 3-digits grouping */{
+	background-color: transparent;
+	color: #ff2000; /*! Scottish red !*/
+}
+
+.decimalentity,.propkey,.envkey{
+	background-color: transparent;
+	color: #00608b; /*! dark ocean !*/
+}
+
+.decimalhigh /* high order 3-digits grouping,see numericliteral,numericidicator */{
+	background-color: transparent;
+	color: #c81800; /*! wagon red !*/
+}
+
+.divoperator /* division and remainder stand out / %. see operator */{
+	background-color: transparent;
+	color: #ff4500; /*! attention orange !*/
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.domain{
+	background-color: transparent;
+	color: #c11d00; /*! clotted blood !*/
+}
+
+.eiffel,.forth{
+	background-color: transparent;
+	color: #0080ff; /*! nautical blue !*/
+}
+
+.encoding,.env{
+	background-color: transparent;
+	color: #ce0f14; /*! bright fox !*/
+}
+
+.foxpro /* Foxpro/dBase source code */{
+	background-color: transparent;
+	color: #8811aa; /*! hippocrene !*/
+}
+
+.gibberish /* syntactically incorrect stuff, deliberately ugly */{
+	background-color: transparent;
+	color: #de3386; /*! raspberry !*/
+	font-family: "Segoe Print","Lucida Console","Courier New",monospace;
+}
+
+.hct /* begin/end markers for HTML comments. Html-Comment-Tag see hcc */{
+	background-color: transparent;
+	color: #808080; /*! unobtrusive grey !*/
+	font-size: .9em;
+	font-style: italic;
+	white-space: nowrap;
+}
+
+.hex,.hexlow /* low order 4-digits grouping */{
+	background-color: transparent;
+	color: #7e167f; /*! hexlow plum !*/
+}
+
+.hexentity{
+	background-color: transparent;
+	color: #0048ab; /*! industrial blue !*/
+}
+
+.hexhigh /* high order hex 4-digits grouping */{
+	background-color: transparent;
+	color: #ad16ae; /*! hexhigh plum !*/
+}
+
+.html5entity{
+	background-color: transparent;
+	color: #b16934; /*! mustard brown !*/
+}
+
+.htmlattribute,.xmlattribute /* name of attribute, not the value */{
+	background-color: transparent;
+	color: #6465ff; /*! cornflower blue !*/
+}
+
+.htmltag,.xmltag{
+	background-color: transparent;
+	color: #0000cd; /*! medium blue !*/
+	font-size: 20px!important;
+}
+
+.http,.url,.mailserver /* will only appear if no <a. Also. httpkey .ip, .domain,  .newsgroup*/{
+	background-color: transparent;
+	color: #0002e8; /*! perky blue !*/
+}
+
+.httpkey /* for names of fields in HTTP header */{
+	background-color: transparent;
+	color: #00608b; /*! dark ocean !*/
+	font-weight: bold;
+}
+
+.ik /* important keywords: break class interface package return */{
+	background-color: transparent;
+	color: #0008ff; /*! happy blue !*/
+	font-size: 21px; /* define size of important keywords */
+	font-weight: bold;
+}
+
+.ini,.property,.properties,.prop /* ini files,or other configuration files such as properties see .prop .propkey .propvalue */{
+	background-color: transparent;
+	color: #0075e6; /*! cardinal blue !*/
+}
+
+.inikey{
+	background-color: transparent;
+	color: #00004f; /*! black navy !*/
+}
+
+.inisection,.constant,.enum,.htmlstring,.cssclass,.font,.inisection{
+	background-color: transparent;
+	color: #b22222; /*! firebrick !*/
+}
+
+.inivalue,.inivalue,.propvalue,.envvalue,.value{
+	background-color: transparent;
+	color: #000000; /*! black !*/
+}
+
+.interface /* Java interface name */{
+	background-color: transparent;
+	color: #653510; /*! greyed brown !*/
+	font-style: italic;
+}
+
+.interfacedef /* Java interface name */{
+	background-color: transparent;
+	color: #653510; /*! greyed brown !*/
+	font-style: italic;
+	font-weight: bold;
+}
+
+.javadoc /* cf .javadoctag */{
+	background-color: transparent;
+	color: #415fbf; /*! eclipse blue !*/
+	font-style: italic;
+}
+
+.javadoctag /* cf .javadoc */{
+	background-color: transparent;
+	color: #415fbf; /*! eclipse blue !*/
+	font-style: italic;
+	font-weight: bold;
+}
+
+.javascript /* Javascript source code */{
+	background-color: transparent;
+	color: #cc3399; /*! light wine !*/
+}
+
+.jnlp,.xml /* xml source code */{
+	background-color: transparent;
+	color: #266584; /*! Waterman blue !*/
+}
+
+.jsptag,.xmltag{
+	background-color: transparent;
+	color: #cd0000; /*! red3 !*/
+}
+
+.keyword,.k,.reserved/* reserved keyword in any computer language,outside div */{
+	background-color: transparent;
+	color: #000475; /*! indigo !*/
+	font-size: 20px; /* define size of ordinary keywords */
+	font-weight: bold;
+}
+
+.label{
+	background-color: transparent;
+	color: #653510; /*! greyed brown !*/
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.lisp /* LISP 95 source code */{
+	background-color: transparent;
+	color: #887755; /*! frosted gold !*/
+}
+
+.literal /* Java literal */{
+	background-color: transparent;
+	color: #ff6666; /*! fiery orange !*/
+}
+
+.method,.postscript,.ps,.eps,.pascal,.perl,.charentity,.csvitem,.entity,.alphaentity,.htmlentity,.xmlentity,.charentity,.macro{
+	background-color: transparent;
+	color: #00008b; /*! dark blue !*/
+}
+
+.methoddef /* Java method name */{
+	background-color: transparent;
+	color: #00008b; /*! dark blue !*/
+	font-weight: bold;
+}
+
+.numericindicator /* for lead 0x or trail L D F */{
+	background-color: transparent;
+	color: #ff6347; /*! tomato !*/
+	font-size: 17px;
+	font-weight: normal;
+}
+
+.operator,.op/*: see separator, divoperator */{
+	background-color: transparent;
+	color: #006400; /*! dark green !*/
+	/* 14px */
+	font-weight: bold;
+}
+
+.package,.bat,.btm,.bsh,.html,.set{
+	background-color: transparent;
+	color: #934e28; /*! dog brown !*/
+}
+
+.packagedef /* Java package name */{
+	background-color: transparent;
+	color: #934e28; /*! dog brown !*/
+	font-weight: bold;
+}
+
+.pl1 {
+	background-color: transparent;
+	color: #3063fd; /*! big blue !*/
+}
+
+.registry{
+	background-color: transparent;
+	color: #c8006e; /*! registry whine !*/
+}
+
+.semicolon,.sc /*;looks distinct from operator-separator operator or punctuation in any computer language. For colon use op. */{
+	background-color: transparent;
+	color: #800080; /*! Welches !*/
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.sep,.separator /* slash backslash in file and pathnames not bold like operator */{
+	background-color: transparent;
+	color: #006400; /*! dark green !*/
+	font-size: 1em;
+	font-weight: normal;
+}
+
+.sql,.sqlvar /* SQL source code */{
+	background-color: transparent;
+	color: #8d2e2e; /*! Sheldon brown !*/
+}
+
+.string,.stringliteral /* brighter than .htmlstring "string" literals */{
+	background-color: transparent;
+	color: #dc143c; /*! fireplug red !*/
+}
+
+.text,.txt /* raw text,might be used to describe program output */{
+	background-color: transparent;
+	color: #808000; /*! canned olives !*/
+}
+
+.unknownentity{
+	background-color: transparent;
+	color: #de3386; /*! raspberry !*/
+}
+
+.var /* Java variable name */{
+	background-color: transparent;
+	color: #008b8b; /*! dark cyan !*/
+}
+
+.vardef /* Java variable name */{
+	background-color: transparent;
+	color: #008b8b; /*! dark cyan !*/
+	font-weight: bold;
+}
+
+.xmlentity{
+	background-color: transparent;
+	color: #8b0000; /*! plain brown !*/
+}

@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<!-- BUILD.XML complex submitter 26.3 build that copies files to website for upload. -->
+<!-- Build with ANT postzip jet -->
+<!-- Compile and jar submitter using ANT -->
+<!-- Invoke with [ant clean] to erase class files and start over. -->
+<!-- Invoke with [ant compile] to just compile. -->
+<!-- Invoke with [ant jar] to compile and create jar files. -->
+<!-- Invoke with [ant postjar] to post jars to the mindprod website. -->
+<!-- Invoke with [ant jet] to create JET executables. -->
+<!-- Invoke with [ant zip] to create source code zip files. -->
+<!-- Invoke with [ant postzip] to post zip file to the mindprod website. -->
+<!-- Using Apache ANT version 1.10.1 -->
+<!-- For details of ANT use, see http://mindprod.com/jgloss/ant.html -->
+<!-- This script does not build any *.asm files. -->
+
+<!-- D E F I N I T I O N S -->
+<!-- ANT.project.dir is com/mindprod/submitter -->
+<!-- basedir is E:/ -->
+<project name="submitter" basedir="E:/" default="jar">
+
+<!-- extensions for zip. Case sensitive! Go in zip, not necessarily in Jar. -->
+<property name="distributed.exts" value="**/*.au,**/*.asm,**/*.bat,**/*.btm,**/*.c,**/*.COM,**/*.com,**/*.cpp,**/*.css,**/*.csv,**/*.dll,**/*.gif,**/*.h,**/*.hpp,**/*.htm,**/*.html,**/*.ico,**/*.ION,**/*.ion,**/*.jar,**/*.java,**/*.jnlp,**/*.JNLP,**/*.jpg,**/*.look,**/*.png,**/*.properties,**/*.ser,**/*.sln,**/*.txt,**/*.use,**/*.xml" />
+
+<!-- dirs we to exclude from zip. Case sensitive! -->
+<property name="nondistributed" value="**/javadoc/**,**/jetpdb/**,**/Debug/**,**/Release/**" />
+
+<!-- C L E A N -->
+<target name="clean">
+<echo message="    :::    submitter    :::    deleting files to force regeneration." />
+  <delete>
+    <fileset dir="com/mindprod/submitter" includes="**/*.class" />
+    <fileset dir="com/mindprod/submitter" includes="**/*.jar" />
+    <!-- leave Jet *.exe. Old versions are still useful during the build. -->
+    <fileset dir="com/mindprod/submitter" includes="submitter263.zip" />
+  </delete>
+</target>
+
+<!-- C O M P I L E -->
+<target name="compile">
+<echo message="    :::    submitter    :::    compiling Java tree with target=1.8" />
+  <javac source="1.8" target="1.8" srcdir="com/mindprod/submitter" sourcepath="${basedir}" classpath="${basedir}" encoding="UTF-8" debug="on" includeAntRuntime="false">
+    <compilerarg value="-Xlint:unchecked" />
+    <compilerarg value="-Xlint:fallthrough" />
+    <compilerarg value="-Xlint:deprecation" />
+    <compilerarg value="-Xlint:cast" />
+  </javac>
+</target>
+
+<!-- J A V A H must do ant javah to rebuild *.h files. -->
+<target name="javah" depends="compile">
+  <!-- there is no jni -->
+</target>
+
+<!-- G A T H E R -->
+<target name="gather" depends="compile">
+<echo message="    :::    submitter    :::    gathering files to build jar/zip." />
+  <!-- prepare submitter.use precis from two pieces -->
+    <concat destfile="com/mindprod/submitter/submitter.use" fixlastline="yes">
+      <filelist dir="com/mindprod/submitter" files="version.txt,use.txt,versionhistory.txt" />
+    </concat>
+    <copy file="E:/mindprod/applet/submitter.html" todir="com/mindprod/submitter" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/applet/submitter.manual.html" todir="com/mindprod/submitter" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/ico/submitter.ico" tofile="E:/mindprod/applet/submitter.ico" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon128/submitter.png" tofile="com/mindprod/submitter/submitter.icon128.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon16/submitter.png" tofile="com/mindprod/submitter/submitter.icon16.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon32/submitter.png" tofile="com/mindprod/submitter/submitter.icon32.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon48/submitter.png" tofile="com/mindprod/submitter/submitter.icon48.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon64/submitter.png" tofile="com/mindprod/submitter/submitter.icon64.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/screenshot/submitter.png" tofile="com/mindprod/submitter/submitter.screenshot.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/jdisplay.css" todir="com/mindprod/submitter" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/mindprod.css" todir="com/mindprod/submitter" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/pad/submitter.xml" todir="com/mindprod/submitter" failonerror="false" quiet="true" overwrite="true" />
+</target>
+
+<!-- J A R -->
+<!-- Make F:\Program Files (x86)\apache-ant-1.10.1\lib\GenJar.jar known to ANT -->
+<!-- See http://mindprod.com/jgloss/genjar.html for details -->
+<taskdef resource="genjar.properties" />
+
+<target name="jar" depends="gather">
+<echo message="    :::    submitter    :::    genjar finding dependencies and creating jar." />
+  <genjar jarfile="com/mindprod/submitter/submitter.jar">
+    <!-- include main class and all its dependencies -->
+    <class name="com.mindprod.submitter.Submitter" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.submitter.Submitter" />
+      <attribute name="Application-Name" value="Submitter" />
+      <attribute name="Permissions" value="all-permissions" />
+    </manifest>
+  </genjar>
+
+  <!-- S I G N -->
+  <!-- get _your_ password from set jarsignerpassword=sesame -->
+  <!-- get _your_ code-signing certificate from set cert=mindprodcert2017rsa -->
+  <property environment="env" />
+  <signjar jar="com/mindprod/submitter/submitter.jar"
+    alias="${env.cert}" keystore="${env.keystore}/.keystore" storepass="${env.jarsignerpassword}"
+    tsaurl="http://sha256timestamp.ws.symantec.com/sha256/timestamp" />
+  <!-- bundle public key of code signing certificate for zip. -->
+  <copy file="E:/mindprod/applet/${env.cert}.cer" todir="com/mindprod/submitter" failonerror="true" overwrite="true" />
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/submitter" output="nul:" logError="true" failonerror="true">
+    <arg value="submitter.jar" />
+    <arg value="1.2" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/submitter" output="com/mindprod/submitter/submitter.look">
+    <arg value="submitter.jar" />
+  </exec>
+  <!-- build detectduplicates.jar -->
+  <jar jarfile="com/mindprod/submitter/detectduplicates.jar">
+    <!-- Extra classes and properties to include in detectduplicates.jar -->
+    <fileset dir="${basedir}" >
+      <include name="com/mindprod/commandline/CacheIterator.class" />
+      <include name="com/mindprod/commandline/CommandLine.class" />
+      <include name="com/mindprod/commandline/Saver.class" />
+      <include name="com/mindprod/common18/BigDate.class" />
+      <include name="com/mindprod/common18/Build.class" />
+      <include name="com/mindprod/common18/EIO.class" />
+      <include name="com/mindprod/common18/Misc.class" />
+      <include name="com/mindprod/common18/ST.class" />
+      <include name="com/mindprod/csv/CSVCharCategory.class" />
+      <include name="com/mindprod/csv/CSVReadState.class" />
+      <include name="com/mindprod/csv/CSVReader$1.class" />
+      <include name="com/mindprod/csv/CSVReader.class" />
+      <include name="com/mindprod/entities/DeEntify.class" />
+      <include name="com/mindprod/entities/DeEntifyStrings.class" />
+      <include name="com/mindprod/fastcat/FastCat.class" />
+      <include name="com/mindprod/filter/AllButSVNDirectoriesFilter.class" />
+      <include name="com/mindprod/filter/ExtensionListFilter.class" />
+      <include name="com/mindprod/hunkio/HunkIO.class" />
+      <include name="com/mindprod/submitter/DetectDuplicates.class" />
+      <include name="com/mindprod/submitter/PadSites.class" />
+    </fileset>
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.submitter.DetectDuplicates" />
+      <attribute name="Application-Name" value="DetectDuplicates" />
+      <attribute name="Permissions" value="all-permissions" />
+    </manifest>
+  </jar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/submitter" output="nul:" logError="true" failonerror="true">
+    <arg value="detectduplicates.jar" />
+    <arg value="1.1" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/submitter" output="com/mindprod/submitter/detectduplicates.look">
+    <arg value="detectduplicates.jar" />
+  </exec>
+  <!-- build formatpadsites.jar -->
+  <genjar jarfile="com/mindprod/submitter/formatpadsites.jar">
+    <class name="com.mindprod.submitter.FormatPadSites" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.submitter.FormatPadSites" />
+      <attribute name="Application-Name" value="FormatPadSites" />
+      <attribute name="Permissions" value="all-permissions" />
+    </manifest>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/submitter" output="nul:" logError="true" failonerror="true">
+    <arg value="formatpadsites.jar" />
+    <arg value="1.1" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/submitter" output="com/mindprod/submitter/formatpadsites.look">
+    <arg value="formatpadsites.jar" />
+  </exec>
+  <!-- build grabasp.jar -->
+  <genjar jarfile="com/mindprod/submitter/grabasp.jar">
+    <class name="com.mindprod.submitter.GrabAsp" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.submitter.GrabAsp" />
+      <attribute name="Application-Name" value="GrabAsp" />
+      <attribute name="Permissions" value="all-permissions" />
+    </manifest>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/submitter" output="nul:" logError="true" failonerror="true">
+    <arg value="grabasp.jar" />
+    <arg value="1.1" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/submitter" output="com/mindprod/submitter/grabasp.look">
+    <arg value="grabasp.jar" />
+  </exec>
+  <!-- build justnewappvisors.jar -->
+  <genjar jarfile="com/mindprod/submitter/justnewappvisors.jar">
+    <class name="com.mindprod.submitter.JustNewAppvisors" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.submitter.JustNewAppvisors" />
+      <attribute name="Application-Name" value="JustNewAppvisors" />
+      <attribute name="Permissions" value="all-permissions" />
+    </manifest>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/submitter" output="nul:" logError="true" failonerror="true">
+    <arg value="justnewappvisors.jar" />
+    <arg value="1.1" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/submitter" output="com/mindprod/submitter/justnewappvisors.look">
+    <arg value="justnewappvisors.jar" />
+  </exec>
+  <!-- build submissionsite.jar -->
+  <genjar jarfile="com/mindprod/submitter/submissionsite.jar">
+    <class name="com.mindprod.submitter.SubmissionSite" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.submitter.SubmissionSite" />
+      <attribute name="Application-Name" value="SubmissionSite" />
+      <attribute name="Permissions" value="all-permissions" />
+    </manifest>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/submitter" output="nul:" logError="true" failonerror="true">
+    <arg value="submissionsite.jar" />
+    <arg value="1.1" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/submitter" output="com/mindprod/submitter/submissionsite.look">
+    <arg value="submissionsite.jar" />
+  </exec>
+  <!-- build submitbatch.jar -->
+  <genjar jarfile="com/mindprod/submitter/submitbatch.jar">
+    <class name="com.mindprod.submitter.SubmitBatch" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.submitter.SubmitBatch" />
+      <attribute name="Application-Name" value="SubmitBatch" />
+      <attribute name="Permissions" value="all-permissions" />
+    </manifest>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/submitter" output="nul:" logError="true" failonerror="true">
+    <arg value="submitbatch.jar" />
+    <arg value="1.1" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/submitter" output="com/mindprod/submitter/submitbatch.look">
+    <arg value="submitbatch.jar" />
+  </exec>
+  <!-- build tidykeywords.jar -->
+  <genjar jarfile="com/mindprod/submitter/tidykeywords.jar">
+    <class name="com.mindprod.submitter.TidyKeywords" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.submitter.TidyKeywords" />
+      <attribute name="Application-Name" value="TidyKeywords" />
+      <attribute name="Permissions" value="all-permissions" />
+    </manifest>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/submitter" output="nul:" logError="true" failonerror="true">
+    <arg value="tidykeywords.jar" />
+    <arg value="1.1" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/submitter" output="com/mindprod/submitter/tidykeywords.look">
+    <arg value="tidykeywords.jar" />
+  </exec>
+</target>
+
+<!-- P O S T J A R -->
+<target name="postjar" depends="jar">
+<echo message="    :::    submitter    :::    posting jar to website." />
+  <!-- copy jar(s) to website -->
+  <copy file="com/mindprod/submitter/submitter.jar" todir="E:/mindprod/applet" />
+  <copy file="com/mindprod/submitter/detectduplicates.jar" todir="E:/mindprod/applet" />
+  <copy file="com/mindprod/submitter/formatpadsites.jar" todir="E:/mindprod/applet" />
+  <copy file="com/mindprod/submitter/grabasp.jar" todir="E:/mindprod/applet" />
+  <copy file="com/mindprod/submitter/justnewappvisors.jar" todir="E:/mindprod/applet" />
+  <copy file="com/mindprod/submitter/submissionsite.jar" todir="E:/mindprod/applet" />
+  <copy file="com/mindprod/submitter/submitbatch.jar" todir="E:/mindprod/applet" />
+  <copy file="com/mindprod/submitter/tidykeywords.jar" todir="E:/mindprod/applet" />
+  <!-- Extra posting -->
+  <delete>
+  <fileset dir="com/mindprod/submitter" includes="**/*.log.html" />
+  </delete>
+</target>
+
+<!-- P R E J E T -->
+<target name="prejet">
+<echo message="    :::    submitter    :::    avoid regenerating Jet executable if already done." />
+  <uptodate property="jet.uptodate" targetfile="com/mindprod/submitter/submitter.exe">
+    <srcfiles dir="com/mindprod/submitter" includes="*.jar"/>
+    </uptodate>
+</target>
+
+<!-- J E T -->
+<!-- Requires Excelsior JET native Java compiler jc.exe on the path -->
+<!-- See http://mindprod.com/jgloss/jet.html for details -->
+<target name="jet" depends="prejet" unless="jet.uptodate">
+<echo message="    :::    submitter    :::    jet compiling." />
+  <exec executable="jc.exe" dir="com/mindprod/submitter">
+    <arg value="-DECOR=" />
+    <arg value="submitter.jar" />
+  </exec>
+  <!-- copy submitter.exe to E:/sys -->
+  <copy file="com/mindprod/submitter/submitter.exe" todir="E:/sys" />
+  <echo message="    :::    submitter/DetectDuplicates    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/submitter">
+    <arg value="-DECOR=" />
+    <arg value="detectduplicates.jar" />
+  </exec>
+  <!-- copy detectduplicates.exe to E:/sys -->
+  <copy file="com/mindprod/submitter/detectduplicates.exe" todir="E:/sys" />
+  <echo message="    :::    submitter/FormatPadSites    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/submitter">
+    <arg value="-DECOR=" />
+    <arg value="formatpadsites.jar" />
+  </exec>
+  <!-- copy formatpadsites.exe to E:/sys -->
+  <copy file="com/mindprod/submitter/formatpadsites.exe" todir="E:/sys" />
+  <echo message="    :::    submitter/GrabAsp    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/submitter">
+    <arg value="-DECOR=" />
+    <arg value="grabasp.jar" />
+  </exec>
+  <!-- copy grabasp.exe to E:/sys -->
+  <copy file="com/mindprod/submitter/grabasp.exe" todir="E:/sys" />
+  <echo message="    :::    submitter/JustNewAppvisors    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/submitter">
+    <arg value="-DECOR=" />
+    <arg value="justnewappvisors.jar" />
+  </exec>
+  <!-- copy justnewappvisors.exe to E:/sys -->
+  <copy file="com/mindprod/submitter/justnewappvisors.exe" todir="E:/sys" />
+  <echo message="    :::    submitter/SubmissionSite    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/submitter">
+    <arg value="-DECOR=" />
+    <arg value="submissionsite.jar" />
+  </exec>
+  <!-- copy submissionsite.exe to E:/sys -->
+  <copy file="com/mindprod/submitter/submissionsite.exe" todir="E:/sys" />
+  <echo message="    :::    submitter/SubmitBatch    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/submitter">
+    <arg value="-DECOR=" />
+    <arg value="submitbatch.jar" />
+  </exec>
+  <!-- copy submitbatch.exe to E:/sys -->
+  <copy file="com/mindprod/submitter/submitbatch.exe" todir="E:/sys" />
+  <echo message="    :::    submitter/TidyKeywords    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/submitter">
+    <arg value="-DECOR=" />
+    <arg value="tidykeywords.jar" />
+  </exec>
+  <!-- copy tidykeywords.exe to E:/sys -->
+  <copy file="com/mindprod/submitter/tidykeywords.exe" todir="E:/sys" />
+</target>
+
+<!-- Z I P -->
+<target name="zip" depends="jar">
+<echo message="    :::    submitter    :::    preparing zip distributable." />
+  <!-- Remove references to separate foot files. -->
+  <exec executable="prunefoot.exe" failifexecutionfails="false" dir="com/mindprod/submitter">
+    <arg value="submitter.html" />
+    <arg value="submitter.manual.html" />
+  </exec>
+  <zip destfile="com/mindprod/submitter/submitter263.zip" duplicate="preserve" filesonly="true" includes="${distributed.exts}" excludes="${nondistributed}">
+    <!-- zipfileset includes all subdirs as well -->
+    <zipfileset dir="com/mindprod/submitter" prefix="com/mindprod/submitter" includes="${distributed.exts}" excludes="${nondistributed}" />
+    <!-- Extra classes and properties to include in the Zip -->
+      <zipfileset  dir="com/mindprod/common18"   prefix="com/mindprod/common18"   includes="${distributed.exts}"  excludes="${nondistributed}"  />
+      <zipfileset  dir="com/mindprod/csv"        prefix="com/mindprod/csv"        includes="${distributed.exts}"  excludes="${nondistributed}"  />
+      <zipfileset  dir="com/mindprod/entities"   prefix="com/mindprod/entities"   includes="${distributed.exts}"  excludes="${nondistributed}"  />
+      <zipfileset  dir="com/mindprod/fastcat"    prefix="com/mindprod/fastcat"    includes="${distributed.exts}"  excludes="${nondistributed}"  />
+      <zipfileset  dir="com/mindprod/http"       prefix="com/mindprod/http"       includes="${distributed.exts}"  excludes="${nondistributed}"  />
+      <zipfileset  dir="com/mindprod/hunkio"     prefix="com/mindprod/hunkio"     includes="${distributed.exts}"  excludes="${nondistributed}"  />
+      <zipfileset  dir="com/mindprod/submitter"  prefix="com/mindprod/submitter"  includes="*.list"                                             />
+  </zip>
+
+  <!-- Z I P L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/submitter" output="com/mindprod/submitter/zip.look">
+    <arg value="submitter263.zip" />
+  </exec>
+</target>
+
+<!-- P O S T Z I P -->
+<target name="postzip" depends="zip,postjar">
+<echo message="    :::    submitter    :::    posting zip to website." />
+  <!-- copy precis to website -->
+  <copy file="com/mindprod/submitter/submitter.use" tofile="E:/mindprod/precis/submitter.txt" overwrite="true" />
+  <!-- copy com\mindprod\submitter/submitter263.zip to website -->
+  <copy file="com\mindprod\submitter/submitter263.zip" todir="E:/mindprod/zips" overwrite="true" />
+  <!-- delete old zip distributable from project and website -->
+  <delete file="com/mindprod/submitter/submitter262.zip" failonerror="false" quiet="true" />
+  <delete file="E:/mindprod/zips/submitter262.zip" failonerror="false" quiet="true" />
+</target>
+</project>

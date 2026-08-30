@@ -1,0 +1,13 @@
+
+----
+
+Version History:
+
+ 2.9 2012-11-06 fix bug in nullSafeStringCompare. It was ignoring case.
+
+ 3.0 2014-04-29 add quoteForReplace to quote Regex replacement Strings,
+                stripNaughtyCharacters, reorderLetters, deDupLetters
+
+ 3.1 2016-02-22 add last and tail methods
+
+-30-

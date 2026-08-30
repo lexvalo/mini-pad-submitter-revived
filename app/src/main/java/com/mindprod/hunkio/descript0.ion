@@ -1,0 +1,55 @@
+"desc.btm" creates TCC file descriptions for project files
+"descother.btm" creates TCC file descriptions for non-project files
+"run.bat" execute the HunkIO application from the jar
+"grab.btm" copy in Java source code from IntelliJ and build it. Roedy's use only.
+"HunkIO.class" HunkIO main Java program compiled byte code
+"hunkio.manual.html" detailed HTML manual for the HunkIO project
+"hunkio.jar" jarred class files: Library to read a file at once
+"hunkio.look" uncommented jar manifest
+"hunkio.jnlp" hunkio jnlp Java Web Start launch
+"hunkio-setup.exe" JET distributable, containing runtime
+"hunkio.ico" Windows icon for the project, contains multiple image sizes
+"hunkio.jpn" Manifest of what is included in the JET executable.
+"hunkio.log" log of what JET did compiling and preparing the distributable
+"hunkio.prj" JET project configuration, compiler options and notes on what needs to be included.
+"hunkio.startup" List of classes JET should preload for speed.
+"hunkio.xbind.script" List of DLLs JET will need to run the app.
+"build_hunkio.bat" Build JET executable with project descriptor
+"run_hunkio.bat" Runs the JET executable with default parm.
+"mindprod.css" cascading style sheet for general HTML
+"jdisplay.css" cascading style sheet for displaying source code in HTML
+"package-info.java" Dummy Java source with JavaDoc describing the entire package.
+"untouch.digest" generated: enables untouching (set date back) unchanged but redated files.
+"mindprodcert2017rsa.cer" Public key for Mindprod code-signing certificate. Cannot be used to sign jars.
+"DESCRIPT.ION" TCC file descriptions
+"descript0.ion" generated file of overriding descriptions to merge into DESCRIPT.ION
+"descript2.ion" generated file default descriptions to merge into DESCRIPT.ION
+"MasterDistribution.site" URL to find the master copy of the HunkIO project files
+"hunkio.use" precis(summary) Library to read a file at once Generated
+"hunkio.vpj" Slick Edit project ini file
+"hunkio.vpw" Slick Edit project ini file
+"hunkio.vtg" Slick Edit binary tag xref file
+"hunkio.icon16.png" 16x16 icon for the HunkIO project
+"hunkio.icon32.png" 32x32 icon for the HunkIO project
+"hunkio.icon48.png" roughly 48x48 icon for the HunkIO project
+"hunkio.icon64.png" roughly 64x64 icon for the HunkIO project
+"hunkio.icon128.png" roughly 128x128 icon for the HunkIO project
+"hunkio.screenshot.png" screenshot for the HunkIO project
+"hunkio.splash.gif" splash gif for the HunkIO project
+"hunkio.icon32.gif" 32x32 gif icon for the HunkIO project
+"hunkio.icon64.gif" 64x64 gif icon for the HunkIO project
+"_O_V_E_R_V_I_E_W.txt" Commented List of all files for HunkIO, with one line descriptions.
+"use.txt" key facts about the HunkIO project. Generates hunkio.use
+"version.txt" key current version info about the HunkIO project. Generates hunkio.use
+"versionhistory.txt" complete version history of the HunkIO project. Generates hunkio.use
+"hunkio.txt" ASCII text manual for the HunkIO project.
+"build.xml" Complex ANT build script for HunkIO
+"rebuild.xml" Simplified ANT build script for HunkIO
+"forgather.xml" list of extra gather steps for ANT.
+"forjar.xml" genjar list of extra files to include in hunkio.jar
+"forjarexe.xml" jar.exe list of extra files to include in hunkio.jar
+"forpost.xml" list of extra posting steps for ANT.
+"forzip.xml" list of extra files for ANT include in hunkio19.zip
+"hunkio.xml" ASP PAD desc of the HunkIO project: Library to read a file at once
+"hunkio19.zip" HunkIO 1.9 distribute zip: Library to read a file at once
+"zip.look" uncommented zip manifest for hunkio19.zip

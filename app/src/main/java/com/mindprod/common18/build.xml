@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<!-- BUILD.XML complex common18 3.1 build that copies files to website for upload. -->
+<!-- Build with ANT postzip jet -->
+<!-- Compile and jar common18 using ANT -->
+<!-- Invoke with [ant clean] to erase class files and start over. -->
+<!-- Invoke with [ant compile] to just compile. -->
+<!-- Invoke with [ant jar] to compile and create jar files. -->
+<!-- Invoke with [ant postjar] to post jars to the mindprod website. -->
+<!-- Invoke with [ant zip] to create source code zip files. -->
+<!-- Invoke with [ant postzip] to post zip file to the mindprod website. -->
+<!-- Using Apache ANT version 1.10.1 -->
+<!-- For details of ANT use, see http://mindprod.com/jgloss/ant.html -->
+<!-- This script does not build any *.asm files. -->
+
+<!-- D E F I N I T I O N S -->
+<!-- ANT.project.dir is com/mindprod/common18 -->
+<!-- basedir is E:/ -->
+<project name="common18" basedir="E:/" default="jar">
+
+<!-- extensions for zip. Case sensitive! Go in zip, not necessarily in Jar. -->
+<property name="distributed.exts" value="**/*.au,**/*.asm,**/*.bat,**/*.btm,**/*.c,**/*.COM,**/*.com,**/*.cpp,**/*.css,**/*.csv,**/*.dll,**/*.gif,**/*.h,**/*.hpp,**/*.htm,**/*.html,**/*.ico,**/*.ION,**/*.ion,**/*.jar,**/*.java,**/*.jnlp,**/*.JNLP,**/*.jpg,**/*.look,**/*.png,**/*.properties,**/*.ser,**/*.sln,**/*.txt,**/*.use,**/*.xml" />
+
+<!-- dirs we to exclude from zip. Case sensitive! -->
+<property name="nondistributed" value="**/javadoc/**,**/jetpdb/**,**/Debug/**,**/Release/**" />
+
+<!-- C L E A N -->
+<target name="clean">
+<echo message="    :::    common18    :::    deleting files to force regeneration." />
+  <delete>
+    <fileset dir="com/mindprod/common18" includes="**/*.class" />
+    <fileset dir="com/mindprod/common18" includes="**/*.jar" />
+    <!-- leave Jet *.exe. Old versions are still useful during the build. -->
+    <fileset dir="com/mindprod/common18" includes="common1831.zip" />
+  </delete>
+</target>
+
+<!-- C O M P I L E -->
+<target name="compile">
+<echo message="    :::    common18    :::    compiling Java tree with target=1.8" />
+  <javac source="1.8" target="1.8" srcdir="com/mindprod/common18" sourcepath="${basedir}" classpath="${basedir}" encoding="UTF-8" debug="on" includeAntRuntime="false">
+    <compilerarg value="-Xlint:unchecked" />
+    <compilerarg value="-Xlint:fallthrough" />
+    <compilerarg value="-Xlint:deprecation" />
+    <compilerarg value="-Xlint:cast" />
+  </javac>
+</target>
+
+<!-- J A V A H must do ant javah to rebuild *.h files. -->
+<target name="javah" depends="compile">
+  <!-- there is no jni -->
+</target>
+
+<!-- G A T H E R -->
+<target name="gather" depends="compile">
+<echo message="    :::    common18    :::    gathering files to build jar/zip." />
+  <!-- prepare common18.use precis from two pieces -->
+    <concat destfile="com/mindprod/common18/common18.use" fixlastline="yes">
+      <filelist dir="com/mindprod/common18" files="version.txt,use.txt,versionhistory.txt" />
+    </concat>
+    <copy file="E:/mindprod/application/common18.html" todir="com/mindprod/common18" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/application/common18.manual.html" todir="com/mindprod/common18" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/ico/common18.ico" tofile="E:/mindprod/application/common18.ico" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon128/common18.png" tofile="com/mindprod/common18/common18.icon128.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon16/common18.png" tofile="com/mindprod/common18/common18.icon16.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon32/common18.png" tofile="com/mindprod/common18/common18.icon32.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon48/common18.png" tofile="com/mindprod/common18/common18.icon48.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon64/common18.png" tofile="com/mindprod/common18/common18.icon64.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/screenshot/common18.png" tofile="com/mindprod/common18/common18.screenshot.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/jdisplay.css" todir="com/mindprod/common18" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/mindprod.css" todir="com/mindprod/common18" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/pad/common18.xml" todir="com/mindprod/common18" failonerror="false" quiet="true" overwrite="true" />
+</target>
+
+<!-- J A R -->
+<!-- Make F:\Program Files (x86)\apache-ant-1.10.1\lib\GenJar.jar known to ANT -->
+<!-- See http://mindprod.com/jgloss/genjar.html for details -->
+<taskdef resource="genjar.properties" />
+
+<target name="jar" depends="gather">
+<echo message="    :::    common18    :::    genjar finding dependencies and creating jar." />
+  <genjar jarfile="com/mindprod/common18/common18.jar">
+    <!-- include all classes in the package -->
+    <class>
+      <fileset dir="${basedir}">
+        <!-- include all the classes in com/mindprod/common18 -->
+        <include name="com/mindprod/common18/*.class" />
+        <!-- all dependent classes will be automatically included -->
+      </fileset>
+    </class>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/common18" output="nul:" logError="true" failonerror="true">
+    <arg value="common18.jar" />
+    <arg value="1.2" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/common18" output="com/mindprod/common18/common18.look">
+    <arg value="common18.jar" />
+  </exec>
+</target>
+
+<!-- P O S T J A R -->
+<target name="postjar" depends="jar">
+  <!-- nothing to do -->
+</target>
+
+<!-- J E T  -->
+<!-- Dummy. Not using Jet -->
+<target name="jet">
+</target>
+
+<!-- Z I P -->
+<target name="zip" depends="jar">
+<echo message="    :::    common18    :::    preparing zip distributable." />
+  <!-- Remove references to separate foot files. -->
+  <exec executable="prunefoot.exe" failifexecutionfails="false" dir="com/mindprod/common18">
+    <arg value="common18.html" />
+    <arg value="common18.manual.html" />
+  </exec>
+  <zip destfile="com/mindprod/common18/common1831.zip" duplicate="preserve" filesonly="true" includes="${distributed.exts}" excludes="${nondistributed}">
+    <!-- zipfileset includes all subdirs as well -->
+    <zipfileset dir="com/mindprod/common18" prefix="com/mindprod/common18" includes="${distributed.exts}" excludes="${nondistributed}" />
+    <!-- Extra classes and properties to include in the Zip -->
+      <zipfileset dir="com/mindprod/fastcat"     prefix="com/mindprod/fastcat"     includes="${distributed.exts}" excludes="${nondistributed}" />
+  </zip>
+
+  <!-- Z I P L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/common18" output="com/mindprod/common18/zip.look">
+    <arg value="common1831.zip" />
+  </exec>
+</target>
+
+<!-- P O S T Z I P -->
+<target name="postzip" depends="zip,postjar">
+<echo message="    :::    common18    :::    posting zip to website." />
+  <!-- copy precis to website -->
+  <copy file="com/mindprod/common18/common18.use" tofile="E:/mindprod/precis/common18.txt" overwrite="true" />
+  <!-- copy com\mindprod\common18/common1831.zip to website -->
+  <copy file="com\mindprod\common18/common1831.zip" todir="E:/mindprod/zips" overwrite="true" />
+  <!-- delete old zip distributable from project and website -->
+  <delete file="com/mindprod/common18/common1830.zip" failonerror="false" quiet="true" />
+  <delete file="E:/mindprod/zips/common1830.zip" failonerror="false" quiet="true" />
+</target>
+</project>

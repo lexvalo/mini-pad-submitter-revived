@@ -1,0 +1,45 @@
+@echo off
+rem tidy CSV files of sites, and regenerate HTML
+rem uses Jet.  no Jar version of this script exists.
+echo tidying Submitter PadSite lists...
+E:
+cd \com\mindprod\submitter
+csvcondense.exe appvisor.csv
+csvcondense.exe candidates.csv
+csvcondense.exe dead.csv
+csvcondense.exe hassle.csv
+csvcondense.exe nohassle.csv
+TidyKeywords.exe appvisor.csv
+TidyKeywords.exe candidates.csv
+TidyKeywords.exe dead.csv
+TidyKeywords.exe hassle.csv
+TidyKeywords.exe nohassle.csv
+csvsort.exe appvisor.csv     0i+
+csvsort.exe candidates.csv   4i+ 0i+ 1i+
+csvsort.exe dead.csv         0i+
+csvsort.exe hassle.csv       0i+
+csvsort.exe nohassle.csv     0i+
+csvalign.exe appvisor.csv
+csvalign.exe candidates.csv
+csvalign.exe dead.csv
+csvalign.exe hassle.csv
+csvalign.exe nohassle.csv
+echo formatting appvisor sites
+FormatPadSites.exe appvisor.csv E:\mindprod\jgloss\include\appvisorguts.htmlfrag
+echo formatting candidates
+FormatPadSites.exe candidates.csv E:\mindprod\jgloss\include\candidateguts.htmlfrag
+echo formatting dead
+FormatPadSites.exe dead.csv       E:\mindprod\jgloss\include\deadguts.htmlfrag
+echo formatting hassle
+FormatPadSites.exe hassle.csv     E:\mindprod\jgloss\include\hassleguts.htmlfrag
+echo formatting nohassle
+FormatPadSites.exe nohassle.csv   E:\mindprod\jgloss\include\nohassleguts.htmlfrag
+rem fix css classes
+E:\com\mindprod\repair\fixcssclasses.exe  %configuration -s E:\mindprod\jgloss\include  > nul:
+rem expand macros
+E:
+cd \mindprod\jgloss
+call E:\com\mindprod\htmlmacros\one.btm  appvisor.html candidates.html nohassle.html hassle.html deadpadsites.html  E:\mindprod\applet\submitter.html
+E:
+cd \com\mindprod\submitter
+rem -30-

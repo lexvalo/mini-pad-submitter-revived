@@ -1,0 +1,38 @@
+Common utility classes that work under Swing Java 1.7+.  They are intended
+to be included in your own Java programs.
+Some of the classes included are:
+Age :  computes age in years, months, days
+BigDate :  replacement for Date, calendar calculations
+CheckPermission :  check permission
+ClipboardPoker :  put something in clipboard
+CMPAboutBox :  AWT About box
+CMPAboutJBox :  Swing Abount box
+EIO :  Encapsulated I/O
+FNV1a64 :  64-bit hash function
+FontFactory :  choose and cache optimal fonts for platform
+FullName :  parse full name into surname, given, title etc.
+Hybrid :  hybrid AWT/application
+HybridJ :  Hybrid SWING/application
+ImageInfo :  get information about png, jpg, gif, webp image
+ImageViewer :  display an image
+InOrder :  ensure collection is in order
+JavaVersion :  issure right Java version
+JEButton :  Enhanced JButton
+Laf :  look and feel
+Localise :  localise for LfNl
+Misc :  misc methods
+Play :  play audio
+Progress :  progress counter
+ResizingImageViewer :  viewer that lets user dynamically resize the image
+Shuffle :  shuffle a collection
+ST :  miscellaneous String methods
+StoppableThread :  gracefully stopping thread
+StringSearch :  searching a string
+TestDate :  exercise BigDate
+Twirler :  Twirler activity indicator
+VersionCheck :  check Java version
+The icon is a model of an acetaldehyde molecule (the chemical that gives
+people hangovers.).  I chose it simply became it contains 7 atoms, tying
+in with the earlier common17 for JDK 1.7+.
+com.mindprod.common11 and com.mindprod.common13 com.mindprod.common15 are
+now integrated into common18 and are no longer distributed separately.

@@ -1,0 +1,1 @@
+  <zipfileset dir="com/mindprod/fastcat"     prefix="com/mindprod/fastcat"     includes="${distributed.exts}" excludes="${nondistributed}" />

@@ -1,0 +1,11 @@
+Java classes to include in your own programs.  They let you read or write
+a file in one fell swoop into RAM, in one great hunk, with readEntireFile
+and writeEntireFile.  It also includes createTempFile method that is more
+convenient to use than Sun's File.createTempFile.  It also includes
+PrintWriterPlus that converts linefeeds to platform specific line feeds
+even when they are embedded in data.
+See also the more elaborate filetransfer package
+http://mindprod.com/products1.html#FILETRANSFER if your files
+are too large to fit entirely in RAM.
+Why the three linked ball logo?  It symbolises processing a
+file which may have internal structure as a single piece.

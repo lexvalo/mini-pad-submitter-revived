@@ -1,0 +1,67 @@
+
+----
+
+Version History:
+
+ 1.0 2004-01-01 initial version
+
+ 1.1 2004-01-01 optimise using
+                text.indexOf('&amp;') and sb.append(string) rather
+                than processing character by character.
+
+ 1.2 2004-07-21 add stripHTMLTags -
+                stripFile also strips tags - add stripNbsp
+
+ 1.3 2005-06-20 fix bug in possEntityToChar
+                exposed possEntityToChar as public
+
+ 1.4 2005-07-02 check for null input
+
+ 1.5 2005-07-29 no longer needs entitiestochar.ser
+                file. Converted to JDK 1.5 back to 1,2
+
+ 1.6 2005-09-05 faster code for stripHTMLTags that
+                returns original string if nothing changed.
+
+ 1.7 2005-09-05
+
+ 1.8 2007-02-26 fix bug. hex entity it &#xffff; not &x#ffff;
+
+ 1.9 2007-03-26
+
+ 2.0 2007-04-26
+
+ 2.1 2007-05-10
+
+ 2.2 2007-05-14 StripHTMLTags now strips applet, style, script pairs.
+                generate hex entities as comments in entitycase.javafrag
+
+ 2.3 2008-07-29 refactor code for Entities, add notes to chars, add a few new missing Entities.
+
+ 2.4 2008-08-05 add translateNbspTo parameter to several methods and deprecate the versions without it.
+                This allows you to directly control how &nbsp; is translated, usually ' ' or (char)160.
+                Renamed methods to make it clearer just what sort of input is expect.
+
+ 2.5 2008-08-06 add ability to insert XML entities. Convert to JDK 1.5+, with generics, and for:each, StringBuilder
+
+ 2.6 2009-04-05 StripEntities now leaves a space behind when it removes a <br><p><td> etc tag.
+
+ 2.7 2009-11-14 generate a table for the HTML cheat sheet of quote-like entities.
+
+ 2.8 2009-12-22 export table on HTML 5 entities. Now import csv file rather than embed entity facts.
+
+ 2.9 2010-01-29 export XHTML entities (currently same as HTML-4 entities).
+
+ 3.0 2011-02-10 rename classes and methods. Add file utilities for Entify, DeEntify, Flatten.
+                StripEntities -> DeEntifyStrings,
+                InsertEntities -> EntifyStrings,
+                stripHTMLEntities -> deEntifyHTML,
+                insertHTMLEntities -> entifyHTML.
+
+ 3.1 2011-09-02 correct error in tables reversing Y dierisis and y dieresis. Correct upper/lower categories in table.
+
+ 3.2 2014-08-02 add code b, and the space category.
+
+ 3.3 2014-08-24 add musical symbols and support for chars without alpha entities.
+
+-30-

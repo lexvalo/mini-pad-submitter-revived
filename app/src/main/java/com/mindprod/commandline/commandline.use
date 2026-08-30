@@ -1,0 +1,154 @@
+CommandLine 2.6 build: 9639 released: 2011-01-10 compiled with: Java 1.8.0_131
+
+Command line parser to create a list of files from a tree description.
+
+Copyright: (c) 2003-2017 Canadian Mind Products.
+
+Java class library.
+Download from: http://mindprod.com/products1.html#COMMANDLINE
+
+----
+
+Notes:
+
+You must install the Java JDK to use this program.
+See http://mindprod.com/jgloss/jgloss/jdk.html
+
+You are pretty much on your own how to use this material.
+This program requires a manual install! See below.
+
+I put out an avalanche of free software into the world, and submit PAD
+files to hundreds of distribution sites, but I rarely hear back from
+anyone.  What's happening?  Does it all just work fine?  It is so
+complicated nobody can figure out how to use it and they give up on it?
+It is it useful?  Since everyone has the source, do people just fix the
+programs to their liking themselves?  Did you have trouble installing?  Do
+I presume you know too much?  I would be happy to hear from you about your
+experiences, positive or negative and your requests for improvements.  A
+one-line email to roedy@mindprod.com would be great.
+
+===> Free <===
+Full source included.
+You may even include the source code, modified or unmodified
+in free/commercial open source/proprietary programs that you write and distribute.
+May be used freely for any purpose but military.
+For more details on this restriction, see
+http://mindprod.com/contact/nonmil.html
+If you include any Canadian Mind Products code in your own applications,
+your app too must be labelled non-military use only.
+http://mindprod.com/contact/nonmil.html
+All Java jars and source code are included. If you need the class files or Javadoc, you will have to build them yourself. To streamline the zip downloads, class files and Javadoc have been removed.
+
+----
+
+Prerequisites:
+
+This program runs under any OS that supports Java,
+(e.g.W2K/XP/W2003/Vista/W2008/W7-32/W7-64/W8-32/W8-64/Linux/LinuxARM/LinuxX86
+/LinuxX64/Ubuntu/Solaris/SolarisSPARC/SolarisSPARC64/SolarisX86/SolarisX64/OSX/AIX...)
+so long as you have
+<><> Java version 1.8 <><> or later installed (32-bit or 64-bit Java).
+See http://mindprod.com/jgloss/installingjava.html for details.
+
+----
+
+Installing on a PC:
+
+Download source and compiled jar files to run on your own machine as a part of your own program.
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+To install, extract the zip download with WinZip
+(or similar unzip utility) into any directory you please,
+often J:\ --  ticking off the <span class="click">use folder names</span> option.
+
+----
+
+Installing on a MacIntosh:
+
+Use Safari to download source and compiled jar files to run on your own machine as a part of your own program.
+Safari will automatically unpack the zip into ~/Downloads (version 10.5)
+[or on the Desktop (version 10.4 and earlier)].
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+You may optionally move the download tree to a permanent home.
+I don't have a MacIntosh, just a PC, so I can't test my Java programs for Mac compatibility.
+In theory they should work without problems, but in practice that does not always happen.
+If you have problems please, let me know, preferably with screenshots and complete verbatim error messages.
+
+----
+
+Rebuilding:
+
+You are pretty much on your own how to use this material.
+
+----
+
+Use:
+
+CommandLine parses the command line for a description of a set of files
+and converts it into a list of individual files to process.
+CommandLine does nothing by itself. It is library code you
+can incorporate into your own Java programs like this:
+   CommandLine wantedFiles = new CommandLine( args,
+     new AllDirectoriesFilter() /* which directories to include */,
+     new ExtensionListFilter( "java" ) /* which file extensions to include */);
+    // iterate through all the files in the collection.
+    for ( File file : wantedFiles )
+        {
+        // files appear in random order, as provided by the OS
+        System.err.println( file.getCanonicalPath() );
+        }// end for
+On the command line, you can specify a list of individual files, mixed
+with a list of directories.
+The Iteration of Files you get have names as you specified them on the
+command line.  If you need canonical names, you must use getCanonicalPath
+or GetCanonicalFile.
+If you use the -s switch in includes all the files in all the recursive
+subdirectories. It must precede the directory names it applies to.
+If you use the -q switch, it will suppress the counts of how many files it
+found in each subdirectory.  It will be passed through to the application
+via isQuiet.
+if you use the -v switch, that means verbose.  It will be passed through
+to the application via isVerbose.
+If you have both -q and -v on the command line, the last option prevails.
+Commandline does not currently suupport wildcards, negative selections, or
+@indirect lists.
+Why that apple tree icon?  It represents a tree of various types of files,
+from which you pick some.
+
+
+----
+
+Version History:
+
+ 1.4 2005-06-18 cleaner bat files
+
+ 1.5 2005-07-07 displays stats, with
+                recursive indenting. converted to Java 1.5 syntax
+
+ 1.6 2006-01-01
+
+ 1.7 2006-01-01
+
+ 1.8 2006-03-13 rewrite with for:each JDK 1.5
+
+ 1.9 2007-01-01
+
+ 2.0 2007-01-01
+
+ 2.1 2007-01-01
+
+ 2.2 2007-06-29 Commandline is Iterable, isQuiet, now iterate CommandLine directly.
+
+ 2.3 2007-08-27 add JunkFilter
+
+ 2.4 2009-02-27 send output to err instead of out so will not contaminate batch data to out.
+
+ 2.5 2009-02-28 CommandLine now uses considerably less RAM by caching the list of files on disk.
+                You no longer need specify estimatedFiles.
+                Split off into its own package.
+
+ 2.6 2011-01-10 v verbose option
+
+-30-
+

@@ -1,0 +1,178 @@
+/*
+ * [CSVISBN.java]
+ *
+ * Summary: convert ISBN10 or ISBN13 in selected columns.
+ *
+ * Copyright: (c) 2012-2017 Roedy Green, Canadian Mind Products, http://mindprod.com
+ *
+ * Licence: This software may be copied and used freely for any purpose but military.
+ *          http://mindprod.com/contact/nonmil.html
+ *
+ * Requires: JDK 1.8+
+ *
+ * Created with: JetBrains IntelliJ IDEA IDE http://www.jetbrains.com/idea/
+ *
+ * Version History:
+ *  1.0 2012-12-15 initial version
+ */
+package com.mindprod.csv;
+
+import com.mindprod.common18.EIO;
+import com.mindprod.hunkio.HunkIO;
+// import com.mindprod.isbn.ISBNValidate;
+
+import java.io.EOFException;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.charset.Charset;
+
+import static java.lang.System.*;
+
+/**
+ * convert ISBN10 or ISBN13 in selected columns.
+ * <p/>
+ * Use: java.exe com.mindprod.CSVSIBN somefile.csv  0 3
+ *
+ * @author Roedy Green, Canadian Mind Products
+ * @version 1.0 2012-12-15 initial version
+ * @since 2012-12-15
+ */
+public final class CSVISBN
+    {
+    /**
+     * how to use the command line
+     */
+    private static final String USAGE = "\nCSVISBN needs a single filename.csv on the command line followed by " +
+                                        "0-based numeric columns to convert ISBN10<->ISBN13.";
+
+    /**
+     * convert awkward characters  in selected columns in a CSV file to entities,
+     * constructor. Just create the CSVISBN object.. There are no methods to call.
+     *
+     * @param fileBeingProcessed CSV file to have awkward chars converted to HTML entities.
+     * @param separatorChar      field separator character, usually ',' in North America,
+     *                           ';' in Europe and sometimes '\t' for
+     *                           tab.
+     * @param quoteChar          char to use to enclose fields containing a separator, usually '\"'. Use (char)0 if
+     *                           you don't want a quote character.
+     * @param commentChar        char to use to introduce comments.  Use (char) 0 if none.  Only one character allowed.
+     * @param encoding           encoding of the input and output file.
+     * @param colsToConvert      list of columns wanted to have ISBNs converted.
+     *
+     * @throws java.io.IOException if problems reading/writing file
+     */
+    @SuppressWarnings( { "WeakerAccess" } )
+    public CSVISBN( final File fileBeingProcessed, final char separatorChar, final char quoteChar,
+                    final char commentChar, final Charset encoding, final int... colsToConvert ) throws IOException
+        {
+        final String commentChars = ( commentChar == 0 ) ? "" : String.valueOf( commentChar );
+        // reader, separatorChar, quoteChar, commentChars, hideComments, trimQuoted,
+        // trimUnquoted allowMultipleLineFields
+        final CSVReader r = new CSVReader( EIO.getBufferedReader( fileBeingProcessed, 64 * 1024, encoding ),
+                separatorChar, quoteChar, commentChars,
+                true, true /* trimQuoted */, true /* trimUnquoted */, true
+        );
+        final File tempFile = HunkIO.createTempFile( "temp_", ".tmp", fileBeingProcessed );
+        // writer, quoteLevel, separatorChar, quoteChar, commentChar, trim
+        final PrintWriter pw = EIO.getPrintWriter( tempFile, 32 * 1024, encoding );
+        final CSVWriter w = new CSVWriter( pw, 0 /* minimal  */, separatorChar, quoteChar, commentChar, true );
+        try
+            {
+            while ( true )
+                {
+                // process one line each time through the loop.
+                final String[] fields = r.getAllFieldsInLine();
+                final int fieldCount = r.wasComment() ? fields.length - 1 : fields.length;
+                // convert selected column to entities for selected columns.
+                for ( int source : colsToConvert )
+                    {
+                    if ( source < fieldCount )
+                        {
+                        final String rawISBN = fields[ source ];
+                        final String isbnWithoutDashes;
+                        if ( rawISBN.contains( "-" ) )
+                            {
+                            isbnWithoutDashes = ISBNValidate.tidyISBN10or13RemovingDashes( rawISBN );
+                            }
+                        else
+                            {
+                            isbnWithoutDashes = rawISBN;
+                            }
+                        switch ( isbnWithoutDashes.length() )
+                            {
+                            // convert 10 to 13 without dashes
+                            case 10:
+                                fields[ source ] = ISBNValidate.isbn10To13( isbnWithoutDashes );
+                                break;
+                            // convert 13 to 10 without dashes
+                            case 13:
+                                fields[ source ] = ISBNValidate.isbn13To10( isbnWithoutDashes );
+                                break;
+                            default:
+                                err.println( " line "
+                                             + r.lineCount()
+                                             + " contains invalid ISBN "
+                                             + rawISBN
+                                             + " Left as is." );
+                            }
+                        }
+                    }
+                w.nl( fields, r.wasComment() );
+                } // end while
+            }
+        catch ( EOFException e )
+            {
+            out.println( r.lineCount() + " lines converted." );
+            r.close();
+            w.close();
+            HunkIO.deleteAndRename( tempFile, fileBeingProcessed );
+            }
+        }
+
+    /**
+     * Simple command line interface to CSVISBN. Corverts selected columns in one csv file whose name is on the
+     * command line. Must have
+     * extension .csv <br> Use java com.mindprod.CSVISBN somefile.csv 0 1 2 3 ...
+     * Output replaces input. If you want the input, make a copy first.
+     *
+     * @param args name of csv file to convert, followed by zero-based cols to process in desired order.
+     */
+    public static void main( final String[] args )
+        {
+        if ( args.length < 2 )
+            {
+            throw new IllegalArgumentException( USAGE );
+            }
+        final String filename = args[ 0 ];
+        if ( !filename.endsWith( ".csv" ) )
+            {
+            throw new IllegalArgumentException( "Bad Extension\n" + USAGE );
+            }
+        final File file = new File( filename );
+        final int[] colsToStrip = new int[ args.length - 1 ];
+        try
+            {
+            for ( int i = 1; i < args.length; i++ )
+                {
+                colsToStrip[ i - 1 ] = Integer.parseInt( args[ i ] );
+                }
+            }
+        catch ( NumberFormatException e )
+            {
+            throw new IllegalArgumentException( USAGE );
+            }
+        try
+            {
+            // file,  separatorChar,  quoteChar,  commentChar
+            new CSVISBN( file, ',', '\"', '#', CSV.UTF8, colsToStrip );
+            }
+        catch ( IOException e )
+            {
+            err.println();
+            e.printStackTrace( err );
+            err.println( "CSVISBN failed " + EIO.getCanOrAbsPath( file ) );
+            err.println();
+            }
+        } // end main
+    }

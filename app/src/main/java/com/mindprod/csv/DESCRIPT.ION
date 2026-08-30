@@ -1,0 +1,211 @@
+"_O_V_E_R_V_I_E_W.txt" Commented List of all files for CSV, with one line descriptions.
+"build.xml" Complex ANT build script for CSV
+"ColumnDescriptor.class" compiled Java byte code
+"CSV.class" CSV main Java program compiled byte code
+"csv.exe" JET executable Read, write, align, condense, dump, sort, convert, patch, reshape, group pack... CSV (Comma, tab and semicolon-Separated Variable) files
+"csv.icon128.png" roughly 128x128 icon for the CSV project
+"csv.icon16.png" 16x16 icon for the CSV project
+"csv.icon32.png" 32x32 icon for the CSV project
+"csv.icon48.png" roughly 48x48 icon for the CSV project
+"csv.icon64.png" roughly 64x64 icon for the CSV project
+"csv.jar" jarred class files: Read, write, align, condense, dump, sort, convert, patch, reshape, group pack... CSV (Comma, tab and semicolon-Separated Variable) files
+"CSV.java" display statistics on a CSV file
+"csv.look" uncommented jar manifest
+"csv.manual.html" detailed HTML manual for the CSV project
+"csv.screenshot.png" screenshot for the CSV project
+"csv.use" precis(summary) Read, write, align, condense, dump, sort, convert, patch, reshape, group pack... CSV (Comma, tab and semicolon-Separated Variable) files Generated
+"csv.xml" ASP PAD desc of the CSV project: Read, write, align, condense, dump, sort, convert, patch, reshape, group pack... CSV (Comma, tab and semicolon-Separated Variable) files
+"csv75.zip" CSV 7.5 distribute zip: Read, write, align, condense, dump, sort, convert, patch, reshape, group pack... CSV (Comma, tab and semicolon-Separated Variable) files
+"CSVAlign.class" alternate Java program compiled byte code
+"csvalign.exe" JET executable
+"csvalign.jar" jarred class files.
+"CSVAlign.java" align CSV file
+"csvalign.look" uncommented jar manifest
+"CSVChangeCase.class" alternate Java program compiled byte code
+"csvchangecase.exe" JET executable
+"csvchangecase.jar" jarred class files.
+"CSVChangeCase.java" change case of field in CSV file
+"csvchangecase.look" uncommented jar manifest
+"CSVCharCategory.class" compiled Java byte code
+"CSVCharCategory.java" Enumeration of classses of character
+"CSVCommaToTab.class" alternate Java program compiled byte code
+"csvcommatotab.exe" JET executable
+"csvcommatotab.jar" jarred class files.
+"CSVCommaToTab.java" covert comma-separated to tab-separated
+"csvcommatotab.look" uncommented jar manifest
+"CSVCondense.class" alternate Java program compiled byte code
+"csvcondense.exe" JET executable
+"csvcondense.jar" jarred class files.
+"CSVCondense.java" compact CSV file
+"csvcondense.look" uncommented jar manifest
+"CSVDeDup$1.class" compiled Java byte code
+"CSVDeDup.class" alternate Java program compiled byte code
+"csvdedup.exe" JET executable
+"csvdedup.jar" jarred class files.
+"CSVDeDup.java" deDup a CSV file
+"csvdedup.look" uncommented jar manifest
+"CSVDeDupField.class" alternate Java program compiled byte code
+"csvdedupfield.exe" JET executable
+"csvdedupfield.jar" jarred class files.
+"CSVDeDupField.java" sort and deDup letters within a field
+"csvdedupfield.look" uncommented jar manifest
+"CSVDeEntify.class" alternate Java program compiled byte code
+"csvdeentify.exe" JET executable
+"csvdeentify.jar" jarred class files.
+"CSVDeEntify.java" remove entities from CSV file
+"csvdeentify.look" uncommented jar manifest
+"CSVDump.class" alternate Java program compiled byte code
+"csvdump.exe" JET executable
+"csvdump.jar" jarred class files.
+"CSVDump.java" dump contents of CSV file to console
+"csvdump.look" uncommented jar manifest
+"CSVEntify.class" alternate Java program compiled byte code
+"csventify.exe" JET executable
+"csventify.jar" jarred class files.
+"CSVEntify.java" convert chars to entities in CSV file
+"csventify.look" uncommented jar manifest
+"CSVISBN.class" alternate Java program compiled byte code
+"csvisbn.exe" JET executable
+"csvisbn.jar" jarred class files.
+"CSVISBN.java" ISBN10<->ISBN13
+"csvisbn.look" uncommented jar manifest
+"CSVPack.class" alternate Java program compiled byte code
+"csvpack.exe" JET executable
+"csvpack.jar" jarred class files.
+"CSVPack.java" make CSV file as compact as possible
+"csvpack.look" uncommented jar manifest
+"CSVReader$1.class" compiled Java byte code
+"CSVReader.class" compiled Java byte code
+"CSVReader.java" Read CSV Files
+"CSVReadState.class" compiled Java byte code
+"CSVReadState.java" parser enumeration states
+"CSVRecode.class" alternate Java program compiled byte code
+"csvrecode.exe" JET executable
+"csvrecode.jar" jarred class files.
+"CSVRecode.java" recode column of csv file
+"csvrecode.look" uncommented jar manifest
+"CSVReplaceStrings.class" alternate Java program compiled byte code
+"csvreplacestrings.exe" JET executable
+"csvreplacestrings.jar" jarred class files.
+"CSVReplaceStrings.java" alt Java program source
+"csvreplacestrings.look" uncommented jar manifest
+"CSVReplaceURLs.class" alternate Java program compiled byte code
+"csvreplaceurls.exe" JET executable
+"csvreplaceurls.jar" jarred class files.
+"CSVReplaceURLs.java" alt Java program source
+"csvreplaceurls.look" uncommented jar manifest
+"CSVReshape.class" alternate Java program compiled byte code
+"csvreshape.exe" JET executable
+"csvreshape.jar" jarred class files.
+"CSVReshape.java" rearrange columns in CSV file
+"csvreshape.look" uncommented jar manifest
+"CSVScale.class" alternate Java program compiled byte code
+"csvscale.exe" JET executable
+"csvscale.jar" jarred class files.
+"CSVScale.java" scale column by a mulitplier
+"csvscale.look" uncommented jar manifest
+"CSVSort$SortableCSVRow.class" compiled Java byte code
+"CSVSort.class" alternate Java program compiled byte code
+"csvsort.exe" JET executable
+"csvsort.jar" jarred class files.
+"CSVSort.java" Sort on multiple columns
+"csvsort.look" uncommented jar manifest
+"CSVSortField.class" alternate Java program compiled byte code
+"csvsortfield.exe" JET executable
+"csvsortfield.jar" jarred class files.
+"CSVSortField.java" Sort within a field
+"csvsortfield.look" uncommented jar manifest
+"CSVStripTags.class" alternate Java program compiled byte code
+"csvstriptags.exe" JET executable
+"csvstriptags.jar" jarred class files.
+"CSVStripTags.java" Strip HTML tags from specified columns
+"csvstriptags.look" uncommented jar manifest
+"CSVTabToComma.class" alternate Java program compiled byte code
+"csvtabtocomma.exe" JET executable
+"csvtabtocomma.jar" jarred class files.
+"CSVTabToComma.java" convert tab-separated file to comma-separated
+"csvtabtocomma.look" uncommented jar manifest
+"CSVTemplate.class" alternate Java program compiled byte code
+"csvtemplate.exe" JET executable
+"csvtemplate.jar" jarred class files.
+"CSVTemplate.java" generate arbitrary file format from CSV
+"csvtemplate.look" uncommented jar manifest
+"CSVToSRS.class" alternate Java program compiled byte code
+"csvtosrs.exe" JET executable
+"csvtosrs.jar" jarred class files.
+"CSVToSRS.java" convert CSV to Funduc SR replace
+"csvtosrs.look" uncommented jar manifest
+"CSVToSRX.class" alternate Java program compiled byte code
+"csvtosrx.exe" JET executable
+"csvtosrx.jar" jarred class files.
+"CSVToSRX.java" convert CSV to new Fundur SR
+"csvtosrx.look" uncommented jar manifest
+"CSVToTable.class" alternate Java program compiled byte code
+"csvtotable.exe" JET executable
+"csvtotable.jar" jarred class files.
+"CSVToTable.java" convert CSV to html table
+"csvtotable.look" uncommented jar manifest
+"CSVToUnique.class" alternate Java program compiled byte code
+"csvtounique.exe" JET executable
+"csvtounique.jar" jarred class files.
+"CSVToUnique.java" simple diff, recs unique to each file
+"csvtounique.look" uncommented jar manifest
+"CSVTuple.class" alternate Java program compiled byte code
+"csvtuple.exe" JET executable
+"csvtuple.jar" jarred class files.
+"CSVTuple.java" split long lines to shorter ones
+"csvtuple.look" uncommented jar manifest
+"CSVWriter.class" compiled Java byte code
+"CSVWriter.java" Write CSV Files
+"DeDupStrategy.class" compiled Java byte code
+"DeDupStrategy.java" Enum for 3 dedup strategies
+"desc.btm" creates TCC file descriptions for project files
+"descother.btm" creates TCC file descriptions for non-project files
+"DESCRIPT.ION" TCC file descriptions
+"descript0.ion" generated file of overriding descriptions to merge into DESCRIPT.ION
+"descript2.ion" generated file default descriptions to merge into DESCRIPT.ION
+"forjar.xml" genjar list of extra files to include in csv.jar
+"forzip.xml" list of extra files for ANT include in csv75.zip
+"grab.btm" copy in Java source code from IntelliJ and build it. Roedy's use only.
+"j18.txt" marker to indicate that Java compiler target version 1.8 needed.
+"jdisplay.css" cascading style sheet for displaying source code in HTML
+"LinesToCSV.class" alternate Java program compiled byte code
+"linestocsv.exe" JET executable
+"linestocsv.jar" jarred class files.
+"LinesToCSV.java" convert text file to CSV
+"linestocsv.look" uncommented jar manifest
+"MasterDistribution.site" URL to find the master copy of the CSV project files
+"mindprod.css" cascading style sheet for general HTML
+"rebuild.xml" Simplified ANT build script for CSV
+"run.bat" execute the CSV application from the jar
+"sampleurls.csv" Test sample CSV file of urls
+"sampleurls.html" result of running testtemplate.btm
+"showurlanddatatemplate.html" template for 2 col table
+"showurltemplate.html" CSVtemplate template to convert list of URL to clickable HTML.
+"TableToCSV.class" alternate Java program compiled byte code
+"tabletocsv.exe" JET executable
+"tabletocsv.jar" jarred class files.
+"TableToCSV.java" convert html table to CSV
+"tabletocsv.look" uncommented jar manifest
+"test.csv" Sample test document
+"TestCSVLoad.class" alternate Java program compiled byte code
+"testcsvload.exe" JET executable
+"testcsvload.jar" jarred class files.
+"TestCSVLoad.java" demo load into HashMap
+"testcsvload.look" uncommented jar manifest
+"TestCSVReader.class" alternate Java program compiled byte code
+"testcsvreader.exe" JET executable
+"testcsvreader.jar" jarred class files.
+"TestCSVReader.java" demo on use of CSVRead
+"testcsvreader.look" uncommented jar manifest
+"TestCSVWriter.class" alternate Java program compiled byte code
+"testcsvwriter.exe" JET executable
+"testcsvwriter.jar" jarred class files.
+"TestCSVWriter.java" demo on use of CSVWrite
+"testcsvwriter.look" uncommented jar manifest
+"testtemplate.btm" convert a CSV file of URLs to HTML
+"untouch.digest" generated: enables untouching (set date back) unchanged but redated files.
+"use.txt" key facts about the CSV project. Generates csv.use
+"version.txt" key current version info about the CSV project. Generates csv.use
+"versionhistory.txt" complete version history of the CSV project. Generates csv.use
+"zip.look" uncommented zip manifest for csv75.zip

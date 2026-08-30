@@ -1,0 +1,13 @@
+How various tools are used to research new PAD Submission sites:
+1. We create a Candidates.csv list of candidates.
+2. Run Tidy.bat which uses TidyKeywords to sort and dedup the keywords and Format to display the list in formatted HTML.
+3. run AssignSiteNames to assign one-word names for the sites.
+4. Manually improve the names.
+5. run Probe and Classify to sort out the various catches to the sites, discovering duplicates of sites already done, leaving the hassle-free.
+6. For each hassle-free candidate, run crack to generate the code to submit a pad in incorporate it into SubmissionSite.java.
+7. Run Submission site to get a list of PAD Sites. Update use.txt, allsites.list, newsites.list, somesites.list.
+8. Run the search/replace script to fix the count of websites. Regenerate all html and code to incorporate it.
+9. Run Some.bat which uses SubmitBatch to send a pad to all the new sites to check out the code.
+10. Bring up Submitter Applet to make sure it looks ok.
+11. Run consistency to make sure all is consistent, ready to distribute.
+12. DoesPADMaps should not be needed. It was a one-shot.

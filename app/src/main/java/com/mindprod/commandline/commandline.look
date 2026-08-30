@@ -1,0 +1,9 @@
+META-INF/MANIFEST.MF
+com/mindprod/commandline/CacheIterator.class
+com/mindprod/commandline/CommandLine.class
+com/mindprod/commandline/Retriever.class
+com/mindprod/commandline/Saver.class
+com/mindprod/common18/EIO.class
+com/mindprod/common18/ST.class
+com/mindprod/fastcat/FastCat.class
+com/mindprod/hunkio/HunkIO.class

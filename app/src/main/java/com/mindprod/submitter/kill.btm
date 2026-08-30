@@ -1,0 +1,12 @@
+rem get rid of junk files
+E:\
+cd com\mindprod\submitter
+del /E *.log.html
+del /E 0??.html
+del /E grabasp.csv
+del /E temp.csv
+del /E *.tmp
+del /E *.*~
+del /E possappvisor.csv 
+del /E newappvisor.csv 
+rem -30-

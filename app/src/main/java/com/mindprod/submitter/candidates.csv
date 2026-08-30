@@ -1,0 +1,115 @@
+# P A D   S U B M I S S I O N   S I T E S
+# 64-bit: 64-bit software only.
+# Active: Actively responding.
+# Add: Candidate site to be definitely included in the hassle-free sites supported by the mini PAD submitter.
+# Almost: Almost hassle-free.
+# AltUpload: You may alternately upload the PAD file off your local hard disk.
+# AppVisor: Submit via AppVisor.
+# Arabic: Arabic
+# ArticleLinks: Article links only.
+# Attack: Firefox accuses this site of covertly installing malware.
+# Audio: Audio software only.
+# BackLinkHome: They have the cheek to demand you put a back-link ad for them on your home page (or possibly a page linked directly from your home page). Screw em! You must have the back link set up and uploaded before you submit your PAD.
+# BackLinkMandatory: Must provide a backlink from your website to theirs and inform them where it is. You must have the back link set up and uploaded to your website before you submit your PAD.
+# BackLinkOptional: They request you provide an optional backlink from your website to theirs and inform them where it is. You must have the back link set up and uploaded before you submit your PAD.
+# BackLinkTip: To ensure prompt processing, they request you provide a backlink from your website to theirs and inform them where it is. You must have the back link set up and uploaded before you submit your PAD.
+# Blacklist: They blacklisted me without explanation and without possibility of appeal. It could be because I wrote the mini PAD Submitter, I am gay, atheist, anti-war…, because I hold many unpopular opinions, because I submitted such a large catalog of software, because I frequently release new builds, because they saw my name on a blacklist somewhere or they just made an error.
+# Blind: The onerous way they make you type the security code, you might as well be blind.
+# Broken: Site has bugs that prevent PAD submission.
+# Bulgarian: Bulgarian
+# Candidate: Candidate site to be possibly included in the hassle-free sites supported by the mini PAD submitter.
+# Captcha: Must prove your worthiness by keying an almost-impossible-to-decipher Captcha. They have contempt for programmers. They think that programmers have nothing better to do with their time than as tediously as possible manually submit programs. They forget that the programmers are doing them a favour.
+# Chinese: Chinese
+# Confirm: You must confirm your PAD submission by visiting a link sent via email.
+# Crapware: When you download programs from this site, they use a custom downloader/installer that installs a number of unwanted, unrelated extra crapware programs.
+# Czech: Czech
+# Danish: Danish
+# Dead: Site dead — suspended, closed, disappeared or repurposed.
+# Delete: Site to be deleted from the list of hassle-free sites supported by the mini PAD submitter.
+# Down: Site temporarily down.
+# Duplicate: Duplicate.
+# Dutch: Dutch
+# Educational: Educational software only.
+# English: English
+# Esperanto: Esperanto
+# Expired: Expired SSL Certificate
+# Financial: Financial software only.
+# Form: Does not use PADs. You must fill in a form.
+# Former: Formerly hassle-free.
+# Freeware: Freeware only.
+# French: French
+# Games: Games only.
+# German: German
+# Greek: Greek
+# Handheld: Software for handhelds only.
+# Head: They probe your website for the PAD, screenshot, zip etc. using an abbreviated HTTP HEAD rather than a full HTTP GET. This may lead them to complain about missing files that are indeed present or fail to detect PAD changes.
+# HiddenValidation: Hidden validation code to deter automated submission.
+# Hungarian: Hungarian
+# Indian: Indian
+# Indonesian: Indonesian
+# Italian: Italian
+# Japanese: Japanese
+# JavaScript: The site is obfuscated with JavaScript.
+# Login: You must set up an account and login with a password.
+# Mac: Macintosh only.
+# MalformedURL: Malformed URL.
+# Malware: Chrome or Firefox accuses this site of listing malware.
+# Mobile: Mobile software only.
+# Multimedia: Multimedia software only.
+# Multiple: You may submit multiple PADs at once.
+# NoAuto: They explicitly ask you not to use any automation in PAD submission.
+# NoLogo: They have not customised their site with a logo.
+# NoOpera: No Opera.
+# NoProbe: You must resubmit after every version change because they fail to periodically probe your PAD for changes.
+# NoSubmissionPage: Cannot find PAD submission page.
+# NotAccepting: Not currently accepting PAD submissions.
+# Notify: They notify you by email when they notice your PAD or the files it references change or become inaccessible.
+# NotResponding: Not Responding and domain abandoned.
+# Obfuscated: Obfuscated to deter automated submission.
+# OldSpec: They support only an obsolete (pre 3.0) versionof the PAD spec.
+# Onion: Not recommended.
+# PADmaps: They support the PADmaps protocol so that submitting one PAD submits your whole catalog.
+# PADRING: They support the PADRING protocol so that submitting one PAD submits your whole catalog.
+# Palm: Palm only.
+# Parked: Site parked and domain abandoned.
+# Pay: You must pay to list.
+# Polish: Polish
+# Portuguese: Portuguese
+# Prefill: You press a PREFILL button to display the contents of the PAD and then you edit the fields before final submission.
+# Propagate: They pass the PADs you submit to other PADSites.
+# Proprietary: You must select a proprietary category for the PAD.
+# Recommended: Recommended.
+# RegNow: Only software sold via RegNow/Bluesnap (née Plimus)/eSellerate etc.
+# Rekey: You must manually rekey some of the fields in the PAD.
+# Resurrected: Site was off the air for a while, but it is back.
+# Romanian: Romanian
+# Russian: Russian
+# Scavenger: You may not even have to submit your PAD to them. They go out scouring the web for PADs.
+# Screensaver: Screensavers only.
+# Shareware: Shareware only. No freeware.
+# SiteLinks: Site links only.
+# Skill: You must answer a skill-testing question.
+# Slow: Site is unusually slow to respond. Please be patient.
+# Spanish: Spanish
+# Stalls: Stalls ignoring timeout when Java probes the site.
+# Strict: They have their own stricter-than-ASP standards for validating PADs.
+# Swedish: Swedish
+# Thai: Thai
+# TOP10: Ranked in the top 10.
+# TOP100: Ranked in the top 100.
+# TOP20: Ranked in the top 20.
+# TOP30: Ranked in the top 30.
+# Turkish: Turkish
+# Ukranian: Ukranian
+# Unix: Unix only.
+# Upload: You don’t submit an URL, you upload the PAD file off your local hard disk.
+# Validation: You must key a legible validation code to prove you are not using automated software submission.
+# ViaEmail: Submit your PAD via email.
+# ViewState: Complicated state information, difficult to automate.
+# Warn: They warn you of subtle problems with the PAD.
+# Windows: Windows only.
+## name,              homeUrl,                           submitUrl,                                                      logo, keywords, notes
+Programmisemplici,    http://www.programmisemplici.com,  http://www.programmisemplici.com/programma_semplice_000007.htm,
+Free-Download-Center, http://www.freedownloadcenter.com, http://www.freedownloadcenter.com,                              , Proprietary
+I-0-I,                http://www.i0i.link,               http://www.i0i.link/index.php?a=pad&submit_pad,                 , Proprietary Rekey
+N-5-Net,              http://files.n5net.com/index.php,  http://files.n5net.com/submit/,                                 , Validation

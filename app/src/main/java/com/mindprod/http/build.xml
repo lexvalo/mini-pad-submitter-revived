@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<!-- BUILD.XML complex http 3.2 build that copies files to website for upload. -->
+<!-- Build with ANT postzip jet -->
+<!-- Compile and jar http using ANT -->
+<!-- Invoke with [ant clean] to erase class files and start over. -->
+<!-- Invoke with [ant compile] to just compile. -->
+<!-- Invoke with [ant jar] to compile and create jar files. -->
+<!-- Invoke with [ant postjar] to post jars to the mindprod website. -->
+<!-- Invoke with [ant zip] to create source code zip files. -->
+<!-- Invoke with [ant postzip] to post zip file to the mindprod website. -->
+<!-- Using Apache ANT version 1.10.1 -->
+<!-- For details of ANT use, see http://mindprod.com/jgloss/ant.html -->
+<!-- This script does not build any *.asm files. -->
+
+<!-- D E F I N I T I O N S -->
+<!-- ANT.project.dir is com/mindprod/http -->
+<!-- basedir is E:/ -->
+<project name="http" basedir="E:/" default="jar">
+
+<!-- extensions for zip. Case sensitive! Go in zip, not necessarily in Jar. -->
+<property name="distributed.exts" value="**/*.au,**/*.asm,**/*.bat,**/*.btm,**/*.c,**/*.COM,**/*.com,**/*.cpp,**/*.css,**/*.csv,**/*.dll,**/*.gif,**/*.h,**/*.hpp,**/*.htm,**/*.html,**/*.ico,**/*.ION,**/*.ion,**/*.jar,**/*.java,**/*.jnlp,**/*.JNLP,**/*.jpg,**/*.look,**/*.png,**/*.properties,**/*.ser,**/*.sln,**/*.txt,**/*.use,**/*.xml" />
+
+<!-- dirs we to exclude from zip. Case sensitive! -->
+<property name="nondistributed" value="**/javadoc/**,**/jetpdb/**,**/Debug/**,**/Release/**" />
+
+<!-- C L E A N -->
+<target name="clean">
+<echo message="    :::    http    :::    deleting files to force regeneration." />
+  <delete>
+    <fileset dir="com/mindprod/http" includes="**/*.class" />
+    <fileset dir="com/mindprod/http" includes="**/*.jar" />
+    <!-- leave Jet *.exe. Old versions are still useful during the build. -->
+    <fileset dir="com/mindprod/http" includes="http32.zip" />
+  </delete>
+</target>
+
+<!-- C O M P I L E -->
+<target name="compile">
+<echo message="    :::    http    :::    compiling Java tree with target=1.8" />
+  <javac source="1.8" target="1.8" srcdir="com/mindprod/http" sourcepath="${basedir}" classpath="${basedir}" encoding="UTF-8" debug="on" includeAntRuntime="false">
+    <compilerarg value="-Xlint:unchecked" />
+    <compilerarg value="-Xlint:fallthrough" />
+    <compilerarg value="-Xlint:deprecation" />
+    <compilerarg value="-Xlint:cast" />
+  </javac>
+</target>
+
+<!-- J A V A H must do ant javah to rebuild *.h files. -->
+<target name="javah" depends="compile">
+  <!-- there is no jni -->
+</target>
+
+<!-- G A T H E R -->
+<target name="gather" depends="compile">
+<echo message="    :::    http    :::    gathering files to build jar/zip." />
+  <!-- prepare http.use precis from two pieces -->
+    <concat destfile="com/mindprod/http/http.use" fixlastline="yes">
+      <filelist dir="com/mindprod/http" files="version.txt,use.txt,versionhistory.txt" />
+    </concat>
+    <copy file="E:/mindprod/application/http.html" todir="com/mindprod/http" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/application/http.manual.html" todir="com/mindprod/http" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/ico/http.ico" tofile="E:/mindprod/application/http.ico" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon128/http.png" tofile="com/mindprod/http/http.icon128.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon16/http.png" tofile="com/mindprod/http/http.icon16.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon32/http.png" tofile="com/mindprod/http/http.icon32.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon48/http.png" tofile="com/mindprod/http/http.icon48.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon64/http.png" tofile="com/mindprod/http/http.icon64.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/screenshot/http.png" tofile="com/mindprod/http/http.screenshot.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/jdisplay.css" todir="com/mindprod/http" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/mindprod.css" todir="com/mindprod/http" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/pad/http.xml" todir="com/mindprod/http" failonerror="false" quiet="true" overwrite="true" />
+</target>
+
+<!-- J A R -->
+<!-- Make F:\Program Files (x86)\apache-ant-1.10.1\lib\GenJar.jar known to ANT -->
+<!-- See http://mindprod.com/jgloss/genjar.html for details -->
+<taskdef resource="genjar.properties" />
+
+<target name="jar" depends="gather">
+<echo message="    :::    http    :::    genjar finding dependencies and creating jar." />
+  <genjar jarfile="com/mindprod/http/http.jar">
+    <!-- include all classes in the package -->
+    <class>
+      <fileset dir="${basedir}">
+        <!-- include all the classes in com/mindprod/http -->
+        <include name="com/mindprod/http/*.class" />
+        <!-- all dependent classes will be automatically included -->
+      </fileset>
+    </class>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/http" output="nul:" logError="true" failonerror="true">
+    <arg value="http.jar" />
+    <arg value="1.2" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/http" output="com/mindprod/http/http.look">
+    <arg value="http.jar" />
+  </exec>
+</target>
+
+<!-- P O S T J A R -->
+<target name="postjar" depends="jar">
+  <!-- nothing to do -->
+</target>
+
+<!-- J E T  -->
+<!-- Dummy. Not using Jet -->
+<target name="jet">
+</target>
+
+<!-- Z I P -->
+<target name="zip" depends="jar">
+<echo message="    :::    http    :::    preparing zip distributable." />
+  <!-- Remove references to separate foot files. -->
+  <exec executable="prunefoot.exe" failifexecutionfails="false" dir="com/mindprod/http">
+    <arg value="http.html" />
+    <arg value="http.manual.html" />
+  </exec>
+  <zip destfile="com/mindprod/http/http32.zip" duplicate="preserve" filesonly="true" includes="${distributed.exts}" excludes="${nondistributed}">
+    <!-- zipfileset includes all subdirs as well -->
+    <zipfileset dir="com/mindprod/http" prefix="com/mindprod/http" includes="${distributed.exts}" excludes="${nondistributed}" />
+    <!-- Extra classes and properties to include in the Zip -->
+      <zipfileset dir="com/mindprod/common18"    prefix="com/mindprod/common18"    includes="${distributed.exts}" excludes="${nondistributed}" />
+  </zip>
+
+  <!-- Z I P L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/http" output="com/mindprod/http/zip.look">
+    <arg value="http32.zip" />
+  </exec>
+</target>
+
+<!-- P O S T Z I P -->
+<target name="postzip" depends="zip,postjar">
+<echo message="    :::    http    :::    posting zip to website." />
+  <!-- copy precis to website -->
+  <copy file="com/mindprod/http/http.use" tofile="E:/mindprod/precis/http.txt" overwrite="true" />
+  <!-- copy com\mindprod\http/http32.zip to website -->
+  <copy file="com\mindprod\http/http32.zip" todir="E:/mindprod/zips" overwrite="true" />
+  <!-- delete old zip distributable from project and website -->
+  <delete file="com/mindprod/http/http31.zip" failonerror="false" quiet="true" />
+  <delete file="E:/mindprod/zips/http31.zip" failonerror="false" quiet="true" />
+</target>
+</project>

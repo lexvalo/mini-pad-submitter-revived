@@ -1,0 +1,118 @@
+"_O_V_E_R_V_I_E_W.txt" Commented List of all files for Common18, with one line descriptions.
+"Age.class" compiled Java byte code
+"Age.java" computes age in years, months, days
+"BigDate.class" compiled Java byte code
+"BigDate.java" replacement for Date, calendar calculations
+"Build.class" compiled Java byte code
+"Build.java" tracks build number
+"build.xml" Complex ANT build script for Common18
+"CheckPermission.class" compiled Java byte code
+"CheckPermission.java" check permission
+"Chunkify$1.class" compiled Java byte code
+"Chunkify$ChunkIterator.class" compiled Java byte code
+"Chunkify.class" compiled Java byte code
+"Chunkify.java" Iterator over delimited chunks
+"ClipboardPoker.class" compiled Java byte code
+"ClipboardPoker.java" put something in clipboard
+"CMPAboutBox$1.class" compiled Java byte code
+"CMPAboutBox$2.class" compiled Java byte code
+"CMPAboutBox$3.class" compiled Java byte code
+"CMPAboutBox$4.class" compiled Java byte code
+"CMPAboutBox.class" compiled Java byte code
+"CMPAboutBox.java" AWT About box
+"CMPAboutJBox$1.class" compiled Java byte code
+"CMPAboutJBox$2.class" compiled Java byte code
+"CMPAboutJBox.class" compiled Java byte code
+"CMPAboutJBox.java" Swing Abount box
+"Common18.class" Common18 main Java program compiled byte code
+"common18.icon128.png" roughly 128x128 icon for the Common18 project
+"common18.icon16.png" 16x16 icon for the Common18 project
+"common18.icon32.png" 32x32 icon for the Common18 project
+"common18.icon48.png" roughly 48x48 icon for the Common18 project
+"common18.icon64.png" roughly 64x64 icon for the Common18 project
+"common18.jar" jarred class files: Common utility classes that work under Java 1.8+ with enums and generics
+"Common18.java" main Java program source
+"common18.look" uncommented jar manifest
+"common18.screenshot.png" screenshot for the Common18 project
+"common18.use" precis(summary) Common utility classes that work under Java 1.8+ with enums and generics Generated
+"common18.xml" ASP PAD desc of the Common18 project: Common utility classes that work under Java 1.8+ with enums and generics
+"common1831.zip" Common18 3.1 distribute zip: Common utility classes that work under Java 1.8+ with enums and generics
+"CopyrightCanadianMindProducts.class" compiled Java byte code
+"CopyrightCanadianMindProducts.java" Copyright info
+"desc.btm" creates TCC file descriptions for project files
+"descother.btm" creates TCC file descriptions for non-project files
+"DESCRIPT.ION" TCC file descriptions
+"descript0.ion" generated file of overriding descriptions to merge into DESCRIPT.ION
+"descript2.ion" generated file default descriptions to merge into DESCRIPT.ION
+"EIO.class" compiled Java byte code
+"EIO.java" Encapsulated I/O
+"FNV1a64.class" compiled Java byte code
+"FNV1a64.java" 64-bit hash function
+"FNV1a64Digester.class" compiled Java byte code
+"FNV1a64Digester.java" Digester version of 64 bit hash
+"FontFactory.class" compiled Java byte code
+"FontFactory.java" choose and cache optimal fonts for platform
+"forzip.xml" list of extra files for ANT include in common1831.zip
+"FullName.class" compiled Java byte code
+"FullName.java" parse full name into surname, given, title etc.
+"grab.btm" copy in Java source code from IntelliJ and build it. Roedy's use only.
+"Hybrid$1.class" compiled Java byte code
+"Hybrid.class" compiled Java byte code
+"Hybrid.java" hybrid AWT/application
+"HybridJ$1$1.class" compiled Java byte code
+"HybridJ$1.class" compiled Java byte code
+"HybridJ.class" compiled Java byte code
+"HybridJ.java" Hybrid SWING/application
+"ImageInfo.class" compiled Java byte code
+"ImageInfo.java" get information about png, jpg, gif, webp image
+"ImageViewer.class" compiled Java byte code
+"ImageViewer.java" display an image
+"InOrder.class" compiled Java byte code
+"InOrder.java" ensure collection is in order
+"j18.txt" marker to indicate that Java compiler target version 1.8 needed.
+"JavaVersion.class" compiled Java byte code
+"JavaVersion.java" issure right Java version
+"jdisplay.css" cascading style sheet for displaying source code in HTML
+"JEButton.class" compiled Java byte code
+"JEButton.java" Enhanced JButton
+"Laf$1.class" compiled Java byte code
+"Laf.class" compiled Java byte code
+"Laf.java" look and feel
+"Limiter.class" compiled Java byte code
+"Limiter.java" limit
+"Localise.class" compiled Java byte code
+"Localise.java" localise for LfNL
+"MasterDistribution.site" URL to find the master copy of the Common18 project files
+"mindprod.css" cascading style sheet for general HTML
+"Misc.class" compiled Java byte code
+"Misc.java" misc methods
+"Play.class" compiled Java byte code
+"Play.java" play audio
+"PrintSorted$SortablePair.class" compiled Java byte code
+"PrintSorted.class" compiled Java byte code
+"PrintSorted.java" Print lines in sorted order
+"Progress.class" compiled Java byte code
+"Progress.java" progress counter
+"rebuild.xml" Simplified ANT build script for Common18
+"ResizingImageViewer.class" compiled Java byte code
+"ResizingImageViewer.java" viewer that lets user dynamically resize the image
+"run.bat" execute the Common18 application from the jar
+"Shuffle.class" compiled Java byte code
+"Shuffle.java" shuffle a collection
+"ST.class" compiled Java byte code
+"ST.java" miscellaneous String methods
+"StoppableThread.class" compiled Java byte code
+"StoppableThread.java" gracefully stopping thread
+"StringSearch.class" compiled Java byte code
+"StringSearch.java" searching a string
+"TestDate.class" compiled Java byte code
+"TestDate.java" exercise BigDate
+"Twirler.class" compiled Java byte code
+"Twirler.java" Twirler activity indicator
+"untouch.digest" generated: enables untouching (set date back) unchanged but redated files.
+"use.txt" key facts about the Common18 project. Generates common18.use
+"version.txt" key current version info about the Common18 project. Generates common18.use
+"VersionCheck.class" compiled Java byte code
+"VersionCheck.java" check Java version to make sure it is recent
+"versionhistory.txt" complete version history of the Common18 project. Generates common18.use
+"zip.look" uncommented zip manifest for common1831.zip

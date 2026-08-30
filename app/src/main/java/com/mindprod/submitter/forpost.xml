@@ -1,0 +1,3 @@
+<delete>
+<fileset dir="com/mindprod/submitter" includes="**/*.log.html" />
+</delete>

@@ -1,0 +1,193 @@
+Amper 2.0 build: 9639 released: 2012-11-03 compiled with: Java 1.8.0_131 Jet jet12.0-pro-x86/1.8.0_131
+
+Converts & to &amp in html, and back.
+
+Copyright: (c) 1999-2017 Canadian Mind Products.
+
+Java application.
+Download from: http://mindprod.com/products1.html#AMPER
+
+----
+
+Notes:
+
+You must install the Java JRE to use this program.
+See http://mindprod.com/jgloss/jgloss/jre.html
+
+This program can only be used from the command prompt, (or via an command
+line style icon shortcut) e.g. under Windows command.exe or JPSoft
+tcmd.exe, formerly called the DOS box. Just clicking the programs in a
+directory listing will not do anything useful. Just typing the program
+names at the command prompt will not either.
+
+This program requires a manual install! See below.
+
+This program works with vanilla text files, (e.g. ASCII files or UTF-8
+Unicode files). You will need a text editor to create and view them, not a word
+processor. e.g. notepad, Visual Slick Edit or other suitable text editor
+http://mindprod.com/jgloss/editor.html. You must use a monospaced font
+http://mindprod.com/jgloss/monospacedfonts.html (aka fixed pitch, aka
+programmer font) to view your files, or they won't look properly aligned.
+
+I put out an avalanche of free software into the world, and submit PAD
+files to hundreds of distribution sites, but I rarely hear back from
+anyone.  What's happening?  Does it all just work fine?  It is so
+complicated nobody can figure out how to use it and they give up on it?
+It is it useful?  Since everyone has the source, do people just fix the
+programs to their liking themselves?  Did you have trouble installing?  Do
+I presume you know too much?  I would be happy to hear from you about your
+experiences, positive or negative and your requests for improvements.  A
+one-line email to roedy@mindprod.com would be great.
+
+===> Free <===
+Full source included.
+You may even include the source code, modified or unmodified
+in free/commercial open source/proprietary programs that you write and distribute.
+May be used freely for any purpose but military.
+For more details on this restriction, see
+http://mindprod.com/contact/nonmil.html
+If you include any Canadian Mind Products code in your own applications,
+your app too must be labelled non-military use only.
+http://mindprod.com/contact/nonmil.html
+All Java jars and source code are included. If you need the class files or Javadoc, you will have to build them yourself. To streamline the zip downloads, class files and Javadoc have been removed.
+
+----
+
+Prerequisites:
+
+This program runs under any OS that supports Java,
+(e.g.W2K/XP/W2003/Vista/W2008/W7-32/W7-64/W8-32/W8-64/Linux/LinuxARM/LinuxX86
+/LinuxX64/Ubuntu/Solaris/SolarisSPARC/SolarisSPARC64/SolarisX86/SolarisX64/OSX/AIX...)
+so long as you have
+<><> Java version 1.8 <><> or later installed (32-bit or 64-bit Java).
+See http://mindprod.com/jgloss/installingjava.html for details.
+
+----
+
+Installing on a PC:
+
+Download source and compiled jar files to run on your own machine as an application.
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+To install, extract the zip download with WinZip
+(or similar unzip utility) into any directory you please,
+often J:\ --  ticking off the <span class="click">use folder names</span> option.
+To run as an application, type:
+java.exe %JAVA_OPTIONS -ea -jar J:\com\mindprod\amper\amper.jar {put any parms here}
+
+adjusting as necessary to account for where the jar file is.
+
+----
+
+Installing on a MacIntosh:
+
+Use Safari to download source and compiled jar files to run on your own machine as an application.
+Safari will automatically unpack the zip into ~/Downloads (version 10.5)
+[or on the Desktop (version 10.4 and earlier)].
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+You may optionally move the download tree to a permanent home.
+I don't have a MacIntosh, just a PC, so I can't test my Java programs for Mac compatibility.
+In theory they should work without problems, but in practice that does not always happen.
+If you have problems please, let me know, preferably with screenshots and complete verbatim error messages.
+To run as an application, without parameters, just double click the jar file.
+
+To run as an application with parameters, in bash shell type:
+open Terminal.app
+cd ~/Desktop
+java.exe -ea -jar com/mindprod/amper/amper.jar {put any parms here}
+
+adjusting as necessary to account for where the jar file is.
+
+----
+
+Rebuilding:
+
+The zip already contains the necessary jar files, so unless you modify
+the program, there is no need to recompile the source or rebuild the jar.
+Configure.java basedir="E:/" in rebuild.xml to the drive where your files are.
+Use ANT and rebuild.xml, not build.xml, to recompile and recreate the jar.
+
+----
+
+Use:
+
+Converts & to &amp; in HTML files, but does not convert it
+when the & is already in an entity e.g. &lt; &thetasym;
+&eacute;   The DeAmpify utility converts &amp; back to &.
+It works only on *.html *.htm and *.csv files.
+The main use for this is to pass HTMLValidator verification
+of your HTML, which is very picky about &, especially inside
+URLs.
+As a side effect, it also ensures all your <!-- ... -->
+balance.
+It does not change & to &amp; inside comments (or macros masquerading as
+comments), though it will change it inside href= and image= urls, or
+anywhere else e.g.  Java Applet parameters, which is correct according to
+the HTMLValidator.  It does _not_ change " to &quot; < to &lt; or é to
+&eacute; It just fixes &, the most troublesome character.
+To convert a single file, type:
+  java.exe -jar C:\com\mindprod\amper\amper.jar myfile.html
+The results replace the old file, so you had better make a
+backup just in case this is not what you want.
+You can also list several files on the command line:
+  java.exe -jar C:\com\mindprod\amper\amper.jar myfile.html C:\mydir\another.html
+To use convert the current directory of HTML files:
+  java.exe -jar C:\com\mindprod\amper\amper.jar .
+Sorry no wildcards, just . , and ..
+DON'T USE WILDCARDS unless you deeply understand how they
+work. See http://mindprod.com/jgloss/wildcard.html. Windows
+expands them, not amper, and feeds them to amper (or any other program)
+as a giant list of all the directories and files in the
+current directory. Amper will thus tend  process all the files
+in your directories, when you just meant to process the files in
+the current directory.
+The -s switch makes all subsequent directories searched
+recursively to include all their subdirectories.
+e.g.
+  java.exe -jar C:\com\mindprod\amper\amper.jar -s E:\mindprod
+will fix all *.html files in the mindprod directory tree,
+ignoring other types of files.
+The -q option switch suppresses output. Without it, you see
+a list of the files it changed.
+If you have the jar extension set up as executable, you can
+abbreviate:
+  C:\com\mindprod\amper\amper.jar .
+Amper does not change any character other than &.  It does
+NOT convert high ascii codes to their Unicode equivalents.
+Doing that is tricky since it depends on knowing for certain
+the encoding of the file. If you need to do that now, you can
+with a Funduc search and replace script.
+To go the other way, to convert &amp; to &, use
+  C:\com\mindprod\amper\deampify.jar myfile.html
+Why the & icon?  I hope that should be obvious.
+
+
+----
+
+Version History:
+
+ 1.1 2006-03-05
+
+ 1.2 2007-03-26 fix bug in StripEntities. Was not doing &#xffff; properly.
+
+ 1.3 2007-04-07 recover from crash. Tidy code.
+
+ 1.4 2007-05-10 add icon, PAD file.
+
+ 1.5 2007-06-29 add -q command line support. New CommandLine interface.
+
+ 1.6 2008-08-03 change detail parameter so that you can request three levels of detail, rather than two.
+
+ 1.7 2012-01-25 now handles HTML5 entities. It now leaves any unusual entities as is.
+
+ 1.8 2012-02-09 fix bug. Now handles even very longest HTML5 entities. No longer extends DeEntifyStrings.
+
+ 1.9 2012-06-18 allow you to ampify .htm and .csv files
+
+ 2.0 2012-11-03 deal text inside <script is no longer ampified.
+                new methods ampifyPossiblyScriptedString(String) ampifyPossiblyCommentedString(String)
+                deprecated ampifyCommented.
+
+-30-
+

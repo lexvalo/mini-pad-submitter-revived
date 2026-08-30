@@ -1,0 +1,55 @@
+"desc.btm" creates TCC file descriptions for project files
+"descother.btm" creates TCC file descriptions for non-project files
+"run.bat" execute the FastCat application from the jar
+"grab.btm" copy in Java source code from IntelliJ and build it. Roedy's use only.
+"FastCat.class" FastCat main Java program compiled byte code
+"fastcat.manual.html" detailed HTML manual for the FastCat project
+"fastcat.jar" jarred class files: Streamlined Replacement for StringBuilder
+"fastcat.look" uncommented jar manifest
+"fastcat.jnlp" fastcat jnlp Java Web Start launch
+"fastcat-setup.exe" JET distributable, containing runtime
+"fastcat.ico" Windows icon for the project, contains multiple image sizes
+"fastcat.jpn" Manifest of what is included in the JET executable.
+"fastcat.log" log of what JET did compiling and preparing the distributable
+"fastcat.prj" JET project configuration, compiler options and notes on what needs to be included.
+"fastcat.startup" List of classes JET should preload for speed.
+"fastcat.xbind.script" List of DLLs JET will need to run the app.
+"build_fastcat.bat" Build JET executable with project descriptor
+"run_fastcat.bat" Runs the JET executable with default parm.
+"mindprod.css" cascading style sheet for general HTML
+"jdisplay.css" cascading style sheet for displaying source code in HTML
+"package-info.java" Dummy Java source with JavaDoc describing the entire package.
+"untouch.digest" generated: enables untouching (set date back) unchanged but redated files.
+"mindprodcert2017rsa.cer" Public key for Mindprod code-signing certificate. Cannot be used to sign jars.
+"DESCRIPT.ION" TCC file descriptions
+"descript0.ion" generated file of overriding descriptions to merge into DESCRIPT.ION
+"descript2.ion" generated file default descriptions to merge into DESCRIPT.ION
+"MasterDistribution.site" URL to find the master copy of the FastCat project files
+"fastcat.use" precis(summary) Streamlined Replacement for StringBuilder Generated
+"fastcat.vpj" Slick Edit project ini file
+"fastcat.vpw" Slick Edit project ini file
+"fastcat.vtg" Slick Edit binary tag xref file
+"fastcat.icon16.png" 16x16 icon for the FastCat project
+"fastcat.icon32.png" 32x32 icon for the FastCat project
+"fastcat.icon48.png" roughly 48x48 icon for the FastCat project
+"fastcat.icon64.png" roughly 64x64 icon for the FastCat project
+"fastcat.icon128.png" roughly 128x128 icon for the FastCat project
+"fastcat.screenshot.png" screenshot for the FastCat project
+"fastcat.splash.gif" splash gif for the FastCat project
+"fastcat.icon32.gif" 32x32 gif icon for the FastCat project
+"fastcat.icon64.gif" 64x64 gif icon for the FastCat project
+"_O_V_E_R_V_I_E_W.txt" Commented List of all files for FastCat, with one line descriptions.
+"use.txt" key facts about the FastCat project. Generates fastcat.use
+"version.txt" key current version info about the FastCat project. Generates fastcat.use
+"versionhistory.txt" complete version history of the FastCat project. Generates fastcat.use
+"fastcat.txt" ASCII text manual for the FastCat project.
+"build.xml" Complex ANT build script for FastCat
+"rebuild.xml" Simplified ANT build script for FastCat
+"forgather.xml" list of extra gather steps for ANT.
+"forjar.xml" genjar list of extra files to include in fastcat.jar
+"forjarexe.xml" jar.exe list of extra files to include in fastcat.jar
+"forpost.xml" list of extra posting steps for ANT.
+"forzip.xml" list of extra files for ANT include in fastcat24.zip
+"fastcat.xml" ASP PAD desc of the FastCat project: Streamlined Replacement for StringBuilder
+"fastcat24.zip" FastCat 2.4 distribute zip: Streamlined Replacement for StringBuilder
+"zip.look" uncommented zip manifest for fastcat24.zip

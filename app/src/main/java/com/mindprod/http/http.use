@@ -1,0 +1,175 @@
+Http 3.2 build: 9639 released: 2014-07-15 compiled with: Java 1.8.0_131
+
+HTTP library to do GET/POST/HEAD/PROBE/CHASE.
+
+Copyright: (c) 1998-2017 Canadian Mind Products.
+
+Java class library.
+Download from: http://mindprod.com/products1.html#HTTP
+
+----
+
+Notes:
+
+You must install the Java JDK to use this program.
+See http://mindprod.com/jgloss/jgloss/jdk.html
+
+You are pretty much on your own how to use this material.
+This program requires a manual install! See below.
+
+I put out an avalanche of free software into the world, and submit PAD
+files to hundreds of distribution sites, but I rarely hear back from
+anyone.  What's happening?  Does it all just work fine?  It is so
+complicated nobody can figure out how to use it and they give up on it?
+It is it useful?  Since everyone has the source, do people just fix the
+programs to their liking themselves?  Did you have trouble installing?  Do
+I presume you know too much?  I would be happy to hear from you about your
+experiences, positive or negative and your requests for improvements.  A
+one-line email to roedy@mindprod.com would be great.
+
+===> Free <===
+Full source included.
+You may even include the source code, modified or unmodified
+in free/commercial open source/proprietary programs that you write and distribute.
+May be used freely for any purpose but military.
+For more details on this restriction, see
+http://mindprod.com/contact/nonmil.html
+If you include any Canadian Mind Products code in your own applications,
+your app too must be labelled non-military use only.
+http://mindprod.com/contact/nonmil.html
+All Java jars and source code are included. If you need the class files or Javadoc, you will have to build them yourself. To streamline the zip downloads, class files and Javadoc have been removed.
+
+----
+
+Prerequisites:
+
+This program runs under any OS that supports Java,
+(e.g.W2K/XP/W2003/Vista/W2008/W7-32/W7-64/W8-32/W8-64/Linux/LinuxARM/LinuxX86
+/LinuxX64/Ubuntu/Solaris/SolarisSPARC/SolarisSPARC64/SolarisX86/SolarisX64/OSX/AIX...)
+so long as you have
+<><> Java version 1.8 <><> or later installed (32-bit or 64-bit Java).
+See http://mindprod.com/jgloss/installingjava.html for details.
+
+----
+
+Installing on a PC:
+
+Download source and compiled jar files to run on your own machine as a part of your own program.
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+To install, extract the zip download with WinZip
+(or similar unzip utility) into any directory you please,
+often J:\ --  ticking off the <span class="click">use folder names</span> option.
+
+----
+
+Installing on a MacIntosh:
+
+Use Safari to download source and compiled jar files to run on your own machine as a part of your own program.
+Safari will automatically unpack the zip into ~/Downloads (version 10.5)
+[or on the Desktop (version 10.4 and earlier)].
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+You may optionally move the download tree to a permanent home.
+I don't have a MacIntosh, just a PC, so I can't test my Java programs for Mac compatibility.
+In theory they should work without problems, but in practice that does not always happen.
+If you have problems please, let me know, preferably with screenshots and complete verbatim error messages.
+
+----
+
+Rebuilding:
+
+You are pretty much on your own how to use this material.
+
+----
+
+Use:
+
+http is a small library of Java classes to let you do HTTP CGI GET, POST,
+HEAD, PROBE, CHASE and "FETCH" (generic) to a server.  It will also encode
+parameter pairs for you.
+It does nothing on its own.  It is intended to be incorporated into your
+own programs.
+To see a sample use have a look at the com.mindprod.submitter package,
+downloadable at http://mindprod.com/products1.html#SUBMITTER
+For downloading long http:, file: or https: files, see
+com.mindprod.filetransfer.Download
+http://mindprod.com/products1.html#FILETRANSFER
+The Get, Post, Head and Probe classes only work on http: and https:
+The Fetch class works on http:, https:, file: etc.
+For meanings of various response codes, see
+http://mindprod/jgloss/responsecode.html
+I don't have a proxy server myself, so I have not been able to experiment
+with getting Http to work with one.  It may simply be a matter of setting
+some Java properties with the -D option on the command line.  It would
+probably be easier for you to experiment with your appplication run as a
+standalone utility than as an Applet.  In my opinion, proxy servers should
+be transparent to applications.  The current proxy interface sounds like
+the work of teenage programmers who live on cheap pizza and don't change
+their underwear.  If you are successful at getting proxies to work with
+Http, please pass on what you did.  Here is what Sun has to say about
+proxies.
+http://java.sun.com/javase/6/docs/technotes/guides/net/proxies.html
+
+Oracle made an error in dealing with SSL SNI (Server Name Indication).
+Some sites require it enabled, others disabled.  You have to find out
+by experiment. Oracle should have made controlling it an instance method
+of HttpURLConnection.  But they made it a global system property.  This means
+if you have threads, you will get interference between your HTTP.disableSNI() 
+and HTTP.enableSNI(). One way of handling it is to do your two types of SNI
+sites is separate batches.
+
+
+----
+
+Version History:
+
+ 1.0 1998-01-01 initial version
+
+ 1.1 2007-07-19 improved handling of responseCode
+
+ 1.2 2007-07-27 use UTF-8 instead of 8859_1.
+
+ 1.3 2007-08-24 readStringBlocking, readBytesBlocking, encoding on Get
+
+ 1.4 2007-09-26 add TIMEOUT
+
+ 1.5 2007-12-30 add alternate get and post methods that take a full URL.
+
+ 1.6 2008-01-14 add gzip option on read
+
+ 1.7 2008-07-25 add configurable User-Agent, add Base Http class.
+
+ 1.8 2008-07-27 handle case where URL given was not HTTP
+
+ 1.9 2008-08-22 support accept-charset, accept-encoding and accept-language. Fix bugs in gzip support.
+
+ 2.0 2009-02-20 major refactoring. separate setParms and setPostParms. new send method. Post can have both types
+                of parm.
+
+ 2.1 2010-02-07 new methods Post.setBody Http.setRequestProperties.
+
+ 2.2 2010-04-05 new method getURL
+
+ 2.3 2010-11-14 new method setInstanceFollowRedirects
+
+ 2.4 2011-02-03 change documentation to reflect that the HTTP package handled both http: and https: equally well.
+
+ 2.5 2011-04-01 allow gzip compression. Update User agent.
+
+ 2.6 2011-05-01 getRawResponseMessage and getResponseMessage(uses standard wordings).
+
+ 2.7 2011-05-19 change all encoding parms from String to Charset type for tighter parameter checking.
+
+ 2.8 2011-08-30 update User Agent
+
+ 2.9 2011-11-09 add configuring getter/setters for Accept-Property, Accept-Charset etc.
+
+ 3.0 2014-01-29 adjust default User Agent
+
+ 3.1 2014-04-17 give a message about any exceptions rather than just a -1 return code.
+
+ 3.2 2014-07-15 add isGood method to categorise the responseCode
+
+-30-
+

@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<!-- BUILD.XML complex entities 3.3 build that copies files to website for upload. -->
+<!-- Build with ANT postzip jet -->
+<!-- Compile and jar entities using ANT -->
+<!-- Invoke with [ant clean] to erase class files and start over. -->
+<!-- Invoke with [ant compile] to just compile. -->
+<!-- Invoke with [ant jar] to compile and create jar files. -->
+<!-- Invoke with [ant postjar] to post jars to the mindprod website. -->
+<!-- Invoke with [ant jet] to create JET executables. -->
+<!-- Invoke with [ant zip] to create source code zip files. -->
+<!-- Invoke with [ant postzip] to post zip file to the mindprod website. -->
+<!-- Using Apache ANT version 1.10.1 -->
+<!-- For details of ANT use, see http://mindprod.com/jgloss/ant.html -->
+<!-- This script does not build any *.asm files. -->
+
+<!-- D E F I N I T I O N S -->
+<!-- ANT.project.dir is com/mindprod/entities -->
+<!-- basedir is E:/ -->
+<project name="entities" basedir="E:/" default="jar">
+
+<!-- extensions for zip. Case sensitive! Go in zip, not necessarily in Jar. -->
+<property name="distributed.exts" value="**/*.au,**/*.asm,**/*.bat,**/*.btm,**/*.c,**/*.COM,**/*.com,**/*.cpp,**/*.css,**/*.csv,**/*.dll,**/*.gif,**/*.h,**/*.hpp,**/*.htm,**/*.html,**/*.ico,**/*.ION,**/*.ion,**/*.jar,**/*.java,**/*.jnlp,**/*.JNLP,**/*.jpg,**/*.look,**/*.png,**/*.properties,**/*.ser,**/*.sln,**/*.txt,**/*.use,**/*.xml" />
+
+<!-- dirs we to exclude from zip. Case sensitive! -->
+<property name="nondistributed" value="**/javadoc/**,**/jetpdb/**,**/Debug/**,**/Release/**" />
+
+<!-- C L E A N -->
+<target name="clean">
+<echo message="    :::    entities    :::    deleting files to force regeneration." />
+  <delete>
+    <fileset dir="com/mindprod/entities" includes="**/*.class" />
+    <fileset dir="com/mindprod/entities" includes="**/*.jar" />
+    <!-- leave Jet *.exe. Old versions are still useful during the build. -->
+    <fileset dir="com/mindprod/entities" includes="entities33.zip" />
+  </delete>
+</target>
+
+<!-- C O M P I L E -->
+<target name="compile">
+<echo message="    :::    entities    :::    compiling Java tree with target=1.8" />
+  <javac source="1.8" target="1.8" srcdir="com/mindprod/entities" sourcepath="${basedir}" classpath="${basedir}" encoding="UTF-8" debug="on" includeAntRuntime="false">
+    <compilerarg value="-Xlint:unchecked" />
+    <compilerarg value="-Xlint:fallthrough" />
+    <compilerarg value="-Xlint:deprecation" />
+    <compilerarg value="-Xlint:cast" />
+  </javac>
+</target>
+
+<!-- J A V A H must do ant javah to rebuild *.h files. -->
+<target name="javah" depends="compile">
+  <!-- there is no jni -->
+</target>
+
+<!-- G A T H E R -->
+<target name="gather" depends="compile">
+<echo message="    :::    entities    :::    gathering files to build jar/zip." />
+  <!-- prepare entities.use precis from two pieces -->
+    <concat destfile="com/mindprod/entities/entities.use" fixlastline="yes">
+      <filelist dir="com/mindprod/entities" files="version.txt,use.txt,versionhistory.txt" />
+    </concat>
+    <copy file="E:/mindprod/application/entities.html" todir="com/mindprod/entities" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/application/entities.manual.html" todir="com/mindprod/entities" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/ico/entities.ico" tofile="E:/mindprod/application/entities.ico" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon128/entities.png" tofile="com/mindprod/entities/entities.icon128.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon16/entities.png" tofile="com/mindprod/entities/entities.icon16.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon32/entities.png" tofile="com/mindprod/entities/entities.icon32.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon48/entities.png" tofile="com/mindprod/entities/entities.icon48.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon64/entities.png" tofile="com/mindprod/entities/entities.icon64.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/screenshot/entities.png" tofile="com/mindprod/entities/entities.screenshot.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/jdisplay.css" todir="com/mindprod/entities" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/mindprod.css" todir="com/mindprod/entities" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/pad/entities.xml" todir="com/mindprod/entities" failonerror="false" quiet="true" overwrite="true" />
+</target>
+
+<!-- J A R -->
+<!-- Make F:\Program Files (x86)\apache-ant-1.10.1\lib\GenJar.jar known to ANT -->
+<!-- See http://mindprod.com/jgloss/genjar.html for details -->
+<taskdef resource="genjar.properties" />
+
+<target name="jar" depends="gather">
+<echo message="    :::    entities    :::    genjar finding dependencies and creating jar." />
+  <genjar jarfile="com/mindprod/entities/entities.jar">
+    <!-- include main class and all its dependencies -->
+    <class name="com.mindprod.entities.Entities" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.entities.Entities" />
+      <attribute name="Application-Name" value="Entities" />
+    </manifest>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/entities" output="nul:" logError="true" failonerror="true">
+    <arg value="entities.jar" />
+    <arg value="1.2" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/entities" output="com/mindprod/entities/entities.look">
+    <arg value="entities.jar" />
+  </exec>
+  <!-- build arrownonets.jar -->
+  <genjar jarfile="com/mindprod/entities/arrownonets.jar">
+    <class name="com.mindprod.entities.ArrowNonets" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.entities.ArrowNonets" />
+      <attribute name="Application-Name" value="ArrowNonets" />
+    </manifest>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/entities" output="nul:" logError="true" failonerror="true">
+    <arg value="arrownonets.jar" />
+    <arg value="1.1" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/entities" output="com/mindprod/entities/arrownonets.look">
+    <arg value="arrownonets.jar" />
+  </exec>
+  <!-- build deentify.jar -->
+  <genjar jarfile="com/mindprod/entities/deentify.jar">
+    <class name="com.mindprod.entities.DeEntify" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.entities.DeEntify" />
+      <attribute name="Application-Name" value="DeEntify" />
+    </manifest>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/entities" output="nul:" logError="true" failonerror="true">
+    <arg value="deentify.jar" />
+    <arg value="1.1" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/entities" output="com/mindprod/entities/deentify.look">
+    <arg value="deentify.jar" />
+  </exec>
+  <!-- build entify.jar -->
+  <genjar jarfile="com/mindprod/entities/entify.jar">
+    <class name="com.mindprod.entities.Entify" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.entities.Entify" />
+      <attribute name="Application-Name" value="Entify" />
+    </manifest>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/entities" output="nul:" logError="true" failonerror="true">
+    <arg value="entify.jar" />
+    <arg value="1.1" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/entities" output="com/mindprod/entities/entify.look">
+    <arg value="entify.jar" />
+  </exec>
+  <!-- build flatten.jar -->
+  <genjar jarfile="com/mindprod/entities/flatten.jar">
+    <class name="com.mindprod.entities.Flatten" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.entities.Flatten" />
+      <attribute name="Application-Name" value="Flatten" />
+    </manifest>
+  </genjar>
+
+  <!-- J A R C H E C K -->
+  <exec executable="jarcheck.exe" dir="com/mindprod/entities" output="nul:" logError="true" failonerror="true">
+    <arg value="flatten.jar" />
+    <arg value="1.1" />
+    <arg value="1.8" />
+  </exec>
+  <!-- J A R L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/entities" output="com/mindprod/entities/flatten.look">
+    <arg value="flatten.jar" />
+  </exec>
+</target>
+
+<!-- P O S T J A R -->
+<target name="postjar" depends="jar">
+  <!-- nothing to do -->
+</target>
+
+<!-- P R E J E T -->
+<target name="prejet">
+<echo message="    :::    entities    :::    avoid regenerating Jet executable if already done." />
+  <uptodate property="jet.uptodate" targetfile="com/mindprod/entities/entities.exe">
+    <srcfiles dir="com/mindprod/entities" includes="*.jar"/>
+    </uptodate>
+</target>
+
+<!-- J E T -->
+<!-- Requires Excelsior JET native Java compiler jc.exe on the path -->
+<!-- See http://mindprod.com/jgloss/jet.html for details -->
+<target name="jet" depends="prejet" unless="jet.uptodate">
+<echo message="    :::    entities    :::    jet compiling." />
+  <exec executable="jc.exe" dir="com/mindprod/entities">
+    <arg value="-DECOR=" />
+    <arg value="entities.jar" />
+  </exec>
+  <!-- copy entities.exe to E:/sys -->
+  <copy file="com/mindprod/entities/entities.exe" todir="E:/sys" />
+  <echo message="    :::    entities/ArrowNonets    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/entities">
+    <arg value="-DECOR=" />
+    <arg value="arrownonets.jar" />
+  </exec>
+  <!-- copy arrownonets.exe to E:/sys -->
+  <copy file="com/mindprod/entities/arrownonets.exe" todir="E:/sys" />
+  <echo message="    :::    entities/DeEntify    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/entities">
+    <arg value="-DECOR=" />
+    <arg value="deentify.jar" />
+  </exec>
+  <!-- copy deentify.exe to E:/sys -->
+  <copy file="com/mindprod/entities/deentify.exe" todir="E:/sys" />
+  <echo message="    :::    entities/Entify    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/entities">
+    <arg value="-DECOR=" />
+    <arg value="entify.jar" />
+  </exec>
+  <!-- copy entify.exe to E:/sys -->
+  <copy file="com/mindprod/entities/entify.exe" todir="E:/sys" />
+  <echo message="    :::    entities/Flatten    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/entities">
+    <arg value="-DECOR=" />
+    <arg value="flatten.jar" />
+  </exec>
+  <!-- copy flatten.exe to E:/sys -->
+  <copy file="com/mindprod/entities/flatten.exe" todir="E:/sys" />
+</target>
+
+<!-- Z I P -->
+<target name="zip" depends="jar">
+<echo message="    :::    entities    :::    preparing zip distributable." />
+  <!-- Remove references to separate foot files. -->
+  <exec executable="prunefoot.exe" failifexecutionfails="false" dir="com/mindprod/entities">
+    <arg value="entities.html" />
+    <arg value="entities.manual.html" />
+  </exec>
+  <zip destfile="com/mindprod/entities/entities33.zip" duplicate="preserve" filesonly="true" includes="${distributed.exts}" excludes="${nondistributed}">
+    <!-- zipfileset includes all subdirs as well -->
+    <zipfileset dir="com/mindprod/entities" prefix="com/mindprod/entities" includes="${distributed.exts}" excludes="${nondistributed}" />
+    <!-- Extra classes and properties to include in the Zip -->
+      <zipfileset dir="com/mindprod/commandline" prefix="com/mindprod/commandline" includes="${distributed.exts}" excludes="${nondistributed}" />
+      <zipfileset dir="com/mindprod/common18"    prefix="com/mindprod/common18"    includes="${distributed.exts}" excludes="${nondistributed}" />
+      <zipfileset dir="com/mindprod/csv"         prefix="com/mindprod/csv"         includes="${distributed.exts}" excludes="${nondistributed}" />
+      <zipfileset dir="com/mindprod/fastcat"     prefix="com/mindprod/fastcat"     includes="${distributed.exts}" excludes="${nondistributed}" />
+      <zipfileset dir="com/mindprod/filter"      prefix="com/mindprod/filter"      includes="${distributed.exts}" excludes="${nondistributed}" />
+      <zipfileset dir="com/mindprod/hunkio"      prefix="com/mindprod/hunkio"      includes="${distributed.exts}" excludes="${nondistributed}" />
+  </zip>
+
+  <!-- Z I P L O O K -->
+  <exec executable="jarlook.exe" dir="com/mindprod/entities" output="com/mindprod/entities/zip.look">
+    <arg value="entities33.zip" />
+  </exec>
+</target>
+
+<!-- P O S T Z I P -->
+<target name="postzip" depends="zip,postjar">
+<echo message="    :::    entities    :::    posting zip to website." />
+  <!-- copy precis to website -->
+  <copy file="com/mindprod/entities/entities.use" tofile="E:/mindprod/precis/entities.txt" overwrite="true" />
+  <!-- copy com\mindprod\entities/entities33.zip to website -->
+  <copy file="com\mindprod\entities/entities33.zip" todir="E:/mindprod/zips" overwrite="true" />
+  <!-- delete old zip distributable from project and website -->
+  <delete file="com/mindprod/entities/entities32.zip" failonerror="false" quiet="true" />
+  <delete file="E:/mindprod/zips/entities32.zip" failonerror="false" quiet="true" />
+</target>
+</project>

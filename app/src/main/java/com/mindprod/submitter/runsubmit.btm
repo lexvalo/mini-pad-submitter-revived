@@ -1,0 +1,8 @@
+@echo off
+@echo °±²Û runsubmit.btm: run Submitter as an application with logging Û²±°
+Rem adjust drive letter before use:
+E:
+cd com\mindprod\submitter
+rem logDir it C:\temp
+java.exe %JAVA_OPTIONS -ea   -jar submitter.jar C:\temp
+rem -30-

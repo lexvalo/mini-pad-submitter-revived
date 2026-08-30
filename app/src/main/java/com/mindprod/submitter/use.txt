@@ -1,0 +1,193 @@
+Submitter will submit your PAD *.xml program descriptor file (PAD 3.11 or
+PAD 4.0 format) to 66 PADsites.  Unlike other submission programs, this
+program submits only to PADSites that welcome automated submissions and
+put up no impediments of any kind to automated submission.  Compose your
+PAD *.xml file using a program like PADGen, then upload it you your
+website.  Then enter the URL of your website directory where you upload
+pads and the name of the pad itself e.g.  hypotheticalprogram.xml, then
+hit SUBMIT.  It also has a batch mode to submit a list of PADs to a list
+of PAD submission sites.  The advantages of Mini Pad Submitter over other
+similar programs are:
+- The program is free.
+- You are not required to install any software on your machine, (though
+  you can optionally).
+- CMP checks all the submission websites twice daily to make sure they are
+  still operational and removes any deadwood from the list.
+- No hassle setting accounts or passwords or key any hard-to-read captcha
+  security codes.
+- All is completely automatic. All you need to supply is the PAD url.
+- The program avoids submitting to sites that have onerous restrictions
+  such as demanding a back link.
+- The program is open source (full Java source code provided for you to
+  study or modify).
+- The list of sites has been gradually shrinking as submission sites go
+  out of business.  At one point there were over 200 hassle-free sites.
+  Other lists of submission sites are mostly dead wood.  I
+  prune out deadwood daily. 
+  
+numbered site names in case-sensitive alpha order >>>>
+  1. 2Software
+  2. AbabaSoft
+  3. ABCDatos
+  4. ABDownloads
+  5. AllSoftWares
+  6. AppDown
+  7. AskedFiles
+  8. BigDreamSoft
+  9. BizPep
+ 10. DeSoftList
+ 11. Download100
+ 12. Download11
+ 13. Download3K
+ 14. Download3KDe
+ 15. Download3KEs
+ 16. Download3KFr
+ 17. Download3kRo
+ 18. Download4You
+ 19. DownloadBy
+ 20. DownloadoManiac
+ 21. DownloadReady
+ 22. Downloads2
+ 23. DownloadsArea
+ 24. DownloadSpin
+ 25. DownloadTyphoon
+ 26. EuroDownload
+ 27. Evocero
+ 28. FastShareware
+ 29. Fd4a
+ 30. FileCluster
+ 31. FileDir
+ 32. FileProfile
+ 33. FilesGuard
+ 34. FindSoftNet
+ 35. FindSoftwareeu
+ 36. ForMac
+ 37. FreeSafeSoft
+ 38. FreeSoftwareSharewareDownloads
+ 39. Freeware1
+ 40. FreewaresZDown
+ 41. ImFreeware
+ 42. MyDownloadPlanet
+ 43. PlanetSofts
+ 44. RaritySoft
+ 45. RecoveryReview
+ 46. RuSoftList
+ 47. Sharewareville
+ 48. Soft112
+ 49. Soft321
+ 50. SoftFolder
+ 51. Softholm
+ 52. SoftListWs
+ 53. SoftwareBee
+ 54. SoftwareKB
+ 55. SoftwareWagon
+ 56. SpotPig
+ 57. StandaloneInstaller
+ 58. StyleXP3x
+ 59. Swdb
+ 60. TelechargerZ
+ 61. TeraByte
+ 62. TwoBrothers
+ 63. WebContentSolutions
+ 64. Windows10Compatible
+ 65. YankeeDownload
+ 66. ZDown
+ 
+See http://mindprod.com/jgloss/pad.html for hints on
+creating your PAD file.
+You can run it as a signed Applet or as standalone application:
+java com.mindprod.submitter.Submitter
+To use Submitter, all you have to do is run it as a Applet or an
+application and type in the URL of your PAD, e.g.
+http://mindprod.com/pad/password.xml for a PAD 3.11 format or e.g.
+http://repository.appvisor.com/info/app-550076260eb0/Password_Generator_pad.xml
+for a PAD 4.0 format.
+The Applet must be signed to allow it to talk to a variety
+of websites and to use the registry to persist just which
+pads it has already submitted.
+If you turn on the Java console, you can view the log of how
+the various websites responded.  Normally you just get to
+see them for a few seconds.
+If you want to study the responses more carefully, the
+responses from the websites are  captured in files in the
+current directory of the form xxxx_yyyy.log.html where xxxx
+is the name of the pad and yyyy in the name of the
+submission site. You can look at them with a browser or a
+text editor.
+
+SUBMITBATCH
+-----------
+There is also a batch version of the program. To use it, you
+prepare a list of complete URLs of your pad files.
+For PAD 3.11 the URL will be on your website.
+For PAD 4.0 the URL will be on the appvisor.com website.
+like this:
+http://mysite.com/pad/fantastic.xml
+http://mysite.com/pad/great.xml
+http://mysite.com/pad/astounding.xml
+http://repository.appvisor.com/info/app-550076260eb0/Password_Generator_pad.xml
+;http://ignorethissite.com/alreadydone.xml
+Lead semicolon means ignore, treat as comment.
+Don't put any blank lines in the file or at the end!
+and put the list in a text file somewhere, called for
+example E:\env\pads.list
+You must have previously uploaded all these pads and the
+corresponding programs to your website or published them at Appvisor.com
+Then you can can submit that entire list of pads to every
+website with one command:
+java.exe -jar submitbatch.jar  E:\env\pads.list
+You might want to use TakeCommand scrolling, > output.txt or a tee
+utility to capture the voluminous console output to a file.
+Unlike the Applet version, the batch version will not stop
+you from frequently resubmitting PADs.  Don't abuse that
+freedom, or the PAD websites may block you.
+prepare a list of complete URLs of your pad files.
+For PAD 3.11 the URL will be on your website.
+For PAD 4.0 the URL will be on the appvisor.com website.
+like this:
+http://mysite.com/pad/fantastic.xml
+http://mysite.com/pad/great.xml
+http://mysite.com/pad/astounding.xml
+http://repository.appvisor.com/info/app-550076260eb0/Password_Generator_pad.xml
+;http://ignorethissite.com/alreadydone.xml
+Lead semicolon means ignore, treat as comment.
+Don't put any blank lines in the file or at the end!
+and put the list in a text file somewhere, called for
+example E:\env\pads.list
+You must have previously uploaded all these pads and the
+corresponding programs to your website or published them at Appvisor.com
+Then you can can submit that entire list of pads to every
+website with one command:
+java.exe -jar submitbatch.jar  E:\env\pads.list
+You might want to use TakeCommand scrolling, > output.txt or a tee
+utility to capture the voluminous console output to a file.
+Unlike the Applet version, the batch version will not stop
+you from frequently resubmitting PADs.  Don't abuse that
+freedom, or the PAD websites may block you.
+You can also limit which sites you submit the list to by supplying
+a second parameter, e.g.
+java.exe -jar submitbatch.jar  E:\env\pads.list   E:\env\somesites.list
+Where somesites.list looks like this:
+DownloadoManiac
+ZDown
+Submit batch logs site responses the same way Submitter does.
+Using the site names spelled precisely as is the list above.
+
+LOGGING
+-------
+If you run Submitter in a browser, you can turn on logging (a record of
+how each site responded to each PAD submission) by providing a directory
+to dump the log files to with a logDir parameter.
+e.g. <param name="logDir" value="C:\temp">
+If you leave off the parameter, logging is suppressed.
+If you run Submitter from the command line, you can turn on logging by
+providing a directory to dump the log files to on the command line.
+e.g. java.exe -jar submitter.jar  C:\temp
+If you leave off the parameter, logging is suppressed.
+With SubmitBatch, logging is always turned on, and the logs are always placed
+in the current directory.
+
+ICON
+----
+Why the megaphone icon?  It represents spreading the word about the
+programs you have written.

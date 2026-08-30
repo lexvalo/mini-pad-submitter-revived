@@ -1,0 +1,5 @@
+META-INF/MANIFEST.MF
+com/mindprod/common18/EIO.class
+com/mindprod/hunkio/HunkIO.class
+com/mindprod/hunkio/PrintWriterPlus.class
+com/mindprod/hunkio/PrintWriterPortable.class

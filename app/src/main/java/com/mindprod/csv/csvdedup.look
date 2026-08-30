@@ -1,0 +1,16 @@
+META-INF/MANIFEST.MF
+com/mindprod/common18/BigDate.class
+com/mindprod/common18/EIO.class
+com/mindprod/common18/Misc.class
+com/mindprod/common18/ST.class
+com/mindprod/csv/CSV.class
+com/mindprod/csv/CSVCharCategory.class
+com/mindprod/csv/CSVDeDup$1.class
+com/mindprod/csv/CSVDeDup.class
+com/mindprod/csv/CSVReadState.class
+com/mindprod/csv/CSVReader$1.class
+com/mindprod/csv/CSVReader.class
+com/mindprod/csv/CSVWriter.class
+com/mindprod/csv/DeDupStrategy.class
+com/mindprod/fastcat/FastCat.class
+com/mindprod/hunkio/HunkIO.class

@@ -1,0 +1,49 @@
+Converts & to &amp; in HTML files, but does not convert it
+when the & is already in an entity e.g. &lt; &thetasym;
+&eacute;   The DeAmpify utility converts &amp; back to &.
+It works only on *.html *.htm and *.csv files.
+The main use for this is to pass HTMLValidator verification
+of your HTML, which is very picky about &, especially inside
+URLs.
+As a side effect, it also ensures all your <!-- ... -->
+balance.
+It does not change & to &amp; inside comments (or macros masquerading as
+comments), though it will change it inside href= and image= urls, or
+anywhere else e.g.  Java Applet parameters, which is correct according to
+the HTMLValidator.  It does _not_ change " to &quot; < to &lt; or é to
+&eacute; It just fixes &, the most troublesome character.
+To convert a single file, type:
+  java.exe -jar C:\com\mindprod\amper\amper.jar myfile.html
+The results replace the old file, so you had better make a
+backup just in case this is not what you want.
+You can also list several files on the command line:
+  java.exe -jar C:\com\mindprod\amper\amper.jar myfile.html C:\mydir\another.html
+To use convert the current directory of HTML files:
+  java.exe -jar C:\com\mindprod\amper\amper.jar .
+Sorry no wildcards, just . , and ..
+DON'T USE WILDCARDS unless you deeply understand how they
+work. See http://mindprod.com/jgloss/wildcard.html. Windows
+expands them, not amper, and feeds them to amper (or any other program)
+as a giant list of all the directories and files in the
+current directory. Amper will thus tend  process all the files
+in your directories, when you just meant to process the files in
+the current directory.
+The -s switch makes all subsequent directories searched
+recursively to include all their subdirectories.
+e.g.
+  java.exe -jar C:\com\mindprod\amper\amper.jar -s E:\mindprod
+will fix all *.html files in the mindprod directory tree,
+ignoring other types of files.
+The -q option switch suppresses output. Without it, you see
+a list of the files it changed.
+If you have the jar extension set up as executable, you can
+abbreviate:
+  C:\com\mindprod\amper\amper.jar .
+Amper does not change any character other than &.  It does
+NOT convert high ascii codes to their Unicode equivalents.
+Doing that is tricky since it depends on knowing for certain
+the encoding of the file. If you need to do that now, you can
+with a Funduc search and replace script.
+To go the other way, to convert &amp; to &, use
+  C:\com\mindprod\amper\deampify.jar myfile.html
+Why the & icon?  I hope that should be obvious.

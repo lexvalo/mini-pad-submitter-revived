@@ -1,0 +1,118 @@
+"desc.btm" creates TCC file descriptions for project files
+"descother.btm" creates TCC file descriptions for non-project files
+"run.bat" execute the Submitter application from the jar
+"grab.btm" copy in Java source code from IntelliJ and build it. Roedy's use only.
+"Submitter.class" Submitter main Java program compiled byte code
+"DetectDuplicates.class" alternate Java program compiled byte code
+"FormatPadSites.class" alternate Java program compiled byte code
+"GrabAsp.class" alternate Java program compiled byte code
+"JustNewAppvisors.class" alternate Java program compiled byte code
+"SubmissionSite.class" alternate Java program compiled byte code
+"SubmitBatch.class" alternate Java program compiled byte code
+"TidyKeywords.class" alternate Java program compiled byte code
+"submitter.exe" JET executable Submits PAD XMLs to 66 PADsites
+"detectduplicates.exe" JET executable
+"formatpadsites.exe" JET executable
+"grabasp.exe" JET executable
+"justnewappvisors.exe" JET executable
+"submissionsite.exe" JET executable
+"submitbatch.exe" JET executable
+"tidykeywords.exe" JET executable
+"E:\sys\submitter.exe" JET executable Submits PAD XMLs to 66 PADsites
+"E:\sys\detectduplicates.exe" JET executable
+"E:\sys\formatpadsites.exe" JET executable
+"E:\sys\grabasp.exe" JET executable
+"E:\sys\justnewappvisors.exe" JET executable
+"E:\sys\submissionsite.exe" JET executable
+"E:\sys\submitbatch.exe" JET executable
+"E:\sys\tidykeywords.exe" JET executable
+"submitter.html" html to launch the Submitter program
+"submitter.manual.html" detailed HTML manual for the Submitter project
+"submitter.jar" jarred class files: Submits PAD XMLs to 66 PADsites
+"submitter.look" uncommented jar manifest
+"detectduplicates.jar" jarred class files.
+"detectduplicates.look" uncommented jar manifest
+"formatpadsites.jar" jarred class files.
+"formatpadsites.look" uncommented jar manifest
+"grabasp.jar" jarred class files.
+"grabasp.look" uncommented jar manifest
+"justnewappvisors.jar" jarred class files.
+"justnewappvisors.look" uncommented jar manifest
+"submissionsite.jar" jarred class files.
+"submissionsite.look" uncommented jar manifest
+"submitbatch.jar" jarred class files.
+"submitbatch.look" uncommented jar manifest
+"tidykeywords.jar" jarred class files.
+"tidykeywords.look" uncommented jar manifest
+"E:\mindprod\applet\detectduplicates.jar"  jarred class files.
+"E:\mindprod\applet\formatpadsites.jar"  jarred class files.
+"E:\mindprod\applet\grabasp.jar"  jarred class files.
+"E:\mindprod\applet\justnewappvisors.jar"  jarred class files.
+"E:\mindprod\applet\submissionsite.jar"  jarred class files.
+"E:\mindprod\applet\submitbatch.jar"  jarred class files.
+"E:\mindprod\applet\tidykeywords.jar"  jarred class files.
+"submitter.jnlp" submitter jnlp Java Web Start launch
+"submitter.efs" generated: JET compiler internal file
+"submitter.rfs" generated: JET compiler control file
+"submitter.rsp" JET configuration file
+"submitter.usg" generated: JET compiler method use tracking
+"submitter-setup.exe" JET distributable, containing runtime
+"submitter.ico" Windows icon for the project, contains multiple image sizes
+"submitter.jpn" Manifest of what is included in the JET executable.
+"submitter.log" log of what JET did compiling and preparing the distributable
+"submitter.prj" JET project configuration, compiler options and notes on what needs to be included.
+"submitter.startup" List of classes JET should preload for speed.
+"submitter.xbind.script" List of DLLs JET will need to run the app.
+"build_submitter.bat" Build JET executable with project descriptor
+"run_submitter.bat" Runs the JET executable with default parm.
+"mindprod.css" cascading style sheet for general HTML
+"jdisplay.css" cascading style sheet for displaying source code in HTML
+"package-info.java" Dummy Java source with JavaDoc describing the entire package.
+"untouch.digest" generated: enables untouching (set date back) unchanged but redated files.
+"mindprodcert2017rsa.cer" Public key for Mindprod code-signing certificate. Cannot be used to sign jars.
+"DESCRIPT.ION" TCC file descriptions
+"descript0.ion" generated file of overriding descriptions to merge into DESCRIPT.ION
+"descript2.ion" generated file default descriptions to merge into DESCRIPT.ION
+"MasterDistribution.site" URL to find the master copy of the Submitter project files
+"submitter.use" precis(summary) Submits PAD XMLs to 66 PADsites Generated
+"submitter.vpj" Slick Edit project ini file
+"submitter.vpw" Slick Edit project ini file
+"submitter.vtg" Slick Edit binary tag xref file
+"submitter.icon16.png" 16x16 icon for the Submitter project
+"submitter.icon32.png" 32x32 icon for the Submitter project
+"submitter.icon48.png" roughly 48x48 icon for the Submitter project
+"submitter.icon64.png" roughly 64x64 icon for the Submitter project
+"submitter.icon128.png" roughly 128x128 icon for the Submitter project
+"submitter.screenshot.png" screenshot for the Submitter project
+"submitter.splash.gif" splash gif for the Submitter project
+"submitter.icon32.gif" 32x32 gif icon for the Submitter project
+"submitter.icon64.gif" 64x64 gif icon for the Submitter project
+"_O_V_E_R_V_I_E_W.txt" Commented List of all files for Submitter, with one line descriptions.
+"use.txt" key facts about the Submitter project. Generates submitter.use
+"version.txt" key current version info about the Submitter project. Generates submitter.use
+"versionhistory.txt" complete version history of the Submitter project. Generates submitter.use
+"submitter.txt" ASCII text manual for the Submitter project.
+"build.xml" Complex ANT build script for Submitter
+"rebuild.xml" Simplified ANT build script for Submitter
+"forgather.xml" list of extra gather steps for ANT.
+"forjar.xml" genjar list of extra files to include in submitter.jar
+"forjarexe.xml" jar.exe list of extra files to include in submitter.jar
+"fordetectduplicatesjar.xml" genjar list of extra files to include in detectduplicates.jar
+"fordetectduplicatesjarexe.xml" jar.exe list of extra files to include in detectduplicates.jar
+"forformatpadsitesjar.xml" genjar list of extra files to include in formatpadsites.jar
+"forformatpadsitesjarexe.xml" jar.exe list of extra files to include in formatpadsites.jar
+"forgrabaspjar.xml" genjar list of extra files to include in grabasp.jar
+"forgrabaspjarexe.xml" jar.exe list of extra files to include in grabasp.jar
+"forjustnewappvisorsjar.xml" genjar list of extra files to include in justnewappvisors.jar
+"forjustnewappvisorsjarexe.xml" jar.exe list of extra files to include in justnewappvisors.jar
+"forsubmissionsitejar.xml" genjar list of extra files to include in submissionsite.jar
+"forsubmissionsitejarexe.xml" jar.exe list of extra files to include in submissionsite.jar
+"forsubmitbatchjar.xml" genjar list of extra files to include in submitbatch.jar
+"forsubmitbatchjarexe.xml" jar.exe list of extra files to include in submitbatch.jar
+"fortidykeywordsjar.xml" genjar list of extra files to include in tidykeywords.jar
+"fortidykeywordsjarexe.xml" jar.exe list of extra files to include in tidykeywords.jar
+"forpost.xml" list of extra posting steps for ANT.
+"forzip.xml" list of extra files for ANT include in submitter263.zip
+"submitter.xml" ASP PAD desc of the Submitter project: Submits PAD XMLs to 66 PADsites
+"submitter263.zip" Submitter 26.3 distribute zip: Submits PAD XMLs to 66 PADsites
+"zip.look" uncommented zip manifest for submitter263.zip

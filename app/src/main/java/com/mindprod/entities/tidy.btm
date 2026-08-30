@@ -1,0 +1,9 @@
+rem tidy the entity facts file. Does not regenate
+E:
+E:\com\mindprod\entities
+csvcondense.exe entityfacts.csv
+rem fields are 0=categories, 1=hex, 2=overstrike, 3=entity, 4=desc,5=notes.
+rem sort by entity, hex, desc, categories
+csvsort.exe entityfacts.csv 3s+ 1x+  4s+  5s+
+csvalign.exe entityfacts.csv
+rem -30-

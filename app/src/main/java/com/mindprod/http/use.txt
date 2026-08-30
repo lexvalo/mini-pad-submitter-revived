@@ -1,0 +1,33 @@
+http is a small library of Java classes to let you do HTTP CGI GET, POST,
+HEAD, PROBE, CHASE and "FETCH" (generic) to a server.  It will also encode
+parameter pairs for you.
+It does nothing on its own.  It is intended to be incorporated into your
+own programs.
+To see a sample use have a look at the com.mindprod.submitter package,
+downloadable at http://mindprod.com/products1.html#SUBMITTER
+For downloading long http:, file: or https: files, see
+com.mindprod.filetransfer.Download
+http://mindprod.com/products1.html#FILETRANSFER
+The Get, Post, Head and Probe classes only work on http: and https:
+The Fetch class works on http:, https:, file: etc.
+For meanings of various response codes, see
+http://mindprod/jgloss/responsecode.html
+I don't have a proxy server myself, so I have not been able to experiment
+with getting Http to work with one.  It may simply be a matter of setting
+some Java properties with the -D option on the command line.  It would
+probably be easier for you to experiment with your appplication run as a
+standalone utility than as an Applet.  In my opinion, proxy servers should
+be transparent to applications.  The current proxy interface sounds like
+the work of teenage programmers who live on cheap pizza and don't change
+their underwear.  If you are successful at getting proxies to work with
+Http, please pass on what you did.  Here is what Sun has to say about
+proxies.
+http://java.sun.com/javase/6/docs/technotes/guides/net/proxies.html
+
+Oracle made an error in dealing with SSL SNI (Server Name Indication).
+Some sites require it enabled, others disabled.  You have to find out
+by experiment. Oracle should have made controlling it an instance method
+of HttpURLConnection.  But they made it a global system property.  This means
+if you have threads, you will get interference between your HTTP.disableSNI() 
+and HTTP.enableSNI(). One way of handling it is to do your two types of SNI
+sites is separate batches.

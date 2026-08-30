@@ -1,0 +1,53 @@
+
+----
+
+Version History:
+
+ 1.0 1998-01-01 initial version
+
+ 1.1 2007-07-19 improved handling of responseCode
+
+ 1.2 2007-07-27 use UTF-8 instead of 8859_1.
+
+ 1.3 2007-08-24 readStringBlocking, readBytesBlocking, encoding on Get
+
+ 1.4 2007-09-26 add TIMEOUT
+
+ 1.5 2007-12-30 add alternate get and post methods that take a full URL.
+
+ 1.6 2008-01-14 add gzip option on read
+
+ 1.7 2008-07-25 add configurable User-Agent, add Base Http class.
+
+ 1.8 2008-07-27 handle case where URL given was not HTTP
+
+ 1.9 2008-08-22 support accept-charset, accept-encoding and accept-language. Fix bugs in gzip support.
+
+ 2.0 2009-02-20 major refactoring. separate setParms and setPostParms. new send method. Post can have both types
+                of parm.
+
+ 2.1 2010-02-07 new methods Post.setBody Http.setRequestProperties.
+
+ 2.2 2010-04-05 new method getURL
+
+ 2.3 2010-11-14 new method setInstanceFollowRedirects
+
+ 2.4 2011-02-03 change documentation to reflect that the HTTP package handled both http: and https: equally well.
+
+ 2.5 2011-04-01 allow gzip compression. Update User agent.
+
+ 2.6 2011-05-01 getRawResponseMessage and getResponseMessage(uses standard wordings).
+
+ 2.7 2011-05-19 change all encoding parms from String to Charset type for tighter parameter checking.
+
+ 2.8 2011-08-30 update User Agent
+
+ 2.9 2011-11-09 add configuring getter/setters for Accept-Property, Accept-Charset etc.
+
+ 3.0 2014-01-29 adjust default User Agent
+
+ 3.1 2014-04-17 give a message about any exceptions rather than just a -1 return code.
+
+ 3.2 2014-07-15 add isGood method to categorise the responseCode
+
+-30-

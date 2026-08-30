@@ -1,0 +1,288 @@
+CSV 7.5 build: 9639 released: 2016-05-21 compiled with: Java 1.8.0_131 Jet jet12.0-pro-x86/1.8.0_131
+
+Read, write, align, condense, dump, sort, convert, patch, reshape, group pack... CSV (Comma, tab and semicolon-Separated Variable) files.
+
+Copyright: (c) 2002-2017 Canadian Mind Products.
+
+Java application.
+Download from: http://mindprod.com/products1.html#CSV
+View formatted HTML Manual online at: http://mindprod.com/application/csv.manual.html
+
+----
+
+Notes:
+
+You must install the Java JRE to use this program.
+See http://mindprod.com/jgloss/jgloss/jre.html
+
+This program can only be used from the command prompt, (or via an command
+line style icon shortcut) e.g. under Windows command.exe or JPSoft
+tcmd.exe, formerly called the DOS box. Just clicking the programs in a
+directory listing will not do anything useful. Just typing the program
+names at the command prompt will not either.
+
+This program requires a manual install! See below.
+
+This program works with vanilla text files, (e.g. ASCII files or UTF-8
+Unicode files). You will need a text editor to create and view them, not a word
+processor. e.g. notepad, Visual Slick Edit or other suitable text editor
+http://mindprod.com/jgloss/editor.html. You must use a monospaced font
+http://mindprod.com/jgloss/monospacedfonts.html (aka fixed pitch, aka
+programmer font) to view your files, or they won't look properly aligned.
+
+I put out an avalanche of free software into the world, and submit PAD
+files to hundreds of distribution sites, but I rarely hear back from
+anyone.  What's happening?  Does it all just work fine?  It is so
+complicated nobody can figure out how to use it and they give up on it?
+It is it useful?  Since everyone has the source, do people just fix the
+programs to their liking themselves?  Did you have trouble installing?  Do
+I presume you know too much?  I would be happy to hear from you about your
+experiences, positive or negative and your requests for improvements.  A
+one-line email to roedy@mindprod.com would be great.
+
+===> Free <===
+Full source included.
+You may even include the source code, modified or unmodified
+in free/commercial open source/proprietary programs that you write and distribute.
+May be used freely for any purpose but military.
+For more details on this restriction, see
+http://mindprod.com/contact/nonmil.html
+If you include any Canadian Mind Products code in your own applications,
+your app too must be labelled non-military use only.
+http://mindprod.com/contact/nonmil.html
+All Java jars and source code are included. If you need the class files or Javadoc, you will have to build them yourself. To streamline the zip downloads, class files and Javadoc have been removed.
+
+----
+
+Prerequisites:
+
+This program runs under any OS that supports Java,
+(e.g.W2K/XP/W2003/Vista/W2008/W7-32/W7-64/W8-32/W8-64/Linux/LinuxARM/LinuxX86
+/LinuxX64/Ubuntu/Solaris/SolarisSPARC/SolarisSPARC64/SolarisX86/SolarisX64/OSX/AIX...)
+so long as you have
+<><> Java version 1.8 <><> or later installed (32-bit or 64-bit Java).
+See http://mindprod.com/jgloss/installingjava.html for details.
+
+----
+
+Installing on a PC:
+
+Download source and compiled jar files to run on your own machine as an application.
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+To install, extract the zip download with WinZip
+(or similar unzip utility) into any directory you please,
+often J:\ --  ticking off the <span class="click">use folder names</span> option.
+To run as an application, type:
+java.exe %JAVA_OPTIONS -ea -jar J:\com\mindprod\csv\csv.jar {put any parms here}
+
+adjusting as necessary to account for where the jar file is.
+
+----
+
+Installing on a MacIntosh:
+
+Use Safari to download source and compiled jar files to run on your own machine as an application.
+Safari will automatically unpack the zip into ~/Downloads (version 10.5)
+[or on the Desktop (version 10.4 and earlier)].
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+You may optionally move the download tree to a permanent home.
+I don't have a MacIntosh, just a PC, so I can't test my Java programs for Mac compatibility.
+In theory they should work without problems, but in practice that does not always happen.
+If you have problems please, let me know, preferably with screenshots and complete verbatim error messages.
+To run as an application, without parameters, just double click the jar file.
+
+To run as an application with parameters, in bash shell type:
+open Terminal.app
+cd ~/Desktop
+java.exe -ea -jar com/mindprod/csv/csv.jar {put any parms here}
+
+adjusting as necessary to account for where the jar file is.
+
+----
+
+Rebuilding:
+
+The zip already contains the necessary jar files, so unless you modify
+the program, there is no need to recompile the source or rebuild the jar.
+Configure.java basedir="E:/" in rebuild.xml to the drive where your files are.
+Use ANT and rebuild.xml, not build.xml, to recompile and recreate the jar.
+
+----
+
+Use:
+
+Read, write, align, reshape, dump, sort, convert and pack comma, tab and
+semicolon- separated variable files, commonly known as CSV files.  It
+consists of a 31 Java classes/utilities including CSVReader, CSVWriter,
+CSVAlign, CSVChangeCase, CSVCommaToTab, CSVCondense, CSVDeDup,
+CSVDeDupField, CSVDeEntify, CSVDump, CSVEntify, CSVISBN, CSVPack,
+CSVPatch, CSVReplaceStrings, CSVReplaceURLs, CSVReshape, CSVScale,
+CSVSort, CSVSortField, CSVTabToComma, CSVTemplate, CSVToSRS, CSVTSRX ,
+CSVToTable, CSVToUnique, CSVTuple, LinesToCSV, TableToCSV, for reading and
+writing CSV (Comma Separated Value) formatted files.  Also handles
+tab-separated and semicolon-separated files.  This is the format use by
+Microsoft Word and other Microsoft products.  This version now supports #
+embedded comments.  You can use them either as standalone command line
+utilities or as classes you can embed in your own Java programs.  To learn
+how to use the suite, see the online manual at
+http://mindprod.com/application/csv.manual.html
+Futures
+-------
+Use column names instead of numbers in the CSV commands.
+
+
+----
+
+Version History:
+
+ 1.0 2002-03-27 initial release
+
+ 1.1 2002-03-28 close
+                configurable separator char
+                no longer sensitive to line-ending convention.
+                uses a categorise routine to message categories for use in case clauses.
+                faster skipToNextLine
+
+ 1.2 2002-04-17 put in to separate package
+
+ 1.3 2002-04-17
+
+ 1.4 2002-04-19 fix bug if last field on line is empty, was not counting as a field.
+
+ 1.5 2002-04-19
+
+ 1.6 2002-05-25 allow choice of " or ' quote char.
+
+ 1.7 2002-08-29 getAllFieldsInLine
+
+ 1.8 2002-11-12 allow Microsoft Excel format fields that can span several lines. sponsored by Steve Hunter of
+                agilense.com
+
+ 1.9 2002-11-14 trim parameter to control whether fields are trimmed of lead/trail whitespace (blanks, Cr, Lf,
+                Tab etc.)
+
+ 2.0 2003-08-10 getInt, getLong, getFloat, getDouble
+
+ 2.1 2005-07-16 reorganisation, new bat files.
+
+ 2.2 2005-08-28 add CSVAlign and CSVPack to the suite.
+
+ 2.3 2005-08-28 add CSVAlign and CSVPack to the suite.
+                Use java com.mindprod.CSVAlign somefile.csv
+
+ 2.4 2007-05-20 add icon and PAD
+
+ 2.5 2007-11-27 tidy comments
+
+ 2.6 2008-02-20 IntelliJ inspector, spell corrections, tightening code.
+
+ 2.7 2008-05-28 add CSVTab2Comma.
+
+ 2.8 2008-06-04 add CSVWriter put for various primitives.
+
+ 2.9 2009-03-27 refactor using enums, support comments.
+                major rewrite. Now supports #-style
+                comments. More efficient RAM use. You can configure the
+                separator character, quote character and comment character.
+                You can read seeing or hiding the comments. The API was
+                changed to support comments.
+
+ 3.0 2009-06-15 lookup table to speed CSVReader
+
+ 3.1 2009-12-03 add CSVSort
+
+ 3.2 2010-02-23 add hex sort 9x+ option to CSVSort
+
+ 3.3 2010-11-14 change default to no comments in input file for CSVTab2Comma.
+
+ 3.4 2010-12-03 add CSV2SRS
+
+ 3.5 2010-12-11 add CSVReshape
+
+ 3.6 2010-12-14 add Lines2CSV
+
+ 3.7 2010-12-17 add CSVDeDup
+
+ 3.8 2010-12-31 add CSVRecode
+
+ 3.9 2011-01-22 add CSVTuple
+
+ 4.0 2011-01-23 add CSVToTable and TableToCSV
+
+ 4.1 2011-01-24 add CSVEntify and CSVStripEntities
+
+ 4.2 2011-01-25 modify all utilities so you can specify the encoding, default to UTF-8.
+
+ 4.3 2011-02-08 add support for sorting by field length. Add CSVCondense.
+
+ 4.4 2011-02-09 add getYYYYMMDD to CSVReader, improve error exceptions in CSVReader.
+
+ 4.5 2011-02-14 CSVToTable no longer entifies. Do separately with Entify, if needed. Add CSVTemplate.
+
+ 4.6 2011-02-16 rename from StripEntities to DeEntify. Add summary counts at the end of each utility.
+
+ 4.7 2011-02-17 add CSVChangeCase, CSVReshape now reorders the lead ## label comment.
+
+ 4.8 2011-02-17 CSVPack, CSVCondense, CSVTuple now tidy up ## label comments.
+                CSVReader has new method wasLabelComment to detect ## field labelling comments.
+
+ 4.9 2011-02-19 CSVAlign aligns ## comment.
+
+ 5.0 2011-02-21 add CSVWriter.setLineSeparator
+
+ 5.1 2011-02-24 fix bug, emitted """" for single field with quotelevel 2. reported by Dr. Jens Uwe Meyborn
+
+ 5.2 2011-02-25 new csvReader constructor parm trimUnquoted. Use Intellij to fill it in with true every place full
+                constructor used.
+
+ 5.3 2011-02-25 fix but when column comment had extra cols. left align date headers.
+
+ 5.4 2011-03-04 CSVToSRS: apply prelude and postlude to create a complete script that needs tweaking.
+
+ 5.5 2011-03-07 CSVTemplate: output file how has same extension as the template.
+
+ 5.6 2011-03-08 eliminate all but first duplicate in patch file. allow comments in patch file,
+                allow 2+ cols in patch file.
+
+ 5.7 2011-03-10 allow numeric sorts on empty columns.
+
+ 5.8 2011-03-11 CSVChangeCase fix bug in selecting the correct translation letter.
+
+ 5.9 2011-05-11 fix bug in multi-field reads in CSVReader
+
+ 6.0 2011-10-27 make CSV display stats. It used to be a dummy.
+
+ 6.1 2011-10-29 track comment lines and lines with tail comments separately.
+
+ 6.2 2011-10-30 fix fieldCount bug, which corrected bug with hideComments not working.
+
+ 6.3 2011-11-10 add CSVSortField and CSVDeDupField
+
+ 6.4 2012-01-25 redefine meaning of n option and add d option to CSVSort
+
+ 6.5 2012-02-19 DeDupStrategy -keepfirst -keeplast and -delete. f for family name sort option.
+
+ 6.6 2012-07-31 fix sort on surname van Pelt, Mc Mac
+
+ 6.7 2012-11-12 add CSVCommaToTab
+
+ 6.8 2013-01-30 CSVToTable now specify class to <tr as well
+
+ 6.9 2013-02-19 Change all encoding parms from string the Charset.
+
+ 7.0 2014-04-29 Three new utilities CSVReplaceStrings, CSVReplaceURLs and CSVtoUnique.
+
+ 7.1 2014-06-01 add CSVScale, encapsulate much of the IO with the EIO class.
+
+ 7.2 2014-08-05 add CSVToSRX for generating Funduc BE search/replace scripts.
+
+ 7.3 2014-08-16 add CSVStripTags for removing HTML tags.
+
+ 7.4 2014-09-14 CSVToTable now creates a *.htmlfrag file, and TableToCSV not accepts a *.htmlfrag
+
+ 7.5 2016-05-21 correct bug where CSVWrite sometimes failed to enclose fields containginng commas in quotes.
+
+-30-
+

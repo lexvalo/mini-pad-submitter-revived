@@ -1,0 +1,109 @@
+"_O_V_E_R_V_I_E_W.txt" Commented List of all files for Entities, with one line descriptions.
+"ArrowNonets.class" alternate Java program compiled byte code
+"arrownonets.exe" JET executable
+"arrownonets.jar" jarred class files.
+"ArrowNonets.java" Generate display of 9 unicode arrows
+"arrownonets.look" uncommented jar manifest
+"build.xml" Complex ANT build script for Entities
+"DeEntify.class" alternate Java program compiled byte code
+"deentify.exe" JET executable
+"deentify.jar" jarred class files.
+"DeEntify.java" alt Java program source
+"deentify.look" uncommented jar manifest
+"DeEntifyStrings.class" compiled Java byte code
+"DeEntifyStrings.java" Convert entities to UTF-8
+"desc.btm" creates TCC file descriptions for project files
+"descother.btm" creates TCC file descriptions for non-project files
+"DESCRIPT.ION" TCC file descriptions
+"descript0.ion" generated file of overriding descriptions to merge into DESCRIPT.ION
+"descript2.ion" generated file default descriptions to merge into DESCRIPT.ION
+"Entify.class" alternate Java program compiled byte code
+"entify.exe" JET executable
+"entify.jar" jarred class files.
+"Entify.java" alt Java program source
+"entify.look" uncommented jar manifest
+"EntifyStrings.class" compiled Java byte code
+"EntifyStrings.java" Convert UTF-8 to entities
+"Entities.class" Entities main Java program compiled byte code
+"entities.exe" JET executable Converts HTML/XML/XHTML entities to char and back, also strips HTML/XML/XHTML tags
+"entities.icon128.png" roughly 128x128 icon for the Entities project
+"entities.icon16.png" 16x16 icon for the Entities project
+"entities.icon32.png" 32x32 icon for the Entities project
+"entities.icon48.png" roughly 48x48 icon for the Entities project
+"entities.icon64.png" roughly 64x64 icon for the Entities project
+"entities.jar" jarred class files: Converts HTML/XML/XHTML entities to char and back, also strips HTML/XML/XHTML tags
+"Entities.java" main Java program source
+"entities.look" uncommented jar manifest
+"entities.screenshot.png" screenshot for the Entities project
+"entities.use" precis(summary) Converts HTML/XML/XHTML entities to char and back, also strips HTML/XML/XHTML tags Generated
+"entities.xml" ASP PAD desc of the Entities project: Converts HTML/XML/XHTML entities to char and back, also strips HTML/XML/XHTML tags
+"entities33.zip" Entities 3.3 distribute zip: Converts HTML/XML/XHTML entities to char and back, also strips HTML/XML/XHTML tags
+"entityarrow.html" arrow entities
+"entityarrow.htmlfrag" arrow entities
+"entityarrownonets.html" arrow nonet grids
+"entityarrownonets.htmlfrag" arrow nonet grids
+"entitycase.javafrag" case statements for EntifyStrings.java
+"entitycasehex.javafrag" alternate case statements to Insert in EntifyStrings.java. Not used.
+"entitycurrency.htmlfrag" currency entities
+"entitycyrillic.html" Russian numeric entities for HTML4
+"entitycyrillic.htmlfrag" Russian numeric entities for HTML4
+"entitycyrillic5.html" Russian alphabetic entities for HTML5
+"entitycyrillic5.htmlfrag" Russian alphabetic entities for HTML5
+"entitydiacritic.html" diacritic marks and accents
+"entitydiacritic.htmlfrag" diacritic marks and accents
+"entityfacts.csv" basic facts about entities
+"entityfacts.javafrag" facts about entities
+"entitygreek.html" Greek entities
+"entitygreek.htmlfrag" Greek entities
+"entityhex.html" hex entities
+"entityhex.htmlfrag" hex entities
+"entityhtml5.html" html5 entities
+"entityhtml5.htmlfrag" html5 entities
+"entityjustkeys.javafrag" legal entity keys. Insert in DeEntifyStrings.java
+"entityjustvalues.javafrag" legal entity values. Insert in DeEntifyStrings.java
+"entitylatin.html" latin accented letter entities
+"entitylatin.htmlfrag" latin accented letter entities
+"entitymusic.htmlfrag" musical entities
+"entitypolish.html" Polish entities
+"entitypolish.htmlfrag" Polish entities
+"entityproposed.html" proposed entities
+"entityproposed.htmlfrag" proposed entities
+"entityquoter.html" various types of quote entities
+"entityquoter.htmlfrag" various types of quote entities
+"entityspace.htmlfrag" space entities
+"entityspecial.html" special entities
+"entityspecial.htmlfrag" special entities
+"entitysymbol.html" symbol entities
+"entitysymbol.htmlfrag" symbol entities
+"entityvslick.vlx" for Vslick
+"entityvslickhtml.tagdoc" for Vslick
+"entityxhtml.html" xhtml entities
+"entityxhtml.htmlfrag" xhtml entities
+"Flatten.class" alternate Java program compiled byte code
+"flatten.exe" JET executable
+"flatten.jar" jarred class files.
+"Flatten.java" alt Java program source
+"flatten.look" uncommented jar manifest
+"forzip.xml" list of extra files for ANT include in entities33.zip
+"grab.btm" copy in Java source code from IntelliJ and build it. Roedy's use only.
+"grabhtml5.btm" massage source html5 enity doc
+"Hebrew.class" compiled Java byte code
+"hebrew.csv" Hebrew letteres and codes
+"hebrew.html" generated entities for Hebrew
+"Hebrew.java" Generate Hebrew entity table
+"j18.txt" marker to indicate that Java compiler target version 1.8 needed.
+"jdisplay.css" cascading style sheet for displaying source code in HTML
+"MasterDistribution.site" URL to find the master copy of the Entities project files
+"mindprod.css" cascading style sheet for general HTML
+"Nonet.class" compiled Java byte code
+"PatchDescriptions.class" compiled Java byte code
+"PatchDescriptions.java" One shot to add descriptions to entities
+"prepare.btm" propagate generated files
+"rebuild.xml" Simplified ANT build script for Entities
+"run.bat" execute the Entities application from the jar
+"tidy.btm" tidy entityfacts.btm file
+"untouch.digest" generated: enables untouching (set date back) unchanged but redated files.
+"use.txt" key facts about the Entities project. Generates entities.use
+"version.txt" key current version info about the Entities project. Generates entities.use
+"versionhistory.txt" complete version history of the Entities project. Generates entities.use
+"zip.look" uncommented zip manifest for entities33.zip

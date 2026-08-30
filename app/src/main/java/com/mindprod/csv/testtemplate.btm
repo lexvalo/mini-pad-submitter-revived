@@ -1,0 +1,5 @@
+rem convert a csv file of URLs to html.
+rem needs copy of sampleurls.csv and showurltemplate.html in current directory
+rem result shows in matching sampleurls.html file
+java -jar csvtemplate.jar sampleurls.csv showurltemplate.html
+rem -30-

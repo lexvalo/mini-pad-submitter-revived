@@ -1,0 +1,55 @@
+"desc.btm" creates TCC file descriptions for project files
+"descother.btm" creates TCC file descriptions for non-project files
+"run.bat" execute the Http application from the jar
+"grab.btm" copy in Java source code from IntelliJ and build it. Roedy's use only.
+"Http.class" Http main Java program compiled byte code
+"http.manual.html" detailed HTML manual for the Http project
+"http.jar" jarred class files: HTTP library to do GET/POST/HEAD/PROBE/CHASE
+"http.look" uncommented jar manifest
+"http.jnlp" http jnlp Java Web Start launch
+"http-setup.exe" JET distributable, containing runtime
+"http.ico" Windows icon for the project, contains multiple image sizes
+"http.jpn" Manifest of what is included in the JET executable.
+"http.log" log of what JET did compiling and preparing the distributable
+"http.prj" JET project configuration, compiler options and notes on what needs to be included.
+"http.startup" List of classes JET should preload for speed.
+"http.xbind.script" List of DLLs JET will need to run the app.
+"build_http.bat" Build JET executable with project descriptor
+"run_http.bat" Runs the JET executable with default parm.
+"mindprod.css" cascading style sheet for general HTML
+"jdisplay.css" cascading style sheet for displaying source code in HTML
+"package-info.java" Dummy Java source with JavaDoc describing the entire package.
+"untouch.digest" generated: enables untouching (set date back) unchanged but redated files.
+"mindprodcert2017rsa.cer" Public key for Mindprod code-signing certificate. Cannot be used to sign jars.
+"DESCRIPT.ION" TCC file descriptions
+"descript0.ion" generated file of overriding descriptions to merge into DESCRIPT.ION
+"descript2.ion" generated file default descriptions to merge into DESCRIPT.ION
+"MasterDistribution.site" URL to find the master copy of the Http project files
+"http.use" precis(summary) HTTP library to do GET/POST/HEAD/PROBE/CHASE Generated
+"http.vpj" Slick Edit project ini file
+"http.vpw" Slick Edit project ini file
+"http.vtg" Slick Edit binary tag xref file
+"http.icon16.png" 16x16 icon for the Http project
+"http.icon32.png" 32x32 icon for the Http project
+"http.icon48.png" roughly 48x48 icon for the Http project
+"http.icon64.png" roughly 64x64 icon for the Http project
+"http.icon128.png" roughly 128x128 icon for the Http project
+"http.screenshot.png" screenshot for the Http project
+"http.splash.gif" splash gif for the Http project
+"http.icon32.gif" 32x32 gif icon for the Http project
+"http.icon64.gif" 64x64 gif icon for the Http project
+"_O_V_E_R_V_I_E_W.txt" Commented List of all files for Http, with one line descriptions.
+"use.txt" key facts about the Http project. Generates http.use
+"version.txt" key current version info about the Http project. Generates http.use
+"versionhistory.txt" complete version history of the Http project. Generates http.use
+"http.txt" ASCII text manual for the Http project.
+"build.xml" Complex ANT build script for Http
+"rebuild.xml" Simplified ANT build script for Http
+"forgather.xml" list of extra gather steps for ANT.
+"forjar.xml" genjar list of extra files to include in http.jar
+"forjarexe.xml" jar.exe list of extra files to include in http.jar
+"forpost.xml" list of extra posting steps for ANT.
+"forzip.xml" list of extra files for ANT include in http32.zip
+"http.xml" ASP PAD desc of the Http project: HTTP library to do GET/POST/HEAD/PROBE/CHASE
+"http32.zip" Http 3.2 distribute zip: HTTP library to do GET/POST/HEAD/PROBE/CHASE
+"zip.look" uncommented zip manifest for http32.zip

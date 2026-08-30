@@ -1,0 +1,18 @@
+FastCat is a streamlined speedy version of StringBuffer/StringBuilder that
+is more efficient because it does not allocate a buffer until the very
+last minute, and allocates it the exact size needed.  You use it in
+writing your own Java Programs.  It works very similarly to StringBuilder,
+so the Javadoc should be all you need.
+FastCat is null-safe.  If you pass a null or a 0-length string to one of
+the .append methods it does nothing.  This means you can streamline your
+application code.  You don't have to explicitly avoid appending nulls, an
+error that can slip through testing with StringBuilder since it may occur
+only rarely.  FastCat does not work well if you append one character at a
+time to your FastCat.  For that sort of application, use the traditional
+StringBuilder.  FastCat works very quickly with minimal RAM usage if you
+can accurately predict roughly how many chunks you will append but have
+only a vague idea of the final total size.  By minimising RAM usage, your
+garbage collection occurs less frequently, which speeds it up.  I got a
+10% speedup when I switched over the HTMLMacros app to use it.
+The basic idea of FastCat is you estimate how many chunks you concatenate,
+not the length of the output.

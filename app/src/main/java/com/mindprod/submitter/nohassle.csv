@@ -1,0 +1,177 @@
+# P A D   S U B M I S S I O N   S I T E S
+# 64-bit: 64-bit software only.
+# Active: Actively responding.
+# Add: Candidate site to be definitely included in the hassle-free sites supported by the mini PAD submitter.
+# Almost: Almost hassle-free.
+# AltUpload: You may alternately upload the PAD file off your local hard disk.
+# AppVisor: Submit via AppVisor.
+# Arabic: Arabic
+# ArticleLinks: Article links only.
+# Attack: Firefox accuses this site of covertly installing malware.
+# Audio: Audio software only.
+# BackLinkHome: They have the cheek to demand you put a back-link ad for them on your home page (or possibly a page linked directly from your home page). Screw em! You must have the back link set up and uploaded before you submit your PAD.
+# BackLinkMandatory: Must provide a backlink from your website to theirs and inform them where it is. You must have the back link set up and uploaded to your website before you submit your PAD.
+# BackLinkOptional: They request you provide an optional backlink from your website to theirs and inform them where it is. You must have the back link set up and uploaded before you submit your PAD.
+# BackLinkTip: To ensure prompt processing, they request you provide a backlink from your website to theirs and inform them where it is. You must have the back link set up and uploaded before you submit your PAD.
+# Blacklist: They blacklisted me without explanation and without possibility of appeal. It could be because I wrote the mini PAD Submitter, I am gay, atheist, anti-war…, because I hold many unpopular opinions, because I submitted such a large catalog of software, because I frequently release new builds, because they saw my name on a blacklist somewhere or they just made an error.
+# Blind: The onerous way they make you type the security code, you might as well be blind.
+# Broken: Site has bugs that prevent PAD submission.
+# Bulgarian: Bulgarian
+# Candidate: Candidate site to be possibly included in the hassle-free sites supported by the mini PAD submitter.
+# Captcha: Must prove your worthiness by keying an almost-impossible-to-decipher Captcha. They have contempt for programmers. They think that programmers have nothing better to do with their time than as tediously as possible manually submit programs. They forget that the programmers are doing them a favour.
+# Chinese: Chinese
+# Confirm: You must confirm your PAD submission by visiting a link sent via email.
+# Crapware: When you download programs from this site, they use a custom downloader/installer that installs a number of unwanted, unrelated extra crapware programs.
+# Czech: Czech
+# Danish: Danish
+# Dead: Site dead — suspended, closed, disappeared or repurposed.
+# Delete: Site to be deleted from the list of hassle-free sites supported by the mini PAD submitter.
+# Down: Site temporarily down.
+# Duplicate: Duplicate.
+# Dutch: Dutch
+# Educational: Educational software only.
+# English: English
+# Esperanto: Esperanto
+# Expired: Expired SSL Certificate
+# Financial: Financial software only.
+# Form: Does not use PADs. You must fill in a form.
+# Former: Formerly hassle-free.
+# Freeware: Freeware only.
+# French: French
+# Games: Games only.
+# German: German
+# Greek: Greek
+# Handheld: Software for handhelds only.
+# Head: They probe your website for the PAD, screenshot, zip etc. using an abbreviated HTTP HEAD rather than a full HTTP GET. This may lead them to complain about missing files that are indeed present or fail to detect PAD changes.
+# HiddenValidation: Hidden validation code to deter automated submission.
+# Hungarian: Hungarian
+# Indian: Indian
+# Indonesian: Indonesian
+# Italian: Italian
+# Japanese: Japanese
+# JavaScript: The site is obfuscated with JavaScript.
+# Login: You must set up an account and login with a password.
+# Mac: Macintosh only.
+# MalformedURL: Malformed URL.
+# Malware: Chrome or Firefox accuses this site of listing malware.
+# Mobile: Mobile software only.
+# Multimedia: Multimedia software only.
+# Multiple: You may submit multiple PADs at once.
+# NoAuto: They explicitly ask you not to use any automation in PAD submission.
+# NoLogo: They have not customised their site with a logo.
+# NoOpera: No Opera.
+# NoProbe: You must resubmit after every version change because they fail to periodically probe your PAD for changes.
+# NoSubmissionPage: Cannot find PAD submission page.
+# NotAccepting: Not currently accepting PAD submissions.
+# Notify: They notify you by email when they notice your PAD or the files it references change or become inaccessible.
+# NotResponding: Not Responding and domain abandoned.
+# Obfuscated: Obfuscated to deter automated submission.
+# OldSpec: They support only an obsolete (pre 3.0) versionof the PAD spec.
+# Onion: Not recommended.
+# PADmaps: They support the PADmaps protocol so that submitting one PAD submits your whole catalog.
+# PADRING: They support the PADRING protocol so that submitting one PAD submits your whole catalog.
+# Palm: Palm only.
+# Parked: Site parked and domain abandoned.
+# Pay: You must pay to list.
+# Polish: Polish
+# Portuguese: Portuguese
+# Prefill: You press a PREFILL button to display the contents of the PAD and then you edit the fields before final submission.
+# Propagate: They pass the PADs you submit to other PADSites.
+# Proprietary: You must select a proprietary category for the PAD.
+# Recommended: Recommended.
+# RegNow: Only software sold via RegNow/Bluesnap (née Plimus)/eSellerate etc.
+# Rekey: You must manually rekey some of the fields in the PAD.
+# Resurrected: Site was off the air for a while, but it is back.
+# Romanian: Romanian
+# Russian: Russian
+# Scavenger: You may not even have to submit your PAD to them. They go out scouring the web for PADs.
+# Screensaver: Screensavers only.
+# Shareware: Shareware only. No freeware.
+# SiteLinks: Site links only.
+# Skill: You must answer a skill-testing question.
+# Slow: Site is unusually slow to respond. Please be patient.
+# Spanish: Spanish
+# Stalls: Stalls ignoring timeout when Java probes the site.
+# Strict: They have their own stricter-than-ASP standards for validating PADs.
+# Swedish: Swedish
+# Thai: Thai
+# TOP10: Ranked in the top 10.
+# TOP100: Ranked in the top 100.
+# TOP20: Ranked in the top 20.
+# TOP30: Ranked in the top 30.
+# Turkish: Turkish
+# Ukranian: Ukranian
+# Unix: Unix only.
+# Upload: You don’t submit an URL, you upload the PAD file off your local hard disk.
+# Validation: You must key a legible validation code to prove you are not using automated software submission.
+# ViaEmail: Submit your PAD via email.
+# ViewState: Complicated state information, difficult to automate.
+# Warn: They warn you of subtle problems with the PAD.
+# Windows: Windows only.
+## name,                           homeUrl,                                      submitUrl,                                                                logo,                               keywords,                                                                                                                       notes
+2-Software,                        http://www.2-software.net,                    http://www.2-software.net/submit.html,                                    2software.png
+Ababa-Soft,                        http://www.ababasoft.com,                     http://www.ababasoft.com/index.html,                                      ababasoft.png
+ABCDatos,                          http://www.abcdatos.com,                      http://www.abcdatos.com/programas/padform.html,                           abcdatos.png,                       Spanish
+ABDownloads,                       http://www.ab-downloads.com/english/windows/, http://www.ab-downloads.com/english/Submit/,                              abdownloads.png,                    Bulgarian Chinese Czech Danish Dutch English French German Italian Japanese Polish Portuguese Russian Spanish Swedish Ukranian
+All-Soft-Wares,                    http://windows.en.all-softwares.com,          http://windows.en.all-softwares.com/submit.php,                           ,                                   ,                                                                                                                               "nologo"
+App-Down,                          http://appdown.com,                           http://appdown.com/submit.php,                                            appdown.png
+Asked-Files,                       http://www.askedfiles.com,                    http://www.askedfiles.com/submit.php,                                     askedfiles.png
+Big-Dream-Soft,                    http://www.bigdreamsoft.com,                  http://www.bigdreamsoft.com/submit.php,                                   ,                                   NoLogo
+Biz-Pep,                           http://www.bizpep.com/,                       http://www.bizpep.com/,                                                   ,                                   NoLogo
+De-Soft-List,                      http://de.softlist.ws,                        http://de.softlist.ws/addsoft/,                                           ,                                   German
+Download-By,                       http://www.download-by.net,                   http://www.download-by.net/submit.php,                                    downloadby.png
+Download-Ready,                    http://www.downloadready.com,                 http://www.downloadready.com/submit.php,                                  downloadready.png
+Download-Spin,                     http://www.downloadspin.com,                  http://www.downloadspin.com/submit.php,                                   downloadspin.png
+Download-Typhoon,                  http://www.downloadtyphoon.com,               http://www.downloadtyphoon.com/submit-pad-file,                           downloadtyphoon.png
+Download100,                       http://www.download100.net,                   http://www.download100.net/services/submit-soft.aspx,                     download100.jpg
+Download11,                        http://download11.com,                        http://download11.com/submit/,                                            download11.png,                     TOP100
+Download3-K,                       http://www.download3k.com,                    http://www.download3k.com/submit.php,                                     download3k.png,                     TOP30
+Download3-KDe,                     http://www.download3k.de/,                    http://www.download3k.de/submit.php,                                      download3kde.png
+Download3-KEs,                     http://www.download3k.es,                     http://www.download3k.es/submit.php,                                      download3kes.png
+Download3-KFr,                     http://www.download3k.fr,                     http://www.download3k.fr/submit.php,                                      ,                                   French
+Download3k-Ro,                     http://www.download3k.ro,                     http://www.download3k.ro/submit.php,                                      download3kro.png,                   Romanian
+Download4-You,                     http://download4you.com,                      http://download4you.com/php/add.php,                                      download4you.png
+Downloado-Maniac,                  http://download.omani.ac,                     http://download.omani.ac/submit.php,                                      downloadomaniac.png
+Downloads-Area,                    http://www.downloadsarea.com,                 http://www.downloadsarea.com/Submit.html,                                 downloadsarea.png
+Downloads2,                        http://www.downloads2.com,                    http://www.downloads2.com/submit.php,                                     downloads2.png
+Euro-Download,                     http://www.eurodownload.com,                  http://www.eurodownload.com/pad_submit.php,                               eurodownload.png
+Evocero,                           http://www.evocero.com/evosoftware/index.php, http://www.evocero.com/evosoftware/submit.php,                            evocero.png
+Fast-Shareware,                    http://www.fastshareware.com,                 http://www.fastshareware.com/submit.php,                                  fastshareware.jpg
+Fd4a,                              http://www.fd4a.net/,                         http://www.fd4a.net/submit.php,                                           download4a.png,                     TOP100
+File-Cluster,                      http://www.filecluster.com,                   http://www.filecluster.com/submit-software.html,                          filecluster.png,                    TOP30
+File-Dir,                          https://filedir.com/,                         https://filedir.com/submit-apps/,                                         filedir.png
+File-Profile,                      http://www.fileprofile.com,                   http://www.fileprofile.com/submit.htm,                                    fileprofile.png
+Files-Guard,                       http://filesguard.com,                        http://filesguard.com/submit.php,                                         filesguard.png
+Find-Soft-Net,                     http://www.findsoft.net,                      http://www.findsoft.net/Submit.html,                                      findsoftnet.png
+Find-Softwareeu,                   http://www.findsoftware.eu,                   http://www.findsoftware.eu/submit.php,
+For-Mac,                           http://for-mac.com,                           http://for-mac.com/submit.html,                                           formac.png,                         Mac
+Free-Safe-Soft,                    http://freesafesoft.com/main.php,             http://freesafesoft.com/submit.php,                                       freesafesoft.png
+Free-Software-Shareware-Downloads, http://free-software-shareware-downloads.com, http://free-software-shareware-downloads.com/submit.php,                  freesoftwaresharewaredownloads.png
+Freeware1,                         http://www.freeware1.com,                     http://www.freeware1.com/submit.php,                                      freeware1.png
+Freewares-ZDown,                   http://www.freewares.z-down.com,              http://www.freewares.z-down.com/submit-freeware.php,                      freewareszdown.png,                 Freeware
+Im-Freeware,                       http://www.imfreeware.com,                    http://www.imfreeware.com/submitres,                                      imfreeware.png,                     Proprietary,                                                                                                                    "You can leave out the proprietary category, and it still works."
+My-Download-Planet,                http://www.mydownloadplanet.com,              http://www.mydownloadplanet.com/submit-software.aspx,                     mydownloadplanet.png
+Planet-Softs,                      http://www.planetsofts.com,                   http://www.planetsofts.com/submit.html,                                   planetsofts.png
+Rarity-Soft,                       http://www.raritysoft.com,                    http://www.raritysoft.com/pad/submit,                                     raritysoft.png
+Recovery-Review,                   http://recovery-review.com,                   http://recovery-review.com/pad-submission.html,                           recoveryreview.png
+Ru-Soft-List,                      http://ru.softlist.ws,                        http://ru.softlist.ws/addsoft/,                                           ,                                   Russian
+Sharewareville,                    http://sharewareville.com,                    http://sharewareville.com/submit.php,                                     sharewareville.png
+Soft-Folder,                       http://www.softfolder.com,                    http://www.softfolder.com/software/submit.php,                            softfolder.png
+Soft-List-Ws,                      http://softlist.ws,                           http://softlist.ws/addsoft/,
+Soft112,                           http://www.soft112.com,                       http://www.soft112.com/submit-software.html,                              soft112.png,                        Resurrected
+Soft321,                           http://www.soft321.com,                       http://www.soft321.com/submit.php,                                        soft321.png
+Softholm,                          http://www.softholm.com,                      http://www.softholm.com/php/pad_submit.html,                              softholm.png,                       TOP100 Russian
+Software-Bee,                      http://www.softwarebee.com,                   http://www.softwarebee.com/submit.html,                                   softwarebee.gif
+Software-KB,                       http://www.softwarekb.com,                    http://www.softwarekb.com/submissions-2/submit-pad-4/,                    softwarekb.png
+Software-Wagon,                    http://softwarewagon.com,                     http://softwarewagon.com/submit-software.php,                             softwarewagon.png
+Spot-Pig,                          http://www.spotpig.com,                       http://www.spotpig.com/submit.php,                                        ,                                   NoLogo
+Standalone-Installer,              http://standaloneinstaller.com,               http://standaloneinstaller.com/submit.php,                                standaloneinstaller.png
+Style-XP3x,                        http://stylexp.3x.ro,                         http://stylexp.3x.ro/submit.php,                                          ,                                   NoLogo
+Swdb,                              http://swdb.ru,                               http://swdb.ru/submit/,                                                   swdb.png
+Telecharger-Z,                     http://telecharger.z-down.com/,               http://telecharger.z-down.com/soumission_logiciel_shareware_freeware.php, telecharger.png,                    French
+Tera-Byte,                         http://ip-66-51-104-19.tera-byte.com,         http://ip-66-51-104-19.tera-byte.com/submit.php,                          ,                                   NoLogo
+Two-Brothers,                      http://shareware.twobrotherssoftware.com,     http://shareware.twobrotherssoftware.com/submit.php,                      twobrothers.png,                    Onion,                                                                                                                          "MalwareBytes says it is malicious. They bar you if you submit a PAD more than once, even if it has changed."
+Web-Content-Solutions,             http://www.webcontentsolutions.com,           http://www.webcontentsolutions.com/submitform.html,                       ,                                   NoLogo,                                                                                                                         "might not really be a padsite, even though it has pad submit form"
+Windows10-Compatible,              http://www.windows10compatible.com,           http://www.windows10compatible.com/submit,                                windows10.png,                      ,                                                                                                                               "Windows 10 only"
+Yankee-Download,                   http://www.yankeedownload.com,                http://www.yankeedownload.com/pad_submit.php,                             yankeedownload.png,                 TOP100
+ZDown,                             http://www.z-down.com,                        http://www.z-down.com/submit-softwares.php,                               zdown.png

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XML_DIZ_INFO>
+  <MASTER_PAD_VERSION_INFO>
+    <MASTER_PAD_VERSION>4.0</MASTER_PAD_VERSION>
+    <MASTER_PAD_EDITOR>AppVisor 1.0.43</MASTER_PAD_EDITOR>
+    <MASTER_PAD_EDITOR_URL>http://publisher.appvisor.com</MASTER_PAD_EDITOR_URL>
+    <MASTER_PAD_INFO>Portable Application Description, or PAD(TM) 2004 Association of Software Professionals (ASP)http://www.asp-shareware.org/pad is a data set standard and specification that is commercialsoftware publishers to disseminate certified information about their software application. The PAD format is copyright of the ASP and cannot be used without the formal licensing and permission of both the Association of Software Professionals and its agent AppVisor.com.</MASTER_PAD_INFO>
+    <CERTIFIED>Y</CERTIFIED>
+    <CERTIFICATE_ID>CRT-C300E015EBEF</CERTIFICATE_ID>
+    <CERTIFICATE_LICENSE>http://repository.appvisor.com/crt-c300e015ebef</CERTIFICATE_LICENSE>
+  </MASTER_PAD_VERSION_INFO>
+  <RoboSoft>
+    <Company_UIN>CMP-120053D1FD1E</Company_UIN>
+    <Product_UIN>APP-C300E015EBEF</Product_UIN>
+    <Publish_on_CD>FALSE</Publish_on_CD>
+    <NewsFeed_Search_String></NewsFeed_Search_String>
+    <Search_String>CSVReader/Writer</Search_String>
+    <Press_Release_Search_String></Press_Release_Search_String>
+    <Backlink></Backlink>
+    <Comments_For_Reviewer></Comments_For_Reviewer>
+    <Search_String_Unique>CSVReader/Writer</Search_String_Unique>
+    <Search_Engine_Search_String></Search_Engine_Search_String>
+    <Web_Directories_Search_String></Web_Directories_Search_String>
+    <Company_Description></Company_Description>
+  </RoboSoft>
+  <Company_Info>
+    <PublisherID>pid-d100b4383410</PublisherID>
+    <BrandID>bid-120053d1fd1e</BrandID>
+    <Company_Name>Canadian Mind Products</Company_Name>
+    <Country>Canada</Country>
+    <State_Province>BC</State_Province>
+    <City_Town>Victoria</City_Town>
+    <Zip_Postal_Code>V8T 4G8</Zip_Postal_Code>
+    <Address_1>#101 - 2536 Wark Street</Address_1>
+    <Address_2>Quadra Village</Address_2>
+    <Company_WebSite_URL>http://mindprod.com</Company_WebSite_URL>
+    <Contact_Info>
+      <Contact_First_Name>Roedy</Contact_First_Name>
+      <Contact_Last_Name>Green</Contact_Last_Name>
+      <Contact_Email>inquiry@mindprod.com</Contact_Email>
+      <Author_First_Name>Roedy</Author_First_Name>
+      <Author_Last_Name>Green</Author_Last_Name>
+      <Author_Email>inquiry@mindprod.com</Author_Email>
+      <Contact_Phone>(250) 361-9093</Contact_Phone>
+    </Contact_Info>
+    <Support_Info>
+      <Sales_Email>inquiry@mindprod.com</Sales_Email>
+      <Support_Email>inquiry@mindprod.com</Support_Email>
+      <General_Email>inquiry@mindprod.com</General_Email>
+      <Sales_Phone>(250) 361-9093</Sales_Phone>
+      <Support_Phone>(250) 361-9093</Support_Phone>
+      <General_Phone>(250) 361-9093</General_Phone>
+      <Fax_Phone>(250) 361-9093</Fax_Phone>
+    </Support_Info>
+    <GooglePlusPage></GooglePlusPage>
+    <LinkedinPage></LinkedinPage>
+    <TwitterCompanyPage></TwitterCompanyPage>
+    <FacebookCompanyPage></FacebookCompanyPage>
+  </Company_Info>
+  <Program_Info>
+    <AppID>app-c300e015ebef</AppID>
+    <Program_Name>CSVReader/Writer</Program_Name>
+    <Program_Version>7.5</Program_Version>
+    <Program_Release_Month>05</Program_Release_Month>
+    <Program_Release_Day>21</Program_Release_Day>
+    <Program_Release_Year>2016</Program_Release_Year>
+    <Program_Cost_Dollars>0.00</Program_Cost_Dollars>
+    <Program_Type>Freeware</Program_Type>
+    <Program_Category_Class>Web Development::Java &amp; JavaScript</Program_Category_Class>
+    <Program_Specific_Category>Development Tools</Program_Specific_Category>
+    <Program_Categories>Programming :: Java,Programming :: Tools and Editors</Program_Categories>
+    <Program_Release_Status>Minor Update</Program_Release_Status>
+    <Program_Install_Support>No Install Support</Program_Install_Support>
+    <Program_Target_Platform>Windows</Program_Target_Platform>
+    <Program_OS_Support>Win2000,WinXP,Win7 x32,Win7 x64,Windows 8,Windows 10,WinServer,WinOther,WinVista,WinVista x64</Program_OS_Support>
+    <Program_Language>English</Program_Language>
+    <Program_Change_Info>fix bug in CSVWriter, sometimes failed to surround fields in ''.</Program_Change_Info>
+    <Program_System_Requirements>Java 1.8+</Program_System_Requirements>
+    <Limitations>No limitations</Limitations>
+    <Awards></Awards>
+    <File_Info>
+      <File_Size_Bytes>3136512</File_Size_Bytes>
+      <File_Size_K>3063</File_Size_K>
+      <File_Size_MB>2.99</File_Size_MB>
+    </File_Info>
+    <Expire_Info>
+      <Has_Expire_Info>N</Has_Expire_Info>
+      <Expire_Count></Expire_Count>
+      <Expire_Based_On></Expire_Based_On>
+      <Expire_Year></Expire_Year>
+      <Expire_Other_Info></Expire_Other_Info>
+      <Expire_Month></Expire_Month>
+      <Expire_Day></Expire_Day>
+    </Expire_Info>
+    <FacebookFanPage></FacebookFanPage>
+    <VideoLink1URL></VideoLink1URL>
+    <VideoLink2URL></VideoLink2URL>
+    <Includes_JAVA_VM></Includes_JAVA_VM>
+    <Includes_DirectX></Includes_DirectX>
+    <Includes_VB_Runtime></Includes_VB_Runtime>
+    <GooglePlusFanPage></GooglePlusFanPage>
+  </Program_Info>
+  <Web_Info>
+    <Application_URLs>
+      <Application_Info_URL>http://mindprod.com/products1.html#CSV</Application_Info_URL>
+      <Application_Order_URL>http://mindprod.com/products1.html#CSV</Application_Order_URL>
+      <Application_Screenshot_URL>http://mindprod.com/image/screenshot/csv.png</Application_Screenshot_URL>
+      <Application_Icon_URL>http://mindprod.com/image/icon32/csv.png</Application_Icon_URL>
+      <Application_XML_File_URL>http://repository.appvisor.com/info/app-c300e015ebef/CSVReaderWriter_pad.xml</Application_XML_File_URL>
+    </Application_URLs>
+    <Download_URLs>
+      <Primary_Download_URL>http://mindprod.com/zips/csv75.zip</Primary_Download_URL>
+      <Secondary_Download_URL></Secondary_Download_URL>
+      <Additional_Download_URL_1></Additional_Download_URL_1>
+      <Additional_Download_URL_2></Additional_Download_URL_2>
+    </Download_URLs>
+  </Web_Info>
+  <Program_Descriptions>
+    <English>
+      <Keywords>CSVReader,CSVWriter,Align,ChangeCase,DeDup,DeEntify,Dump,Entify,Pack,Patch,Reshape,Sort,TabToComma,ToHTML,TableToCSV,Tuple,LinesToCSV,csv,comma-separated values,semicolon-separated values,SQL format,Microsoft Excel format,MS Word mailmerge format</Keywords>
+      <Char_Desc_45>read/write/aliign/sort/pack... csv files.</Char_Desc_45>
+      <Char_Desc_80>Java to  read, write, align, sort, reshape, pack... comma, tab-separated files.</Char_Desc_80>
+      <Char_Desc_250>31 Java classes/utilities you can use standalone or embed in your own programs to Read, write, align, condense, sort, reshape, patch, template tuple, convert, pack... comma, tab and semicolon-separated variable files, commonly known as CSV files.</Char_Desc_250>
+      <Char_Desc_450>31 Java classes/utilities you can use standalone or embed in your own programs to commonly known as CSV files: CSVReader, CSVWriter, CSVAlign, CSVChangeCase, CSVCommaToTab, CSVCondense, CSVDeDup, CSVDeDupField, CSVDeEntify, CSVDump, CSVEntify, CSVISBN, CSVPack, CSVPatch, CSVReplaceStrings, CSVReplaceURLs, CSVReshape, CSVScale, CSVSort, CSVSortField, CSVTabToComma, CSVTemplate, CSVToSRS, CSVTSRX , CSVToTable, CSVToUnique, CSVTuple</Char_Desc_450>
+      <Char_Desc_2000>31 Java classes you can use standalone or embed in your own programs to
+Read, write, align, sort  and pack comma, tab and semicolon-
+separated variable files, commonly known as CSV files.
+
+It consists of 31 Java classes/utilities CSVReader, CSVWriter, 
+CSVAlign, CSVChangeCase, CSVCommaToTab, CSVCondense, CSVDeDup, 
+CSVDeDupField, CSVDeEntify, CSVDump, CSVEntify, CSVISBN, CSVPack, 
+CSVPatch, CSVReplaceStrings, CSVReplaceURLs, CSVReshape, CSVScale, 
+CSVSort, CSVSortField, CSVTabToComma, CSVTemplate, CSVToSRS, CSVTSRX , 
+CSVToTable, CSVToUnique, CSVTuple, LinesToCSV, TableToCSV, for reading and writing CSV (Comma  Separated Value) formatted files.  Also handles tab-separated and semicolon-separated files. This is the format use by Microsoft Word and other Microsoft products. This version now supports # embedded comments.
+
+You can configure the separator, quote and comment characters.
+
+Note that CSV files are perhaps 10 times slower to process than binary files. They are for data interchange with other languages or when human-readibility or editability is important.  If you want speed, use binary format files, e.g.
+DataInputStream or possibly the convenient but slower ObjectInputStream.
+
+For example, CSVAlign aligns the fields in columns for easier proofreading.
+
+ java.exe -jar csv.jar somefile.csv
+
+CSVPack removes all unecessary spaces to make at CSV file as compact as possible.
+
+ java.exe -jar csv.jar somefile.csv
+
+CSVSort sorts CSV file case sensitively, insensitively or numerically on a set of columns, ascending or descending
+
+CSVTabToComma converts a tab-separated file to a comma-separated one.
+
+ java.exe -jar csv.jar somefile.csv</Char_Desc_2000>
+    </English>
+  </Program_Descriptions>
+  <Permissions>
+    <Distribution_Permissions>You may include CSVReader/Writer any CD compilation.
+You may not sell CSVReader/Writer. It is free.</Distribution_Permissions>
+    <EULA>This program is for non-military use only.
+For details on what that licencing restriction means and why I restricted this software that way, see http://mindprod.com/contact/nonmil.html
+If you incorporate any of my code in your programs, they too must be marked for non-military use only.
+However it is not your responsibility to enforce that restriction.</EULA>
+  </Permissions>
+  <ASP>
+    <ASP_FORM>Y</ASP_FORM>
+    <ASP_Member>Y</ASP_Member>
+    <ASP_Member_Number>07607</ASP_Member_Number>
+  </ASP>
+  <Affiliates>
+    <Affiliates_Regsoft_Order_Page></Affiliates_Regsoft_Order_Page>
+    <Affiliates_Regnow_Order_Page></Affiliates_Regnow_Order_Page>
+    <Affiliates_Regsoft_Vendor_ID></Affiliates_Regsoft_Vendor_ID>
+    <Affiliates_Regnow_Vendor_ID></Affiliates_Regnow_Vendor_ID>
+    <Affiliates_Regsoft_Product_ID></Affiliates_Regsoft_Product_ID>
+    <Affiliates_Regnow_Product_ID></Affiliates_Regnow_Product_ID>
+    <Affiliates_FORM></Affiliates_FORM>
+    <Affiliates_FORM_VER></Affiliates_FORM_VER>
+    <Affiliates_VERSION></Affiliates_VERSION>
+    <Affiliates_URL></Affiliates_URL>
+    <Affiliates_Information_Page></Affiliates_Information_Page>
+    <Affiliates_Avangate_Order_Page></Affiliates_Avangate_Order_Page>
+    <Affiliates_Avangate_Vendor_ID></Affiliates_Avangate_Vendor_ID>
+    <Affiliates_Avangate_Product_ID></Affiliates_Avangate_Product_ID>
+    <Affiliates_Avangate_Maximum_Commission_Rate></Affiliates_Avangate_Maximum_Commission_Rate>
+    <Affiliates_BMTMicro_Order_Page></Affiliates_BMTMicro_Order_Page>
+    <Affiliates_BMTMicro_Vendor_ID></Affiliates_BMTMicro_Vendor_ID>
+    <Affiliates_BMTMicro_Product_ID></Affiliates_BMTMicro_Product_ID>
+    <Affiliates_BMTMicro_Maximum_Commission_Rate></Affiliates_BMTMicro_Maximum_Commission_Rate>
+    <Affiliates_eSellerate_Order_Page></Affiliates_eSellerate_Order_Page>
+    <Affiliates_eSellerate_Vendor_ID></Affiliates_eSellerate_Vendor_ID>
+    <Affiliates_eSellerate_Product_ID></Affiliates_eSellerate_Product_ID>
+    <Affiliates_eSellerate_Maximum_Commission_Rate></Affiliates_eSellerate_Maximum_Commission_Rate>
+    <Affiliates_Kagi_Order_Page></Affiliates_Kagi_Order_Page>
+    <Affiliates_Kagi_Vendor_ID></Affiliates_Kagi_Vendor_ID>
+    <Affiliates_Kagi_Product_ID></Affiliates_Kagi_Product_ID>
+    <Affiliates_Kagi_Maximum_Commission_Rate></Affiliates_Kagi_Maximum_Commission_Rate>
+    <Affiliates_Order1_Order_Page></Affiliates_Order1_Order_Page>
+    <Affiliates_Order1_Vendor_ID></Affiliates_Order1_Vendor_ID>
+    <Affiliates_Order1_Product_ID></Affiliates_Order1_Product_ID>
+    <Affiliates_Order1_Maximum_Commission_Rate></Affiliates_Order1_Maximum_Commission_Rate>
+    <Affiliates_Regnet_Order_Page></Affiliates_Regnet_Order_Page>
+    <Affiliates_Regnet_Vendor_ID></Affiliates_Regnet_Vendor_ID>
+    <Affiliates_Regnet_Product_ID></Affiliates_Regnet_Product_ID>
+    <Affiliates_Regnet_Maximum_Commission_Rate></Affiliates_Regnet_Maximum_Commission_Rate>
+    <Affiliates_Regnow_Maximum_Commission_Rate></Affiliates_Regnow_Maximum_Commission_Rate>
+    <Affiliates_Regsoft_Maximum_Commission_Rate></Affiliates_Regsoft_Maximum_Commission_Rate>
+    <Affiliates_ShareIt_Order_Page></Affiliates_ShareIt_Order_Page>
+    <Affiliates_ShareIt_Vendor_ID></Affiliates_ShareIt_Vendor_ID>
+    <Affiliates_ShareIt_Product_ID></Affiliates_ShareIt_Product_ID>
+    <Affiliates_ShareIt_Maximum_Commission_Rate></Affiliates_ShareIt_Maximum_Commission_Rate>
+    <Affiliates_SWReg_Order_Page></Affiliates_SWReg_Order_Page>
+    <Affiliates_SWReg_Vendor_ID></Affiliates_SWReg_Vendor_ID>
+    <Affiliates_SWReg_Product_ID></Affiliates_SWReg_Product_ID>
+    <Affiliates_SWReg_Maximum_Commission_Rate></Affiliates_SWReg_Maximum_Commission_Rate>
+  </Affiliates>
+  <NewsFeed>
+    <NewsFeed_FORM></NewsFeed_FORM>
+    <NewsFeed_VERSION></NewsFeed_VERSION>
+    <NewsFeed_URL></NewsFeed_URL>
+    <NewsFeed_DESCRIPTION></NewsFeed_DESCRIPTION>
+    <NewsFeed_Feed_URL></NewsFeed_Feed_URL>
+    <NewsFeed_Type></NewsFeed_Type>
+    <NewsFeed_Site_URL></NewsFeed_Site_URL>
+    <NewsFeed_Author_First_Name>Roedy</NewsFeed_Author_First_Name>
+    <NewsFeed_Author_Last_Name>Green</NewsFeed_Author_Last_Name>
+    <NewsFeed_Author_Email>inquiry@mindprod.com</NewsFeed_Author_Email>
+    <NewsFeed_Language></NewsFeed_Language>
+    <NewsFeed_Title></NewsFeed_Title>
+    <NewsFeed_Description_70></NewsFeed_Description_70>
+    <NewsFeed_Description_250></NewsFeed_Description_250>
+    <NewsFeed_Purpose></NewsFeed_Purpose>
+    <NewsFeed_Site_Name></NewsFeed_Site_Name>
+  </NewsFeed>
+  <Press_Release>
+    <Press_Release></Press_Release>
+    <Headline></Headline>
+    <Summary></Summary>
+    <Press_Release_Plain></Press_Release_Plain>
+  </Press_Release>
+  <Site>
+    <Site_FORM></Site_FORM>
+    <Site_VERSION></Site_VERSION>
+    <Site_URL></Site_URL>
+    <Site_DESCRIPTION></Site_DESCRIPTION>
+    <Site_Site_Title>Canadian Mind Products</Site_Site_Title>
+    <Site_Site_URL>http://mindprod.com</Site_Site_URL>
+    <Site_Keywords>Roedy Green, Canadian Mind Products, Java Glossary, Computer Buyers' Glossary, Gay Glossary, Java, glossary, gay, roedy, CMP, Consolidated Moose Pasture, terminology</Site_Keywords>
+    <Site_Description_100>CMP's purpose is to stand up for the rights of plants and animals.  Java, Computer Buyer glossaries.</Site_Description_100>
+    <Site_Description_250>CMP's purpose is to stand up for the rights of plants and animals. Animals also includes cetacea, humans, gay people, atheists, war victims and invertebrates. CMP attempts to inculcate planetary consciousness - concern for the planet as a whole.</Site_Description_250>
+    <Site_Description_450>CMP's purpose is to stand up for the rights of plants and animals. Animals also includes cetacea, humans, gay people, atheists, war victims and invertebrates. CMP attempts to inculcate planetary consciousness - concern for the planet as a whole. A subgoal is to teach people to use computers effectively, particularly with the Java computer language.</Site_Description_450>
+    <Site_Contact_First_Name>Roedy</Site_Contact_First_Name>
+    <Site_Contact_Last_Name>Green</Site_Contact_Last_Name>
+    <Site_Contact_Email>inquiry@mindprod.com</Site_Contact_Email>
+  </Site>
+  <Dynamic_PAD>
+    <Dynamic_Distributive>N</Dynamic_Distributive>
+    <General>
+      <DP_Pad_Enabled>TRUE</DP_Pad_Enabled>
+      <DP_AtFormFill_Enabled>TRUE</DP_AtFormFill_Enabled>
+      <DP_Distributive_Enabled>FALSE</DP_Distributive_Enabled>
+      <DP_Script_Base_URL>http://repository.appvisor.com/</DP_Script_Base_URL>
+      <DP_Pad_Mask>CSVReaderWriter_pad.xml</DP_Pad_Mask>
+      <DP_Distributive_Primary_URL>http://mindprod.com/zips/csv75.zip</DP_Distributive_Primary_URL>
+      <DP_Distributive_Mask>csv75.zip</DP_Distributive_Mask>
+    </General>
+  </Dynamic_PAD>
+</XML_DIZ_INFO>

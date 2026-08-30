@@ -1,0 +1,37 @@
+
+----
+
+Version History:
+
+ 1.0 2009-09-29 initial release
+
+ 1.1 2009-10-09 return this from append
+
+ 1.2 2010-01-25 fix bug in rarely used clear method.
+
+ 1.3 2010-02-13 convert from JDK 1.6 to JDK 1.5
+
+ 1.4 2011-06-08 add room, size, used methods
+
+ 1.5 2011-11-13 append methods now ignore null parameters
+
+ 1.6 2011-11-19 checkEstimate method to get advance warning an estimate is too tight or too generous.
+
+ 1.7 2012-11-19 add the drop method to drop last appended String. e.g. to trim last comma.
+
+ 1.8 2013-03-12 add toCommaList
+
+ 1.9 2013-04-10 add toSpaceList and toSeparatedList
+
+ 2.0 2014-03-22 handle null in Object..., add setPolicy to allow recover
+
+ 2.1 2014-04-16 new constructor to build a string all in one line
+
+ 2.2 2014-04-29 methods to insert separators, toSeparatedList
+
+ 2.3 2014-07-02 slightly different way of calculating when space is getting tight or is too generous.
+                setWhereTextCameFrom to help locate problems.
+
+ 2.4 2014-09-07 add toAndList to produce an comma list with the word and.
+
+-30-

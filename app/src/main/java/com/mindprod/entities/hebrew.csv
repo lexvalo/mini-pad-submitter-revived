@@ -1,0 +1,83 @@
+L, 0x05d0, Hebrew letter Alef
+L, 0x05d1, Hebrew letter Bet
+L, 0x05d2, Hebrew letter Gimel
+L, 0x05d3, Hebrew letter Dalet
+L, 0x05d4, Hebrew letter He
+L, 0x05d5, Hebrew letter Vav
+L, 0x05d6, Hebrew letter Zayin
+L, 0x05d7, Hebrew letter Het
+L, 0x05d8, Hebrew letter Tet
+L, 0x05d9, Hebrew letter Yod
+L, 0x05da, Hebrew letter Final Kaf
+L, 0x05db, Hebrew letter Kaf
+L, 0x05dc, Hebrew letter Lamed
+L, 0x05dd, Hebrew letter Final Mem
+L, 0x05de, Hebrew letter Mem
+L, 0x05df, Hebrew letter Final Nun
+L, 0x05e0, Hebrew letter Nun
+L, 0x05e1, Hebrew letter Samekh
+L, 0x05e2, Hebrew letter Ayin
+L, 0x05e3, Hebrew letter Final Pe
+L, 0x05e4, Hebrew letter Pe
+L, 0x05e5, Hebrew letter Final Tsadi
+L, 0x05e6, Hebrew letter Tsadi
+L, 0x05e7, Hebrew letter Qof
+L, 0x05e8, Hebrew letter Resh
+L, 0x05e9, Hebrew letter Shin
+L, 0x05ea, Hebrew letter Tav
+L, 0x05f0, Hebrew ligature Yiddish double Vav
+L, 0x05f1, Hebrew ligature Yiddish Vav Yod
+L, 0x05f2, Hebrew ligature Yiddish double Yod
+P, 0x0591, Hebrew accent Etnahta
+P, 0x0592, Hebrew accent Segol
+P, 0x0593, Hebrew accent Shalshelet
+P, 0x0594, Hebrew accent Zaqef Qatan
+P, 0x0595, Hebrew accent Zaqef Gadol
+P, 0x0596, Hebrew accent Tipeha
+P, 0x0597, Hebrew accent Revia
+P, 0x0598, Hebrew accent Zarqa
+P, 0x0599, Hebrew accent Pashta
+P, 0x059a, Hebrew accent Yetiv
+P, 0x059b, Hebrew accent Tevir
+P, 0x059c, Hebrew accent Geresh
+P, 0x059d, Hebrew accent Geresh Muqdam
+P, 0x059e, Hebrew accent Gershayim
+P, 0x059f, Hebrew accent Qarney Para
+P, 0x05a0, Hebrew accent Telisha Gedola
+P, 0x05a1, Hebrew accent Pazer
+P, 0x05a3, Hebrew accent Munah
+P, 0x05a4, Hebrew accent Mahapakh
+P, 0x05a5, Hebrew accent Merkha
+P, 0x05a6, Hebrew accent Merkha Kefula
+P, 0x05a7, Hebrew accent Darga
+P, 0x05a8, Hebrew accent Qadma
+P, 0x05a9, Hebrew accent Telisha Qetana
+P, 0x05aa, Hebrew accent Yerah Ben Yomo
+P, 0x05ab, Hebrew accent Ole
+P, 0x05ac, Hebrew accent Iluy
+P, 0x05ad, Hebrew accent Dehi
+P, 0x05ae, Hebrew accent Zinor
+P, 0x05af, Hebrew mark Masora circle
+P, 0x05b0, Hebrew point Sheva
+P, 0x05b1, Hebrew point Hataf Segol
+P, 0x05b2, Hebrew point Hataf Patah
+P, 0x05b3, Hebrew point Hataf Qamats
+P, 0x05b4, Hebrew point Hiriq
+P, 0x05b5, Hebrew point Tsere
+P, 0x05b6, Hebrew point Segol
+P, 0x05b7, Hebrew point Patah
+P, 0x05b8, Hebrew point Qamats
+P, 0x05b9, Hebrew point Holam
+P, 0x05bb, Hebrew point Qubuts
+P, 0x05bc, Hebrew point Dagesh or Mapiq (or Shuruq)
+P, 0x05bd, Hebrew point Meteg
+P, 0x05be, Hebrew punctuation Maqaf
+P, 0x05bf, Hebrew point Rafe
+P, 0x05c0, Hebrew punctuation Paseq
+P, 0x05c1, Hebrew point Shin dot
+P, 0x05c2, Hebrew point Sin dot
+P, 0x05c3, Hebrew punctuation Sof Pasuq
+P, 0x05c4, Hebrew mark upper dot
+P, 0x05f3, Hebrew punctuation Geresh
+P, 0x05f4, Hebrew punctuation Gershayim
+P, 0x20aa, new sheqel sign (Israel currency)

@@ -1,0 +1,37 @@
+"_O_V_E_R_V_I_E_W.txt" Commented List of all files for HunkIO, with one line descriptions.
+"build.xml" Complex ANT build script for HunkIO
+"desc.btm" creates TCC file descriptions for project files
+"descother.btm" creates TCC file descriptions for non-project files
+"DESCRIPT.ION" TCC file descriptions
+"descript0.ion" generated file of overriding descriptions to merge into DESCRIPT.ION
+"descript2.ion" generated file default descriptions to merge into DESCRIPT.ION
+"forzip.xml" list of extra files for ANT include in hunkio19.zip
+"grab.btm" copy in Java source code from IntelliJ and build it. Roedy's use only.
+"HunkIO.class" HunkIO main Java program compiled byte code
+"hunkio.icon128.png" roughly 128x128 icon for the HunkIO project
+"hunkio.icon16.png" 16x16 icon for the HunkIO project
+"hunkio.icon32.png" 32x32 icon for the HunkIO project
+"hunkio.icon48.png" roughly 48x48 icon for the HunkIO project
+"hunkio.icon64.png" roughly 64x64 icon for the HunkIO project
+"hunkio.jar" jarred class files: Library to read a file at once
+"HunkIO.java" main Java program source
+"hunkio.look" uncommented jar manifest
+"hunkio.screenshot.png" screenshot for the HunkIO project
+"hunkio.use" precis(summary) Library to read a file at once Generated
+"hunkio.xml" ASP PAD desc of the HunkIO project: Library to read a file at once
+"hunkio19.zip" HunkIO 1.9 distribute zip: Library to read a file at once
+"j18.txt" marker to indicate that Java compiler target version 1.8 needed.
+"jdisplay.css" cascading style sheet for displaying source code in HTML
+"MasterDistribution.site" URL to find the master copy of the HunkIO project files
+"mindprod.css" cascading style sheet for general HTML
+"PrintWriterPlus.class" compiled Java byte code
+"PrintWriterPlus.java" PrintWriter that can handle embedded \n
+"PrintWriterPortable.class" compiled Java byte code
+"PrintWriterPortable.java" converts embedded newlines to platform convention
+"rebuild.xml" Simplified ANT build script for HunkIO
+"run.bat" execute the HunkIO application from the jar
+"untouch.digest" generated: enables untouching (set date back) unchanged but redated files.
+"use.txt" key facts about the HunkIO project. Generates hunkio.use
+"version.txt" key current version info about the HunkIO project. Generates hunkio.use
+"versionhistory.txt" complete version history of the HunkIO project. Generates hunkio.use
+"zip.look" uncommented zip manifest for hunkio19.zip

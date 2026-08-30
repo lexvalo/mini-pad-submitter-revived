@@ -1,0 +1,83 @@
+@echo off
+rem prop.btm
+rem propagate generated files to be included on website.
+rem normally only Roedy runs this. Requires Jet
+Echo must have inserted generated code into E:\com\mindprod\entities, but not generated HTML.
+Echo see com.mindprod.entities.Entities.main source code for details.
+pause
+E:
+cd \com\mindprod\entities
+rem tidy and sort by entity
+call tidy.btm
+rem fields are: categories, hex, overstrike, alpha entity, description, notes
+echo generating aux files from entityfacts.csv
+echo following anomalies are to be expected
+echo duplicate entity lang
+echo duplicate entity ne
+echo duplicate entity rang
+echo many hex codes have no associated entity.
+java.exe %JAVA_OPTIONS -ea -jar entities.jar
+java.exe %JAVA_OPTIONS -ea -jar arrownonets.jar
+echo check generated files in E:\com\mindprod\entities before they are propagated
+pause
+describe entityarrow.htmlfrag        "arrow entities"
+describe entitycurrency.htmlfrag     "currency entities"
+describe entityarrownonets.htmlfrag  "arrow nonet grids"
+describe entitycase.javafrag         "case statements for EntifyStrings.java"
+describe entitycasehex.javafrag      "alternate case statements to Insert in EntifyStrings.java. Not used."
+describe entitycyrillic.htmlfrag     "Russian numeric entities for HTML4"
+describe entitycyrillic5.htmlfrag    "Russian alphabetic entities for HTML5"
+describe entitydiacritic.htmlfrag    "diacritic marks and accents"
+describe entityfacts.csv             "basic facts about entities"
+describe entitygreek.htmlfrag        "Greek entities"
+describe entityhex.htmlfrag          "hex entities"
+describe entityhtml5.htmlfrag        "html5 entities"
+describe entityproposed.htmlfrag     "proposed entities"
+describe entityjustkeys.javafrag     "legal entity keys. Insert in DeEntifyStrings.java"
+describe entityjustvalues.javafrag   "legal entity values. Insert in DeEntifyStrings.java"
+describe entitylatin.htmlfrag        "latin accented letter entities"
+describe entitypolish.htmlfrag       "Polish entities"
+describe entityquoter.htmlfrag       "various types of quote entities"
+describe entityspace.htmlfrag        "space entities"
+describe entityspecial.htmlfrag      "special entities"
+describe entitysymbol.htmlfrag       "symbol entities"
+describe entityvslick.vlx            "for Vslick"
+describe entityvslickhtml.tagdoc     "for Vslick"
+describe entityxhtml.htmlfrag        "xhtml entities"
+describe entitymusic.htmlfrag        "musical entities"
+set target="E:\mindprod\jgloss\include\"
+copy entityarrow.htmlfrag       %target%
+copy entitycurrency.htmlfrag    %target%
+copy entityarrownonets.htmlfrag %target%
+copy entitycyrillic.htmlfrag    %target%
+copy entitycyrillic5.htmlfrag   %target%
+copy entitydiacritic.htmlfrag   %target%
+copy entitygreek.htmlfrag       %target%
+copy entityhex.htmlfrag         %target%
+copy entityhtml5.htmlfrag       %target%
+copy entitylatin.htmlfrag       %target%
+copy entitymusic.htmlfrag       %target%
+copy entitypolish.htmlfrag      %target%
+copy entityproposed.htmlfrag    %target%
+copy entityquoter.htmlfrag      %target%
+copy entityspace.htmlfrag       %target%
+copy entityspecial.htmlfrag     %target%
+copy entitysymbol.htmlfrag      %target%
+copy entityxhtml.htmlfrag       %target%
+echo some generated files must be manually propagated.
+echo entitycase.java : case statements. Insert EntifyStrings.java, then recompile.
+echo entitycasehex.java : alternate case statements to Insert in EntifyStrings.java, then recompile. Not used.
+echo entityfacts.java : basic facts Edit here.
+echo entityjustkeys.javafrag  :  legal entity keys. Insert in DeEntifyStrings.java, then recompile.
+echo entityjustvalues.javafrag  : legal entity values. Insert in DeEntifyStrings.java, then recompile.
+echo entityvslick.vlx  : Insert into F:\program files\vslick\vslick.vlx,
+echo entityvslickhtml.tagdoc : insert into F:\program files\vslick\builtins\html.tagdoc, just ones not there yet.
+echo patch keywords= amp; lt; gt; quot;  instead of cskeywords.
+echo remember to manually propagate entitycase.javafrag, entitycasehex.javafrag, entityvslick.vlx, entityvslickhtml.tagdoc
+pause
+E:
+cd \mindprod\jgloss
+call one htmlentities.html
+E:
+cd \com\mindprod\entities
+rem -30-

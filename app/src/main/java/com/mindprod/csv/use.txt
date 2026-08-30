@@ -1,0 +1,18 @@
+Read, write, align, reshape, dump, sort, convert and pack comma, tab and
+semicolon- separated variable files, commonly known as CSV files.  It
+consists of a 31 Java classes/utilities including CSVReader, CSVWriter,
+CSVAlign, CSVChangeCase, CSVCommaToTab, CSVCondense, CSVDeDup,
+CSVDeDupField, CSVDeEntify, CSVDump, CSVEntify, CSVISBN, CSVPack,
+CSVPatch, CSVReplaceStrings, CSVReplaceURLs, CSVReshape, CSVScale,
+CSVSort, CSVSortField, CSVTabToComma, CSVTemplate, CSVToSRS, CSVTSRX ,
+CSVToTable, CSVToUnique, CSVTuple, LinesToCSV, TableToCSV, for reading and
+writing CSV (Comma Separated Value) formatted files.  Also handles
+tab-separated and semicolon-separated files.  This is the format use by
+Microsoft Word and other Microsoft products.  This version now supports #
+embedded comments.  You can use them either as standalone command line
+utilities or as classes you can embed in your own Java programs.  To learn
+how to use the suite, see the online manual at
+http://mindprod.com/application/csv.manual.html
+Futures
+-------
+Use column names instead of numbers in the CSV commands.

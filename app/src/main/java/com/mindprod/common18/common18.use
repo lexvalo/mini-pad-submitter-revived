@@ -1,0 +1,140 @@
+Common18 3.1 build: 9639 released: 2016-02-22 compiled with: Java 1.8.0_131
+
+Common utility classes that work under Java 1.8+ with enums and generics.
+
+Copyright: (c) 2005-2017 Canadian Mind Products.
+
+Java class library.
+Download from: http://mindprod.com/products1.html#COMMON18
+
+----
+
+Notes:
+
+You must install the Java JDK to use this program.
+See http://mindprod.com/jgloss/jgloss/jdk.html
+
+You are pretty much on your own how to use this material.
+This program requires a manual install! See below.
+
+I put out an avalanche of free software into the world, and submit PAD
+files to hundreds of distribution sites, but I rarely hear back from
+anyone.  What's happening?  Does it all just work fine?  It is so
+complicated nobody can figure out how to use it and they give up on it?
+It is it useful?  Since everyone has the source, do people just fix the
+programs to their liking themselves?  Did you have trouble installing?  Do
+I presume you know too much?  I would be happy to hear from you about your
+experiences, positive or negative and your requests for improvements.  A
+one-line email to roedy@mindprod.com would be great.
+
+===> Free <===
+Full source included.
+You may even include the source code, modified or unmodified
+in free/commercial open source/proprietary programs that you write and distribute.
+May be used freely for any purpose but military.
+For more details on this restriction, see
+http://mindprod.com/contact/nonmil.html
+If you include any Canadian Mind Products code in your own applications,
+your app too must be labelled non-military use only.
+http://mindprod.com/contact/nonmil.html
+All Java jars and source code are included. If you need the class files or Javadoc, you will have to build them yourself. To streamline the zip downloads, class files and Javadoc have been removed.
+
+----
+
+Prerequisites:
+
+This program runs under any OS that supports Java,
+(e.g.W2K/XP/W2003/Vista/W2008/W7-32/W7-64/W8-32/W8-64/Linux/LinuxARM/LinuxX86
+/LinuxX64/Ubuntu/Solaris/SolarisSPARC/SolarisSPARC64/SolarisX86/SolarisX64/OSX/AIX...)
+so long as you have
+<><> Java version 1.8 <><> or later installed (32-bit or 64-bit Java).
+See http://mindprod.com/jgloss/installingjava.html for details.
+
+----
+
+Installing on a PC:
+
+Download source and compiled jar files to run on your own machine as a part of your own program.
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+To install, extract the zip download with WinZip
+(or similar unzip utility) into any directory you please,
+often J:\ --  ticking off the <span class="click">use folder names</span> option.
+
+----
+
+Installing on a MacIntosh:
+
+Use Safari to download source and compiled jar files to run on your own machine as a part of your own program.
+Safari will automatically unpack the zip into ~/Downloads (version 10.5)
+[or on the Desktop (version 10.4 and earlier)].
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+You may optionally move the download tree to a permanent home.
+I don't have a MacIntosh, just a PC, so I can't test my Java programs for Mac compatibility.
+In theory they should work without problems, but in practice that does not always happen.
+If you have problems please, let me know, preferably with screenshots and complete verbatim error messages.
+
+----
+
+Rebuilding:
+
+You are pretty much on your own how to use this material.
+
+----
+
+Use:
+
+Common utility classes that work under Swing Java 1.7+.  They are intended
+to be included in your own Java programs.
+Some of the classes included are:
+Age :  computes age in years, months, days
+BigDate :  replacement for Date, calendar calculations
+CheckPermission :  check permission
+ClipboardPoker :  put something in clipboard
+CMPAboutBox :  AWT About box
+CMPAboutJBox :  Swing Abount box
+EIO :  Encapsulated I/O
+FNV1a64 :  64-bit hash function
+FontFactory :  choose and cache optimal fonts for platform
+FullName :  parse full name into surname, given, title etc.
+Hybrid :  hybrid AWT/application
+HybridJ :  Hybrid SWING/application
+ImageInfo :  get information about png, jpg, gif, webp image
+ImageViewer :  display an image
+InOrder :  ensure collection is in order
+JavaVersion :  issure right Java version
+JEButton :  Enhanced JButton
+Laf :  look and feel
+Localise :  localise for LfNl
+Misc :  misc methods
+Play :  play audio
+Progress :  progress counter
+ResizingImageViewer :  viewer that lets user dynamically resize the image
+Shuffle :  shuffle a collection
+ST :  miscellaneous String methods
+StoppableThread :  gracefully stopping thread
+StringSearch :  searching a string
+TestDate :  exercise BigDate
+Twirler :  Twirler activity indicator
+VersionCheck :  check Java version
+The icon is a model of an acetaldehyde molecule (the chemical that gives
+people hangovers.).  I chose it simply became it contains 7 atoms, tying
+in with the earlier common17 for JDK 1.7+.
+com.mindprod.common11 and com.mindprod.common13 com.mindprod.common15 are
+now integrated into common18 and are no longer distributed separately.
+
+
+----
+
+Version History:
+
+ 2.9 2012-11-06 fix bug in nullSafeStringCompare. It was ignoring case.
+
+ 3.0 2014-04-29 add quoteForReplace to quote Regex replacement Strings,
+                stripNaughtyCharacters, reorderLetters, deDupLetters
+
+ 3.1 2016-02-22 add last and tail methods
+
+-30-
+

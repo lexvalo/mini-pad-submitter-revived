@@ -1,0 +1,109 @@
+Submitter 26.3 build: 9639 released: 2017-03-30 compiled with: Java 1.8.0_131 Jet jet12.0-pro-x86/1.8.0_131
+
+Submits PAD XMLs to 66 PADsites.
+
+Copyright: (c) 2007-2017 Canadian Mind Products.
+
+signed Java Applet (that can also be run as an application).
+Download from: http://mindprod.com/products1.html#SUBMITTER
+View HTML to run this program online at: http://mindprod.com/applet/submitter.html
+
+----
+
+Notes:
+
+You must install the Java JRE to use this program.
+See http://mindprod.com/jgloss/jgloss/jre.html
+
+This hybrid program is mainly designed to be used as an Applet in a
+browser but is can also be used from the command prompt, e.g. under
+Windows command.exe or JPSoft tcc.exe, formerly called the DOS box. Just
+clicking the programs in a directory listing will not do anything useful.  
+Just typing the program names at the command prompt will not either.
+
+This program requires a manual install! See below.
+
+I put out an avalanche of free software into the world, and submit PAD
+files to hundreds of distribution sites, but I rarely hear back from
+anyone.  What's happening?  Does it all just work fine?  It is so
+complicated nobody can figure out how to use it and they give up on it?
+It is it useful?  Since everyone has the source, do people just fix the
+programs to their liking themselves?  Did you have trouble installing?  Do
+I presume you know too much?  I would be happy to hear from you about your
+experiences, positive or negative and your requests for improvements.  A
+one-line email to roedy@mindprod.com would be great.
+
+===> Free <===
+Full source included.
+You may even include the source code, modified or unmodified
+in free/commercial open source/proprietary programs that you write and distribute.
+May be used freely for any purpose but military.
+For more details on this restriction, see
+http://mindprod.com/contact/nonmil.html
+If you include any Canadian Mind Products code in your own applications,
+your app too must be labelled non-military use only.
+http://mindprod.com/contact/nonmil.html
+All Java jars and source code are included. If you need the class files or Javadoc, you will have to build them yourself. To streamline the zip downloads, class files and Javadoc have been removed.
+
+----
+
+Prerequisites:
+
+This program runs under any OS that supports Java,
+(e.g.W2K/XP/W2003/Vista/W2008/W7-32/W7-64/W8-32/W8-64/Linux/LinuxARM/LinuxX86
+/LinuxX64/Ubuntu/Solaris/SolarisSPARC/SolarisSPARC64/SolarisX86/SolarisX64/OSX/AIX...)
+so long as you have
+<><> Java version 1.8 <><> or later installed (32-bit or 64-bit Java).
+See http://mindprod.com/jgloss/installingjava.html for details.
+
+----
+
+Installing on a PC:
+
+Download source and compiled jar files to run on your own machine as an application or Applet
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+To install, extract the zip download with WinZip
+(or similar unzip utility) into any directory you please,
+often J:\ --  ticking off the <span class="click">use folder names</span> option.
+To run as an application, type:
+java.exe %JAVA_OPTIONS -ea -jar J:\com\mindprod\submitter\submitter.jar {put any parms here}
+
+adjusting as necessary to account for where the jar file is.
+
+----
+
+Installing on a MacIntosh:
+
+Use Safari to download source and compiled jar files to run on your own machine as an application or Applet.
+Safari will automatically unpack the zip into ~/Downloads (version 10.5)
+[or on the Desktop (version 10.4 and earlier)].
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+You may optionally move the download tree to a permanent home.
+I don't have a MacIntosh, just a PC, so I can't test my Java programs for Mac compatibility.
+In theory they should work without problems, but in practice that does not always happen.
+If you have problems please, let me know, preferably with screenshots and complete verbatim error messages.
+To run as an application, without parameters, just double click the jar file.
+
+To run as an application with parameters, in bash shell type:
+open Terminal.app
+cd ~/Desktop
+java.exe -ea -jar com/mindprod/submitter/submitter.jar {put any parms here}
+
+adjusting as necessary to account for where the jar file is.
+
+----
+
+Rebuilding:
+
+The zip already contains the necessary jar files, so unless you modify
+the program, there is no need to recompile the source or rebuild the jar.
+Configure.java basedir="E:/" in rebuild.xml to the drive where your files are.
+Configure.java your certificate name with environment SET cert=mindprodcert2017rsa
+Configure.java your certificate password with environment SET jarsignerpassword=sesame
+Use ANT and rebuild.xml, not build.xml, to recompile and recreate the jar.
+
+----
+
+Use:

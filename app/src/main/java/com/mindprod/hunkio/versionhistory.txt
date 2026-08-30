@@ -1,0 +1,22 @@
+
+----
+
+Version History:
+
+ 1.3 2005-06-18 add more consistent bat files.
+
+ 1.4 2006-01-14 readEntire file now works with multi-byte
+                encodings.
+
+ 1.5 2006-01-25 readFile/writeFile with non-default
+                encoding, raw read/write entire file.
+
+ 1.6 2007-05-24 add icon, pad, Intellij inspector.
+
+ 1.7 2009-05-03 create PrintWriterPlus vs PrintWriterPortable
+
+ 1.8 2013-02-19 convert all encoding parms from String to Charset, all file parms form String to File
+
+ 1.9 2014-05-17 fix bug, failed to chop tail end of file when writing a shorter file than previously.
+
+-30-

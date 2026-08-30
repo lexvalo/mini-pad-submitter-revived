@@ -1,0 +1,891 @@
+Submitter 26.3 build: 9639 released: 2017-03-30 compiled with: Java 1.8.0_131 Jet jet12.0-pro-x86/1.8.0_131
+
+Submits PAD XMLs to 66 PADsites.
+
+Copyright: (c) 2007-2017 Canadian Mind Products.
+
+signed Java Applet (that can also be run as an application).
+Download from: http://mindprod.com/products1.html#SUBMITTER
+View HTML to run this program online at: http://mindprod.com/applet/submitter.html
+
+----
+
+Notes:
+
+You must install the Java JRE to use this program.
+See http://mindprod.com/jgloss/jgloss/jre.html
+
+This hybrid program is mainly designed to be used as an Applet in a
+browser but is can also be used from the command prompt, e.g. under
+Windows command.exe or JPSoft tcc.exe, formerly called the DOS box. Just
+clicking the programs in a directory listing will not do anything useful.  
+Just typing the program names at the command prompt will not either.
+
+This program requires a manual install! See below.
+
+I put out an avalanche of free software into the world, and submit PAD
+files to hundreds of distribution sites, but I rarely hear back from
+anyone.  What's happening?  Does it all just work fine?  It is so
+complicated nobody can figure out how to use it and they give up on it?
+It is it useful?  Since everyone has the source, do people just fix the
+programs to their liking themselves?  Did you have trouble installing?  Do
+I presume you know too much?  I would be happy to hear from you about your
+experiences, positive or negative and your requests for improvements.  A
+one-line email to roedy@mindprod.com would be great.
+
+===> Free <===
+Full source included.
+You may even include the source code, modified or unmodified
+in free/commercial open source/proprietary programs that you write and distribute.
+May be used freely for any purpose but military.
+For more details on this restriction, see
+http://mindprod.com/contact/nonmil.html
+If you include any Canadian Mind Products code in your own applications,
+your app too must be labelled non-military use only.
+http://mindprod.com/contact/nonmil.html
+All Java jars and source code are included. If you need the class files or Javadoc, you will have to build them yourself. To streamline the zip downloads, class files and Javadoc have been removed.
+
+----
+
+Prerequisites:
+
+This program runs under any OS that supports Java,
+(e.g.W2K/XP/W2003/Vista/W2008/W7-32/W7-64/W8-32/W8-64/Linux/LinuxARM/LinuxX86
+/LinuxX64/Ubuntu/Solaris/SolarisSPARC/SolarisSPARC64/SolarisX86/SolarisX64/OSX/AIX...)
+so long as you have
+<><> Java version 1.8 <><> or later installed (32-bit or 64-bit Java).
+See http://mindprod.com/jgloss/installingjava.html for details.
+
+----
+
+Installing on a PC:
+
+Download source and compiled jar files to run on your own machine as an application or Applet
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+To install, extract the zip download with WinZip
+(or similar unzip utility) into any directory you please,
+often J:\ --  ticking off the <span class="click">use folder names</span> option.
+To run as an application, type:
+java.exe %JAVA_OPTIONS -ea -jar J:\com\mindprod\submitter\submitter.jar {put any parms here}
+
+adjusting as necessary to account for where the jar file is.
+
+----
+
+Installing on a MacIntosh:
+
+Use Safari to download source and compiled jar files to run on your own machine as an application or Applet.
+Safari will automatically unpack the zip into ~/Downloads (version 10.5)
+[or on the Desktop (version 10.4 and earlier)].
+First install a recent Java JDK or JVM.
+See http://mindprod.com/jgloss/installingjava.html.
+You may optionally move the download tree to a permanent home.
+I don't have a MacIntosh, just a PC, so I can't test my Java programs for Mac compatibility.
+In theory they should work without problems, but in practice that does not always happen.
+If you have problems please, let me know, preferably with screenshots and complete verbatim error messages.
+To run as an application, without parameters, just double click the jar file.
+
+To run as an application with parameters, in bash shell type:
+open Terminal.app
+cd ~/Desktop
+java.exe -ea -jar com/mindprod/submitter/submitter.jar {put any parms here}
+
+adjusting as necessary to account for where the jar file is.
+
+----
+
+Rebuilding:
+
+The zip already contains the necessary jar files, so unless you modify
+the program, there is no need to recompile the source or rebuild the jar.
+Configure.java basedir="E:/" in rebuild.xml to the drive where your files are.
+Configure.java your certificate name with environment SET cert=mindprodcert2017rsa
+Configure.java your certificate password with environment SET jarsignerpassword=sesame
+Use ANT and rebuild.xml, not build.xml, to recompile and recreate the jar.
+
+----
+
+Use:
+
+Submitter will submit your PAD *.xml program descriptor file (PAD 3.11 or
+PAD 4.0 format) to 66 PADsites.  Unlike other submission programs, this
+program submits only to PADSites that welcome automated submissions and
+put up no impediments of any kind to automated submission.  Compose your
+PAD *.xml file using a program like PADGen, then upload it you your
+website.  Then enter the URL of your website directory where you upload
+pads and the name of the pad itself e.g.  hypotheticalprogram.xml, then
+hit SUBMIT.  It also has a batch mode to submit a list of PADs to a list
+of PAD submission sites.  The advantages of Mini Pad Submitter over other
+similar programs are:
+- The program is free.
+- You are not required to install any software on your machine, (though
+  you can optionally).
+- CMP checks all the submission websites twice daily to make sure they are
+  still operational and removes any deadwood from the list.
+- No hassle setting accounts or passwords or key any hard-to-read captcha
+  security codes.
+- All is completely automatic. All you need to supply is the PAD url.
+- The program avoids submitting to sites that have onerous restrictions
+  such as demanding a back link.
+- The program is open source (full Java source code provided for you to
+  study or modify).
+- The list of sites has been gradually shrinking as submission sites go
+  out of business.  At one point there were over 200 hassle-free sites.
+  Other lists of submission sites are mostly dead wood.  I
+  prune out deadwood daily. 
+  
+numbered site names in case-sensitive alpha order >>>>
+  1. 2Software
+  2. AbabaSoft
+  3. ABCDatos
+  4. ABDownloads
+  5. AllSoftWares
+  6. AppDown
+  7. AskedFiles
+  8. BigDreamSoft
+  9. BizPep
+ 10. DeSoftList
+ 11. Download100
+ 12. Download11
+ 13. Download3K
+ 14. Download3KDe
+ 15. Download3KEs
+ 16. Download3KFr
+ 17. Download3kRo
+ 18. Download4You
+ 19. DownloadBy
+ 20. DownloadoManiac
+ 21. DownloadReady
+ 22. Downloads2
+ 23. DownloadsArea
+ 24. DownloadSpin
+ 25. DownloadTyphoon
+ 26. EuroDownload
+ 27. Evocero
+ 28. FastShareware
+ 29. Fd4a
+ 30. FileCluster
+ 31. FileDir
+ 32. FileProfile
+ 33. FilesGuard
+ 34. FindSoftNet
+ 35. FindSoftwareeu
+ 36. ForMac
+ 37. FreeSafeSoft
+ 38. FreeSoftwareSharewareDownloads
+ 39. Freeware1
+ 40. FreewaresZDown
+ 41. ImFreeware
+ 42. MyDownloadPlanet
+ 43. PlanetSofts
+ 44. RaritySoft
+ 45. RecoveryReview
+ 46. RuSoftList
+ 47. Sharewareville
+ 48. Soft112
+ 49. Soft321
+ 50. SoftFolder
+ 51. Softholm
+ 52. SoftListWs
+ 53. SoftwareBee
+ 54. SoftwareKB
+ 55. SoftwareWagon
+ 56. SpotPig
+ 57. StandaloneInstaller
+ 58. StyleXP3x
+ 59. Swdb
+ 60. TelechargerZ
+ 61. TeraByte
+ 62. TwoBrothers
+ 63. WebContentSolutions
+ 64. Windows10Compatible
+ 65. YankeeDownload
+ 66. ZDown
+ 
+See http://mindprod.com/jgloss/pad.html for hints on
+creating your PAD file.
+You can run it as a signed Applet or as standalone application:
+java com.mindprod.submitter.Submitter
+To use Submitter, all you have to do is run it as a Applet or an
+application and type in the URL of your PAD, e.g.
+http://mindprod.com/pad/password.xml for a PAD 3.11 format or e.g.
+http://repository.appvisor.com/info/app-550076260eb0/Password_Generator_pad.xml
+for a PAD 4.0 format.
+The Applet must be signed to allow it to talk to a variety
+of websites and to use the registry to persist just which
+pads it has already submitted.
+If you turn on the Java console, you can view the log of how
+the various websites responded.  Normally you just get to
+see them for a few seconds.
+If you want to study the responses more carefully, the
+responses from the websites are  captured in files in the
+current directory of the form xxxx_yyyy.log.html where xxxx
+is the name of the pad and yyyy in the name of the
+submission site. You can look at them with a browser or a
+text editor.
+
+SUBMITBATCH
+-----------
+There is also a batch version of the program. To use it, you
+prepare a list of complete URLs of your pad files.
+For PAD 3.11 the URL will be on your website.
+For PAD 4.0 the URL will be on the appvisor.com website.
+like this:
+http://mysite.com/pad/fantastic.xml
+http://mysite.com/pad/great.xml
+http://mysite.com/pad/astounding.xml
+http://repository.appvisor.com/info/app-550076260eb0/Password_Generator_pad.xml
+;http://ignorethissite.com/alreadydone.xml
+Lead semicolon means ignore, treat as comment.
+Don't put any blank lines in the file or at the end!
+and put the list in a text file somewhere, called for
+example E:\env\pads.list
+You must have previously uploaded all these pads and the
+corresponding programs to your website or published them at Appvisor.com
+Then you can can submit that entire list of pads to every
+website with one command:
+java.exe -jar submitbatch.jar  E:\env\pads.list
+You might want to use TakeCommand scrolling, > output.txt or a tee
+utility to capture the voluminous console output to a file.
+Unlike the Applet version, the batch version will not stop
+you from frequently resubmitting PADs.  Don't abuse that
+freedom, or the PAD websites may block you.
+prepare a list of complete URLs of your pad files.
+For PAD 3.11 the URL will be on your website.
+For PAD 4.0 the URL will be on the appvisor.com website.
+like this:
+http://mysite.com/pad/fantastic.xml
+http://mysite.com/pad/great.xml
+http://mysite.com/pad/astounding.xml
+http://repository.appvisor.com/info/app-550076260eb0/Password_Generator_pad.xml
+;http://ignorethissite.com/alreadydone.xml
+Lead semicolon means ignore, treat as comment.
+Don't put any blank lines in the file or at the end!
+and put the list in a text file somewhere, called for
+example E:\env\pads.list
+You must have previously uploaded all these pads and the
+corresponding programs to your website or published them at Appvisor.com
+Then you can can submit that entire list of pads to every
+website with one command:
+java.exe -jar submitbatch.jar  E:\env\pads.list
+You might want to use TakeCommand scrolling, > output.txt or a tee
+utility to capture the voluminous console output to a file.
+Unlike the Applet version, the batch version will not stop
+you from frequently resubmitting PADs.  Don't abuse that
+freedom, or the PAD websites may block you.
+You can also limit which sites you submit the list to by supplying
+a second parameter, e.g.
+java.exe -jar submitbatch.jar  E:\env\pads.list   E:\env\somesites.list
+Where somesites.list looks like this:
+DownloadoManiac
+ZDown
+Submit batch logs site responses the same way Submitter does.
+Using the site names spelled precisely as is the list above.
+
+LOGGING
+-------
+If you run Submitter in a browser, you can turn on logging (a record of
+how each site responded to each PAD submission) by providing a directory
+to dump the log files to with a logDir parameter.
+e.g. <param name="logDir" value="C:\temp">
+If you leave off the parameter, logging is suppressed.
+If you run Submitter from the command line, you can turn on logging by
+providing a directory to dump the log files to on the command line.
+e.g. java.exe -jar submitter.jar  C:\temp
+If you leave off the parameter, logging is suppressed.
+With SubmitBatch, logging is always turned on, and the logs are always placed
+in the current directory.
+
+ICON
+----
+Why the megaphone icon?  It represents spreading the word about the
+programs you have written.
+
+
+----
+
+Version History:
+
+ 1.1 2007-01-01 uses separate thread to submit to improve repaint behaviour.
+
+ 1.2 2007-05-29 add DownBroad
+
+ 1.3 2007-06-02 add download3k
+
+ 1.4 2007-06-20 add downloadready
+
+ 1.5 2007-07-04 add HotLib
+                delete IgnoreTheLeft, modify HotLib, add BestFreewareDownload
+
+ 1.6 2007-07-04
+
+ 1.7 2007-08-12 add PadPile, remove 1st4software
+
+ 1.8 2007-08-24 use new HTTP library.
+
+ 1.9 2007-09-08 drop HotLib
+
+ 2.0 2007-09-15 add Trial-Files
+
+ 2.1 2007-09-25 add www.i-freeware-download.com
+
+ 2.2 2007-09-26 add software-dungeon.co.uk
+
+ 2.3 2007-11-30 ShareSoftware24
+
+ 2.4 2008-02-27 add Download-o-maniac!, list of batch sites
+
+ 2.5 2008-02-28 remove dead sites.
+
+ 2.6 2008-04-03 add build number to title
+
+ 2.7 2008-05-12 add FileCluster
+
+ 2.8 2008-07-25 convert to new Http package.
+
+ 2.9 2008-08-04 add SoftSea.
+
+ 3.0 2008-08-18 responses are now displayed more comprehensibly as formatted HTML, responses in words.
+
+ 3.1 2008-09-16 add Ozysoftware to list of submission sites.
+
+ 3.2 2008-10-14 remove Ozysoftware from list of submission sites
+
+ 3.3 2008-10-17 remove Techpedia from list of submission sites
+
+ 3.4 2008-10-19 remove Download2K from list of submission sites
+
+ 3.5 2009-02-20 add EnterHelp, Ozysoftware to list of submission sites
+
+ 3.6 2009-02-20 add PadRepository, TechWoods, WillemSoft to list of submission sites
+
+ 3.7 2009-02-21 remove SoftSea, add AbabaSoft, BestSoftware, HamSoftware, SoftwareHorizon
+
+ 3.8 2009-02-23 remove SoftwareArea51 and WillingSoftware.
+                Write Crack class to automatically analyse websites and write the code to access them
+                Review all code for all websites and update it to match the latest parameters.
+                add sites AmazingFile, AtomicDownload. DiamondsLastForever, Downloads2, GeneralFreeware,
+                Mayzer, PlusPro, ShellTips, Vonna, WebAcclaim, Z-Down
+
+ 3.9 2009-02-24 add Download-It-Now
+
+ 4.0 2009-03-14 add 20 new sites, log HTML responses to separate files.
+
+ 4.1 2009-03-16 refactor SubmissionSite
+                don't pester user with HTML rendering errors,
+                improve HTML rendering with setBase().
+
+ 4.2 2009-04-10 add AppDown, Dalexis. remove ActiveMerge
+
+ 4.3 2009-04-11 add AivSoft, FilesGuard, FreeFileSeek, GetAllSoft, HotFileDownload,
+                Seek4Software, SharewarePower, Soft-db, Softake, Softholm, SoftLookup
+
+ 4.4 2009-05-11 remove DL Daddy, add Softwarelode, Digimodes, Download-by
+
+ 4.5 2009-05-19 remove TrialFiles, add Publish-Me, AlphaDownloads , DownloadChoice, SoftwareArchiveIsGreat,
+                Download5000, DownloadArsivi, DownloadShareware, DownloadStation,
+                EliasSoftDownloads, FreeSoftwareSharewareDownloads,
+                FreeShareWeb, FreewareArchiv, Freeware1,
+                FreeSoftwareApps, Goooggle, SafeFreeDownloads, SafeFreeSoftware, SafeFreeSoftwareDowload
+
+ 4.6 2009-05-19 remove WebAcclaim, add PadfileInfo, PadFM, PeachSeed, ShareApple, Vandino, Webzf
+
+ 4.7 2009-06-06 add Geeez, GeneralShareware, Newsoft2006, pc24hours,
+                ResourceDB, RetailerDeals, Share32, SharewareBay, SharewareKing, SoftAllWare, BobSoft, SoftLow
+
+ 4.8 2009-07-11 remove BobSoft, EnterHelp, Softake
+                add Top4Download, SoftwareMass, SoftwareSizzle, SuperDownloads, TrialWare, TryingBuying, WestDownload
+
+ 4.9 2009-07-30 remove BestSoftware, add SubmitPadFile, ProgrammersHeaven
+
+ 5.0 2009-09-22 add five sites, and remove two
+
+ 5.1 2009-10-25 remove Techwoods, add SuperWebHunt, ABDownloads, Downloads2K, Soft321.
+
+ 5.2 2009-11-03 remove Sharewareville. Add Windows7Download, SoftwareDownloads
+
+ 5.3 2009-11-21 remove http://www.allapp.com/Submit-Software/
+                add http://www.5moons.net/submit.php
+                http://www.8844download.com/submit.htm
+                http://www.affiliate-referrals.net/submit.php (DL Daddy)
+                http://www.goodownload.com/submit.html
+                http://www.resourcefill.com/submit.php
+                http://www.uniqueidea.net/download/submit.asp
+                http://www.acidfiles.com/submit.html
+
+ 5.4 2009-12-02 remove FileVolution, add Download11, SoftCab, AfDown, DeltaLoad, DesktopShareware, 12buzz,
+                GetSharewareForeFree, FreePadDatabase, FreewareTown
+
+ 5.5 2009-12-11 add 11 sites: DownloadDir, EuSoftNet, FreeSoftwarePrograms, IMfreeware, dlTube,
+                MySoftwareList, NewDownload, SoftwareCrown, PeterBurgess, SearchSomeSoft, SearchAllSoft
+
+ 5.6 2009-12-13 add 10 sites: 4software2Download, SharewareCheap, SoftwareRatings,
+                ShopLagom, SmallFreeware, Soft4Sale, SoftMobile, SoftwareMatrix, SystemUtils, WorldSoftwareArchive
+
+ 5.7 2009-12-17 add 16 sites: 123Freesoft, 4software2Download, DownloadYourSoftware, EzySoft, FastShareware,
+                FileEdge, FilePicks, FileProfile, LoadFree, , ObtainSoft, ReviewWorld, Download4a,
+                DownloadExpo, DownloadHeaven, DownloadPile, EasyFileDownloads
+
+ 5.8 2009-12-18 add 10 sites: FilePile, FilesStore, FindBestSoft, FineDownloads,
+                FreewareDump, FreewareSoft, MetaDownloads, PocketPCSoftwareDownloads, Run2, SafeFreeSoftware
+
+ 5.9 2009-12-19 add 14 sites: SharewareDump, Sharewareville, Smilestone, SoftDir, SoftwareDetails,
+                SoftwareKB, SoftWeb, TechWoods, Telecharger, TopSharewareDownloads, VideoSoftwareDirect,
+                WinColors, WindFile, BigSoftwareBox
+
+ 6.0 2009-12-29 remove 1 site, DownloadExpo
+
+ 6.1 2009-12-31 remove 2 site, Bull, SoftwareDownloads
+
+ 6.2 2010-01-02 add 1 site, TrinityFiles.
+
+ 6.3 2010-01-19 drop two sites TrinityFiles, SharewareRatings.com
+
+ 6.4 2010-02-12 drop newsoft2006.
+
+ 6.5 2010-02-14 add AbsoluteWay, DownloadNew, DownloadSharewares, EspanolSoftware, Mvbbb aka AllFreeSoftware
+
+ 6.6 2010-02-15 add FreeSafeSoft, UKSoftwareDownloads, drop WillemsSoft
+
+ 6.7 2010-02-24 drop BigSoftwareBox
+
+ 6.8 2010-03-23 drop ShellTips, Gooogle, user selectable Look and Feel.
+
+ 6.9 2010-03-28 drop EnterHelp SafeFreeSoftware, PublishMe, FreeSoftwareApps
+
+ 7.0 2010-04-02 drop Softweb
+
+ 7.1 2010-04-28 drop EuSoftNet, add YankeeDownload.
+
+ 7.2 2010-05-18 drop 12buzz
+
+ 7.3 2010-05-26 drop ActiveMerge, SoftMerge
+
+ 7.4 2010-06-03 drop UKSoftwareDownloads
+
+ 7.5 2010-06-05 drop free-pad-database.com
+
+ 7.6 2010-06-07 drop submit-pad-file
+
+ 7.7 2010-06-30 drop software-online.smilestone.it
+
+ 7.8 2010-08-03 drop load-free.net
+
+ 7.9 2010-08-05 allow you to specify directory where logs go on submitter command line.
+
+ 8.0 2010-08-09 add Ware23, ZoomLoad.
+
+ 8.1 2010-08-15 remove BetterWindowsSoftware
+
+ 8.2 2010-08-15 fix bug in command line option to let you select logging directory.
+
+ 8.3 2010-09-12 remove superwebhunt and file-store.info.
+
+ 8.4 2010-09-14 remove 8844download.com.
+
+ 8.5 2010-09-19 remove hotfiledownload
+
+ 8.6 2010-09-24 remove freeshareweb
+
+ 8.7 2010-10-03 remove software-archive.isgreat.org diamondslastforever.com
+
+ 8.8 2010-10-19 remove DesktopShareware
+
+ 8.9 2010-11-01 remove SharewarePower
+
+ 9.0 2010-11-05 remove AtomicDownload
+
+ 9.1 2010-11-14 remove download-heaven.info finedownloads.info
+
+ 9.2 2010-11-23 remove SoftwareMass DownloadShareware DeltaLoad
+
+ 9.3 2010-12-07 remove 3 dead sites, update code to submit to several sites
+
+ 9.4 2010-12-17 remove GooDownload
+
+ 9.5 2010-12-30 remove EliasSoftDownloads
+
+ 9.6 2011-02-06 remove SharewareDump, Dalexis, 5Moons
+
+ 9.7 2011-02-23 remove PadfileInfo, add FindSoft
+
+ 9.8 2011-03-04 add DownloadZNow
+
+ 9.9 2011-03-09 add DownloadTyphoon
+
+10.0 2011-03-13 add SoftwareWagon
+
+10.1 2011-03-13 add DownloadKaleidoscope
+
+10.2 2011-03-15 add ABCDatos, BgSoft, CyhNet, Discoveres, DownloadUp,
+                SoftListDe, SoftListRu, SoftListWs, TrinityFiles remove AbsoluteWay
+
+10.3 2011-04-04 remove FreeSafeSoft, FilePile, SoftwareDetails. All went out of business.
+
+10.4 2011-04-05 add PaulsPicks, update code for ResourceDB
+
+10.5 2011-04-17 remove Softcrown. add FreewareSoftwareLinks
+
+10.6 2011-05-05 remove Techwoods. Add ActiveMerge, AbArchive
+
+10.7 2011-05-20 remove 4Software2Download, Softdir, Softholm, AbArchive
+                add DownloadPocket, NewSoft4You, 4Software2Download (add back), AboutVideoConverter,
+                Andra, ANewDownload, ApbspotNnet84, AppleTVConverter, AskedFiles, Augesoft
+                B3Hostings, BuyAllSoft
+
+10.8 2011-05-22 add CyberMethexis, CriticalFiles, DesktopSoftware, DivX, DivXConverter, Download4Sure,
+                DownloadsArea, EFreshWare, 4Software2Download, ANewDownload
+
+10.9 2011-05-23 add FileSearch, FilesPlaza, FindAllSoft, FindSoftwareeu, FineDownloads,
+                ForMac, FreeDownloadBusiness, FreeDownloadDevelopment, FreeDownloadEducation, FreeDownloadGraphics,
+                FreeDownloadHomeHobby, FreeDownloadUtilities, FreeSafeSoft, FreeSoft,
+                FreeSoftwareDownloads, FreewaresZDown, GetABest, Idv, iPadSoftOnline,
+                iPhoneToPC, iPodTouchToComputer, MlbSoft, MpegConverter, MsKpl
+                OnlyFreeSoft, PandaFiles, Place77, PocketPCFreeware, PopScript
+
+11.0 2011-05-26 add RecoveryReview, RMConverter, ScienceVitolab, SearchAnySoft, SharewareFiles,
+                Soft4Buy, SoftDirectoryInfo, SoftFilesUs, SoftFolder, SoftGeeks
+                Softholm, SoftMerge, SoftwareDownloadsFree, SoftWebsNepal, Softzu,
+                StyleXP3x, SuccessScripts, SwissListe, TipCase, UuuCom,
+                WebByTools, Wersoft, Win7Freeware, Windows7software, WinLoad,
+                WordPerfect
+
+11.1 2011-05-28 correct form action code used to submit to:
+                4Software2Download, AppleTVConverter, Augesoft, B3Hostings,
+                DesktopSoftware, DivXConverter, FileSearch, WinLoad
+                remove Download4Sure (keeps giving 500 internal server error)
+                move EFreshware to hassle list for using hidden validation
+                remove FilesPlaza, not responding
+                remove Andra, not responding.
+
+11.2 2011-05-31 drop SystemUtils
+
+11.3 2011-06-11 drop FreewareSoft, SoftwareDownloadsFree
+
+11.4 2011-07-12 drop SoftDirectoryInfo
+
+11.5 2011-07-14 drop iPadSoftOnline, iPhoneToPC, iPodTouchToComputer
+
+11.6 2011-07-23 drop AmazingDownloads, add AEoid
+
+11.7 2011-08-14 drop SuccessScripts, Windows7Software
+
+11.8 2011-08-20 drop ANewDownload
+
+11.9 2011-08-24 drop MsKpl
+
+12.0 2011-08-30 update access technique for ActiveMerge, AbsolutelyFreeSoftware, AsfConverter
+                drop DownloadChoice, WestDownload, Zoomload
+
+12.1 2011-08-31 update access technique for SoftLookup, TopSharewareDownloads
+                drop TipCase, FreewareArchiv, DownloadFrenzy, ByteFlow.
+                No longer attempt to render HTML responses. They were jamming Java HTML rendering.
+
+12.2 2011-09-17 remove DownloadPile,FineDownloads,MetaDownloads
+
+12.3 2011-09-18 remove FreewareTown, add SharewareIsland
+
+12.4 2011-09-21 remove AugeSoft
+
+12.5 2011-09-23 remove DownloadStation
+
+12.6 2011-09-25 remove appletvconverter, AsfConverter ,DivXConverter, MpegConverter, RMConverter
+
+12.7 2011-09-28 remove absolutelyfreesoftware
+
+12.8 2011-10-02 remove DownloadPocket
+
+12.9 2011-10-04 remove Digimodes
+
+13.0 2011-10-11 add FiveMoons, Acritum, Avi0, Dalexis, DeltaLoad, DownloadPronet, DownloadSoftFiles, Descargar24
+
+13.1 2011-10-14 add FilesSpot, FreeDownloadSoft, FreewareShareNet, iPadSoftOnline, iPhoneToPC,
+                IPodTouchtoComputer, MyFilesNet, MyFreewares, MyGameDownload, Phelios
+                SafeFreeSoftware, Zonator, YourFreeFiles, SuperWebHunt
+
+13.2 2011-10-15 drop AlphaDownload FreeFileSeek
+
+13.3 2011-10-24 drop ApbspotNet84
+
+13.4 2011-10-27 drop 4Software2Download
+
+13.5 2011-11-08 drop WebZf
+
+13.6 2011-11-14 drop PadRing padsite, not PADRING tho multi-pad submit scheme, drop SafeFreeSoftware
+
+13.7 2011-11-21 drop DownloadYourSoftware
+
+13.8 2011-11-22 drop BobSoft
+
+13.9 2011-12-04 drop PopScript
+
+14.0 2011-12-11 drop DeltaLoad
+
+14.1 2011-12-23 drop Descargar24
+
+14.2 2012-01-11 drop desktopsoftware.info
+
+14.3 2012-01-17 add DownloadFreePrograms
+
+14.4 2012-01-17 drop Dalexis
+
+14.5 2012-02-06 add EasyFindSoft, Evocero, LQKO, MyDownloadPlanet,
+                PlanetSofts, SearchForSoft, Soft112, SoftCrave, SoftMont,
+                Software4sure, TrueSoft, FileStorageDe, NebulaShareware, Download3kRo,
+                Win7programs
+
+14.6 2012-02-17 drop GetABest
+
+14.7 2012-02-19 resurrect Dalexis, FreeFileSeek, Webzf
+
+14.8 2012-02-21 drop TrueSoft
+
+14.9 2012-02-22 drop EspanolSoftware, GetSharewareForFree
+
+15.0 2012-02-29 drop FreeFileSeek
+
+15.1 2012-03-08 drop 15 sites: Download5000, WebbyTools, FreeSoft, iPadSoftOnline, iPodTouchtoComputer,
+                MyGameDownload, NewDownload, ObtainSoft, ResourceDB, ShareSoftware24, SharewareKing, Software4sure,
+                SoftwareHorizon, DLDaddy, Acritum
+
+15.2 2012-03-14 drop SmallFreeware
+
+15.3 2012-03-20 drop free-software-downloads and free-software-shareware-downloads
+
+15.4 2012-04-16 drop http://www.softpc.net http://www.soft112.com
+
+15.5 2012-04-19 drop http://www.soft4sale.com/
+
+15.6 2012-04-24 drop AboutVideoConverter, freewaresoftwarelinks
+
+15.7 2012-05-13 drop Zonator, retailerdeals
+
+15.8 2012-05-17 drop DownBroad
+
+15.9 2012-05-27 add All4Down DownloadNew EzSoft Jqwn SoftwareDownloads Swdb TeraByte TheNetFile TheSharewareSpot
+
+16.0 2012-05-31 drop EasyFindSoft
+
+16.1 2012-06-09 drop TryingBuying
+
+16.2 2012-06-11 drop DownloadNew, add Filedir
+
+16.3 2012-06-16 drop downloaddir.com, cybermethexis.org
+
+16.4 2012-06-19 drop software.idv.hk
+
+16.5 2012-06-24 drop FileSearch
+
+16.6 2012-06-26 drop b3hostings, add CuteShareware SearchSoftware
+
+16.7 2012-07-10 drop share32
+
+16.8 2012-07-11 drop searchforsoft
+
+16.9 2012-07-12 drop PandaFiles
+
+17.0 2012-07-21 drop PC24Hours
+
+17.1 2012-07-22 drop all4down
+
+17.2 2012-07-23 drop run2, add Adpocket
+
+17.3 2012-08-08 remove activemerge, softmerge, ozysoftware
+
+17.4 2012-08-29 remove superwebhunt
+
+17.5 2012-09-08 remove cyhnet, add AppsPalette, DownloadMaxi, SoftList, EnterHelp, Site90, SoftPyro
+
+17.6 2012-09-10 remove AdPocket
+
+17.7 2012-09-17 remove EnterHelp
+
+17.8 2012-09-27 remove downloads.adv.site90.net
+
+17.9 2012-10-13 update URL for FileDir
+
+18.0 2012-10-17 drop Dalexis
+
+18.1 2012-10-24 fix Nebulashare, drop superdownloads, aivsoft, telecharger
+                add All4Down, CyberMethexis, FreeSoftware911, SuperWebHunt
+                add ResourceDB, Site90, TrueSoft, OzySoftware
+
+18.2 2012-10-31 add ComAtoZ, FreeSoftwareDownloads, FreeSoftwareSharewareDownloads.
+                Update TrueSoft, remove Peachseed.
+
+18.3 2012-11-07 delete Phelios, rename DownloadReady to Sopcos
+
+18.4 2012-11-09 rewrite internals to consistently use enums instead of Strings
+
+18.5 2012-11-23 delete Nebula, CyberMethexis, DownloadMaxi, update code for Truesoft
+
+18.6 2012-12-02 drop Sopcos
+
+18.7 2012-12-05 drop Wincolors, add HotDigitalProducts, add SoftwarePreviews
+
+18.8 2012-12-13 drop Superwebhunt
+
+18.9 2012-12-14 drop searchsomesoft, add Sopcos
+
+19.0 2012-12-18 drop shoplagom
+
+19.1 2013-01-05 drop 123freesoft, atoz.com,
+                add getsharewareforfree.com, soft112.com, sopcos.com, searchsomesoft.com
+
+19.2 2013-01-30 drop aeoid, downloadpronet, downloadsoftfiles, filesspot, freewaresharenet
+                myfilesnet, softcab, thenetfile, thesharewarespot, sciencevitolab
+
+19.3 2013-01-30 add SoftwareListing, FilesShareware
+
+19.4 2013-02-03 drop acidfiles, fileedge, windfile
+
+19.5 2013-02-08 drop criticalfiles
+
+19.6 2013-02-18 add DownloadReady, Telecharger
+
+19.7 2013-02-22 drop filestorage.de
+
+19.8 2013-03-08 drop softwaredownloads.me, add MacSoftware911, HotCart, Linux112, Windows8Downloads
+
+19.9 2013-03-11 drop All4Down
+
+20.0 2013-03-25 drop DNKA
+
+20.1 2013-03-26 drop site90.net, add 50ftwares.com
+
+20.2 2013-04-09 drop download90.netne.net
+
+20.3 2013-04-20 drop ezy-soft, truesoft
+
+20.4 2013-04-21 drop Sopcos
+
+20.5 2013-04-27 drop freesoftware911 , linux112 , macsoftware911, soft112
+
+20.6 2013-05-05 drop SoftZu, DownloadSoftwareSearch, SoftwareMatrix, SoftwareLocator, EzSoft
+
+20.7 2013-05-05 drop free-software-programs, add AbyanSoft, Software2D, WorldShareware, Infojateng
+
+20.8 2013-05-16 drop place77
+
+20.9 2013-06-03 drop i-freeware-download, software2d, worldshareware.info
+
+21.0 2013-06-15 drop onlyfreesoft, softcrave, infojateng
+
+21.1 2013-07-07 drop abyansoft
+
+21.2 2013-07-24 drop softwebsnepal, trialware.biz add 2Software.
+
+21.3 2013-08-08 drop uniqueideo.net
+
+21.4 2013-08-23 drop bg-soft.net/, newsoft4you , earchsoftwar.com, www.winload.
+
+21.5 2013-09-10 drop www.yourfreefiles.com.
+
+21.6 2013-10-20 drop softwaresizzle, filepicks, hot-cart,
+                free-download-soft, programmersheaven, topsharewaredownloads
+
+21.7 2013-11-29 drop imoosoft, softlookup
+
+21.8 2013-12-22 drop soft-all-ware and vadino
+
+21.9 2014-01-07 drop ozysoftware, download-up, review-world, software-listin
+
+22.0 2014-01-21 drop mysharewares,50ftwares, add Apps112,Download100,Download3Kde,Download3Kes
+                GetUNet,ScottBurchfield,Soft2Download,SystemPrograms,TheDownloadFree,WindowsSoftware911
+
+22.1 2014-03-06 drop TrinityFiles, GetUnet, PadRepository, Geeez, add Softcrave
+
+22.2 2014-03-24 drop FindBestSoft, softwarepreviews, cuteshareware
+
+22.3 2014-03-31 add 5oftwares, drop ScottBurchfield
+
+22.4 2014-04-07 drop SoftGeeks, HotDigital Products.
+
+22.5 2014-04-23 drop apps112 and SystemPrograms.
+
+22.6 2014-05-15 drop free-software-downloads and softlow.
+
+22.7 2014-06-13 add CoolTechsOftWare, add AppVisor category.
+
+22.8 2014-06-24 drop 5ofttares.com.
+
+22.9 2014-07-01 drop http://www.pocket-pc-freeware.com/
+
+23.0 2014-08-16 add TestBD, BgSoft, AllSoftWares, FileLook,
+                SpacyHost, WebContentSolutions, SoftMerge,
+                Business112, Linux112, MacSoftware911, Soft112, TrinityFiles,
+                Apps112
+                drop DownloadFreePrograms
+
+23.1 2014-08-27 drop sharewarebay, pocketpc-software-downlsoads
+
+23.2 2014-09-06 drop dltube, add MatchGameR, DownloadFreeProgram
+
+23.3 2014-09-23 drop 3area.com lqko.com Apps112, Business112, Linux112, MacSoftware911, WindowsSoftware911
+
+23.4 2014-10-15 drop buyAllsoft findallsoft getsharewareforfree padfm Searchanysoft
+                Searchsomesoft Searchallsoft Soft-mobile soft2down softwareul spacyhost
+                wersoft world-software
+
+23.5 2014-11-28 drop sharewarefiles.net, cooltechsoftware.com, jqwn, qdyu, add TryBeforePay, Download3KFr, IfBit
+
+23.6 2015-01-06 adjust SoftwareKB. Drop softfiles.us wordperfect.org matchgamer.info
+
+23.7 2015-01-26 drop absoluteshareware, amazingfiles, avi0, ifbit, PeterBurgess, add Liotron
+
+23.8 2015-02-07 drop bestsecuritytips, downloadery, downloadry, generalfreeware, softwarecrown, win7freeware, win7programs
+
+23.9 2015-02-21 drop add spotpig, allfreedownloads, drop divx.ws
+
+24.0 2015-03-26 drop mysoftwarelist, filedomain, bg-soft, trybeforepay. add SaveFile, StandaloneInstaller
+
+24.1 2015-05-17 drop myfreewares, Softmont, Mayzer
+
+24.2 2015-07-21 drop swissliste fd4a downloadznow uuucom freedownloadbusiness freedownloaddevelopment
+                freedownloadeducation freedownloadgraphics freedownloadhomehobby freedownloadutilities
+
+24.3 2015-08-21 drop filelook, liotron, fd4a, getallsoft, WebZf, downloadarsivi
+
+24.4 2015-10-18 drop softcrave appspalette savefile add bigdreamsoft freedownloadssclub
+
+24.5 2015-11-29 drop mvbbb, sharewarecheap, ware23, sharewareisland
+
+24.6 2015-12-24 drop bestsoftwarefordownload, bestvistadownloads, freedownloadsclub, top4download, windows7download, windows8downoads
+
+24.7 2015-12-28 drop bestsoftware4download
+
+24.8 2016-02-27 drop allfreedownloads.org, add windows10
+
+24.9 2016-04-15 drop Vonna
+
+25.0 2016-04-30 drop shareapple and trinity and add Isharesoftware.
+
+25.1 2016-05-07 drop easyfiledownloads, softmerge, and Isharesoftware.
+
+25.2 2016-05-20 drop softliste.de, videsoftwaredirect
+
+25.3 2016-06-09 drop Soft-DB
+
+25.4 2016-06-23 dro hame-software and 5moons
+
+25.5 2016-06-25 drop resourcefill
+
+25.6 2016-07-15 drop pluspro.net
+
+25.7 2016-08-06 drop softpyro.com
+
+25.8 2016-08-22 add RaritySoft
+
+25.9 2016-11-10 drop softwarelode, downloadfreeprgrograms, download-it-now.net
+
+26.0 2016-12-05 add SoftwareBee, drop discoveres.com
+
+26.1 2017-01-10 drap thedownloadfree
+
+26.2 2017-02-14 drop mlbsoft and afdown
+
+26.3 2017-03-30 drop http://paulspicks.com/
+
+-30-
+

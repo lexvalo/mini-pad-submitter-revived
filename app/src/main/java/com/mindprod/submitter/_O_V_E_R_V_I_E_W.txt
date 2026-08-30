@@ -1,0 +1,192 @@
+_O_V_E_R_V_I_E_W.txt             Commented List of all files for Submitter, with one line descriptions.
+allsites.list                    list of all sites
+appvisor.csv                     PADsites that accept pads via AppVisor.com
+AssignSiteNames$1.class          compiled Java byte code
+AssignSiteNames$LongestFirst.class compiled Java byte code
+AssignSiteNames.class            compiled Java byte code
+AssignSiteNames.java             Assign site names to site urls
+BreakSiteNames.class             compiled Java byte code
+BreakSiteNames.java              Put <wbr> into site names
+build.xml                        Complex ANT build script for Submitter
+candidates.csv                   PADsites that accept pads via AppVisor.com
+Category.class                   compiled Java byte code
+Category.java                    enum for various padsite files
+Crack.class                      compiled Java byte code
+Crack.java                       Analyses websites and generate Java code to submit to them
+dead.csv                         List of defunct PADsites
+desc.btm                         creates TCC file descriptions for project files
+descother.btm                    creates TCC file descriptions for non-project files
+DESCRIPT.ION                     TCC file descriptions
+descript0.ion                    generated file of overriding descriptions to merge into DESCRIPT.ION
+descript2.ion                    generated file default descriptions to merge into DESCRIPT.ION
+DetectDuplicates.class           alternate Java program compiled byte code
+detectduplicates.exe             JET executable
+detectduplicates.jar             jarred class files.
+DetectDuplicates.java            alt Java program source
+detectduplicates.look            uncommented jar manifest
+DoesPADmaps.btm                  Check csv files to see which sites use PADMapts
+DoesPADmaps.class                compiled Java byte code
+DoesPADmaps.java                 Finds padsites that support PADmaps
+fordetectduplicatesjarexe.xml    jar.exe list of extra files to include in detectduplicates.jar
+FormatForAspSites.class          compiled Java byte code
+FormatForAspSites.java           Format ASP padsites
+FormatPadSites.class             alternate Java program compiled byte code
+formatpadsites.exe               JET executable
+formatpadsites.jar               jarred class files.
+FormatPadSites.java              alt Java program source
+formatpadsites.look              uncommented jar manifest
+forpost.xml                      list of extra posting steps for ANT.
+forzip.xml                       list of extra files for ANT include in submitter263.zip
+grab.btm                         copy in Java source code from IntelliJ and build it. Roedy's use only.
+grabasp.btm                      Collect new PADsites from ASP list
+GrabAsp.class                    alternate Java program compiled byte code
+grabasp.exe                      JET executable
+grabasp.jar                      jarred class files.
+GrabAsp.java                     Grab padsite info from ASP website
+grabasp.look                     uncommented jar manifest
+guesslanguage.btm                Guess language of the sites
+GuessLanguage.class              compiled Java byte code
+GuessLanguage.java               guess language of a padsite
+hassle.csv                       List of submission sites with hassle
+how.txt                          how site preparation tools work
+j18.txt                          marker to indicate that Java compiler target version 1.8 needed.
+jdisplay.css                     cascading style sheet for displaying source code in HTML
+JustNewAppvisors.class           alternate Java program compiled byte code
+justnewappvisors.exe             JET executable
+justnewappvisors.jar             jarred class files.
+JustNewAppvisors.java            find new Appvisor sites
+justnewappvisors.look            uncommented jar manifest
+Keyword.class                    compiled Java byte code
+Keyword.java                     Enum for various Pad site description keywords
+KeywordsAlphabetically.class     compiled Java byte code
+kill.btm                         kill junk files
+MarkDeadAspSites.class           compiled Java byte code
+MarkDeadAspSites.java            mark ASP sites dead
+MarkRedirectedAspSites.class     compiled Java byte code
+MarkRedirectedAspSites.java      Mark ASP padsites redirected
+MasterDistribution.site          URL to find the master copy of the Submitter project files
+mindprod.css                     cascading style sheet for general HTML
+mindprodcert2017rsa.cer          Public key for Mindprod code-signing certificate. Cannot be used to sign jars.
+new.bat                          Submits all pads to some sites
+newsites.list                    Recently added sites
+nohassle.csv                     List of sites without hassles to submit
+pad3.list                        list of pad3.11 pads
+pad4.list                        list of pad 4.0 pads
+PadSites.class                   compiled Java byte code
+PadSites.java                    Used by DetectDupPadSites
+ProbeAndClassify.class           compiled Java byte code
+ProbeAndClassify.java            Probe candidate sites and classify them
+rebuild.xml                      Simplified ANT build script for Submitter
+RobustJEditorPane.class          compiled Java byte code
+RobustJEditorPane.java           JEditorPane that does not report rendering errors
+run.bat                          execute the Submitter application from the jar
+runsubmit.btm                    execute the Submitter application from the jar
+showcandidates.bat               show candidates without changing sort order
+some.bat                         Submits all pads to some sites
+somepads.list                    List of all mindprod.com pads
+somesites.list                   list of all sites
+SubmissionSite$1.class           compiled Java byte code
+SubmissionSite$10.class          compiled Java byte code
+SubmissionSite$11.class          compiled Java byte code
+SubmissionSite$12.class          compiled Java byte code
+SubmissionSite$13.class          compiled Java byte code
+SubmissionSite$14.class          compiled Java byte code
+SubmissionSite$15.class          compiled Java byte code
+SubmissionSite$16.class          compiled Java byte code
+SubmissionSite$17.class          compiled Java byte code
+SubmissionSite$18.class          compiled Java byte code
+SubmissionSite$19.class          compiled Java byte code
+SubmissionSite$2.class           compiled Java byte code
+SubmissionSite$20.class          compiled Java byte code
+SubmissionSite$21.class          compiled Java byte code
+SubmissionSite$22.class          compiled Java byte code
+SubmissionSite$23.class          compiled Java byte code
+SubmissionSite$24.class          compiled Java byte code
+SubmissionSite$25.class          compiled Java byte code
+SubmissionSite$26.class          compiled Java byte code
+SubmissionSite$27.class          compiled Java byte code
+SubmissionSite$28.class          compiled Java byte code
+SubmissionSite$29.class          compiled Java byte code
+SubmissionSite$3.class           compiled Java byte code
+SubmissionSite$30.class          compiled Java byte code
+SubmissionSite$31.class          compiled Java byte code
+SubmissionSite$32.class          compiled Java byte code
+SubmissionSite$33.class          compiled Java byte code
+SubmissionSite$34.class          compiled Java byte code
+SubmissionSite$35.class          compiled Java byte code
+SubmissionSite$36.class          compiled Java byte code
+SubmissionSite$37.class          compiled Java byte code
+SubmissionSite$38.class          compiled Java byte code
+SubmissionSite$39.class          compiled Java byte code
+SubmissionSite$4.class           compiled Java byte code
+SubmissionSite$40.class          compiled Java byte code
+SubmissionSite$41.class          compiled Java byte code
+SubmissionSite$42.class          compiled Java byte code
+SubmissionSite$43.class          compiled Java byte code
+SubmissionSite$44.class          compiled Java byte code
+SubmissionSite$45.class          compiled Java byte code
+SubmissionSite$46.class          compiled Java byte code
+SubmissionSite$47.class          compiled Java byte code
+SubmissionSite$48.class          compiled Java byte code
+SubmissionSite$49.class          compiled Java byte code
+SubmissionSite$5.class           compiled Java byte code
+SubmissionSite$50.class          compiled Java byte code
+SubmissionSite$51.class          compiled Java byte code
+SubmissionSite$52.class          compiled Java byte code
+SubmissionSite$53.class          compiled Java byte code
+SubmissionSite$54.class          compiled Java byte code
+SubmissionSite$55.class          compiled Java byte code
+SubmissionSite$56.class          compiled Java byte code
+SubmissionSite$57.class          compiled Java byte code
+SubmissionSite$58.class          compiled Java byte code
+SubmissionSite$59.class          compiled Java byte code
+SubmissionSite$6.class           compiled Java byte code
+SubmissionSite$60.class          compiled Java byte code
+SubmissionSite$61.class          compiled Java byte code
+SubmissionSite$62.class          compiled Java byte code
+SubmissionSite$63.class          compiled Java byte code
+SubmissionSite$64.class          compiled Java byte code
+SubmissionSite$65.class          compiled Java byte code
+SubmissionSite$66.class          compiled Java byte code
+SubmissionSite$7.class           compiled Java byte code
+SubmissionSite$8.class           compiled Java byte code
+SubmissionSite$9.class           compiled Java byte code
+SubmissionSite.class             alternate Java program compiled byte code
+submissionsite.exe               JET executable
+submissionsite.jar               jarred class files.
+SubmissionSite.java              alt Java program source
+submissionsite.look              uncommented jar manifest
+SubmitBatch.class                alternate Java program compiled byte code
+submitbatch.exe                  JET executable
+submitbatch.jar                  jarred class files.
+SubmitBatch.java                 alt Java program source
+submitbatch.look                 uncommented jar manifest
+Submitter$1.class                compiled Java byte code
+Submitter$2.class                compiled Java byte code
+Submitter$3.class                compiled Java byte code
+Submitter.class                  Submitter main Java program compiled byte code
+submitter.exe                    JET executable Submits PAD XMLs to 66 PADsites
+submitter.html                   html to launch the Submitter program
+submitter.icon128.png            roughly 128x128 icon for the Submitter project
+submitter.icon16.png             16x16 icon for the Submitter project
+submitter.icon32.png             32x32 icon for the Submitter project
+submitter.icon48.png             roughly 48x48 icon for the Submitter project
+submitter.icon64.png             roughly 64x64 icon for the Submitter project
+submitter.jar                    jarred class files: Submits PAD XMLs to 66 PADsites
+Submitter.java                   main Java program source
+submitter.look                   uncommented jar manifest
+submitter.screenshot.png         screenshot for the Submitter project
+submitter.use                    precis(summary) Submits PAD XMLs to 66 PADsites Generated
+submitter.xml                    ASP PAD desc of the Submitter project: Submits PAD XMLs to 66 PADsites
+submitter263.zip                 Submitter 26.3 distribute zip: Submits PAD XMLs to 66 PADsites
+tidy.btm                         Tidy *.csv files
+TidyKeywords.class               alternate Java program compiled byte code
+tidykeywords.exe                 JET executable
+tidykeywords.jar                 jarred class files.
+TidyKeywords.java                Dedup and sort keywords field
+tidykeywords.look                uncommented jar manifest
+untouch.digest                   generated: enables untouching (set date back) unchanged but redated files.
+use.txt                          key facts about the Submitter project. Generates submitter.use
+version.txt                      key current version info about the Submitter project. Generates submitter.use
+versionhistory.txt               complete version history of the Submitter project. Generates submitter.use
+zip.look                         uncommented zip manifest for submitter263.zip

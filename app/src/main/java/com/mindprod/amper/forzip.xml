@@ -1,0 +1,5 @@
+  <zipfileset dir="com/mindprod/commandline" prefix="com/mindprod/commandline" includes="${distributed.exts}" excludes="${nondistributed}" />
+  <zipfileset dir="com/mindprod/common18"    prefix="com/mindprod/common18"    includes="${distributed.exts}" excludes="${nondistributed}" />
+  <zipfileset dir="com/mindprod/fastcat"     prefix="com/mindprod/fastcat"     includes="${distributed.exts}" excludes="${nondistributed}" />
+  <zipfileset dir="com/mindprod/filter" prefix="com/mindprod/filter" includes="${distributed.exts}" excludes="${nondistributed}" />
+  <zipfileset dir="com/mindprod/hunkio" prefix="com/mindprod/hunkio" includes="${distributed.exts}" excludes="${nondistributed}" />

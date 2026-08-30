@@ -1,0 +1,30 @@
+CommandLine parses the command line for a description of a set of files
+and converts it into a list of individual files to process.
+CommandLine does nothing by itself. It is library code you
+can incorporate into your own Java programs like this:
+   CommandLine wantedFiles = new CommandLine( args,
+     new AllDirectoriesFilter() /* which directories to include */,
+     new ExtensionListFilter( "java" ) /* which file extensions to include */);
+    // iterate through all the files in the collection.
+    for ( File file : wantedFiles )
+        {
+        // files appear in random order, as provided by the OS
+        System.err.println( file.getCanonicalPath() );
+        }// end for
+On the command line, you can specify a list of individual files, mixed
+with a list of directories.
+The Iteration of Files you get have names as you specified them on the
+command line.  If you need canonical names, you must use getCanonicalPath
+or GetCanonicalFile.
+If you use the -s switch in includes all the files in all the recursive
+subdirectories. It must precede the directory names it applies to.
+If you use the -q switch, it will suppress the counts of how many files it
+found in each subdirectory.  It will be passed through to the application
+via isQuiet.
+if you use the -v switch, that means verbose.  It will be passed through
+to the application via isVerbose.
+If you have both -q and -v on the command line, the last option prevails.
+Commandline does not currently suupport wildcards, negative selections, or
+@indirect lists.
+Why that apple tree icon?  It represents a tree of various types of files,
+from which you pick some.

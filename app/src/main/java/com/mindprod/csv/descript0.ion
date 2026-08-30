@@ -1,0 +1,309 @@
+"desc.btm" creates TCC file descriptions for project files
+"descother.btm" creates TCC file descriptions for non-project files
+"run.bat" execute the CSV application from the jar
+"grab.btm" copy in Java source code from IntelliJ and build it. Roedy's use only.
+"CSV.class" CSV main Java program compiled byte code
+"CSVAlign.class" alternate Java program compiled byte code
+"CSVChangeCase.class" alternate Java program compiled byte code
+"CSVCommaToTab.class" alternate Java program compiled byte code
+"CSVCondense.class" alternate Java program compiled byte code
+"CSVDeDup.class" alternate Java program compiled byte code
+"CSVDeDupField.class" alternate Java program compiled byte code
+"CSVDeEntify.class" alternate Java program compiled byte code
+"CSVDump.class" alternate Java program compiled byte code
+"CSVEntify.class" alternate Java program compiled byte code
+"CSVISBN.class" alternate Java program compiled byte code
+"CSVPack.class" alternate Java program compiled byte code
+"CSVRecode.class" alternate Java program compiled byte code
+"CSVReplaceStrings.class" alternate Java program compiled byte code
+"CSVReplaceURLs.class" alternate Java program compiled byte code
+"CSVReshape.class" alternate Java program compiled byte code
+"CSVScale.class" alternate Java program compiled byte code
+"CSVSort.class" alternate Java program compiled byte code
+"CSVSortField.class" alternate Java program compiled byte code
+"CSVStripTags.class" alternate Java program compiled byte code
+"CSVTabToComma.class" alternate Java program compiled byte code
+"CSVTemplate.class" alternate Java program compiled byte code
+"CSVToSRS.class" alternate Java program compiled byte code
+"CSVToSRX.class" alternate Java program compiled byte code
+"CSVToTable.class" alternate Java program compiled byte code
+"CSVToUnique.class" alternate Java program compiled byte code
+"CSVTuple.class" alternate Java program compiled byte code
+"LinesToCSV.class" alternate Java program compiled byte code
+"TableToCSV.class" alternate Java program compiled byte code
+"TestCSVLoad.class" alternate Java program compiled byte code
+"TestCSVReader.class" alternate Java program compiled byte code
+"TestCSVWriter.class" alternate Java program compiled byte code
+"csv.exe" JET executable Read, write, align, condense, dump, sort, convert, patch, reshape, group pack... CSV (Comma, tab and semicolon-Separated Variable) files
+"csvalign.exe" JET executable
+"csvchangecase.exe" JET executable
+"csvcommatotab.exe" JET executable
+"csvcondense.exe" JET executable
+"csvdedup.exe" JET executable
+"csvdedupfield.exe" JET executable
+"csvdeentify.exe" JET executable
+"csvdump.exe" JET executable
+"csventify.exe" JET executable
+"csvisbn.exe" JET executable
+"csvpack.exe" JET executable
+"csvrecode.exe" JET executable
+"csvreplacestrings.exe" JET executable
+"csvreplaceurls.exe" JET executable
+"csvreshape.exe" JET executable
+"csvscale.exe" JET executable
+"csvsort.exe" JET executable
+"csvsortfield.exe" JET executable
+"csvstriptags.exe" JET executable
+"csvtabtocomma.exe" JET executable
+"csvtemplate.exe" JET executable
+"csvtosrs.exe" JET executable
+"csvtosrx.exe" JET executable
+"csvtotable.exe" JET executable
+"csvtounique.exe" JET executable
+"csvtuple.exe" JET executable
+"linestocsv.exe" JET executable
+"tabletocsv.exe" JET executable
+"testcsvload.exe" JET executable
+"testcsvreader.exe" JET executable
+"testcsvwriter.exe" JET executable
+"E:\sys\csv.exe" JET executable Read, write, align, condense, dump, sort, convert, patch, reshape, group pack... CSV (Comma, tab and semicolon-Separated Variable) files
+"E:\sys\csvalign.exe" JET executable
+"E:\sys\csvchangecase.exe" JET executable
+"E:\sys\csvcommatotab.exe" JET executable
+"E:\sys\csvcondense.exe" JET executable
+"E:\sys\csvdedup.exe" JET executable
+"E:\sys\csvdedupfield.exe" JET executable
+"E:\sys\csvdeentify.exe" JET executable
+"E:\sys\csvdump.exe" JET executable
+"E:\sys\csventify.exe" JET executable
+"E:\sys\csvisbn.exe" JET executable
+"E:\sys\csvpack.exe" JET executable
+"E:\sys\csvrecode.exe" JET executable
+"E:\sys\csvreplacestrings.exe" JET executable
+"E:\sys\csvreplaceurls.exe" JET executable
+"E:\sys\csvreshape.exe" JET executable
+"E:\sys\csvscale.exe" JET executable
+"E:\sys\csvsort.exe" JET executable
+"E:\sys\csvsortfield.exe" JET executable
+"E:\sys\csvstriptags.exe" JET executable
+"E:\sys\csvtabtocomma.exe" JET executable
+"E:\sys\csvtemplate.exe" JET executable
+"E:\sys\csvtosrs.exe" JET executable
+"E:\sys\csvtosrx.exe" JET executable
+"E:\sys\csvtotable.exe" JET executable
+"E:\sys\csvtounique.exe" JET executable
+"E:\sys\csvtuple.exe" JET executable
+"E:\sys\linestocsv.exe" JET executable
+"E:\sys\tabletocsv.exe" JET executable
+"E:\sys\testcsvload.exe" JET executable
+"E:\sys\testcsvreader.exe" JET executable
+"E:\sys\testcsvwriter.exe" JET executable
+"csv.manual.html" detailed HTML manual for the CSV project
+"csv.jar" jarred class files: Read, write, align, condense, dump, sort, convert, patch, reshape, group pack... CSV (Comma, tab and semicolon-Separated Variable) files
+"csv.look" uncommented jar manifest
+"csvalign.jar" jarred class files.
+"csvalign.look" uncommented jar manifest
+"csvchangecase.jar" jarred class files.
+"csvchangecase.look" uncommented jar manifest
+"csvcommatotab.jar" jarred class files.
+"csvcommatotab.look" uncommented jar manifest
+"csvcondense.jar" jarred class files.
+"csvcondense.look" uncommented jar manifest
+"csvdedup.jar" jarred class files.
+"csvdedup.look" uncommented jar manifest
+"csvdedupfield.jar" jarred class files.
+"csvdedupfield.look" uncommented jar manifest
+"csvdeentify.jar" jarred class files.
+"csvdeentify.look" uncommented jar manifest
+"csvdump.jar" jarred class files.
+"csvdump.look" uncommented jar manifest
+"csventify.jar" jarred class files.
+"csventify.look" uncommented jar manifest
+"csvisbn.jar" jarred class files.
+"csvisbn.look" uncommented jar manifest
+"csvpack.jar" jarred class files.
+"csvpack.look" uncommented jar manifest
+"csvrecode.jar" jarred class files.
+"csvrecode.look" uncommented jar manifest
+"csvreplacestrings.jar" jarred class files.
+"csvreplacestrings.look" uncommented jar manifest
+"csvreplaceurls.jar" jarred class files.
+"csvreplaceurls.look" uncommented jar manifest
+"csvreshape.jar" jarred class files.
+"csvreshape.look" uncommented jar manifest
+"csvscale.jar" jarred class files.
+"csvscale.look" uncommented jar manifest
+"csvsort.jar" jarred class files.
+"csvsort.look" uncommented jar manifest
+"csvsortfield.jar" jarred class files.
+"csvsortfield.look" uncommented jar manifest
+"csvstriptags.jar" jarred class files.
+"csvstriptags.look" uncommented jar manifest
+"csvtabtocomma.jar" jarred class files.
+"csvtabtocomma.look" uncommented jar manifest
+"csvtemplate.jar" jarred class files.
+"csvtemplate.look" uncommented jar manifest
+"csvtosrs.jar" jarred class files.
+"csvtosrs.look" uncommented jar manifest
+"csvtosrx.jar" jarred class files.
+"csvtosrx.look" uncommented jar manifest
+"csvtotable.jar" jarred class files.
+"csvtotable.look" uncommented jar manifest
+"csvtounique.jar" jarred class files.
+"csvtounique.look" uncommented jar manifest
+"csvtuple.jar" jarred class files.
+"csvtuple.look" uncommented jar manifest
+"linestocsv.jar" jarred class files.
+"linestocsv.look" uncommented jar manifest
+"tabletocsv.jar" jarred class files.
+"tabletocsv.look" uncommented jar manifest
+"testcsvload.jar" jarred class files.
+"testcsvload.look" uncommented jar manifest
+"testcsvreader.jar" jarred class files.
+"testcsvreader.look" uncommented jar manifest
+"testcsvwriter.jar" jarred class files.
+"testcsvwriter.look" uncommented jar manifest
+"E:\mindprod\application\csvalign.jar"  jarred class files.
+"E:\mindprod\application\csvchangecase.jar"  jarred class files.
+"E:\mindprod\application\csvcommatotab.jar"  jarred class files.
+"E:\mindprod\application\csvcondense.jar"  jarred class files.
+"E:\mindprod\application\csvdedup.jar"  jarred class files.
+"E:\mindprod\application\csvdedupfield.jar"  jarred class files.
+"E:\mindprod\application\csvdeentify.jar"  jarred class files.
+"E:\mindprod\application\csvdump.jar"  jarred class files.
+"E:\mindprod\application\csventify.jar"  jarred class files.
+"E:\mindprod\application\csvisbn.jar"  jarred class files.
+"E:\mindprod\application\csvpack.jar"  jarred class files.
+"E:\mindprod\application\csvrecode.jar"  jarred class files.
+"E:\mindprod\application\csvreplacestrings.jar"  jarred class files.
+"E:\mindprod\application\csvreplaceurls.jar"  jarred class files.
+"E:\mindprod\application\csvreshape.jar"  jarred class files.
+"E:\mindprod\application\csvscale.jar"  jarred class files.
+"E:\mindprod\application\csvsort.jar"  jarred class files.
+"E:\mindprod\application\csvsortfield.jar"  jarred class files.
+"E:\mindprod\application\csvstriptags.jar"  jarred class files.
+"E:\mindprod\application\csvtabtocomma.jar"  jarred class files.
+"E:\mindprod\application\csvtemplate.jar"  jarred class files.
+"E:\mindprod\application\csvtosrs.jar"  jarred class files.
+"E:\mindprod\application\csvtosrx.jar"  jarred class files.
+"E:\mindprod\application\csvtotable.jar"  jarred class files.
+"E:\mindprod\application\csvtounique.jar"  jarred class files.
+"E:\mindprod\application\csvtuple.jar"  jarred class files.
+"E:\mindprod\application\linestocsv.jar"  jarred class files.
+"E:\mindprod\application\tabletocsv.jar"  jarred class files.
+"E:\mindprod\application\testcsvload.jar"  jarred class files.
+"E:\mindprod\application\testcsvreader.jar"  jarred class files.
+"E:\mindprod\application\testcsvwriter.jar"  jarred class files.
+"csv.jnlp" csv jnlp Java Web Start launch
+"csv.efs" generated: JET compiler internal file
+"csv.rfs" generated: JET compiler control file
+"csv.rsp" JET configuration file
+"csv.usg" generated: JET compiler method use tracking
+"csv-setup.exe" JET distributable, containing runtime
+"csv.ico" Windows icon for the project, contains multiple image sizes
+"csv.jpn" Manifest of what is included in the JET executable.
+"csv.log" log of what JET did compiling and preparing the distributable
+"csv.prj" JET project configuration, compiler options and notes on what needs to be included.
+"csv.startup" List of classes JET should preload for speed.
+"csv.xbind.script" List of DLLs JET will need to run the app.
+"build_csv.bat" Build JET executable with project descriptor
+"run_csv.bat" Runs the JET executable with default parm.
+"mindprod.css" cascading style sheet for general HTML
+"jdisplay.css" cascading style sheet for displaying source code in HTML
+"package-info.java" Dummy Java source with JavaDoc describing the entire package.
+"untouch.digest" generated: enables untouching (set date back) unchanged but redated files.
+"mindprodcert2017rsa.cer" Public key for Mindprod code-signing certificate. Cannot be used to sign jars.
+"DESCRIPT.ION" TCC file descriptions
+"descript0.ion" generated file of overriding descriptions to merge into DESCRIPT.ION
+"descript2.ion" generated file default descriptions to merge into DESCRIPT.ION
+"MasterDistribution.site" URL to find the master copy of the CSV project files
+"csv.use" precis(summary) Read, write, align, condense, dump, sort, convert, patch, reshape, group pack... CSV (Comma, tab and semicolon-Separated Variable) files Generated
+"csv.vpj" Slick Edit project ini file
+"csv.vpw" Slick Edit project ini file
+"csv.vtg" Slick Edit binary tag xref file
+"csv.icon16.png" 16x16 icon for the CSV project
+"csv.icon32.png" 32x32 icon for the CSV project
+"csv.icon48.png" roughly 48x48 icon for the CSV project
+"csv.icon64.png" roughly 64x64 icon for the CSV project
+"csv.icon128.png" roughly 128x128 icon for the CSV project
+"csv.screenshot.png" screenshot for the CSV project
+"csv.splash.gif" splash gif for the CSV project
+"csv.icon32.gif" 32x32 gif icon for the CSV project
+"csv.icon64.gif" 64x64 gif icon for the CSV project
+"_O_V_E_R_V_I_E_W.txt" Commented List of all files for CSV, with one line descriptions.
+"use.txt" key facts about the CSV project. Generates csv.use
+"version.txt" key current version info about the CSV project. Generates csv.use
+"versionhistory.txt" complete version history of the CSV project. Generates csv.use
+"csv.txt" ASCII text manual for the CSV project.
+"build.xml" Complex ANT build script for CSV
+"rebuild.xml" Simplified ANT build script for CSV
+"forgather.xml" list of extra gather steps for ANT.
+"forjar.xml" genjar list of extra files to include in csv.jar
+"forjarexe.xml" jar.exe list of extra files to include in csv.jar
+"forcsvalignjar.xml" genjar list of extra files to include in csvalign.jar
+"forcsvalignjarexe.xml" jar.exe list of extra files to include in csvalign.jar
+"forcsvchangecasejar.xml" genjar list of extra files to include in csvchangecase.jar
+"forcsvchangecasejarexe.xml" jar.exe list of extra files to include in csvchangecase.jar
+"forcsvcommatotabjar.xml" genjar list of extra files to include in csvcommatotab.jar
+"forcsvcommatotabjarexe.xml" jar.exe list of extra files to include in csvcommatotab.jar
+"forcsvcondensejar.xml" genjar list of extra files to include in csvcondense.jar
+"forcsvcondensejarexe.xml" jar.exe list of extra files to include in csvcondense.jar
+"forcsvdedupjar.xml" genjar list of extra files to include in csvdedup.jar
+"forcsvdedupjarexe.xml" jar.exe list of extra files to include in csvdedup.jar
+"forcsvdedupfieldjar.xml" genjar list of extra files to include in csvdedupfield.jar
+"forcsvdedupfieldjarexe.xml" jar.exe list of extra files to include in csvdedupfield.jar
+"forcsvdeentifyjar.xml" genjar list of extra files to include in csvdeentify.jar
+"forcsvdeentifyjarexe.xml" jar.exe list of extra files to include in csvdeentify.jar
+"forcsvdumpjar.xml" genjar list of extra files to include in csvdump.jar
+"forcsvdumpjarexe.xml" jar.exe list of extra files to include in csvdump.jar
+"forcsventifyjar.xml" genjar list of extra files to include in csventify.jar
+"forcsventifyjarexe.xml" jar.exe list of extra files to include in csventify.jar
+"forcsvisbnjar.xml" genjar list of extra files to include in csvisbn.jar
+"forcsvisbnjarexe.xml" jar.exe list of extra files to include in csvisbn.jar
+"forcsvpackjar.xml" genjar list of extra files to include in csvpack.jar
+"forcsvpackjarexe.xml" jar.exe list of extra files to include in csvpack.jar
+"forcsvrecodejar.xml" genjar list of extra files to include in csvrecode.jar
+"forcsvrecodejarexe.xml" jar.exe list of extra files to include in csvrecode.jar
+"forcsvreplacestringsjar.xml" genjar list of extra files to include in csvreplacestrings.jar
+"forcsvreplacestringsjarexe.xml" jar.exe list of extra files to include in csvreplacestrings.jar
+"forcsvreplaceurlsjar.xml" genjar list of extra files to include in csvreplaceurls.jar
+"forcsvreplaceurlsjarexe.xml" jar.exe list of extra files to include in csvreplaceurls.jar
+"forcsvreshapejar.xml" genjar list of extra files to include in csvreshape.jar
+"forcsvreshapejarexe.xml" jar.exe list of extra files to include in csvreshape.jar
+"forcsvscalejar.xml" genjar list of extra files to include in csvscale.jar
+"forcsvscalejarexe.xml" jar.exe list of extra files to include in csvscale.jar
+"forcsvsortjar.xml" genjar list of extra files to include in csvsort.jar
+"forcsvsortjarexe.xml" jar.exe list of extra files to include in csvsort.jar
+"forcsvsortfieldjar.xml" genjar list of extra files to include in csvsortfield.jar
+"forcsvsortfieldjarexe.xml" jar.exe list of extra files to include in csvsortfield.jar
+"forcsvstriptagsjar.xml" genjar list of extra files to include in csvstriptags.jar
+"forcsvstriptagsjarexe.xml" jar.exe list of extra files to include in csvstriptags.jar
+"forcsvtabtocommajar.xml" genjar list of extra files to include in csvtabtocomma.jar
+"forcsvtabtocommajarexe.xml" jar.exe list of extra files to include in csvtabtocomma.jar
+"forcsvtemplatejar.xml" genjar list of extra files to include in csvtemplate.jar
+"forcsvtemplatejarexe.xml" jar.exe list of extra files to include in csvtemplate.jar
+"forcsvtosrsjar.xml" genjar list of extra files to include in csvtosrs.jar
+"forcsvtosrsjarexe.xml" jar.exe list of extra files to include in csvtosrs.jar
+"forcsvtosrxjar.xml" genjar list of extra files to include in csvtosrx.jar
+"forcsvtosrxjarexe.xml" jar.exe list of extra files to include in csvtosrx.jar
+"forcsvtotablejar.xml" genjar list of extra files to include in csvtotable.jar
+"forcsvtotablejarexe.xml" jar.exe list of extra files to include in csvtotable.jar
+"forcsvtouniquejar.xml" genjar list of extra files to include in csvtounique.jar
+"forcsvtouniquejarexe.xml" jar.exe list of extra files to include in csvtounique.jar
+"forcsvtuplejar.xml" genjar list of extra files to include in csvtuple.jar
+"forcsvtuplejarexe.xml" jar.exe list of extra files to include in csvtuple.jar
+"forlinestocsvjar.xml" genjar list of extra files to include in linestocsv.jar
+"forlinestocsvjarexe.xml" jar.exe list of extra files to include in linestocsv.jar
+"fortabletocsvjar.xml" genjar list of extra files to include in tabletocsv.jar
+"fortabletocsvjarexe.xml" jar.exe list of extra files to include in tabletocsv.jar
+"fortestcsvloadjar.xml" genjar list of extra files to include in testcsvload.jar
+"fortestcsvloadjarexe.xml" jar.exe list of extra files to include in testcsvload.jar
+"fortestcsvreaderjar.xml" genjar list of extra files to include in testcsvreader.jar
+"fortestcsvreaderjarexe.xml" jar.exe list of extra files to include in testcsvreader.jar
+"fortestcsvwriterjar.xml" genjar list of extra files to include in testcsvwriter.jar
+"fortestcsvwriterjarexe.xml" jar.exe list of extra files to include in testcsvwriter.jar
+"forpost.xml" list of extra posting steps for ANT.
+"forzip.xml" list of extra files for ANT include in csv75.zip
+"csv.xml" ASP PAD desc of the CSV project: Read, write, align, condense, dump, sort, convert, patch, reshape, group pack... CSV (Comma, tab and semicolon-Separated Variable) files
+"csv75.zip" CSV 7.5 distribute zip: Read, write, align, condense, dump, sort, convert, patch, reshape, group pack... CSV (Comma, tab and semicolon-Separated Variable) files
+"zip.look" uncommented zip manifest for csv75.zip

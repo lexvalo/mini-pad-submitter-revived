@@ -1,0 +1,38 @@
+"_O_V_E_R_V_I_E_W.txt" Commented List of all files for CommandLine, with one line descriptions.
+"build.xml" Complex ANT build script for CommandLine
+"CacheIterator.class" compiled Java byte code
+"CacheIterator.java" Runs through all files collected from commandline
+"CommandLine.class" CommandLine main Java program compiled byte code
+"commandline.icon128.png" roughly 128x128 icon for the CommandLine project
+"commandline.icon16.png" 16x16 icon for the CommandLine project
+"commandline.icon32.png" 32x32 icon for the CommandLine project
+"commandline.icon48.png" roughly 48x48 icon for the CommandLine project
+"commandline.icon64.png" roughly 64x64 icon for the CommandLine project
+"commandline.jar" jarred class files: Command line parser to create a list of files from a tree description
+"CommandLine.java" main Java program source
+"commandline.look" uncommented jar manifest
+"commandline.screenshot.png" screenshot for the CommandLine project
+"commandline.use" precis(summary) Command line parser to create a list of files from a tree description Generated
+"commandline.xml" ASP PAD desc of the CommandLine project: Command line parser to create a list of files from a tree description
+"commandline26.zip" CommandLine 2.6 distribute zip: Command line parser to create a list of files from a tree description
+"desc.btm" creates TCC file descriptions for project files
+"descother.btm" creates TCC file descriptions for non-project files
+"DESCRIPT.ION" TCC file descriptions
+"descript0.ion" generated file of overriding descriptions to merge into DESCRIPT.ION
+"descript2.ion" generated file default descriptions to merge into DESCRIPT.ION
+"forzip.xml" list of extra files for ANT include in commandline26.zip
+"grab.btm" copy in Java source code from IntelliJ and build it. Roedy's use only.
+"j18.txt" marker to indicate that Java compiler target version 1.8 needed.
+"jdisplay.css" cascading style sheet for displaying source code in HTML
+"MasterDistribution.site" URL to find the master copy of the CommandLine project files
+"mindprod.css" cascading style sheet for general HTML
+"rebuild.xml" Simplified ANT build script for CommandLine
+"Retriever.class" compiled Java byte code
+"Retriever.java" Retrieves files from cache
+"Saver.class" compiled Java byte code
+"Saver.java" Saves files to cache
+"untouch.digest" generated: enables untouching (set date back) unchanged but redated files.
+"use.txt" key facts about the CommandLine project. Generates commandline.use
+"version.txt" key current version info about the CommandLine project. Generates commandline.use
+"versionhistory.txt" complete version history of the CommandLine project. Generates commandline.use
+"zip.look" uncommented zip manifest for commandline26.zip

@@ -1,0 +1,581 @@
+<?xml version="1.0"?>
+<!-- REBUILD.XML simple csv 7.5 build that presumes all files are already in the project directory. -->
+<!-- Build with ant -f rebuild.xml postzip jet -->
+<!-- Compile and jar csv using ANT -->
+<!-- Invoke with [ant clean] to erase class files and start over. -->
+<!-- Invoke with [ant compile] to just compile. -->
+<!-- Invoke with [ant jar] to compile and create jar files. -->
+<!-- Invoke with [ant jet] to create JET executables. -->
+<!-- Invoke with [ant zip] to create source code zip files. -->
+<!-- Using Apache ANT version 1.10.1 -->
+<!-- For details of ANT use, see http://mindprod.com/jgloss/ant.html -->
+<!-- This script does not build any *.asm files. -->
+
+<!-- D E F I N I T I O N S -->
+<!-- ANT.project.dir is com/mindprod/csv -->
+<!-- basedir is E:/ -->
+<project name="csv" basedir="E:/" default="jar">
+
+<!-- extensions for zip. Case sensitive! Go in zip, not necessarily in Jar. -->
+<property name="distributed.exts" value="**/*.au,**/*.asm,**/*.bat,**/*.btm,**/*.c,**/*.COM,**/*.com,**/*.cpp,**/*.css,**/*.csv,**/*.dll,**/*.gif,**/*.h,**/*.hpp,**/*.htm,**/*.html,**/*.ico,**/*.ION,**/*.ion,**/*.jar,**/*.java,**/*.jnlp,**/*.JNLP,**/*.jpg,**/*.look,**/*.png,**/*.properties,**/*.ser,**/*.sln,**/*.txt,**/*.use,**/*.xml" />
+
+<!-- dirs we to exclude from zip. Case sensitive! -->
+<property name="nondistributed" value="**/javadoc/**,**/jetpdb/**,**/Debug/**,**/Release/**" />
+
+<!-- C L E A N -->
+<target name="clean">
+<echo message="    :::    csv    :::    deleting files to force regeneration." />
+  <delete>
+    <fileset dir="com/mindprod/csv" includes="**/*.class" />
+    <fileset dir="com/mindprod/csv" includes="**/*.jar" />
+    <!-- leave Jet *.exe. Old versions are still useful during the build. -->
+    <fileset dir="com/mindprod/csv" includes="csv75.zip" />
+  </delete>
+</target>
+
+<!-- C O M P I L E -->
+<target name="compile">
+<echo message="    :::    csv    :::    compiling Java tree with target=1.8" />
+  <javac source="1.8" target="1.8" srcdir="com/mindprod/csv" sourcepath="${basedir}" classpath="${basedir}" encoding="UTF-8" debug="on" includeAntRuntime="false">
+    <compilerarg value="-Xlint:unchecked" />
+    <compilerarg value="-Xlint:fallthrough" />
+    <compilerarg value="-Xlint:deprecation" />
+    <compilerarg value="-Xlint:cast" />
+  </javac>
+</target>
+
+<!-- J A V A H must do ant javah to rebuild *.h files. -->
+<target name="javah" depends="compile">
+  <!-- there is no jni -->
+</target>
+
+<!-- G A T H E R -->
+<target name="gather" depends="compile">
+<echo message="    :::    csv    :::    gathering files to build jar/zip." />
+  <!-- prepare csv.use precis from two pieces -->
+    <concat destfile="com/mindprod/csv/csv.use" fixlastline="yes">
+      <filelist dir="com/mindprod/csv" files="version.txt,use.txt,versionhistory.txt" />
+    </concat>
+    <copy file="E:/mindprod/application/csv.html" todir="com/mindprod/csv" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/application/csv.manual.html" todir="com/mindprod/csv" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/ico/csv.ico" tofile="E:/mindprod/application/csv.ico" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon128/csv.png" tofile="com/mindprod/csv/csv.icon128.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon16/csv.png" tofile="com/mindprod/csv/csv.icon16.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon32/csv.png" tofile="com/mindprod/csv/csv.icon32.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon48/csv.png" tofile="com/mindprod/csv/csv.icon48.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon64/csv.png" tofile="com/mindprod/csv/csv.icon64.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/screenshot/csv.png" tofile="com/mindprod/csv/csv.screenshot.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/jdisplay.css" todir="com/mindprod/csv" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/mindprod.css" todir="com/mindprod/csv" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/pad/csv.xml" todir="com/mindprod/csv" failonerror="false" quiet="true" overwrite="true" />
+</target>
+
+<!-- J A R -->
+<!-- Make F:\Program Files (x86)\apache-ant-1.10.1\lib\GenJar.jar known to ANT -->
+<!-- See http://mindprod.com/jgloss/genjar.html for details -->
+<taskdef resource="genjar.properties" />
+
+<target name="jar" depends="gather">
+<echo message="    :::    csv    :::    genjar finding dependencies and creating jar." />
+  <genjar jarfile="com/mindprod/csv/csv.jar">
+    <!-- include main class and all its dependencies -->
+    <class name="com.mindprod.csv.CSV" />
+    <!-- Extra classes and properties to include in csv.jar -->
+      <class>
+    <fileset dir="${basedir}" >
+    <!-- include all the  classes in com.mindprod.csv dir -->
+      <include name="com/mindprod/csv/*.class" />
+    <!-- all dependent classes will be automatically included -->
+    </fileset>
+    </class>
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSV" />
+      <attribute name="Application-Name" value="CSV" />
+    </manifest>
+  </genjar>
+  <!-- build csvalign.jar -->
+  <genjar jarfile="com/mindprod/csv/csvalign.jar">
+    <class name="com.mindprod.csv.CSVAlign" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVAlign" />
+      <attribute name="Application-Name" value="CSVAlign" />
+    </manifest>
+  </genjar>
+  <!-- build csvchangecase.jar -->
+  <genjar jarfile="com/mindprod/csv/csvchangecase.jar">
+    <class name="com.mindprod.csv.CSVChangeCase" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVChangeCase" />
+      <attribute name="Application-Name" value="CSVChangeCase" />
+    </manifest>
+  </genjar>
+  <!-- build csvcommatotab.jar -->
+  <genjar jarfile="com/mindprod/csv/csvcommatotab.jar">
+    <class name="com.mindprod.csv.CSVCommaToTab" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVCommaToTab" />
+      <attribute name="Application-Name" value="CSVCommaToTab" />
+    </manifest>
+  </genjar>
+  <!-- build csvcondense.jar -->
+  <genjar jarfile="com/mindprod/csv/csvcondense.jar">
+    <class name="com.mindprod.csv.CSVCondense" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVCondense" />
+      <attribute name="Application-Name" value="CSVCondense" />
+    </manifest>
+  </genjar>
+  <!-- build csvdedup.jar -->
+  <genjar jarfile="com/mindprod/csv/csvdedup.jar">
+    <class name="com.mindprod.csv.CSVDeDup" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVDeDup" />
+      <attribute name="Application-Name" value="CSVDeDup" />
+    </manifest>
+  </genjar>
+  <!-- build csvdedupfield.jar -->
+  <genjar jarfile="com/mindprod/csv/csvdedupfield.jar">
+    <class name="com.mindprod.csv.CSVDeDupField" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVDeDupField" />
+      <attribute name="Application-Name" value="CSVDeDupField" />
+    </manifest>
+  </genjar>
+  <!-- build csvdeentify.jar -->
+  <genjar jarfile="com/mindprod/csv/csvdeentify.jar">
+    <class name="com.mindprod.csv.CSVDeEntify" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVDeEntify" />
+      <attribute name="Application-Name" value="CSVDeEntify" />
+    </manifest>
+  </genjar>
+  <!-- build csvdump.jar -->
+  <genjar jarfile="com/mindprod/csv/csvdump.jar">
+    <class name="com.mindprod.csv.CSVDump" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVDump" />
+      <attribute name="Application-Name" value="CSVDump" />
+    </manifest>
+  </genjar>
+  <!-- build csventify.jar -->
+  <genjar jarfile="com/mindprod/csv/csventify.jar">
+    <class name="com.mindprod.csv.CSVEntify" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVEntify" />
+      <attribute name="Application-Name" value="CSVEntify" />
+    </manifest>
+  </genjar>
+  <!-- build csvisbn.jar -->
+  <genjar jarfile="com/mindprod/csv/csvisbn.jar">
+    <class name="com.mindprod.csv.CSVISBN" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVISBN" />
+      <attribute name="Application-Name" value="CSVISBN" />
+    </manifest>
+  </genjar>
+  <!-- build csvpack.jar -->
+  <genjar jarfile="com/mindprod/csv/csvpack.jar">
+    <class name="com.mindprod.csv.CSVPack" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVPack" />
+      <attribute name="Application-Name" value="CSVPack" />
+    </manifest>
+  </genjar>
+  <!-- build csvrecode.jar -->
+  <genjar jarfile="com/mindprod/csv/csvrecode.jar">
+    <class name="com.mindprod.csv.CSVRecode" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVRecode" />
+      <attribute name="Application-Name" value="CSVRecode" />
+    </manifest>
+  </genjar>
+  <!-- build csvreplacestrings.jar -->
+  <genjar jarfile="com/mindprod/csv/csvreplacestrings.jar">
+    <class name="com.mindprod.csv.CSVReplaceStrings" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVReplaceStrings" />
+      <attribute name="Application-Name" value="CSVReplaceStrings" />
+    </manifest>
+  </genjar>
+  <!-- build csvreplaceurls.jar -->
+  <genjar jarfile="com/mindprod/csv/csvreplaceurls.jar">
+    <class name="com.mindprod.csv.CSVReplaceURLs" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVReplaceURLs" />
+      <attribute name="Application-Name" value="CSVReplaceURLs" />
+    </manifest>
+  </genjar>
+  <!-- build csvreshape.jar -->
+  <genjar jarfile="com/mindprod/csv/csvreshape.jar">
+    <class name="com.mindprod.csv.CSVReshape" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVReshape" />
+      <attribute name="Application-Name" value="CSVReshape" />
+    </manifest>
+  </genjar>
+  <!-- build csvscale.jar -->
+  <genjar jarfile="com/mindprod/csv/csvscale.jar">
+    <class name="com.mindprod.csv.CSVScale" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVScale" />
+      <attribute name="Application-Name" value="CSVScale" />
+    </manifest>
+  </genjar>
+  <!-- build csvsort.jar -->
+  <genjar jarfile="com/mindprod/csv/csvsort.jar">
+    <class name="com.mindprod.csv.CSVSort" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVSort" />
+      <attribute name="Application-Name" value="CSVSort" />
+    </manifest>
+  </genjar>
+  <!-- build csvsortfield.jar -->
+  <genjar jarfile="com/mindprod/csv/csvsortfield.jar">
+    <class name="com.mindprod.csv.CSVSortField" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVSortField" />
+      <attribute name="Application-Name" value="CSVSortField" />
+    </manifest>
+  </genjar>
+  <!-- build csvstriptags.jar -->
+  <genjar jarfile="com/mindprod/csv/csvstriptags.jar">
+    <class name="com.mindprod.csv.CSVStripTags" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVStripTags" />
+      <attribute name="Application-Name" value="CSVStripTags" />
+    </manifest>
+  </genjar>
+  <!-- build csvtabtocomma.jar -->
+  <genjar jarfile="com/mindprod/csv/csvtabtocomma.jar">
+    <class name="com.mindprod.csv.CSVTabToComma" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVTabToComma" />
+      <attribute name="Application-Name" value="CSVTabToComma" />
+    </manifest>
+  </genjar>
+  <!-- build csvtemplate.jar -->
+  <genjar jarfile="com/mindprod/csv/csvtemplate.jar">
+    <class name="com.mindprod.csv.CSVTemplate" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVTemplate" />
+      <attribute name="Application-Name" value="CSVTemplate" />
+    </manifest>
+  </genjar>
+  <!-- build csvtosrs.jar -->
+  <genjar jarfile="com/mindprod/csv/csvtosrs.jar">
+    <class name="com.mindprod.csv.CSVToSRS" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVToSRS" />
+      <attribute name="Application-Name" value="CSVToSRS" />
+    </manifest>
+  </genjar>
+  <!-- build csvtosrx.jar -->
+  <genjar jarfile="com/mindprod/csv/csvtosrx.jar">
+    <class name="com.mindprod.csv.CSVToSRX" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVToSRX" />
+      <attribute name="Application-Name" value="CSVToSRX" />
+    </manifest>
+  </genjar>
+  <!-- build csvtotable.jar -->
+  <genjar jarfile="com/mindprod/csv/csvtotable.jar">
+    <class name="com.mindprod.csv.CSVToTable" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVToTable" />
+      <attribute name="Application-Name" value="CSVToTable" />
+    </manifest>
+  </genjar>
+  <!-- build csvtounique.jar -->
+  <genjar jarfile="com/mindprod/csv/csvtounique.jar">
+    <class name="com.mindprod.csv.CSVToUnique" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVToUnique" />
+      <attribute name="Application-Name" value="CSVToUnique" />
+    </manifest>
+  </genjar>
+  <!-- build csvtuple.jar -->
+  <genjar jarfile="com/mindprod/csv/csvtuple.jar">
+    <class name="com.mindprod.csv.CSVTuple" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.CSVTuple" />
+      <attribute name="Application-Name" value="CSVTuple" />
+    </manifest>
+  </genjar>
+  <!-- build linestocsv.jar -->
+  <genjar jarfile="com/mindprod/csv/linestocsv.jar">
+    <class name="com.mindprod.csv.LinesToCSV" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.LinesToCSV" />
+      <attribute name="Application-Name" value="LinesToCSV" />
+    </manifest>
+  </genjar>
+  <!-- build tabletocsv.jar -->
+  <genjar jarfile="com/mindprod/csv/tabletocsv.jar">
+    <class name="com.mindprod.csv.TableToCSV" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.TableToCSV" />
+      <attribute name="Application-Name" value="TableToCSV" />
+    </manifest>
+  </genjar>
+  <!-- build testcsvload.jar -->
+  <genjar jarfile="com/mindprod/csv/testcsvload.jar">
+    <class name="com.mindprod.csv.TestCSVLoad" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.TestCSVLoad" />
+      <attribute name="Application-Name" value="TestCSVLoad" />
+    </manifest>
+  </genjar>
+  <!-- build testcsvreader.jar -->
+  <genjar jarfile="com/mindprod/csv/testcsvreader.jar">
+    <class name="com.mindprod.csv.TestCSVReader" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.TestCSVReader" />
+      <attribute name="Application-Name" value="TestCSVReader" />
+    </manifest>
+  </genjar>
+  <!-- build testcsvwriter.jar -->
+  <genjar jarfile="com/mindprod/csv/testcsvwriter.jar">
+    <class name="com.mindprod.csv.TestCSVWriter" />
+    <!-- define the manifest -->
+    <manifest>
+      <attribute name="Main-Class" value="com.mindprod.csv.TestCSVWriter" />
+      <attribute name="Application-Name" value="TestCSVWriter" />
+    </manifest>
+  </genjar>
+</target>
+
+<!-- P O S T J A R -->
+<target name="postjar" depends="jar">
+  <!-- nothing to do -->
+</target>
+
+<!-- P R E J E T -->
+<target name="prejet">
+<echo message="    :::    csv    :::    avoid regenerating Jet executable if already done." />
+  <uptodate property="jet.uptodate" targetfile="com/mindprod/csv/csv.exe">
+    <srcfiles dir="com/mindprod/csv" includes="*.jar"/>
+    </uptodate>
+</target>
+
+<!-- J E T -->
+<!-- Requires Excelsior JET native Java compiler jc.exe on the path -->
+<!-- See http://mindprod.com/jgloss/jet.html for details -->
+<target name="jet" depends="prejet" unless="jet.uptodate">
+<echo message="    :::    csv    :::    jet compiling." />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csv.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVAlign    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvalign.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVChangeCase    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvchangecase.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVCommaToTab    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvcommatotab.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVCondense    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvcondense.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVDeDup    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvdedup.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVDeDupField    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvdedupfield.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVDeEntify    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvdeentify.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVDump    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvdump.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVEntify    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csventify.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVISBN    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvisbn.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVPack    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvpack.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVRecode    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvrecode.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVReplaceStrings    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvreplacestrings.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVReplaceURLs    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvreplaceurls.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVReshape    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvreshape.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVScale    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvscale.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVSort    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvsort.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVSortField    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvsortfield.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVStripTags    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvstriptags.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVTabToComma    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvtabtocomma.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVTemplate    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvtemplate.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVToSRS    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvtosrs.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVToSRX    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvtosrx.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVToTable    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvtotable.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVToUnique    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvtounique.jar" />
+  </exec>
+  <echo message="    :::    csv/CSVTuple    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="csvtuple.jar" />
+  </exec>
+  <echo message="    :::    csv/LinesToCSV    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="linestocsv.jar" />
+  </exec>
+  <echo message="    :::    csv/TableToCSV    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="tabletocsv.jar" />
+  </exec>
+  <echo message="    :::    csv/TestCSVLoad    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="testcsvload.jar" />
+  </exec>
+  <echo message="    :::    csv/TestCSVReader    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="testcsvreader.jar" />
+  </exec>
+  <echo message="    :::    csv/TestCSVWriter    :::    jet compiling" />
+  <exec executable="jc.exe" dir="com/mindprod/csv">
+    <arg value="-DECOR=" />
+    <arg value="testcsvwriter.jar" />
+  </exec>
+</target>
+
+<!-- Z I P -->
+<target name="zip" depends="jar">
+<echo message="    :::    csv    :::    preparing zip distributable." />
+  <!-- Remove references to separate foot files. -->
+  <exec executable="prunefoot.exe" failifexecutionfails="false" dir="com/mindprod/csv">
+    <arg value="csv.html" />
+    <arg value="csv.manual.html" />
+  </exec>
+  <zip destfile="com/mindprod/csv/csv75.zip" duplicate="preserve" filesonly="true" includes="${distributed.exts}" excludes="${nondistributed}">
+    <!-- zipfileset includes all subdirs as well -->
+    <zipfileset dir="com/mindprod/csv" prefix="com/mindprod/csv" includes="${distributed.exts}" excludes="${nondistributed}" />
+    <!-- Extra classes and properties to include in the Zip -->
+      <zipfileset dir="com/mindprod/common18"    prefix="com/mindprod/common18"    includes="${distributed.exts}" excludes="${nondistributed}" />
+      <zipfileset dir="com/mindprod/entities"    prefix="com/mindprod/entities"    includes="${distributed.exts}" excludes="${nondistributed}" />
+      <zipfileset dir="com/mindprod/fastcat"     prefix="com/mindprod/fastcat"     includes="${distributed.exts}" excludes="${nondistributed}" />
+      <zipfileset dir="com/mindprod/hunkio"      prefix="com/mindprod/hunkio"      includes="${distributed.exts}" excludes="${nondistributed}" />
+      <zipfileset dir="com/mindprod/isbn"        prefix="com/mindprod/isbn"        includes="${distributed.exts}" excludes="${nondistributed}" />
+  </zip>
+</target>
+
+<!-- P O S T Z I P -->
+<target name="postzip" depends="zip,postjar">
+  <!-- not distributing a zip -->
+</target>
+</project>

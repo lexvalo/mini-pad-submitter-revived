@@ -1,0 +1,31 @@
+FilenameFilters you can use in your own Java programs with
+File.list( FilenameFilter f ). They can also be used
+standalone as fancy dir commands.
+They come with Java source and include:
+AllButSVTDirectoriesFilter all but .svn directories
+AllDirectoriesFilter  gets all directories
+AllFilesFilter        gets all files
+ClamFilter            simple wildcard
+DirListFilter         gets a list of directories
+EndsWithFilter        gets files whose names end with a given string.
+EverythingFilter      gets everything
+ExtensionListFilter   gets files matching a list of extensions
+                      (formerly ExtensionFilter)
+FileLengthFilter      gets short or long files
+FileListFilter        gets a list of files
+                      (used to be called ListFilter)
+FilenameLengthFilter  gets short or long filenames
+JunkFilter            used to find junk files by name, extension,
+                      startsWith or endsWith lists.
+MultiFilter           combines other Filters with
+                      "consider", "must" and "never".
+NoFootFilter          accepts *.html but not *.foot.html
+RecentFilter          filters based on lastModified date
+RegexFilter           filters with Regex expressions.
+RecentFilter          filters based on lastModified date
+RegexFilter           filters with Regex expressions.
+StandAndEndWithFilter include/exclude depending on start/endings of filenames
+StartsWithFilter      gets files whose names start with a given string.
+Why that orange disc icon?  It represents a photographic
+filter that filters light, is an analogous way the filter
+class filters files.

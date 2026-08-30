@@ -1,0 +1,9 @@
+META-INF/MANIFEST.MF
+com/mindprod/common18/BigDate.class
+com/mindprod/common18/EIO.class
+com/mindprod/common18/ST.class
+com/mindprod/entities/ArrowNonets.class
+com/mindprod/entities/EntifyStrings.class
+com/mindprod/entities/Nonet.class
+com/mindprod/fastcat/FastCat.class
+com/mindprod/hunkio/HunkIO.class

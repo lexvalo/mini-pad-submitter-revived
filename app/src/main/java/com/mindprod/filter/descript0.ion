@@ -1,0 +1,55 @@
+"desc.btm" creates TCC file descriptions for project files
+"descother.btm" creates TCC file descriptions for non-project files
+"run.bat" execute the Filter application from the jar
+"grab.btm" copy in Java source code from IntelliJ and build it. Roedy's use only.
+"Filter.class" Filter main Java program compiled byte code
+"filter.manual.html" detailed HTML manual for the Filter project
+"filter.jar" jarred class files: collection of FilenameFilters
+"filter.look" uncommented jar manifest
+"filter.jnlp" filter jnlp Java Web Start launch
+"filter-setup.exe" JET distributable, containing runtime
+"filter.ico" Windows icon for the project, contains multiple image sizes
+"filter.jpn" Manifest of what is included in the JET executable.
+"filter.log" log of what JET did compiling and preparing the distributable
+"filter.prj" JET project configuration, compiler options and notes on what needs to be included.
+"filter.startup" List of classes JET should preload for speed.
+"filter.xbind.script" List of DLLs JET will need to run the app.
+"build_filter.bat" Build JET executable with project descriptor
+"run_filter.bat" Runs the JET executable with default parm.
+"mindprod.css" cascading style sheet for general HTML
+"jdisplay.css" cascading style sheet for displaying source code in HTML
+"package-info.java" Dummy Java source with JavaDoc describing the entire package.
+"untouch.digest" generated: enables untouching (set date back) unchanged but redated files.
+"mindprodcert2017rsa.cer" Public key for Mindprod code-signing certificate. Cannot be used to sign jars.
+"DESCRIPT.ION" TCC file descriptions
+"descript0.ion" generated file of overriding descriptions to merge into DESCRIPT.ION
+"descript2.ion" generated file default descriptions to merge into DESCRIPT.ION
+"MasterDistribution.site" URL to find the master copy of the Filter project files
+"filter.use" precis(summary) collection of FilenameFilters Generated
+"filter.vpj" Slick Edit project ini file
+"filter.vpw" Slick Edit project ini file
+"filter.vtg" Slick Edit binary tag xref file
+"filter.icon16.png" 16x16 icon for the Filter project
+"filter.icon32.png" 32x32 icon for the Filter project
+"filter.icon48.png" roughly 48x48 icon for the Filter project
+"filter.icon64.png" roughly 64x64 icon for the Filter project
+"filter.icon128.png" roughly 128x128 icon for the Filter project
+"filter.screenshot.png" screenshot for the Filter project
+"filter.splash.gif" splash gif for the Filter project
+"filter.icon32.gif" 32x32 gif icon for the Filter project
+"filter.icon64.gif" 64x64 gif icon for the Filter project
+"_O_V_E_R_V_I_E_W.txt" Commented List of all files for Filter, with one line descriptions.
+"use.txt" key facts about the Filter project. Generates filter.use
+"version.txt" key current version info about the Filter project. Generates filter.use
+"versionhistory.txt" complete version history of the Filter project. Generates filter.use
+"filter.txt" ASCII text manual for the Filter project.
+"build.xml" Complex ANT build script for Filter
+"rebuild.xml" Simplified ANT build script for Filter
+"forgather.xml" list of extra gather steps for ANT.
+"forjar.xml" genjar list of extra files to include in filter.jar
+"forjarexe.xml" jar.exe list of extra files to include in filter.jar
+"forpost.xml" list of extra posting steps for ANT.
+"forzip.xml" list of extra files for ANT include in filter27.zip
+"filter.xml" ASP PAD desc of the Filter project: collection of FilenameFilters
+"filter27.zip" Filter 2.7 distribute zip: collection of FilenameFilters
+"zip.look" uncommented zip manifest for filter27.zip

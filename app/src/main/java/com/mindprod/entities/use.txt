@@ -1,0 +1,19 @@
+Consists of a three utilities that let you convert/strip/insert HTML
+entities such as &amp; and &quot; from files converting them back and
+forth to their equivalent single characters & and ".  It handles the HTML
+4 entities such as &hearts; as well as decimal &#123; and hexadecimal
+&x#123; entities.
+You may us this package as standalone utilities, or use the classes in
+your own programs to insert or strip entities from HTML.
+You can use them like this:
+REM to remove &amp; entities and HTML tags from from two files and all files in somedir
+REM converting entities back to characters
+flatten.jar  afile.html another.html -s somedir
+REM to convert & to &amp; etc. entities in two files and all files in somedir
+entify.jar afile.html another.html -s somedir
+REM to convert entities in in two files and all files in somedir back to UFT-8 chars
+REM leaving all HTML tags as is.
+deentify.jar afile.html another.html -s somedir
+They come complete with Java source and jar files.
+The Apache people have some similar utilities at:
+http://commons.apache.org/lang/api-2.4/org/apache/commons/lang/StringEscapeUtils.html

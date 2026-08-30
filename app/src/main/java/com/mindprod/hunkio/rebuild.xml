@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!-- REBUILD.XML simple hunkio 1.9 build that presumes all files are already in the project directory. -->
+<!-- Build with ant -f rebuild.xml postzip jet -->
+<!-- Compile and jar hunkio using ANT -->
+<!-- Invoke with [ant clean] to erase class files and start over. -->
+<!-- Invoke with [ant compile] to just compile. -->
+<!-- Invoke with [ant jar] to compile and create jar files. -->
+<!-- Invoke with [ant zip] to create source code zip files. -->
+<!-- Using Apache ANT version 1.10.1 -->
+<!-- For details of ANT use, see http://mindprod.com/jgloss/ant.html -->
+<!-- This script does not build any *.asm files. -->
+
+<!-- D E F I N I T I O N S -->
+<!-- ANT.project.dir is com/mindprod/hunkio -->
+<!-- basedir is E:/ -->
+<project name="hunkio" basedir="E:/" default="jar">
+
+<!-- extensions for zip. Case sensitive! Go in zip, not necessarily in Jar. -->
+<property name="distributed.exts" value="**/*.au,**/*.asm,**/*.bat,**/*.btm,**/*.c,**/*.COM,**/*.com,**/*.cpp,**/*.css,**/*.csv,**/*.dll,**/*.gif,**/*.h,**/*.hpp,**/*.htm,**/*.html,**/*.ico,**/*.ION,**/*.ion,**/*.jar,**/*.java,**/*.jnlp,**/*.JNLP,**/*.jpg,**/*.look,**/*.png,**/*.properties,**/*.ser,**/*.sln,**/*.txt,**/*.use,**/*.xml" />
+
+<!-- dirs we to exclude from zip. Case sensitive! -->
+<property name="nondistributed" value="**/javadoc/**,**/jetpdb/**,**/Debug/**,**/Release/**" />
+
+<!-- C L E A N -->
+<target name="clean">
+<echo message="    :::    hunkio    :::    deleting files to force regeneration." />
+  <delete>
+    <fileset dir="com/mindprod/hunkio" includes="**/*.class" />
+    <fileset dir="com/mindprod/hunkio" includes="**/*.jar" />
+    <!-- leave Jet *.exe. Old versions are still useful during the build. -->
+    <fileset dir="com/mindprod/hunkio" includes="hunkio19.zip" />
+  </delete>
+</target>
+
+<!-- C O M P I L E -->
+<target name="compile">
+<echo message="    :::    hunkio    :::    compiling Java tree with target=1.8" />
+  <javac source="1.8" target="1.8" srcdir="com/mindprod/hunkio" sourcepath="${basedir}" classpath="${basedir}" encoding="UTF-8" debug="on" includeAntRuntime="false">
+    <compilerarg value="-Xlint:unchecked" />
+    <compilerarg value="-Xlint:fallthrough" />
+    <compilerarg value="-Xlint:deprecation" />
+    <compilerarg value="-Xlint:cast" />
+  </javac>
+</target>
+
+<!-- J A V A H must do ant javah to rebuild *.h files. -->
+<target name="javah" depends="compile">
+  <!-- there is no jni -->
+</target>
+
+<!-- G A T H E R -->
+<target name="gather" depends="compile">
+<echo message="    :::    hunkio    :::    gathering files to build jar/zip." />
+  <!-- prepare hunkio.use precis from two pieces -->
+    <concat destfile="com/mindprod/hunkio/hunkio.use" fixlastline="yes">
+      <filelist dir="com/mindprod/hunkio" files="version.txt,use.txt,versionhistory.txt" />
+    </concat>
+    <copy file="E:/mindprod/application/hunkio.html" todir="com/mindprod/hunkio" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/application/hunkio.manual.html" todir="com/mindprod/hunkio" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/ico/hunkio.ico" tofile="E:/mindprod/application/hunkio.ico" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon128/hunkio.png" tofile="com/mindprod/hunkio/hunkio.icon128.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon16/hunkio.png" tofile="com/mindprod/hunkio/hunkio.icon16.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon32/hunkio.png" tofile="com/mindprod/hunkio/hunkio.icon32.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon48/hunkio.png" tofile="com/mindprod/hunkio/hunkio.icon48.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/icon64/hunkio.png" tofile="com/mindprod/hunkio/hunkio.icon64.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/image/screenshot/hunkio.png" tofile="com/mindprod/hunkio/hunkio.screenshot.png" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/jdisplay.css" todir="com/mindprod/hunkio" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/mindprod.css" todir="com/mindprod/hunkio" failonerror="false" quiet="true" overwrite="true" />
+    <copy file="E:/mindprod/pad/hunkio.xml" todir="com/mindprod/hunkio" failonerror="false" quiet="true" overwrite="true" />
+</target>
+
+<!-- J A R -->
+<!-- Make F:\Program Files (x86)\apache-ant-1.10.1\lib\GenJar.jar known to ANT -->
+<!-- See http://mindprod.com/jgloss/genjar.html for details -->
+<taskdef resource="genjar.properties" />
+
+<target name="jar" depends="gather">
+<echo message="    :::    hunkio    :::    genjar finding dependencies and creating jar." />
+  <genjar jarfile="com/mindprod/hunkio/hunkio.jar">
+    <!-- include all classes in the package -->
+    <class>
+      <fileset dir="${basedir}">
+        <!-- include all the classes in com/mindprod/hunkio -->
+        <include name="com/mindprod/hunkio/*.class" />
+        <!-- all dependent classes will be automatically included -->
+      </fileset>
+    </class>
+  </genjar>
+</target>
+
+<!-- P O S T J A R -->
+<target name="postjar" depends="jar">
+  <!-- nothing to do -->
+</target>
+
+<!-- J E T  -->
+<!-- Dummy. Not using Jet -->
+<target name="jet">
+</target>
+
+<!-- Z I P -->
+<target name="zip" depends="jar">
+<echo message="    :::    hunkio    :::    preparing zip distributable." />
+  <!-- Remove references to separate foot files. -->
+  <exec executable="prunefoot.exe" failifexecutionfails="false" dir="com/mindprod/hunkio">
+    <arg value="hunkio.html" />
+    <arg value="hunkio.manual.html" />
+  </exec>
+  <zip destfile="com/mindprod/hunkio/hunkio19.zip" duplicate="preserve" filesonly="true" includes="${distributed.exts}" excludes="${nondistributed}">
+    <!-- zipfileset includes all subdirs as well -->
+    <zipfileset dir="com/mindprod/hunkio" prefix="com/mindprod/hunkio" includes="${distributed.exts}" excludes="${nondistributed}" />
+    <!-- Extra classes and properties to include in the Zip -->
+      <zipfileset dir="com/mindprod/hunkio" prefix="com/mindprod/hunkio" includes="${distributed.exts}" excludes="${nondistributed}" />
+  </zip>
+</target>
+
+<!-- P O S T Z I P -->
+<target name="postzip" depends="zip,postjar">
+  <!-- not distributing a zip -->
+</target>
+</project>

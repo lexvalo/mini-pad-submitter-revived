@@ -1,0 +1,7 @@
+  <zipfileset  dir="com/mindprod/common18"   prefix="com/mindprod/common18"   includes="${distributed.exts}"  excludes="${nondistributed}"  />
+  <zipfileset  dir="com/mindprod/csv"        prefix="com/mindprod/csv"        includes="${distributed.exts}"  excludes="${nondistributed}"  />
+  <zipfileset  dir="com/mindprod/entities"   prefix="com/mindprod/entities"   includes="${distributed.exts}"  excludes="${nondistributed}"  />
+  <zipfileset  dir="com/mindprod/fastcat"    prefix="com/mindprod/fastcat"    includes="${distributed.exts}"  excludes="${nondistributed}"  />
+  <zipfileset  dir="com/mindprod/http"       prefix="com/mindprod/http"       includes="${distributed.exts}"  excludes="${nondistributed}"  />
+  <zipfileset  dir="com/mindprod/hunkio"     prefix="com/mindprod/hunkio"     includes="${distributed.exts}"  excludes="${nondistributed}"  />
+  <zipfileset  dir="com/mindprod/submitter"  prefix="com/mindprod/submitter"  includes="*.list"                                             />

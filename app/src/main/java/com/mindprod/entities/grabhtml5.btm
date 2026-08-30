@@ -1,0 +1,28 @@
+rem grabhtml5.btm  get and massage latest HTML5 entities, for Roedy's use
+E:
+cd E:\com\mindprod\entities
+download.exe "http://www.whatwg.org/specs/web-apps/current-work/multipage/named-character-references.html" temp.html
+extract.exe "U+" - temp.html > temp1.html
+rem get rid of entities without ;
+extract.exe ";" - temp1.html > temp2.html
+tabletocsv.exe  temp2.html
+csv.exe temp2.csv
+rem drop letter itself, add slot for vars
+csvreshape.exe temp2.csv 99 1 0
+csvalign.exe temp2.csv
+echo manually split out overstrike into second column
+echo add 6 in col 0
+echo get rid of U+, both cols,
+echo add lead & to entities, tail ;
+echo prepend 0x on cols 1 and 2
+%EDIT temp2.csv
+pause
+csvchangecase.exe temp2.csv 1l 2l
+copy entityfacts.csv + temp2.csv temp3.csv
+csvsort.exe temp3.csv 3s+ 1x+ 2x+ 0s+
+csvdedup.exe temp3.csv 0 4 5
+csvalign.exe temp3.csv
+%EDIT temp3.csv
+echo temp3.csv is a potential replacement for entityfacts.csv
+rem -30-
+rem -30-

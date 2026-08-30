@@ -1,0 +1,9 @@
+Rem DoesPADmaps.btm
+E:
+rem just reports sites that that should not be marked as supporting padmaps.
+rem Adds mark to those who need it.
+cd E:\com\mindprod\submitter
+java com.mindprod.submitter.DoesPADmaps candidates.csv
+java com.mindprod.submitter.DoesPADmaps hassle.csv
+java com.mindprod.submitter.DoesPADmaps nohassle.csv
+rem -30-

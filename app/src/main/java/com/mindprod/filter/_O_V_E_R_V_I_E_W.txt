@@ -1,0 +1,76 @@
+_O_V_E_R_V_I_E_W.txt             Commented List of all files for Filter, with one line descriptions.
+AllButFootDirectoriesFilter.class compiled Java byte code
+AllButFootDirectoriesFilter.java Avoid foot dirs filter
+AllButSVNDirectoriesFilter.class compiled Java byte code
+AllButSVNDirectoriesFilter.java  Dir filter that excludes Subversion .svn directories
+AvoidJunkFilter.class            compiled Java byte code
+AvoidJunkFilter.java             lets pass non junk files
+build.xml                        Complex ANT build script for Filter
+ClamFilter.class                 compiled Java byte code
+ClamFilter.java                  control head and tail of filename
+desc.btm                         creates TCC file descriptions for project files
+descother.btm                    creates TCC file descriptions for non-project files
+DESCRIPT.ION                     TCC file descriptions
+descript0.ion                    generated file of overriding descriptions to merge into DESCRIPT.ION
+descript2.ion                    generated file default descriptions to merge into DESCRIPT.ION
+DirListFilter.class              compiled Java byte code
+DirListFilter.java               filter where you provide an explicit list of directory names
+EndsWithFilter.class             compiled Java byte code
+EndsWithFilter.java              filter by how the filename ends
+EverythingFilter.class           compiled Java byte code
+EverythingFilter.java            dummy to let everything through
+ExtensionListFilter.class        compiled Java byte code
+ExtensionListFilter.java         filter where you provide a list of file extensions
+FileLengthFilter.class           compiled Java byte code
+FileLengthFilter.java            filter on short or long files
+FileListFilter.class             compiled Java byte code
+FileListFilter.java              filter where you provide a list of specific files
+FilenameLengthFilter.class       compiled Java byte code
+FilenameLengthFilter.java        filter on short or long filenames
+FilePlus.unfinished              unfinished code
+Filter.class                     Filter main Java program compiled byte code
+filter.icon128.png               roughly 128x128 icon for the Filter project
+filter.icon16.png                16x16 icon for the Filter project
+filter.icon32.png                32x32 icon for the Filter project
+filter.icon48.png                roughly 48x48 icon for the Filter project
+filter.icon64.png                roughly 64x64 icon for the Filter project
+filter.jar                       jarred class files: collection of FilenameFilters
+Filter.java                      main Java program source
+filter.look                      uncommented jar manifest
+filter.screenshot.png            screenshot for the Filter project
+filter.use                       precis(summary) collection of FilenameFilters Generated
+filter.xml                       ASP PAD desc of the Filter project: collection of FilenameFilters
+filter27.zip                     Filter 2.7 distribute zip: collection of FilenameFilters
+grab.btm                         copy in Java source code from IntelliJ and build it. Roedy's use only.
+j18.txt                          marker to indicate that Java compiler target version 1.8 needed.
+jdisplay.css                     cascading style sheet for displaying source code in HTML
+JunkFileFilter.class             compiled Java byte code
+JunkFileFilter.java              filters out junk files
+MasterDistribution.site          URL to find the master copy of the Filter project files
+mindprod.css                     cascading style sheet for general HTML
+MultiFilter.class                compiled Java byte code
+MultiFilter.java                 Combines other filters
+NoFootFilter.class               compiled Java byte code
+NoFootFilter.java                select .html but not .foot.html
+OnlyDirectoriesFilter.class      compiled Java byte code
+OnlyDirectoriesFilter.java       Only directories
+OnlyFilesFilter.class            compiled Java byte code
+OnlyFilesFilter.java             only files
+rebuild.xml                      Simplified ANT build script for Filter
+RecentFilter.class               compiled Java byte code
+RecentFilter.java                filter for recent or old files
+RegexFilter.class                compiled Java byte code
+RegexFilter.java                 filter where you provide a regex
+run.bat                          execute the Filter application from the jar
+StartAndEndsWithFilter.class     compiled Java byte code
+StartAndEndsWithFilter.java      include/exclused start/end/regex
+StartsWithFilter.class           compiled Java byte code
+StartsWithFilter.java            filter files by what they start with
+test.bat                         test out the various filters
+untouch.digest                   generated: enables untouching (set date back) unchanged but redated files.
+use.txt                          key facts about the Filter project. Generates filter.use
+version.txt                      key current version info about the Filter project. Generates filter.use
+versionhistory.txt               complete version history of the Filter project. Generates filter.use
+WildcardFilter.class             compiled Java byte code
+WildcardFilter.java              Filter based on * and ? wildcards
+zip.look                         uncommented zip manifest for filter27.zip

@@ -1,0 +1,13 @@
+META-INF/MANIFEST.MF
+com/mindprod/common18/Build.class
+com/mindprod/common18/EIO.class
+com/mindprod/common18/ST.class
+com/mindprod/fastcat/FastCat.class
+com/mindprod/http/Chase.class
+com/mindprod/http/Fetch.class
+com/mindprod/http/Get.class
+com/mindprod/http/Head.class
+com/mindprod/http/Http.class
+com/mindprod/http/Post.class
+com/mindprod/http/Probe.class
+com/mindprod/http/Read.class

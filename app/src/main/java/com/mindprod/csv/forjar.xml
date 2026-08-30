@@ -1,0 +1,7 @@
+  <class>
+<fileset dir="${basedir}" >
+<!-- include all the  classes in com.mindprod.csv dir -->
+  <include name="com/mindprod/csv/*.class" />
+<!-- all dependent classes will be automatically included -->
+</fileset>
+</class>
